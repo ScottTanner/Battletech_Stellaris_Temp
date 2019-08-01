@@ -1,0 +1,266 @@
+############################
+#
+# Bajoran Flavour Events
+#
+# Written by Walshicus
+#
+############################
+
+namespace = STH_bajoran_flavour
+
+# Bajoran Literature
+# Gaudaal's Lament
+country_event = {
+	id = STH_bajoran_flavour.1
+	title = STH_bajoran_flavour.1.name
+	desc = STH_bajoran_flavour.1.desc
+	picture = sth_GFX_evt_vedekAssembly
+	fire_only_once = yes
+	trigger = { is_species_class  = BAJ years_passed < 100 }
+	mean_time_to_happen = { years = 10 }
+	option = {
+		name = STH_bajoran_flavour.1.a
+		add_resource = { influence = 50 }
+		add_monthly_resource_mult = { resource = society_research value = @tier3researchreward min = @tier3researchmin max = @tier3researchmax }
+		add_modifier = { modifier = em_gaudaals_lament years = 10 }
+	}
+}
+
+
+
+
+
+
+event = {
+	id = STH_bajoran_flavour.100
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { 
+		this = { 
+			has_planet_flag = planet_bajor
+			any_pop = { is_species_class  = BAJ }
+			solar_system = { exists = starbase }
+		}
+		from = { NOT = { has_country_flag = bajoran_republic } }	
+	}
+	immediate = {
+		this = { planet_event = { id = STH_bajoran_flavour.101 days = 200 random = 60 } }
+	}
+}
+
+planet_event = {
+	id = STH_bajoran_flavour.101
+	title = STH_bajoran_flavour.101.name
+	desc = STH_bajoran_flavour.101.desc
+	picture = sth_GFX_evt_vedekAssembly
+	is_triggered_only = yes
+	location = root
+	pre_triggers = {
+		has_owner = yes
+	}
+	trigger = { 
+		has_planet_flag = planet_bajor
+		any_pop = { is_species_class  = BAJ }
+		solar_system = { exists = starbase }		
+		owner = { NOT = { has_country_flag = bajoran_republic } }
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "pm_jammed_subspace_comms"
+			days = -1
+		}
+	}
+	option = {
+		name = STH_bajoran_flavour.101.a # dispatch away team
+		hidden_effect = {
+			add_modifier = {
+				modifier = "pm_bajoran_resistance_cells"
+				days = -1
+			}
+			root = { planet_event = { id = STH_bajoran_flavour.102 days = 120 random = 30 } }
+		}	
+	}
+	option = {
+		name = STH_bajoran_flavour.101.b # do nothing
+		hidden_effect = {
+			add_modifier = {
+				modifier = "pm_bajoran_resistance_cells_large"
+				days = -1
+			}
+			root = { planet_event = { id = STH_bajoran_flavour.103 days = 250 random = 60 } }
+		}	
+	}	
+}
+
+planet_event = {
+	id = STH_bajoran_flavour.102
+	title = STH_bajoran_flavour.102.name
+	desc = STH_bajoran_flavour.102.desc
+	picture = sth_GFX_evt_vedekAssembly
+	location = root
+	is_triggered_only = yes
+	pre_triggers = {
+		has_owner = yes
+	}
+	trigger = { 
+		has_planet_flag = planet_bajor
+		any_pop = { is_species_class  = BAJ }
+		solar_system = { exists = starbase }		
+		owner = { NOT = { has_country_flag = bajoran_republic } }
+	}
+	option = {
+		name = STH_bajoran_flavour.102.a # go to starbase
+		hidden_effect = {
+			root = { planet_event = { id = STH_bajoran_flavour.103 days = 60 random = 30 } }
+		}
+	}
+}
+
+planet_event = {
+	id = STH_bajoran_flavour.103
+	title = STH_bajoran_flavour.103.name
+	desc = STH_bajoran_flavour.103.desc
+	picture = GFX_evt_space_debris
+	location = root
+	is_triggered_only = yes
+	pre_triggers = {
+		has_owner = yes
+	}
+	trigger = { 
+		has_planet_flag = planet_bajor
+		any_pop = { is_species_class  = BAJ }
+		solar_system = { exists = starbase }		
+		owner = { NOT = { has_country_flag = bajoran_republic } }
+	}
+	immediate = {
+		random_pop = { limit = { is_species_class = BAJ } kill_pop = yes }
+		solar_system = {
+			if = { 
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}	
+		}
+	}
+	option = {
+		name = STH_bajoran_flavour.103.a # let the resistance be
+		solar_system = {
+			create_starbase = { size = starbase_outpost owner = root.owner }			
+		}
+		hidden_effect = { 
+			remove_modifier = pm_bajoran_resistance_cells 
+			remove_modifier = pm_bajoran_resistance_cells_large
+			remove_modifier = pm_jammed_subspace_comms
+			add_modifier = {
+				modifier = "pm_bajoran_resistance_cells_large"
+				days = 1500
+			}			
+		}
+	}
+	option = {
+		name = STH_bajoran_flavour.103.b # crush the resistance
+		solar_system = {
+			create_starbase = { size = starbase_outpost owner = root.owner }			
+		}
+		random_pop = { limit = { is_species_class = BAJ } kill_pop = yes }
+		hidden_effect = { 
+			remove_modifier = pm_bajoran_resistance_cells 
+			remove_modifier = pm_bajoran_resistance_cells_large
+			remove_modifier = pm_jammed_subspace_comms
+			add_modifier = {
+				modifier = "pm_bajoran_resistance_cells"
+				days = 1500
+			}			
+		}
+	}
+	option = {
+		allow = { owner = { OR = { has_ethic = ethic_fanatic_xenophobe has_ethic = ethic_fanatic_militarist has_ethic = ethic_fanatic_authoritarian } } }
+		name = STH_bajoran_flavour.103.c ### purge all bajorans 
+		solar_system = {
+			create_starbase = { size = starbase_outpost owner = root.owner }			
+		}
+		every_pop = { limit = { is_species_class = BAJ } kill_pop = yes }
+		hidden_effect = { remove_modifier = pm_bajoran_resistance_cells remove_modifier = pm_bajoran_resistance_cells_large remove_modifier = pm_jammed_subspace_comms }
+		owner = { add_resource = { influence = 100 } }
+	}
+}
+
+
+#Lost City of B'hala
+planet_event = {
+	id = STH_bajoran_flavour.200
+	title = STH_bajoran_flavour.200.name
+	desc = STH_bajoran_flavour.200.desc
+	picture = sth_GFX_evt_vedekAssembly
+	show_sound = event_activating_unknown_technology
+	location = root
+	fire_only_once = yes
+	pre_triggers = {
+		has_owner = yes
+		has_ground_combat = no
+	}
+	trigger = {
+		years_passed > 100
+		has_planet_flag = bhavael_bajor
+		any_pop = { is_species_class = BAJ }
+		is_assimilated_planet = no
+	}
+	mean_time_to_happen = { years = 10 }
+	immediate = {
+		add_deposit = d_bajor_lostcity
+		owner = {
+			create_saved_leader = {
+				key = bhala_discoverer
+				creator = root.owner
+				name = random
+				species = root.owner_main_species
+				class = governor
+				skill = random
+				set_age = 50
+				traits = { trait = random_trait }
+				effect = { save_global_event_target_as = bhala_discoverer }
+			}
+		}
+	}
+	option = {
+		name = STH_bajoran_flavour.200.a
+		tooltip = { add_deposit = d_bajor_lostcity }
+	}
+}
+#Leader gets visions
+country_event = {
+	id = STH_bajoran_flavour.201
+	title = STH_bajoran_flavour.201.name
+	desc = STH_bajoran_flavour.201.desc
+	picture = sth_GFX_evt_vedekAssembly
+	location = root
+	is_triggered_only = yes
+	option = {
+		name = STH_bajoran_flavour.201.a
+		activate_saved_leader = { key = bhala_discoverer effect = { set_age = 50 save_global_event_target_as = bhala_discoverer } }
+		hidden_effect = {
+			every_relation = {
+				limit = { has_normal_events = yes }
+				country_event = { id = STH_bajoran_flavour.202 days = 3 scopes = { from = root fromfrom = root.from fromfromfrom = event_target:bhala_discoverer } }
+			}
+		}
+		leave_alliance = { override_requirements = yes }
+	}
+	option = {
+		name = STH_bajoran_flavour.201.b
+		add_modifier = { modifier = em_ignored_prophecy days = 720 }
+		hidden_effect = { remove_saved_leader = bhala_discoverer }
+	}
+}
+#Countries Notified
+country_event = {
+	id = STH_bajoran_flavour.202
+	title = STH_bajoran_flavour.202.name
+	desc = STH_bajoran_flavour.202.desc
+	picture = sth_GFX_evt_vedekAssembly
+	location = root
+	is_triggered_only = yes
+	option = {
+		name = STH_bajoran_flavour.202.a
+		tooltip = { from = { leave_alliance = { override_requirements = yes } } }
+	}
+}

@@ -1,0 +1,9 @@
+############################
+#
+# Pop Events
+#
+# Written by Henrik Eklund
+# STNH - 2.2.0 Compat
+############################
+
+namespace = pop

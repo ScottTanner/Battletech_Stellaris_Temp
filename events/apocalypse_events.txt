@@ -1,0 +1,140 @@
+
+### Apocalypse Events
+
+namespace = apoc
+
+
+
+# Ancient Gateway Reactivated
+country_event = {
+	id = apoc.10
+	title = "apoc.10.name"
+	desc = {
+		text = apoc.10.desc.1
+		trigger = {
+			num_active_gateways = 2
+			NOT = { has_country_flag = did_not_repair_gateway }
+		}
+	}
+	desc = {
+		text = apoc.10.desc.2
+		trigger = {
+			num_active_gateways > 2
+			NOT = { has_country_flag = did_not_repair_gateway }
+		}
+	}
+	desc = {
+		text = apoc.10.desc.3
+		trigger = {
+			has_country_flag = did_not_repair_gateway
+			#has_technology = "tech_gateway_activation"
+		}
+	}
+	desc = {
+		text = apoc.10.desc.4
+		trigger = {
+			has_country_flag = did_not_repair_gateway
+		}
+	}
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	location = from
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = { 
+			has_country_flag = gateway_reactivated
+			has_country_flag = gateway_built
+		}
+	}
+	
+	immediate = {
+		from = { save_event_target_as = gateway_system }
+		set_country_flag = gateway_reactivated
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = did_not_repair_gateway }
+				remove_country_flag = did_not_repair_gateway
+			}
+		}
+	}
+	
+	option = {
+		name = EXCELLENT
+		trigger = {
+			NOT = { has_country_flag = did_not_repair_gateway }
+		}
+	}
+	option = {
+		name = INTERESTING
+		trigger = {
+			has_country_flag = did_not_repair_gateway
+		}
+	}
+	option = {
+		name = apoc.10.a
+		trigger = {
+			has_country_flag = did_not_repair_gateway
+		}
+	}
+}
+
+# New Gateway Constructed
+country_event = {
+	id = apoc.11
+	title = "apoc.11.name"
+	desc = "apoc.11.desc"
+	picture = GFX_evt_drifting_gateway
+	show_sound = event_radio_chatter
+	location = from
+	
+	is_triggered_only = yes
+
+	trigger = {
+		#FROM = { is_megastructure_type = gateway_final }
+		NOR = { 
+			has_country_flag = gateway_reactivated
+			has_country_flag = gateway_built
+		}
+	}
+	
+	immediate = {
+		from = { save_event_target_as = gateway_system }
+		set_country_flag = gateway_built
+	}	
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+country_event = {
+	id = apoc.101
+	hide_window = yes
+
+	trigger = { always = no }
+
+	immediate = {
+		give_technology = {
+			tech = tech_destroyers
+			message = no
+		}
+		give_technology = {
+			tech = tech_cruisers
+			message = no
+		}
+		give_technology = {
+			tech = tech_battleships
+			message = no
+		}
+		give_technology = {
+			tech = tech_titans
+			message = no
+		}
+	}
+}
+

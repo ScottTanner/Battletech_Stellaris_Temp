@@ -1,0 +1,363 @@
+############################
+#
+# The Android Events
+#
+# Written by Walshicus
+#
+############################
+
+namespace = STH_theAndroid_event
+
+
+### The Android
+ship_event = {
+	id = STH_theAndroid_event.1
+	title = STH_theAndroid_event.1.name
+	desc = {
+		trigger = { owner = { is_species_class = FED } }
+		text = STH_theAndroid_event.1.desc_human
+	}
+	desc = {
+		trigger = { any_country = { is_species_class = FED has_communications = root.owner } }
+		text = STH_theAndroid_event.1.desc_known_human
+	}
+	desc = {
+		trigger = { 
+			NOR = {
+				any_country = { is_species_class = FED has_communications = root.owner }
+				owner = { is_species_class = FED }
+			}
+		}
+		text = STH_theAndroid_event.1.desc_unknown_human
+	}
+	picture = sth_GFX_evt_theAndroid2
+	location = FROM
+	is_triggered_only = yes
+	immediate = { 
+		owner = {
+			create_species = { name = "Android" class = ADD portrait = Data_01 traits = { trait = trait_android trait = trait_robot_custom_made } }
+			random_list = {
+				70 = {
+					create_leader = { class = scientist species = last_created name = "Data" skill = 1 set_age = 1 traits = { trait = leader_trait_spark_of_genius trait = leader_trait_cataloger } }
+					last_created_leader = { 
+						set_is_female = no  
+						set_leader_flag = androidData 
+						save_event_target_as = androidLeader 
+						exile_leader_as = androidData 
+					}
+				}
+				10 = {
+					create_leader = { class = governor species = last_created name = "Lore" skill = 1 set_age = 1 traits = { trait = leader_trait_spark_of_genius trait = leader_trait_fortifier } }
+					last_created_leader = { 
+						set_is_female = no  
+						set_leader_flag = androidLore 
+						save_event_target_as = androidLeader 
+						exile_leader_as = androidLore 
+					}
+				}
+				10 = {
+					create_leader = { class = general species = last_created name = "B4" skill = 1 set_age = 1 traits = { trait = leader_trait_arrested_development trait = leader_trait_defender } }
+					last_created_leader = { 
+						set_is_female = no  
+						set_leader_flag = androidB4 
+						save_event_target_as = androidLeader 
+						exile_leader_as = androidB4 
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = STH_theAndroid_event.1.a #Activate
+		hidden_effect = {
+			ship_event = { id = STH_theAndroid_event.10 days = 2 scopes = { from = from fromfrom = event_target:androidLeader } }
+		}
+	}
+	option = {
+		name = STH_theAndroid_event.1.b #Disassemble
+		hidden_effect = {
+			random_list = {
+				90 = { ship_event = { id = STH_theAndroid_event.20 days = 2 scopes = { from = from fromfrom = event_target:androidLeader } } } #Success
+				10 = { ship_event = { id = STH_theAndroid_event.21 days = 2 scopes = { from = from fromfrom = event_target:androidLeader } } } #Failure
+			}
+		}
+	}
+	option = {
+		name = STH_theAndroid_event.1.c #Passively Study
+		hidden_effect = {
+			ship_event = { id = STH_theAndroid_event.30 days = 2 scopes = { from = from fromfrom = event_target:androidLeader } }
+		}
+	}
+}
+
+
+#Awakened
+ship_event = {
+	id = STH_theAndroid_event.10
+	title = STH_theAndroid_event.10.name
+	desc = STH_theAndroid_event.10.desc
+	picture = sth_GFX_evt_theAndroid3
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_theAndroid_event.10.a #Activated	
+		hidden_effect = {
+			owner = { country_event = { id = STH_theAndroid_event.11 days = 1800 scopes = { from = root.from fromfrom = root.fromfrom } } }
+		}
+	}
+}
+
+#Wants to join starfleet etc.
+country_event = {
+	id = STH_theAndroid_event.11
+	title = STH_theAndroid_event.11.name
+	desc = {
+		trigger = { fromfrom = { has_leader_flag = androidData } }
+		text = STH_theAndroid_event.11.desc_data
+	}
+	desc = {
+		trigger = { fromfrom = { has_leader_flag = androidLore } }
+		text = STH_theAndroid_event.11.desc_lore
+	}
+	desc = {
+		trigger = { fromfrom = { has_leader_flag = androidB4 } }
+		text = STH_theAndroid_event.11.desc_b4
+	}
+	picture = sth_GFX_evt_theAndroid4
+	location = Root.Capital_Scope
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_theAndroid_event.11.a #Accept	
+		hidden_effect = { 
+			# clone_leader = { target = root.fromfrom }
+			if = {
+				limit = { fromfrom = { has_leader_flag = androidData } }
+				create_leader = { class = scientist species = fromfrom.species name = "Data" skill = 1 set_age = 30 traits = { trait = leader_trait_spark_of_genius trait = leader_trait_cataloger } }
+				last_created_leader = {
+					set_is_female = no				
+					set_leader_flag = androidData
+				}
+			}
+			if = {
+				limit = { fromfrom = { has_leader_flag = androidLore } }
+				create_leader = { class = governor species = fromfrom.species name = "Lore" skill = 1 set_age = 30 traits = { trait = leader_trait_spark_of_genius trait = leader_trait_fortifier } }
+				last_created_leader = {
+					set_is_female = no				
+					set_leader_flag = androidLore
+				}
+			}
+			if = {
+				limit = { fromfrom = { has_leader_flag = androidB4 } }
+				create_leader = { class = general species = fromfrom.species name = "Lore" skill = 1 set_age = 30 traits = { trait = leader_trait_arrested_development trait = leader_trait_defender } }
+				last_created_leader = {
+					set_is_female = no				
+					set_leader_flag = androidB4
+				}
+			}
+			last_created_leader = { save_event_target_as = androidLeader }
+			fromfrom = { kill_leader = { show_notification = no } }
+		}
+	}
+	option = {
+		name = STH_theAndroid_event.11.b #Reject	
+		hidden_effect = { }
+	}
+}
+
+
+###Disassemble
+#Success
+ship_event = {
+	id = STH_theAndroid_event.20
+	title = STH_theAndroid_event.20.name
+	desc = STH_theAndroid_event.20.desc
+	picture = sth_GFX_evt_theAndroid3
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_theAndroid_event.20.a #Activate		
+		hidden_effect = {
+			fromfrom = {
+				switch = {
+					trigger = has_leader_flag
+					androidData = { set_global_flag = data_disassembled }
+					androidLore = { set_global_flag = lore_disassembled }
+					androidB4 = { set_global_flag = b4_disassembled }
+				}
+			}
+		}
+		owner = {
+			add_resource = { engineering_research = 1000 physics_research = 500 society_research = 300 }
+		}
+	}
+}
+
+#Failure
+ship_event = {
+	id = STH_theAndroid_event.21
+	title = STH_theAndroid_event.21.name
+	desc = STH_theAndroid_event.21.desc
+	picture = sth_GFX_evt_theAndroid3
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_theAndroid_event.21.a #Failure
+		hidden_effect = {
+			fromfrom = {
+				switch = {
+					trigger = has_leader_flag
+					androidData = { set_global_flag = data_disassembled }
+					androidLore = { set_global_flag = lore_disassembled }
+					androidB4 = { set_global_flag = b4_disassembled }
+				}
+			}
+		}
+		owner = {
+			add_resource = { engineering_research = 250 physics_research = 125 society_research = 75 }
+		}
+	}
+}
+
+
+#Passive Study
+ship_event = {
+	id = STH_theAndroid_event.30
+	title = STH_theAndroid_event.30.name
+	desc = STH_theAndroid_event.30.desc
+	picture = sth_GFX_evt_theAndroid5
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_theAndroid_event.30.a #Failure
+		hidden_effect = {
+			fromfrom = {
+				switch = {
+					trigger = has_leader_flag
+					androidData = { set_global_flag = data_observed }
+					androidLore = { set_global_flag = lore_observed }
+					androidB4 = { set_global_flag = b4_observed }
+				}
+			}
+			owner = { country_event = { id = STH_theAndroid_event.31 days = 3600 scopes = { from = root.from fromfrom = root.fromfrom } } }
+		}
+		owner = { add_modifier = { modifier = em_android_study } }
+	}
+}
+
+country_event = {
+	id = STH_theAndroid_event.31
+	title = STH_theAndroid_event.31.name
+	desc = STH_theAndroid_event.31.desc
+	picture = sth_GFX_evt_theAndroid5
+	location = Root.Capital_Scope
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_theAndroid_event.31.a #Activate the Android
+		hidden_effect = { country_event = { id = STH_theAndroid_event.32 days = 2 scopes = { from = root.from fromfrom = root.fromfrom } } }
+	}
+	option = {
+		name = STH_theAndroid_event.31.b #Keep the Android in a simulation for another 10 years
+		hidden_effect = { country_event = { id = STH_theAndroid_event.31 days = 3600 scopes = { from = root.from fromfrom = root.fromfrom } } }
+	}
+	option = {
+		name = STH_theAndroid_event.31.c #Keep the Android in a simulation and don't ask again
+		hidden_effect = { }
+	}
+}
+
+#Awakened
+country_event = {
+	id = STH_theAndroid_event.32
+	title = STH_theAndroid_event.32.name
+	desc = STH_theAndroid_event.32.desc
+	picture = sth_GFX_evt_theAndroid3
+	location = Root.Capital_Scope
+	is_triggered_only = yes
+	immediate = { 
+		remove_modifier = em_android_study
+	}
+	option = {
+		name = STH_theAndroid_event.32.a #Activated	
+		hidden_effect = {
+			country_event = { id = STH_theAndroid_event.11 days = 1800 scopes = { from = root.from fromfrom = root.fromfrom } }
+		}
+	}
+}
+
+
+
+#Anomaly Failure
+ship_event = {
+	id = STH_theAndroid_event.1000
+	title = STH_theAndroid_event.1000.name
+	desc = {
+		trigger = { owner = { is_species_class = FED } }
+		text = STH_theAndroid_event.1000.desc_human
+	}
+	desc = {
+		trigger = { any_country = { is_species_class = FED has_communications = root.owner } }
+		text = STH_theAndroid_event.1000.desc_known_human
+	}
+	desc = {
+		trigger = { 
+			NOR = {
+				any_country = { is_species_class = FED has_communications = root.owner }
+				owner = { is_species_class = FED }
+			}
+		}
+		text = STH_theAndroid_event.1000.desc_unknown_human
+	}
+	picture = sth_GFX_evt_theAndroid2
+	location = FROM
+	is_triggered_only = yes
+	immediate = { 
+		owner = {
+			create_species = { name = "Android" class = ADD portrait = Data_01 traits = { trait = trait_android trait = trait_robot_custom_made } }
+			random_list = {
+				70 = {
+					create_leader = { class = scientist species = last_created name = "Data" skill = 1 set_age = 1 traits = { trait = leader_trait_spark_of_genius trait = leader_trait_cataloger } }
+					last_created_leader = { 
+						set_is_female = no  
+						set_leader_flag = androidData 
+						save_event_target_as = androidLeader 
+						exile_leader_as = androidLeader 
+					}
+					set_global_flag = data_disassembled
+				}
+				10 = {
+					create_leader = { class = governor species = last_created name = "Lore" skill = 1 set_age = 1 traits = { trait = leader_trait_spark_of_genius trait = leader_trait_fortifier } }
+					last_created_leader = { 
+						set_is_female = no  
+						set_leader_flag = androidLore 
+						save_event_target_as = androidLeader 
+						exile_leader_as = androidLeader 
+					}
+					set_global_flag = lore_disassembled
+				}
+				10 = {
+					create_leader = { class = general species = last_created name = "B4" skill = 1 set_age = 1 traits = { trait = leader_trait_arrested_development trait = leader_trait_defender } }
+					last_created_leader = { 
+						set_is_female = no  
+						set_leader_flag = androidB4 
+						save_event_target_as = androidLeader 
+						exile_leader_as = androidLeader 
+					}
+					set_global_flag = b4_disassembled
+				}
+			}
+		}	
+	}
+	option = {
+		name = STH_theAndroid_event.1000.a #Failure
+		hidden_effect = { }
+		owner = {
+			add_resource = { engineering_research = 50 physics_research = 25 society_research = 15 }
+		}
+	}
+}

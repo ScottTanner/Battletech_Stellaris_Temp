@@ -1,0 +1,230 @@
+#################################
+#
+# Federation Diplomatic Events
+# by Walshicus and Shaggo
+#
+#################################
+
+
+namespace = theFederation
+
+#Federation Formation Question
+country_event = {
+	id = theFederation.1100
+	title = "theFederation.1100.name"
+	desc = "theFederation.1100.desc"
+	picture = sth_GFX_evt_federationSigned
+	is_triggered_only = yes
+	immediate = { 
+		save_event_target_as = isuQuestionCountry 
+		random_country = {
+			limit = { has_country_flag = isu_leader }
+			save_event_target_as = isuLeader
+		}
+	}
+	option = {
+		name = theFederation.1100.a
+		ai_chance = { 
+			factor = 10
+			modifier = {
+				factor = 100
+				OR = { 
+					has_country_flag = "andorian_empire"
+					has_country_flag = "tellarian_technocracy"
+					has_country_flag = "united_earth"
+					has_country_flag = "united_human_remnant"
+                	has_country_flag = "denobulan_unity"
+                	has_country_flag = "rigellian_consortium"
+				}
+			}
+		}
+		
+		hidden_effect = { 
+			set_country_flag = wants_isu
+			every_country = {
+				limit = { is_in_federation_with = root NOT = { is_same_value = root } }
+				country_event = { id = theFederation.1101 }
+			}
+		}
+	}
+	option = {
+		name = theFederation.1100.b
+		ai_chance = { factor = 10 }
+		hidden_effect = {
+			set_country_flag = not_wants_isu
+			every_country = {
+				limit = { is_in_federation_with = root NOT = { is_same_value = root } }
+				country_event = { id = theFederation.1102 }
+			}
+		}
+	}
+}
+country_event = {
+	id = theFederation.1101
+	title = "theFederation.1101.name"
+	desc = "theFederation.1101.desc"
+	picture = sth_GFX_evt_federationSigned
+	is_triggered_only = yes
+	option = {
+		name = theFederation.1101.a
+	}
+}
+country_event = {
+	id = theFederation.1102
+	title = "theFederation.1102.name"
+	desc = "theFederation.1102.desc"
+	picture = sth_GFX_evt_federationSigned
+	is_triggered_only = yes
+	option = {
+		name = theFederation.1102.a
+	}
+}
+
+country_event = {
+	id = theFederation.1103
+	title = "theFederation.1103.name"
+	desc = "theFederation.1103.desc"
+	picture = sth_GFX_evt_federationSigned
+	is_triggered_only = yes
+	immediate = { 
+		random_country = {
+			limit = { has_country_flag = isu_leader }
+			save_event_target_as = isuLeader
+		}
+	}
+	option = {
+		name = theFederation.1103.a
+	}
+}
+
+#ISU
+country_event = {
+	id = theFederation.1104
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = {
+				is_in_federation_with = root
+				NOT = { is_same_value = root }
+				NOT = { has_country_flag = considering_isu }
+			}
+			set_country_flag = considering_isu
+			country_event = { id = theFederation.1100 days = 14 random = 7 }
+		}
+		
+		if = {
+			limit = {
+				any_country = {
+					is_in_federation_with = root
+					NOR = {
+						has_country_flag = wants_isu
+						has_country_flag = not_wants_isu
+					}
+				}
+			}
+			country_event = { id = theFederation.1104 days = 28 } 
+		}
+		else = {
+            country_event = { id = theFederation.1110 } 	
+		}
+	}
+}
+
+
+country_event = {
+	id = theFederation.1105
+	title = "theFederation.1105.name"
+	desc = "theFederation.1105.desc"
+	picture = sth_GFX_evt_federationSigned
+	is_triggered_only = yes
+	immediate = { 
+		random_country = {
+			limit = { has_country_flag = isu_leader }
+			save_event_target_as = isuLeader
+		}
+	}
+	option = {
+		name = theFederation.1105.a
+	}
+}
+
+
+#Federation Detail
+country_event = {
+	id = theFederation.1106
+	title = "theFederation.1106.name"
+	desc = { text = theFederation.1106.desc }
+	picture = sth_GFX_evt_federationSigned
+	is_triggered_only = yes
+	immediate = {
+		add_modifier = { modifier = em_federation_formed days = 3650 }
+		every_country = {
+			remove_country_flag = considering_isu
+			remove_country_flag = wants_isu
+			remove_country_flag = not_wants_isu
+			remove_country_flag = isu_leader
+		}
+	}
+	option = {
+		name = theFederation.1106.a
+	}
+}
+
+
+#ISU Signed - Andoria (was 5)
+country_event = {
+	id = theFederation.1110
+	title = "theFederation.1110.name"
+	desc = "theFederation.1110.desc"
+	picture = sth_GFX_evt_federationSigned
+	show_sound = event_anthemUFP
+	is_triggered_only = yes
+	immediate = {
+		save_global_event_target_as = andoria
+	}
+	option = {
+		name = theFederation.1110.a
+		set_empire_name = "Interstellar Union"
+		change_country_flag = {
+			icon = { category="trek" file="InterstellarUnion.dds" }
+			background = { category = "backgrounds" file = "circle_wide.dds" }
+			colors = { "customcolor875" "customcolor1535" "null" "null" }
+		}
+		if = {
+			limit = { has_authority = auth_democratic }
+			change_government = { authority = auth_oligarchic }
+			change_government = { authority = auth_democratic }
+		}
+		else = {
+			change_government = { authority = auth_democratic }
+			change_government = { authority = auth_oligarchic }
+		}
+		change_government = {
+			civics = { civic = civic_interstellar_guard civic = civic_meritocracy }
+		}
+		set_country_flag = interstellar_union
+		hidden_effect = { 			
+			country_event = { id = theFederation.1106 days = 3 } 
+		}
+	}
+	after = {
+		hidden_effect = {
+			every_country = {
+				limit = { has_country_flag = wants_isu is_ai = yes NOT = { has_country_flag = isu_leader } }
+				set_country_flag = interstellar_union_member
+				federation_accession = yes #has ISU condition
+			}
+			every_country = {
+				limit = { has_country_flag = wants_isu is_ai = no NOT = { has_country_flag = isu_leader } }
+				set_country_flag = interstellar_union_member
+				federation_accession_human = yes #has ISU condition
+				country_event = { id = theFederation.1103 }
+			}
+			every_country = {
+				limit = { has_country_flag = not_wants_isu is_ai = no NOT = { has_country_flag = isu_leader } }
+				country_event = { id = theFederation.1105 }
+			}
+		}
+	}
+}

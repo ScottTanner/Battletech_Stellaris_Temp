@@ -1,0 +1,9 @@
+############################
+#
+# Marauder Events
+#
+# Written by Henrik Eklund
+#
+############################
+
+namespace = marauder

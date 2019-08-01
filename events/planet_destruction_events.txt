@@ -1,0 +1,20 @@
+namespace = planet_destruction
+
+#planet_event = {
+#	id = planet_destruction.1
+#	is_triggered_only = yes
+#	hide_window = yes
+#
+#	immediate = {
+#		remove_planet = yes
+#	}
+#}
+
+# Add static war exhaustion for these planet destruction events with: 
+# add_static_war_exhaustion = {
+#				attacker = <country>		 				# attacker in this battle
+#				location = <planet>							# location for battle
+#				value_for_planet_destruction = <0.0-1.0>	# scale amount of WE added to this battle
+#			}
+
+# Cracked

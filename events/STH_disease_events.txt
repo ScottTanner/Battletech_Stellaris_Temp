@@ -1,0 +1,953 @@
+#Disease Events
+#Russ 
+#Version 1.1 (03.07.19)
+
+namespace = STH_disease
+
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+country_event = {
+	id = STH_disease.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { }
+    immediate = {
+		#log = "Disease 1 Start - [This.GetName] | [GetDate]"
+		from = {
+            random_list = {
+                99 = { }
+                1 = {
+                    if = {
+                        limit = { species = { is_species_class = VUL } }
+                        set_leader_flag = bendiiSyndrome
+                        root = { country_event = { id = STH_disease.100 days = 42000 random = 7200 scopes = { from = root.from } } }
+                    }
+                    else_if = {
+                        limit = { species = { is_species_class = FER } }
+                        set_leader_flag = dorekSyndrome
+                        root = { country_event = { id = STH_disease.100 days = 36000 random = 7200 scopes = { from = root.from } } }
+                    }
+                    else_if = {
+                        limit = { species = { is_species_class = CAR } }
+                        set_leader_flag = yarimFelSyndrome
+                        root = { country_event = { id = STH_disease.100 days = 36000 random = 7200 scopes = { from = root.from } } }
+                    }
+                    else_if = {
+                        limit = { species = { is_species_class = HUM } }
+                        set_leader_flag = irumodicSyndrome
+                        root = { country_event = { id = STH_disease.100 days = 14400 random = 720 scopes = { from = root.from } } }
+                    }
+                }
+            }
+        }
+	}
+	after = {
+		#log = "Disease 1 End - [This.GetName] | [GetDate]"
+	}
+}
+
+
+country_event = {
+	id = STH_disease.100
+	title = STH_disease.100.name
+	#IMAGE
+    picture = { trigger = { from = { has_leader_flag = bendiiSyndrome } } picture = sth_GFX_evt_federationVulcan }
+    picture = { trigger = { from = { has_leader_flag = dorekSyndrome } } picture = sth_GFX_evt_ferenginar }
+    picture = { trigger = { from = { has_leader_flag = yarimFelSyndrome } } picture = sth_GFX_evt_cardassiaPrime }
+    picture = { trigger = { from = { has_leader_flag = irumodicSyndrome } } picture = sth_GFX_evt_starfleetDoctor }
+	#DESC
+    desc = { exclusive_trigger = { from = { has_leader_flag = bendiiSyndrome } } text = STH_disease.100.desc.bendii }
+    desc = { exclusive_trigger = { has_country_flag = ferengi_alliance from = { has_leader_flag = dorekSyndrome } } text = STH_disease.100.desc.dorek_fer }
+    desc = { exclusive_trigger = { NOT = { has_country_flag = ferengi_alliance } from = { has_leader_flag = dorekSyndrome } } text = STH_disease.100.desc.dorek_all }
+    desc = { exclusive_trigger = { has_country_flag = cardassian_union from = { has_leader_flag = yarimFelSyndrome } } text = STH_disease.100.desc.yarim_car }
+    desc = { exclusive_trigger = { from = { has_leader_flag = irumodicSyndrome } } text = STH_disease.100.desc.irumodic }
+    is_triggered_only = yes
+    trigger = { 
+        exists = from 
+        NOT = { any_pool_leader = { is_same_value = root.from } }
+        is_assimilator = no
+        is_infester = no
+    }
+	immediate = {
+		#log = "Disease 100 Start - [This.GetName] | [GetDate]"
+	}
+    option = {
+        name = STH_disease.100.bendii
+        exclusive_trigger = { from = { has_leader_flag = bendiiSyndrome } }
+        from = { add_trait = leader_trait_bendii_syndrome }
+    }
+    option = {
+        name = STH_disease.100.dorek_fer
+        exclusive_trigger = { has_country_flag = ferengi_alliance from = { has_leader_flag = dorekSyndrome } }
+        add_resource = { energy = 50 }
+        from = { kill_leader = { show_notification = yes } }
+    }
+    option = {
+        name = STH_disease.100.dorek_all
+        exclusive_trigger = { NOT = { has_country_flag = ferengi_alliance } from = { has_leader_flag = dorekSyndrome } }
+        from = { kill_leader = { show_notification = yes } }
+    }
+    option = {
+        name = STH_disease.100.yarim_car
+        exclusive_trigger = { has_country_flag = cardassian_union from = { has_leader_flag = yarimFelSyndrome } }
+        from = { add_trait = leader_trait_yarim_fel_syndrome }
+    }
+    option = {
+        name = STH_disease.100.yarim_all
+        exclusive_trigger = { NOT = { has_country_flag = cardassian_union } from = { has_leader_flag = yarimFelSyndrome } }
+        from = { add_trait = leader_trait_yarim_fel_syndrome }
+    }
+    option = {
+        name = STH_disease.100.irumodic
+        exclusive_trigger = { from = { has_leader_flag = irumodicSyndrome } }
+        hidden_effect = { country_event = { id = STH_disease.101 days = 1440 random = 720 scopes = { from = root.from } } }
+    }
+    option = { name = STH_disease.100.z }
+	after = {
+		#log = "Disease 100 End - [This.GetName] | [GetDate]"
+	}
+}
+
+country_event = {
+	id = STH_disease.101
+	title = STH_disease.101.name
+	#IMAGE
+    picture = { trigger = { from = { has_leader_flag = irumodicSyndrome } } picture = sth_GFX_evt_starfleetDoctor }
+	#DESC
+    desc = { exclusive_trigger = { from = { has_leader_flag = irumodicSyndrome } } text = STH_disease.101.desc.irumodic }
+    is_triggered_only = yes
+    trigger = { 
+        exists = from 
+        NOT = { any_pool_leader = { is_same_value = root.from } }
+        is_assimilator = no
+        is_infester = no
+    }
+	immediate = {
+		#log = "Disease 101 Start - [This.GetName] | [GetDate]"
+	}
+    option = {
+        name = STH_disease.101.irumodic
+        exclusive_trigger = { from = { has_leader_flag = irumodicSyndrome } }
+        from = { add_trait = leader_trait_irumodic_syndrome }
+        hidden_effect = { country_event = { id = STH_disease.102 days = 1440 random = 720 scopes = { from = root.from } } }
+    }
+    option = { name = STH_disease.101.z }
+	after = {
+		#log = "Disease 101 End - [This.GetName] | [GetDate]"
+	}
+}
+    
+country_event = {
+	id = STH_disease.102
+	title = STH_disease.102.name
+	#IMAGE
+    picture = { trigger = { from = { has_leader_flag = irumodicSyndrome } } picture = sth_GFX_evt_starfleetDoctor }
+	#DESC
+    desc = { exclusive_trigger = { from = { has_leader_flag = irumodicSyndrome } } text = STH_disease.102.desc.irumodic }
+    is_triggered_only = yes
+    trigger = { 
+        exists = from 
+        NOT = { any_pool_leader = { is_same_value = root.from } }
+        is_assimilator = no
+        is_infester = no
+    }
+	immediate = {
+		#log = "Disease 102 Start - [This.GetName] | [GetDate]"
+	}
+    option = {
+        name = STH_disease.102.irumodic
+        exclusive_trigger = { from = { has_leader_flag = irumodicSyndrome } }
+        from = { unassign_leader = this recruitable = no }
+    }
+    option = { name = STH_disease.102.z }
+	after = {
+		#log = "Disease 102 End - [This.GetName] | [GetDate]"
+	}
+}
+
+###Plague - Russ (03/07/2019)
+country_event = {
+	id = STH_disease.1000
+	hide_window = yes
+	trigger = { 
+		has_normal_events = yes
+		is_normal_country = yes
+		is_machine_empire = no
+		any_planet_within_border = {
+			solar_system = { NOT = { any_system_planet = { is_same_value = root.capital_scope } } }
+			is_colony = yes
+            num_pops > 1
+			NOT = { has_planet_flag = homeworld }
+			NOT = { any_owned_pop = { has_plague = yes } }
+		}
+	}
+	mean_time_to_happen = { years = 10 }
+	immediate = {
+		random_planet_within_border = {
+			limit = { 
+				solar_system = { NOT = { any_system_planet = { is_same_value = root.capital_scope } } } ###REMOVE COMMENT
+				is_colony = yes
+		    	NOT = { has_planet_flag = homeworld }
+				NOT = { any_owned_pop = { has_plague = yes } }
+			}
+			save_event_target_as = plagueLocation
+            random_owned_pop = {
+                limit = { is_robot_pop = no }
+                save_event_target_as = plaguePop
+                random_list = {
+                    10 = { 
+						modifier = { factor = 0 species = { is_biological = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -5 root = { has_technology = tech_tanerian_plague_1 } }
+								modifier = { add = -10 root = { has_technology = tech_tanerian_plague_2 } }
+								add_modifier = { modifier = po_tanerian_plague years = 5 }
+								root = { country_event = { id = STH_disease.1501 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } } 
+							}
+							1 = {}
+						}
+					}
+                    10 = { 
+						modifier = { factor = 0 species = { is_biological = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -5 root = { has_technology = tech_laurentian_plague_1 } }
+								modifier = { add = -10 root = { has_technology = tech_laurentian_plague_2 } }
+								add_modifier = { modifier = po_laurentian_plague years = 5 } 
+								root = { country_event = { id = STH_disease.1502 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+                    10 = { 
+						modifier = { factor = 0 species = { is_biological = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -5 root = { has_technology = tech_seripian_flu_1 } }
+								modifier = { add = -10 root = { has_technology = tech_seripian_flu_2 } }
+								add_modifier = { modifier = po_seripian_flu years = 5 } 
+								root = { country_event = { id = STH_disease.1503 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+                    10 = { 
+						modifier = { factor = 0 species = { is_biological = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -5 root = { has_technology = tech_centauran_flu_1 } }
+								modifier = { add = -10 root = { has_technology = tech_centauran_flu_2 } }
+								add_modifier = { modifier = po_centauran_flu years = 5 } 
+								root = { country_event = { id = STH_disease.1504 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+                    10 = { 
+						modifier = { factor = 0 species = { is_biological = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -5 root = { has_technology = tech_ynorian_pox_1 } }
+								modifier = { add = -10 root = { has_technology = tech_ynorian_pox_2 } }
+								add_modifier = { modifier = po_ynorian_pox years = 5 } 
+								root = { country_event = { id = STH_disease.1505 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+                    10 = { 
+						modifier = { factor = 0 species = { is_biological = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -5 root = { has_technology = tech_kentaran_pox_1 } }
+								modifier = { add = -10 root = { has_technology = tech_kentaran_pox_2 } }
+								add_modifier = { modifier = po_kentaran_pox years = 5 } 
+								root = { country_event = { id = STH_disease.1506 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+					##Crystalline + Silicoid
+					8 = { 
+						modifier = { factor = 0 species = { is_crystalline = no is_silicoid = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -4 root = { has_technology = tech_rhombic_paguphage_1 } }
+								modifier = { add = -8 root = { has_technology = tech_rhombic_paguphage_2 } }
+								add_modifier = { modifier = po_rhombic_paguphage years = 5 } 
+								root = { country_event = { id = STH_disease.1507 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+					8 = { 
+						modifier = { factor = 0 species = { is_crystalline = no is_silicoid = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -4 root = { has_technology = tech_monoclinic_paguphage_1 } }
+								modifier = { add = -8 root = { has_technology = tech_monoclinic_paguphage_2 } }
+								add_modifier = { modifier = po_monoclinic_paguphage years = 5 } 
+								root = { country_event = { id = STH_disease.1508 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+					8 = { 
+						modifier = { factor = 0 species = { is_crystalline = no is_silicoid = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -4 root = { has_technology = tech_arxolite_corruption_1 } }
+								modifier = { add = -8 root = { has_technology = tech_arxolite_corruption_2 } }
+								add_modifier = { modifier = po_arxolite_corruption years = 5 } 
+								root = { country_event = { id = STH_disease.1509 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+					8 = { 
+						modifier = { factor = 0 species = { is_crystalline = no is_silicoid = no } }
+						random_list = {
+							10 = { 
+								modifier = { add = -4 root = { has_technology = tech_manxilite_corruption_1 } }
+								modifier = { add = -8 root = { has_technology = tech_manxilite_corruption_2 } }
+								add_modifier = { modifier = po_manxilite_corruption years = 5 } 
+								root = { country_event = { id = STH_disease.1510 scopes = { from = event_target:plaguePop fromfrom = event_target:plagueLocation } } }
+							}
+							1 = {}
+						}
+					}
+                }
+            }
+		}
+	}
+}
+###Notification
+country_event = {
+	id = STH_disease.1001
+	title = STH_disease.1001.name
+	desc = STH_disease.1001.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+		#log = "Disease 1001 Start - [This.GetName] | [GetDate]"
+		from = { save_event_target_as = diseasePop }
+		fromfrom = { save_event_target_as = diseaseLocation }
+	}
+	option = {
+		name = STH_disease.1001.a #Accept
+		enable_special_project = { name = DISEASE_1_PROJECT owner = root location = fromfrom }
+	}
+	after = {
+		#log = "Disease 1001 End - [This.GetName] | [GetDate]"
+	}
+}
+
+###Share Disease Cure Gatekeeper
+country_event = {
+	id = STH_disease.1010
+	title = STH_disease.1010.name
+	desc = { trigger = { last_increased_tech = tech_tanerian_plague_1 } text = STH_disease.1010.desc.tanerian_plague_1 }
+	desc = { trigger = { last_increased_tech = tech_tanerian_plague_2 } text = STH_disease.1010.desc.tanerian_plague_2 }
+	desc = { trigger = { last_increased_tech = tech_laurentian_plague_1 } text = STH_disease.1010.desc.laurentian_plague_1 }
+	desc = { trigger = { last_increased_tech = tech_laurentian_plague_2 } text = STH_disease.1010.desc.laurentian_plague_2 }
+	desc = { trigger = { last_increased_tech = tech_seripian_flu_1 } text = STH_disease.1010.desc.seripian_flu_1 }
+	desc = { trigger = { last_increased_tech = tech_seripian_flu_2 } text = STH_disease.1010.desc.seripian_flu_2 }
+	desc = { trigger = { last_increased_tech = tech_centauran_flu_1 } text = STH_disease.1010.desc.centauran_flu_1 }
+	desc = { trigger = { last_increased_tech = tech_centauran_flu_2 } text = STH_disease.1010.desc.centauran_flu_2 }
+	desc = { trigger = { last_increased_tech = tech_ynorian_pox_1 } text = STH_disease.1010.desc.ynorian_pox_1 }
+	desc = { trigger = { last_increased_tech = tech_ynorian_pox_2 } text = STH_disease.1010.desc.ynorian_pox_2 }
+	desc = { trigger = { last_increased_tech = tech_kentaran_pox_1 } text = STH_disease.1010.desc.kentaran_pox_1 }
+	desc = { trigger = { last_increased_tech = tech_kentaran_pox_2 } text = STH_disease.1010.desc.kentaran_pox_2 }
+	desc = { trigger = { last_increased_tech = tech_rhombic_paguphage_1 } text = STH_disease.1010.desc.rhombic_paguphage_1 }
+	desc = { trigger = { last_increased_tech = tech_rhombic_paguphage_2 } text = STH_disease.1010.desc.rhombic_paguphage_2 }
+	desc = { trigger = { last_increased_tech = tech_monoclinic_paguphage_1 } text = STH_disease.1010.desc.monoclinic_paguphage_1 }
+	desc = { trigger = { last_increased_tech = tech_monoclinic_paguphage_2 } text = STH_disease.1010.desc.monoclinic_paguphage_2 }
+	desc = { trigger = { last_increased_tech = tech_arxolite_corruption_1 } text = STH_disease.1010.desc.arxolite_corruption_1 }
+	desc = { trigger = { last_increased_tech = tech_arxolite_corruption_2 } text = STH_disease.1010.desc.arxolite_corruption_2 }
+	desc = { trigger = { last_increased_tech = tech_manxilite_corruption_1 } text = STH_disease.1010.desc.manxilite_corruption_1 }
+	desc = { trigger = { last_increased_tech = tech_manxilite_corruption_2 } text = STH_disease.1010.desc.manxilite_corruption_2 }
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			last_increased_tech = tech_tanerian_plague_1 
+			last_increased_tech = tech_tanerian_plague_2 
+			last_increased_tech = tech_laurentian_plague_1 
+			last_increased_tech = tech_laurentian_plague_2
+			last_increased_tech = tech_seripian_flu_1
+			last_increased_tech = tech_seripian_flu_2
+			last_increased_tech = tech_centauran_flu_1
+			last_increased_tech = tech_centauran_flu_2
+			last_increased_tech = tech_ynorian_pox_1
+			last_increased_tech = tech_ynorian_pox_2
+			last_increased_tech = tech_kentaran_pox_1
+			last_increased_tech = tech_kentaran_pox_2
+			last_increased_tech = tech_rhombic_paguphage_1
+			last_increased_tech = tech_rhombic_paguphage_2
+			last_increased_tech = tech_monoclinic_paguphage_1
+			last_increased_tech = tech_monoclinic_paguphage_2
+			last_increased_tech = tech_arxolite_corruption_1
+			last_increased_tech = tech_arxolite_corruption_2
+			last_increased_tech = tech_manxilite_corruption_1
+			last_increased_tech = tech_manxilite_corruption_2
+		}
+	}
+	immediate = {
+		#log = "Disease 1010 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1010.a #Share with all races
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = { 
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+		#log = "Disease 1010 Option A - [This.GetName] | [GetDate]"
+		hidden_effect = {
+			every_relation = {
+				limit = { 
+					has_normal_events = yes
+					is_normal_country = yes
+					OR = {
+						AND = {
+							any_owned_pop_species = { is_biological = yes }
+							OR = {
+								last_increased_tech = tech_tanerian_plague_1 
+								last_increased_tech = tech_tanerian_plague_2 
+								last_increased_tech = tech_laurentian_plague_1 
+								last_increased_tech = tech_laurentian_plague_2
+								last_increased_tech = tech_seripian_flu_1
+								last_increased_tech = tech_seripian_flu_2
+								last_increased_tech = tech_centauran_flu_1
+								last_increased_tech = tech_centauran_flu_2
+								last_increased_tech = tech_ynorian_pox_1
+								last_increased_tech = tech_ynorian_pox_2
+								last_increased_tech = tech_kentaran_pox_1
+								last_increased_tech = tech_kentaran_pox_2
+							}
+						}
+						AND = {
+							any_owned_pop_species = { OR = { is_crystalline = yes is_silicoid = yes } }
+							OR = {
+								last_increased_tech = tech_rhombic_paguphage_1
+								last_increased_tech = tech_rhombic_paguphage_2
+								last_increased_tech = tech_monoclinic_paguphage_1
+								last_increased_tech = tech_monoclinic_paguphage_2
+								last_increased_tech = tech_arxolite_corruption_1
+								last_increased_tech = tech_arxolite_corruption_2
+								last_increased_tech = tech_manxilite_corruption_1
+								last_increased_tech = tech_manxilite_corruption_2
+							}
+						}
+					}
+				}
+				root_share_disease_tech = yes
+			}
+		}
+	}
+	option = {
+		name = STH_disease.1010.b #Share with friendly races
+		ai_chance = { 
+			factor = 1
+		}
+		#log = "Disease 1010 Option B - [This.GetName] | [GetDate]"
+		hidden_effect = {
+			every_relation = {
+				limit = { 
+					has_normal_events = yes
+					is_normal_country = yes
+					OR = {
+						AND = {
+							any_owned_pop_species = { is_biological = yes }
+							OR = {
+								last_increased_tech = tech_tanerian_plague_1 
+								last_increased_tech = tech_tanerian_plague_2 
+								last_increased_tech = tech_laurentian_plague_1 
+								last_increased_tech = tech_laurentian_plague_2
+								last_increased_tech = tech_seripian_flu_1
+								last_increased_tech = tech_seripian_flu_2
+								last_increased_tech = tech_centauran_flu_1
+								last_increased_tech = tech_centauran_flu_2
+								last_increased_tech = tech_ynorian_pox_1
+								last_increased_tech = tech_ynorian_pox_2
+								last_increased_tech = tech_kentaran_pox_1
+								last_increased_tech = tech_kentaran_pox_2
+							}
+						}
+						AND = {
+							any_owned_pop_species = { OR = { is_crystalline = yes is_silicoid = yes } }
+							OR = {
+								last_increased_tech = tech_rhombic_paguphage_1
+								last_increased_tech = tech_rhombic_paguphage_2
+								last_increased_tech = tech_monoclinic_paguphage_1
+								last_increased_tech = tech_monoclinic_paguphage_2
+								last_increased_tech = tech_arxolite_corruption_1
+								last_increased_tech = tech_arxolite_corruption_2
+								last_increased_tech = tech_manxilite_corruption_1
+								last_increased_tech = tech_manxilite_corruption_2
+							}
+						}
+					}
+					their_opinion = { who = root value > 0 } 
+				}
+				root_share_disease_tech = yes
+			}
+		}
+	}
+	option = {
+		name = STH_disease.1010.c #Keep to self
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 10
+				OR = { 
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		#log = "Disease 1010 Option C - [This.GetName] | [GetDate]"
+	}
+	after = {
+		#log = "Disease 1010 End - [This.GetName] | [GetDate]"
+	}
+}
+
+country_event = {
+	id = STH_disease.1011
+	title = STH_disease.1011.name #Tanerian
+	desc = STH_disease.1011.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1011 Start - [This.GetName] | [GetDate] | [From.GetName]"
+	}
+	option = {
+		name = STH_disease.1011.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1011 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1012
+	title = STH_disease.1012.name #Laurentian
+	desc = STH_disease.1012.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1012 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1012.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1012 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1013
+	title = STH_disease.1013.name #Seripian
+	desc = STH_disease.1013.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1013 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1013.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1013 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1014
+	title = STH_disease.1014.name #Centauran
+	desc = STH_disease.1014.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1014 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1014.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1014 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1015
+	title = STH_disease.1015.name #Ynorian
+	desc = STH_disease.1015.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1015 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1015.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1015 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1016
+	title = STH_disease.1016.name #Kentaran
+	desc = STH_disease.1016.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1016 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1016.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1016 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1017
+	title = STH_disease.1017.name #Rhombic
+	desc = STH_disease.1017.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1016 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1017.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1016 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1018
+	title = STH_disease.1018.name #Monoclinic
+	desc = STH_disease.1018.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1016 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1018.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1016 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1019
+	title = STH_disease.1019.name #Arxolite
+	desc = STH_disease.1019.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1016 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1019.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1016 End - [This.GetName] | [GetDate]"
+	}
+}
+country_event = {
+	id = STH_disease.1020
+	title = STH_disease.1020.name #Manxilite
+	desc = STH_disease.1020.desc
+	picture = sth_GFX_evt_virus1
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1016 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1020.a #Good
+		add_opinion_modifier = { modifier = opinion_small_boost who = from }
+	}
+	after = {
+		#log = "Disease 1016 End - [This.GetName] | [GetDate]"
+	}
+}
+
+
+#Pop dies
+ship_event = {
+	id = STH_disease.1100
+	title = STH_disease.1100.name
+	desc = STH_disease.1100.desc
+	picture = sth_GFX_evt_virus1
+	location = from
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1100 Start - [This.Owner.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1100.a #Accept
+        fromfrom = { kill_pop = yes }
+	}
+	after = {
+		#log = "Disease 1100 End - [This.Owner.GetName] | [GetDate]"
+	}
+}
+
+#Pop dies due to neglect
+country_event = {
+	id = STH_disease.1110
+	title = STH_disease.1110.name
+	desc = STH_disease.1110.desc
+	picture = sth_GFX_evt_virus1
+	location = from
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1110 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1110.a #Accept
+        fromfrom = { kill_pop = yes }
+        from = { add_modifier = { modifier = pl_neglected years = 5 } }
+	}
+	after = {
+		#log = "Disease 1110 End - [This.GetName] | [GetDate]"
+	}
+}
+
+#Pop dies due to neglect - Infects another
+country_event = {
+	id = STH_disease.1120
+	title = STH_disease.1120.name
+	desc = STH_disease.1120.desc
+	picture = sth_GFX_evt_virus1
+	location = from
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1120 Start - [This.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1120.a #Accept
+        from = { add_modifier = { modifier = pl_neglected years = 5 } }
+        fromfrom = { widen_plagues = yes kill_pop = yes }
+        enable_special_project = { name = DISEASE_2_PROJECT owner = root location = root.from }
+	}
+	after = {
+		#log = "Disease 1120 End - [This.GetName] | [GetDate]"
+	}
+}
+
+#Pop cured
+ship_event = {
+	id = STH_disease.1200
+	title = STH_disease.1200.name
+	desc = STH_disease.1200.desc
+	picture = sth_GFX_evt_virus1
+	location = from
+	is_triggered_only = yes
+	immediate = {
+		#log = "Disease 1200 Start - [This.Owner.GetName] | [GetDate]"
+	}
+	option = {
+		name = STH_disease.1200.a #Accept
+        hidden_effect = {
+            from ={
+                every_owned_pop = { remove_plagues = yes }
+            }
+        }
+        owner = { add_monthly_resource_mult = { resource = unity value = @tier3unityreward min = @tier3unitymin max = @tier3unitymax }  }
+	}
+	after = {
+		#log = "Disease 1200 End - [This.Owner.GetName] | [GetDate]"
+	}
+}
+
+### Notifications for modified disease 1000 - Russ (03/07/2019
+###Notification - tanerian_plague
+country_event = {
+	id = STH_disease.1501
+	title = STH_disease.1501.name
+	desc = STH_disease.1501.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1501.a #Accept
+		enable_special_project = { name = DISEASE_TP_1_PROJECT owner = root.owner location = fromfrom }
+	}
+}	
+###Notification - laurentian_plague
+country_event = {
+	id = STH_disease.1502
+	title = STH_disease.1502.name
+	desc = STH_disease.1502.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1502.a #Accept
+		enable_special_project = { name = DISEASE_LP_1_PROJECT owner = root.owner location = fromfrom }
+	}
+}	
+###Notification - seripian_flu
+country_event = {
+	id = STH_disease.1503
+	title = STH_disease.1503.name
+	desc = STH_disease.1503.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1503.a #Accept
+		enable_special_project = { name = DISEASE_SF_1_PROJECT owner = root.owner location = fromfrom }
+	}
+}	
+###Notification - centauran_flu
+country_event = {
+	id = STH_disease.1504
+	title = STH_disease.1504.name
+	desc = STH_disease.1504.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1504.a #Accept
+		enable_special_project = { name = DISEASE_CF_1_PROJECT owner = root.owner location = fromfrom }	
+	}
+}
+###Notification - ynorian_pox
+country_event = {
+	id = STH_disease.1505
+	title = STH_disease.1505.name
+	desc = STH_disease.1505.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1505.a #Accept
+		enable_special_project = { name = DISEASE_YP_1_PROJECT owner = root.owner location = fromfrom }	
+	}
+}
+###Notification - kentaran_pox
+country_event = {
+	id = STH_disease.1506
+	title = STH_disease.1506.name
+	desc = STH_disease.1506.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1506.a #Accept
+		enable_special_project = { name = DISEASE_KP_1_PROJECT owner = root.owner location = fromfrom }	
+	}
+}
+###Notification - rhombic_paguphage
+country_event = {
+	id = STH_disease.1507
+	title = STH_disease.1507.name
+	desc = STH_disease.1507.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1507.a #Accept
+		enable_special_project = { name = DISEASE_RP_1_PROJECT owner = root.owner location = fromfrom }	
+	}
+}
+###Notification - monoclinic_paguphage
+country_event = {
+	id = STH_disease.1508
+	title = STH_disease.1508.name
+	desc = STH_disease.1508.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1508.a #Accept
+		enable_special_project = { name = DISEASE_MP_1_PROJECT owner = root.owner location = fromfrom }	
+	}
+}
+###Notification - arxolite_corruption
+country_event = {
+	id = STH_disease.1509
+	title = STH_disease.1509.name
+	desc = STH_disease.1509.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1509.a #Accept
+		enable_special_project = { name = DISEASE_AC_1_PROJECT owner = root.owner location = fromfrom }	
+	}
+}
+###Notification - manxilite_corruption
+country_event = {
+	id = STH_disease.1510
+	title = STH_disease.1510.name
+	desc = STH_disease.1510.desc
+	picture = sth_GFX_evt_virus1
+	location = fromfrom
+	trackable = yes
+	is_triggered_only = yes
+	immediate = { 
+				from = { save_event_target_as = plaguePop }
+				fromfrom = { save_event_target_as = plagueLocation }}
+					option = {
+		name = STH_disease.1510.a #Accept
+		enable_special_project = { name = DISEASE_MC_1_PROJECT owner = root.owner location = fromfrom }	
+	}
+}

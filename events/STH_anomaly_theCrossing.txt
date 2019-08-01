@@ -1,0 +1,411 @@
+############################
+#
+# The Crossing Events
+#
+# Written by Walshicus
+#
+############################
+
+namespace = STH_theCrossing_event
+
+
+#Ship on Intercept
+ship_event = {
+	id = STH_theCrossing_event.1
+	title = STH_theCrossing_event.1.name
+	desc = STH_theCrossing_event.1.desc
+	picture = sth_GFX_evt_theCrossing1
+	location = Root
+	is_triggered_only = yes
+	immediate = { fleet = { set_event_locked = yes } }
+	option = {
+		name = STH_theCrossing_event.1.a #Hail
+		hidden_effect = {
+			ship_event = { id = STH_theCrossing_event.10 days = 1 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_theCrossing_event.1.b #Retreat
+		hidden_effect = {
+			random_list = {
+				50 = { 
+					modifier = { add = 5 leader = { has_level = 2 } }
+					modifier = { add = 10 leader = { has_level = 3 } }
+					modifier = { add = 15 leader = { has_level = 4 } }
+					modifier = { add = 20 leader = { has_level >= 5 } }
+					ship_event = { id = STH_theCrossing_event.2 days = 1 scopes = { from = from } }
+				} #Escaped
+				50 = { 
+					modifier = { add = -10 leader = { has_level = 2 } }
+					modifier = { add = -20 leader = { has_level = 3 } }
+					modifier = { add = -30 leader = { has_level = 4 } }
+					modifier = { add = -40 leader = { has_level >= 5 } }
+					ship_event = { id = STH_theCrossing_event.3 days = 1 scopes = { from = from } } 
+				} #Destroyed
+				50 = { 
+					ship_event = { id = STH_theCrossing_event.10 days = 1 scopes = { from = from } } 
+				} #Captured
+			}
+		}
+	}	
+}
+
+#Escaped
+ship_event = {
+	id = STH_theCrossing_event.2
+	title = STH_theCrossing_event.2.name
+	desc = STH_theCrossing_event.2.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = Root
+	is_triggered_only = yes
+	option = {
+		name = STH_theCrossing_event.2.a #
+		leader = { add_experience = 50 }
+		hidden_effect = { fleet = { set_event_locked = no } }
+	}
+}
+
+#Destroyed
+ship_event = {
+	id = STH_theCrossing_event.3
+	title = STH_theCrossing_event.3.name
+	desc = STH_theCrossing_event.3.desc
+	picture = GFX_evt_exploding_ship
+	location = Root	
+	is_triggered_only = yes	
+	option = {
+		name = STH_theCrossing_event.3.a #Full
+		fleet = { destroy_fleet = { target = this kill_leader = yes } }
+	}
+}
+
+#Captured
+ship_event = {
+	id = STH_theCrossing_event.10
+	title = STH_theCrossing_event.10.name
+	desc = STH_theCrossing_event.10.desc
+	picture = sth_GFX_evt_theCrossing2
+	location = Root
+	is_triggered_only = yes
+	option = {
+		name = STH_theCrossing_event.10.a #Fire Weapons
+		hidden_effect = {
+			random_list = {
+				50 = { 
+					ship_event = { id = STH_theCrossing_event.20 days = 1 scopes = { from = from } } 
+				} #No Effect
+				50 = { 
+					modifier = { add = 5 leader = { has_level = 2 } }
+					modifier = { add = 10 leader = { has_level = 3 } }
+					modifier = { add = 15 leader = { has_level = 4 } }
+					modifier = { add = 20 leader = { has_level >= 5 } }
+					ship_event = { id = STH_theCrossing_event.21 days = 1 scopes = { from = from } }
+				} #Escape With Damage
+				50 = { 
+					modifier = { add = -10 leader = { has_level = 2 } }
+					modifier = { add = -20 leader = { has_level = 3 } }
+					modifier = { add = -30 leader = { has_level = 4 } }
+					modifier = { add = -40 leader = { has_level >= 5 } }
+					ship_event = { id = STH_theCrossing_event.22 days = 1 scopes = { from = from } } 
+				} #Destroyed				
+			}
+		}
+	}
+	option = {
+		name = STH_theCrossing_event.10.b #Investigate Interior
+		hidden_effect = {
+			ship_event = { id = STH_theCrossing_event.30 days = 1 scopes = { from = from } }
+		}
+	}
+
+}
+
+#No Effect
+ship_event = {
+	id = STH_theCrossing_event.20
+	title = STH_theCrossing_event.20.name
+	desc = STH_theCrossing_event.20.desc
+	picture = sth_GFX_evt_theCrossing3
+	location = Root
+	is_triggered_only = yes	
+	option = {
+		name = STH_theCrossing_event.20.a #No effect
+		hidden_effect = {
+			ship_event = { id = STH_theCrossing_event.30 days = 1 scopes = { from = from } }
+		}
+	}
+}
+
+#Escape With Damage
+ship_event = {
+	id = STH_theCrossing_event.21
+	title = STH_theCrossing_event.21.name
+	desc = STH_theCrossing_event.21.desc
+	picture = GFX_evt_space_debris
+	location = Root
+	is_triggered_only = yes
+	option = {
+		name = STH_theCrossing_event.21.a
+		owner = { moderate_crew_cost = yes }
+		reduce_hp_percent = 0.25
+		leader = { add_experience = 50 }
+		hidden_effect = { fleet = { set_event_locked = no } }
+	}
+}
+
+#Destroyed
+ship_event = {
+	id = STH_theCrossing_event.22
+	title = STH_theCrossing_event.22.name
+	desc = STH_theCrossing_event.22.desc
+	picture = GFX_evt_exploding_ship
+	location = Root
+	is_triggered_only = yes
+	option = {
+		name = STH_theCrossing_event.22.a #Full
+		fleet = { destroy_fleet = { target = this kill_leader = yes } }
+	}
+}
+
+
+#Investigate Interior
+ship_event = {
+	id = STH_theCrossing_event.30
+	title = STH_theCrossing_event.30.name
+	desc = STH_theCrossing_event.30.desc
+	picture = sth_GFX_evt_theCrossing4
+	location = Root
+	is_triggered_only = yes
+	option = {
+		name = STH_theCrossing_event.30.a #Try a Dialogue
+		hidden_effect = {		
+			ship_event = { id = STH_theCrossing_event.40 days = 1 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_theCrossing_event.30.b #Investigate Countermeasures
+		hidden_effect = {		
+			ship_event = { id = STH_theCrossing_event.50 days = 1 scopes = { from = from } } 
+		}
+	}
+}
+
+#Learn Wisp Ship Is Damaged
+ship_event = {
+	id = STH_theCrossing_event.40
+	title = STH_theCrossing_event.40.name
+	desc = STH_theCrossing_event.40.desc
+	picture = sth_GFX_evt_theCrossing4
+	location = Root
+	is_triggered_only = yes
+	option = {
+		name = STH_theCrossing_event.40.a #Offer to Assist
+		hidden_effect = {		
+			random_list = {
+				50 = { 
+					modifier = { add = 10 leader = { has_level = 2 } }
+					modifier = { add = 20 leader = { has_level = 3 } }
+					modifier = { add = 30 leader = { has_level = 4 } }
+					modifier = { add = 40 leader = { has_level >= 5 } }
+					ship_event = { id = STH_theCrossing_event.41 days = 1 scopes = { from = from } } 
+				} #Ship Repaired
+				50 = { 
+					ship_event = { id = STH_theCrossing_event.42 days = 1 scopes = { from = from } }
+				} #Repairs Fail			
+			}
+		}
+	}
+	option = {
+		name = STH_theCrossing_event.40.b #Exploit Weakness
+		hidden_effect = {		
+			random_list = {
+				50 = { 
+					modifier = { add = 5 leader = { has_level = 2 } }
+					modifier = { add = 10 leader = { has_level = 3 } }
+					modifier = { add = 15 leader = { has_level = 4 } }
+					modifier = { add = 20 leader = { has_level >= 5 } }
+					ship_event = { id = STH_theCrossing_event.45 days = 1 scopes = { from = from } }
+				} #Escaped
+				50 = { 
+					ship_event = { id = STH_theCrossing_event.46 days = 1 scopes = { from = from } } 
+				} #Escape but Damaged
+				50 = { 
+					modifier = { add = -10 leader = { has_level = 2 } }
+					modifier = { add = -20 leader = { has_level = 3 } }
+					modifier = { add = -30 leader = { has_level = 4 } }
+					modifier = { add = -40 leader = { has_level >= 5 } }
+					ship_event = { id = STH_theCrossing_event.47 days = 1 scopes = { from = from } } 
+				} #Destroyed
+				
+			}
+		}
+	}
+}
+
+#Ship Repaired
+ship_event = {
+	id = STH_theCrossing_event.41
+	title = STH_theCrossing_event.41.name
+	desc = STH_theCrossing_event.41.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = Root
+	is_triggered_only = yes
+	option = { 
+		name = STH_theCrossing_event.41.a 
+		leader = { add_skill = 1 }
+		owner = { medium_scaling_society_reward = yes }
+		hidden_effect = { fleet = { set_event_locked = no } }
+	}
+}
+
+
+#Repairs Fail - Both Destroyed
+ship_event = {
+	id = STH_theCrossing_event.42
+	title = STH_theCrossing_event.42.name
+	desc = STH_theCrossing_event.42.desc
+	picture = GFX_evt_space_debris
+	location = Root
+	is_triggered_only = yes
+	option = { 
+		name = STH_theCrossing_event.42.a 
+		fleet = { destroy_fleet = { target = this kill_leader = yes } }
+	}
+}
+
+#Escape
+ship_event = {
+	id = STH_theCrossing_event.45
+	title = STH_theCrossing_event.45.name
+	desc = STH_theCrossing_event.45.desc
+	picture = GFX_evt_space_debris
+	location = Root
+	is_triggered_only = yes
+	option = { 
+		name = STH_theCrossing_event.45.a 
+		leader = { add_experience = 100 }
+		owner = { small_scaling_society_reward = yes }
+		hidden_effect = { fleet = { set_event_locked = no } }
+	}
+}
+
+#Escape With Damage
+ship_event = {
+	id = STH_theCrossing_event.46
+	title = STH_theCrossing_event.46.name
+	desc = STH_theCrossing_event.46.desc
+	picture = GFX_evt_space_debris
+	location = Root
+	is_triggered_only = yes
+	option = { 
+		name = STH_theCrossing_event.46.a 
+		leader = { add_experience = 100 }
+		owner = { 
+			small_scaling_society_reward = yes
+			moderate_crew_cost = yes
+		}
+		reduce_hp_percent = 0.25
+		hidden_effect = { fleet = { set_event_locked = no } }
+	}
+}
+
+#Escape Fail - Both Destroyed
+ship_event = {
+	id = STH_theCrossing_event.47
+	title = STH_theCrossing_event.47.name
+	desc = STH_theCrossing_event.47.desc
+	picture = GFX_evt_exploding_ship
+	location = Root
+	is_triggered_only = yes
+	option = { 
+		name = STH_theCrossing_event.47.a 
+		fleet = { destroy_fleet = { target = this kill_leader = yes } }
+	}
+}
+
+#Osmium Works
+ship_event = {
+	id = STH_theCrossing_event.50
+	title = STH_theCrossing_event.50.name
+	desc = STH_theCrossing_event.50.desc
+	picture = sth_GFX_evt_theCrossing4
+	location = Root
+	is_triggered_only = yes
+	option = {
+		name = STH_theCrossing_event.50.a #Recover Crew
+		hidden_effect = {		
+			random_list = {
+				50 = { 
+					modifier = { add = 10 leader = { has_level = 2 } }
+					modifier = { add = 20 leader = { has_level = 3 } }
+					modifier = { add = 30 leader = { has_level = 4 } }
+					modifier = { add = 40 leader = { has_level >= 5 } }
+					ship_event = { id = STH_theCrossing_event.51 days = 1 scopes = { from = from } } 
+				} #Escape
+				50 = { 
+					ship_event = { id = STH_theCrossing_event.52 days = 1 scopes = { from = from } }
+				} #Escape + Loss of Crew		
+			}
+		}
+	}
+	option = { 
+		name = STH_theCrossing_event.50.b #Abandon Crew
+		hidden_effect = {		
+			ship_event = { id = STH_theCrossing_event.55 days = 1 scopes = { from = from } } 
+		}
+	}
+}
+
+#Escape with crew
+ship_event = {
+	id = STH_theCrossing_event.51
+	title = STH_theCrossing_event.51.name
+	desc = STH_theCrossing_event.51.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = Root
+	is_triggered_only = yes
+	option = { 
+		name = STH_theCrossing_event.51.a 
+		leader = { add_experience = 100 }
+		owner = { small_scaling_society_reward = yes }
+		hidden_effect = { fleet = { set_event_locked = no } }
+	}
+}
+
+#Escape With Small Crew Loss
+ship_event = {
+	id = STH_theCrossing_event.52
+	title = STH_theCrossing_event.52.name
+	desc = STH_theCrossing_event.52.desc
+	picture = GFX_evt_space_debris
+	location = Root
+	is_triggered_only = yes
+	option = { 
+		name = STH_theCrossing_event.52.a 
+		leader = { add_experience = 100 }
+		owner = { 
+			small_scaling_society_reward = yes
+			moderate_crew_cost = yes
+		}
+		hidden_effect = { fleet = { set_event_locked = no } }
+	}
+}
+
+#Escape With Crew Loss - Intentional
+ship_event = {
+	id = STH_theCrossing_event.55
+	title = STH_theCrossing_event.55.name
+	desc = STH_theCrossing_event.55.desc
+	picture = GFX_evt_space_debris
+	location = Root
+	is_triggered_only = yes
+	option = { 
+		name = STH_theCrossing_event.55.a 
+		leader = { add_experience = 100 }
+		owner = { 
+			small_scaling_society_reward = yes 
+			small_crew_cost = yes
+		}
+		hidden_effect = { fleet = { set_event_locked = no } }
+	}
+}

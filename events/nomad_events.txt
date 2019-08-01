@@ -1,0 +1,9 @@
+#################################
+#
+# Nomad Events
+# by Niclas Karlsson & Maximilian Olbers
+# STNH - Capek 2.2.0 Compat WIP
+#################################
+
+namespace = nomad
+

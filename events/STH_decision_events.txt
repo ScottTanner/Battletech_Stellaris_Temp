@@ -1,0 +1,139 @@
+############################
+#
+# Decision Events
+#
+# Written by Walshicus
+#
+############################
+
+namespace = STH_decision_events
+
+#Starport Policy
+Planet_event = {
+	id = STH_decision_events.100
+	title = STH_decision_events.100.name
+	desc = STH_decision_events.100.desc
+	picture = sth_GFX_evt_cargoBay
+	is_triggered_only = yes
+	trigger = { owner = { NOT = { has_active_event = { STH_decision_events.100 } } } }
+	option = {
+		name = STH_decision_events.100.brizeen #Brizeen
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_brizeen
+	}
+	option = {
+		name = STH_decision_events.100.dilithium #Dilithium
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_processed_dilithium
+	}
+	option = {
+		name = STH_decision_events.100.deuterium #Deuterium
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_deuterium
+	}
+	option = {
+		name = STH_decision_events.100.topaline #Topaline
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_topaline
+	}
+	option = {
+		name = STH_decision_events.100.magnesite #Magnesite
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_magnesite
+	}
+	option = {
+		name = STH_decision_events.100.tallonian #Tallonian
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_tallonian
+	}
+	option = {
+		name = STH_decision_events.100.kemocite #Kemocite
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_kemocite
+	}
+	option = {
+		name = STH_decision_events.100.trellium #Trellium
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_trellium
+	}
+	option = {
+		name = STH_decision_events.100.neutronium #Neutronium
+		trigger = { owner = { has_technology = "tech_engineering_13013" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_neutronium
+	}
+	option = {
+		name = STH_decision_events.100.pergium #Pergium
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_pergium
+	}
+	option = {
+		name = STH_decision_events.100.water #Water
+		trigger = { owner = { has_technology = "tech_society_new_worlds_1117" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_water
+	}
+	option = {
+		name = STH_decision_events.100.cordrazine #Cordrazine
+		trigger = { owner = { has_technology = "tech_society_12697" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_cordrazine
+	}
+	option = {
+		name = STH_decision_events.100.energy #Energy
+		remove_all_starport_decisions = yes
+	}
+	option = {
+		name = STH_decision_events.100.back #Nothing
+	}
+}
+
+#Starport Policy - Machine
+Planet_event = {
+	id = STH_decision_events.200
+	title = STH_decision_events.200.name
+	desc = STH_decision_events.200.desc
+	picture = sth_GFX_evt_industry
+	is_triggered_only = yes
+	trigger = { owner = { NOT = { has_active_event = { STH_decision_events.200 } } } }
+	option = {
+		name = STH_decision_events.200.topaline #Topaline
+		# trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_topaline
+	}
+	option = {
+		name = STH_decision_events.200.magnesite #Magnesite
+		# trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_magnesite
+	}
+	option = {
+		name = STH_decision_events.200.tallonian #Tallonian
+		trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_tallonian
+	}
+	option = {
+		name = STH_decision_events.200.kemocite #Kemocite
+		# trigger = { owner = { has_technology = "tech_society_biology_1021" } }
+		remove_all_starport_decisions = yes
+		set_planet_flag = starport_kemocite
+	}
+	option = {
+		name = STH_decision_events.200.trellium #Trellium
+		remove_all_starport_decisions = yes
+	}
+	option = {
+		name = STH_decision_events.200.back #Nothing
+	}
+}

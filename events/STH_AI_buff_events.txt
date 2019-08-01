@@ -1,0 +1,9 @@
+########################
+#
+# AI buff events
+#
+# Written by Shaggo
+#
+########################
+
+namespace = AI_buff

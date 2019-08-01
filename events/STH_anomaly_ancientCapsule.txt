@@ -1,0 +1,201 @@
+namespace = STH_ancient_capsule
+
+#Ancient Capsule Event
+ship_event = {
+	id = STH_ancient_capsule.1
+	title = STH_ancient_capsule.1.name
+	desc = STH_ancient_capsule.1.desc
+	picture = sth_GFX_evt_ancientCapsule1
+	location = FROM
+	is_triggered_only = yes
+	immediate = { fleet = { set_event_locked = yes } }
+	option = {
+		name = STH_ancient_capsule.1.a
+		hidden_effect = { ship_event = { id = STH_ancient_capsule.2 scopes = { from = from } } }
+	}
+	option = {
+		name = STH_ancient_capsule.1.b
+		hidden_effect = { fleet = { set_event_locked = no } }
+		# hidden_effect = { ship_event = { id = STH_ancient_capsule.20 scopes = { from = from } } }
+	}
+}
+	
+#Investigate the Capsule
+ship_event = {
+	id = STH_ancient_capsule.2
+	title = STH_ancient_capsule.2.name
+	desc = {
+		trigger = { owner = { is_machine_empire = no } }
+		text = STH_ancient_capsule.2.desc
+	}
+	desc = {
+		trigger = { owner = { is_machine_empire = yes } }
+		text = STH_ancient_capsule.2.desc.machine
+	}
+	picture = sth_GFX_evt_ancientCapsule2
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_ancient_capsule.2.a
+		trigger = { owner = { is_machine_empire = no } }
+		hidden_effect = {
+			random_list = {
+				10 = { ship_event = { id = STH_ancient_capsule.10  scopes = { from = from } } }
+				10 = { ship_event = { id = STH_ancient_capsule.11  scopes = { from = from } } }
+				10 = { ship_event = { id = STH_ancient_capsule.12  scopes = { from = from } } }
+				10 = { ship_event = { id = STH_ancient_capsule.13  scopes = { from = from } } }
+			}
+		}
+	}
+	option = {
+		name = STH_ancient_capsule.2.b
+		trigger = { owner = { is_machine_empire = no } }
+		hidden_effect = { ship_event = { id = STH_ancient_capsule.21 scopes = { from = from } } }
+	}
+	option = {
+		name = STH_ancient_capsule.2.a.machine
+		trigger = { owner = { is_machine_empire = yes } }
+		hidden_effect = {
+			random_list = {
+				10 = { ship_event = { id = STH_ancient_capsule.10  scopes = { from = from } } }
+				10 = { ship_event = { id = STH_ancient_capsule.11  scopes = { from = from } } }
+				10 = { ship_event = { id = STH_ancient_capsule.12  scopes = { from = from } } }
+				10 = { ship_event = { id = STH_ancient_capsule.13  scopes = { from = from } } }
+			}
+		}
+	}
+	option = {
+		name = STH_ancient_capsule.2.b.machine
+		trigger = { owner = { is_machine_empire = yes } }
+		hidden_effect = { ship_event = { id = STH_ancient_capsule.21 scopes = { from = from } } }
+	}
+}
+
+#Save the people - get society
+ship_event = {
+	id = STH_ancient_capsule.10
+	title = STH_ancient_capsule.10.name
+	desc = {
+		trigger = { owner = { is_machine_empire = no } }
+		text = STH_ancient_capsule.10.desc
+	}
+	desc = {
+		trigger = { owner = { is_machine_empire = yes } }
+		text = STH_ancient_capsule.10.desc.machine
+	}
+	picture = sth_GFX_evt_ancientCapsule1
+	location = FROM
+	is_triggered_only = yes
+	immediate = { fleet = { set_event_locked = no } }
+	option = {
+		name = STH_ancient_capsule.10.a
+		owner = { add_resource = { society_research = 150 } }
+	}
+}
+#Save the people - get leader
+ship_event = {
+	id = STH_ancient_capsule.11
+	title = STH_ancient_capsule.11.name
+	desc = {
+		trigger = { owner = { is_machine_empire = no } }
+		text = STH_ancient_capsule.11.desc
+	}
+	desc = {
+		trigger = { owner = { is_machine_empire = yes } }
+		text = STH_ancient_capsule.11.desc.machine
+	}
+	picture = sth_GFX_evt_ancientCapsule1
+	location = FROM
+	is_triggered_only = yes
+	immediate = { fleet = { set_event_locked = no } }
+	option = {
+		name = STH_ancient_capsule.11.a
+		owner = { create_leader = { class = governor species = owner_main_species name = random skill = 2 traits = { trait = random_trait } } }
+	}
+}
+#Save the people - psychopaths!
+ship_event = {
+	id = STH_ancient_capsule.12
+	title = STH_ancient_capsule.12.name
+	desc = {
+		trigger = { owner = { is_machine_empire = no } }
+		text = STH_ancient_capsule.12.desc
+	}
+	desc = {
+		trigger = { owner = { is_machine_empire = yes } }
+		text = STH_ancient_capsule.12.desc.machine
+	}
+	picture = sth_GFX_evt_ancientCapsule1
+	location = FROM
+	is_triggered_only = yes
+	immediate = { fleet = { set_event_locked = no } }
+	option = {
+		name = STH_ancient_capsule.12.a
+		owner = { add_resource = { influence = -20 } }
+	}
+}
+#Save the people - damage to ship!
+ship_event = {
+	id = STH_ancient_capsule.13
+	title = STH_ancient_capsule.13.name
+	desc = {
+		trigger = { owner = { is_machine_empire = no } }
+		text = STH_ancient_capsule.13.desc
+	}
+	desc = {
+		trigger = { owner = { is_machine_empire = yes } }
+		text = STH_ancient_capsule.13.desc.machine
+	}
+	picture = sth_GFX_evt_ancientCapsule1
+	location = FROM
+	is_triggered_only = yes
+	immediate = { fleet = { set_event_locked = no } }
+	option = {
+		name = STH_ancient_capsule.13.a
+		reduce_hp_percent = 25
+	}
+}
+
+
+#Let the capsule to be destroyed after investigating
+ship_event = {
+	id = STH_ancient_capsule.21
+	title = STH_ancient_capsule.21.name
+	desc = {
+		trigger = { owner = { is_machine_empire = no } }
+		text = STH_ancient_capsule.21.desc
+	}
+	desc = {
+		trigger = { owner = { is_machine_empire = yes } }
+		text = STH_ancient_capsule.21.desc.machine
+	}
+	picture = sth_GFX_evt_ancientCapsule1
+	location = FROM
+	is_triggered_only = yes
+	immediate = { fleet = { set_event_locked = no } }
+	option = { name = "UNDERSTOOD" }
+}
+
+#Fail Events
+ship_event = {
+	id = STH_ancient_capsule.90
+	title = STH_ancient_capsule.90.name
+	desc = STH_ancient_capsule.90.desc
+	picture = sth_GFX_evt_ancientCapsule1
+	location = FROM
+	is_triggered_only = yes
+	option = { name = "UNFORTUNATE" }
+}
+ship_event = {
+	id = STH_ancient_capsule.91
+	title = STH_ancient_capsule.91.name
+	desc = STH_ancient_capsule.91.desc
+	picture = sth_GFX_evt_ancientCapsule1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = "UNFORTUNATE"
+		owner = { add_resource = { minerals = -25 energy = -25 } }
+	}
+}	
+

@@ -1,0 +1,10 @@
+############################
+#
+# Fallen Empire Events
+#
+# Written by Martin Anward
+#
+############################
+
+namespace = fallen_empires_tasks
+

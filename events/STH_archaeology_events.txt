@@ -1,0 +1,399 @@
+############################
+#
+# Archaeology Events
+#
+# Written by Walshicus
+#
+############################
+
+namespace = STH_archaeology_events
+
+###GENERIC EVENTS###
+#Cave In
+fleet_event = {
+	id = STH_archaeology_events.1
+	title = STH_archaeology_events.1.name
+	desc = STH_archaeology_events.1.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.1.a
+		owner = { small_crew_cost = yes }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.2
+	title = STH_archaeology_events.2.name
+	desc = STH_archaeology_events.2.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.2.a
+		owner = { moderate_crew_cost = yes }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.3
+	title = STH_archaeology_events.3.name
+	desc = STH_archaeology_events.3.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.3.a
+		leader = { add_experience = 200 }
+		from = { add_stage_clues = 1 }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.4
+	title = STH_archaeology_events.4.name
+	desc = STH_archaeology_events.4.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.4.a
+		leader = { add_trait = leader_trait_maimed }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.5
+	title = STH_archaeology_events.5.name
+	desc = STH_archaeology_events.5.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.5.a
+		kill_leader = { show_notification = yes }
+	}
+}
+
+###Ancient Facility Random Events
+#Found minor artefact, clue
+fleet_event = {
+	id = STH_archaeology_events.10 #Artefacts found
+	title = STH_archaeology_events.10.name
+	desc = STH_archaeology_events.10.desc
+	picture = STH_GFX_alien_facility
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.10.a
+		owner = { small_artifacts_reward = yes }
+		from = { add_stage_clues = 1 }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.11 #Artefacts found, Injured
+	title = STH_archaeology_events.11.name
+	desc = STH_archaeology_events.11.desc
+	picture = STH_GFX_alien_facility
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.11.a
+		owner = { small_artifacts_reward = yes }
+		leader = {
+			add_timed_trait = { trait = leader_trait_injured months = 6 }
+		}
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.12 #Activated security system, small crew death but clue
+	title = STH_archaeology_events.12.name
+	desc = STH_archaeology_events.12.desc
+	picture = STH_GFX_alien_facility
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.12.a
+		owner = { small_crew_cost = yes }
+		from = { add_stage_clues = 1 }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.13 #Activated security system, leader injured, but clue
+	title = STH_archaeology_events.13.name
+	desc = STH_archaeology_events.13.desc
+	picture = STH_GFX_alien_facility
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.13.a
+		leader = {
+			add_timed_trait = { trait = leader_trait_injured months = 6 }
+		}
+		from = { add_stage_clues = 1 }
+	}
+}
+
+
+###GENERIC EVENTS###
+
+
+#Ship Out of Time - Find the ship
+fleet_event = {
+	id = STH_archaeology_events.100
+	title = STH_archaeology_events.100.name
+	desc = STH_archaeology_events.100.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.100.a
+		owner = { small_scaling_research_reward = { research_type = physics_research } }
+	}
+}
+
+fleet_event = {
+	id = STH_archaeology_events.110
+	title = STH_archaeology_events.110.name
+	desc = STH_archaeology_events.110.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = STH_archaeology_events.110.a
+		owner = { small_scaling_research_reward = { research_type = engineering_research } }
+	}
+}
+
+fleet_event = {
+	id = STH_archaeology_events.120
+	title = STH_archaeology_events.120.name
+	desc = STH_archaeology_events.120.desc
+	picture = sth_GFX_evt_darkShipInterior
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = STH_archaeology_events.120.a
+		owner = { small_scaling_research_reward = { research_type = society_research } }
+	}
+}
+
+fleet_event = {
+	id = STH_archaeology_events.130
+	title = STH_archaeology_events.130.name
+	desc = STH_archaeology_events.130.desc
+	picture = sth_GFX_evt_shipTug
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	option = {
+		name = STH_archaeology_events.130.a
+		hidden_effect = {
+			owner = { 
+				random_list = {
+					10 = { country_event = { id = STH_archaeology_events.131 days = 360 random = 90 scopes = { from = root.from.planet } } } #Propulsion
+					10 = { country_event = { id = STH_archaeology_events.132 days = 360 random = 90 scopes = { from = root.from.planet } } } #Weapons
+					10 = { country_event = { id = STH_archaeology_events.133 days = 360 random = 90 scopes = { from = root.from.planet } } } #Defence
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = STH_archaeology_events.131
+	title = STH_archaeology_events.131.name
+	desc = STH_archaeology_events.131.desc
+	picture = sth_GFX_evt_spaceBackground
+	is_triggered_only = yes
+	option = {
+		name = STH_archaeology_events.131.a
+		add_random_research_option = {
+			category = propulsion
+			area = engineering
+			add_progress = 0.5
+			ignore_prereqs = no #default no
+			ignore_rare = no #default yes
+			fail_effects = {
+				large_scaling_research_reward = { research_type = engineering_research }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = STH_archaeology_events.132
+	title = STH_archaeology_events.132.name
+	desc = STH_archaeology_events.132.desc
+	picture = sth_GFX_evt_spaceBackground
+	is_triggered_only = yes
+	option = {
+		name = STH_archaeology_events.132.a
+		add_random_research_option = {
+			category = particles
+			area = physics
+			add_progress = 0.5
+			ignore_prereqs = no #default no
+			ignore_rare = no #default yes
+			fail_effects = {
+				large_scaling_research_reward = { research_type = physics_research }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = STH_archaeology_events.133
+	title = STH_archaeology_events.133.name
+	desc = STH_archaeology_events.133.desc
+	picture = sth_GFX_evt_spaceBackground
+	is_triggered_only = yes
+	option = {
+		name = STH_archaeology_events.133.a
+		add_random_research_option = {
+			category = field_manipulation
+			area = physics
+			add_progress = 0.5
+			ignore_prereqs = no #default no
+			ignore_rare = no #default yes
+			fail_effects = {
+				large_scaling_research_reward = { research_type = physics_research }
+			}
+		}
+	}
+}
+
+#Chroniton Radiation
+fleet_event = {
+	id = STH_archaeology_events.140
+	title = STH_archaeology_events.140.name
+	desc = STH_archaeology_events.140.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.140.a
+		owner = { small_crew_cost = yes }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.141
+	title = STH_archaeology_events.141.name
+	desc = STH_archaeology_events.141.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.141.a
+		owner = { moderate_crew_cost = yes }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.142
+	title = STH_archaeology_events.142.name
+	desc = STH_archaeology_events.142.desc
+	picture = sth_GFX_evt_undergroundTunnels
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.142.a
+		owner = { small_scaling_energy_reward = yes }
+		from = { add_stage_clues = 2 }
+	}
+}
+
+#Ship stuff found
+fleet_event = {
+	id = STH_archaeology_events.143
+	title = STH_archaeology_events.143.name
+	desc = STH_archaeology_events.143.desc
+	picture = sth_GFX_evt_darkShipInterior
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.143.a
+		owner = { 
+			small_scaling_research_reward = { research_type = society_research } 
+			small_artifacts_reward = yes
+		}
+		from = { add_stage_clues = 1 }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.144
+	title = STH_archaeology_events.144.name
+	desc = STH_archaeology_events.144.desc
+	picture = sth_GFX_evt_darkShipInterior
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.144.a
+		owner = { 
+			small_scaling_research_reward = { research_type = physics_research } 
+			small_artifacts_reward = yes
+		}
+		from = { add_stage_clues = 1 }
+	}
+}
+fleet_event = {
+	id = STH_archaeology_events.145
+	title = STH_archaeology_events.145.name
+	desc = STH_archaeology_events.145.desc
+	picture = sth_GFX_evt_darkShipInterior
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = { from = { set_site_progress_locked = yes } }
+	after = { from = { set_site_progress_locked = no } }
+	option = {
+		name = STH_archaeology_events.145.a
+		owner = { 
+			small_scaling_energy_reward = yes 
+			small_artifacts_reward = yes
+		}
+		from = { add_stage_clues = 1 }
+	}
+}

@@ -1,0 +1,386 @@
+namespace = STH_a_matter_of_time
+
+#A matter of time event
+ship_event = {
+	id = STH_a_matter_of_time.1
+	title = STH_a_matter_of_time.1.name
+	desc = STH_a_matter_of_time.1.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.1.a #Investigate
+		hidden_effect = { ship_event = { id = STH_a_matter_of_time.10 scopes = { from = from } } }
+	}
+	option = {
+		name = STH_a_matter_of_time.1.b #Ignore
+		hidden_effect = { ship_event = { id = STH_a_matter_of_time.15 scopes = { from = from } } }
+	}
+}
+
+#Investigated
+ship_event = {
+	id = STH_a_matter_of_time.10
+	title = STH_a_matter_of_time.10.name
+	desc = STH_a_matter_of_time.10.desc
+	picture = sth_GFX_evt_aMatterOfTime2
+	location = FROM
+	is_triggered_only = yes
+	immediate = { 
+		owner = {
+			create_leader = { 
+				class = scientist 
+				species = owner_main_species
+				name = random
+				skill = 4
+				traits = { trait = leader_trait_spark_of_genius trait = random_trait trait = random_trait }
+			}
+			last_created_leader = {
+				recruitable = no
+				save_event_target_as = timeHistorian
+				if = {
+					limit = { species = { is_species_class = FED } gender = male NOT = { has_global_flag = "Rasmussen" }  }
+					random_list = {
+						50 = { set_name = "Berlinghoff Rasmussen" set_global_flag = "Rasmussen" }
+						50 = {}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = STH_a_matter_of_time.10.a #Allow observation
+		hidden_effect = { 
+			random_list = {
+				10 = { ship_event = { id = STH_a_matter_of_time.20 scopes = { from = from fromfrom = event_target:timeHistorian } } } #Slip of tongue
+				10 = { ship_event = { id = STH_a_matter_of_time.25 scopes = { from = from fromfrom = event_target:timeHistorian } } } #Nothing Special
+				10 = { ship_event = { id = STH_a_matter_of_time.30 scopes = { from = from fromfrom = event_target:timeHistorian } } } #Thief?
+			}
+		}
+	}
+	option = {
+		name = STH_a_matter_of_time.10.b #Refuse observation
+		hidden_effect = { 
+			random_list = {
+				10 = { ship_event = { id = STH_a_matter_of_time.40 scopes = { from = from fromfrom = event_target:timeHistorian } } } #Upset but leaves
+				10 = { ship_event = { id = STH_a_matter_of_time.41 scopes = { from = from fromfrom = event_target:timeHistorian } } } #Beams stuff to ship
+			}
+		}
+	}
+	option = {
+		name = STH_a_matter_of_time.10.c #Imprison
+		allow = { owner = { is_authoritarian = yes } }
+		hidden_effect = { 
+			random_list = {
+				10 = { ship_event = { id = STH_a_matter_of_time.50 scopes = { from = from fromfrom = event_target:timeHistorian } } } #Captured
+				10 = { ship_event = { id = STH_a_matter_of_time.51 scopes = { from = from fromfrom = event_target:timeHistorian } } } #Damages the ship
+				10 = { ship_event = { id = STH_a_matter_of_time.52 scopes = { from = from fromfrom = event_target:timeHistorian } } } #Escapes
+			}
+		}
+	}
+}
+
+#Ignored
+ship_event = {
+	id = STH_a_matter_of_time.15
+	title = STH_a_matter_of_time.15.name
+	desc = STH_a_matter_of_time.15.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.15.a #Weird
+		owner = { add_resource = { physics_research = 50 } }
+	}
+}
+
+
+
+#Slip of the tongue
+ship_event = {
+	id = STH_a_matter_of_time.20
+	title = STH_a_matter_of_time.20.name
+	desc = STH_a_matter_of_time.20.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.20.a #Mind Wipe
+		hidden_effect = { 
+			ship_event = { id = STH_a_matter_of_time.21 scopes = { from = from fromfrom = fromfrom } } #Lose XP
+		}
+	}
+	option = {
+		name = STH_a_matter_of_time.20.b #Refuse
+		hidden_effect = { 
+			ship_event = { id = STH_a_matter_of_time.22 scopes = { from = from fromfrom = fromfrom } } #Timeline Change
+		}
+	}
+}
+
+#Mind Wipe
+ship_event = {
+	id = STH_a_matter_of_time.21
+	title = STH_a_matter_of_time.21.name
+	desc = STH_a_matter_of_time.21.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.21.a #Mind Wipe
+		leader = { add_experience = -100 }
+	}
+}
+
+#Timeline Change
+ship_event = {
+	id = STH_a_matter_of_time.22
+	title = STH_a_matter_of_time.22.name
+	desc = STH_a_matter_of_time.22.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.22.a #Timeline Change
+		hidden_effect = { owner = { small_timeline_change = yes } }
+	}
+}
+
+#Nothing Special
+ship_event = {
+	id = STH_a_matter_of_time.25
+	title = STH_a_matter_of_time.25.name
+	desc = STH_a_matter_of_time.25.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.25.a #Nothing Special
+		hidden_effect = { 
+			random_list = {
+				10 = { ship_event = { id = STH_a_matter_of_time.26 scopes = { from = from fromfrom = fromfrom } } } #Leaves Okay
+				15 = { ship_event = { id = STH_a_matter_of_time.27 scopes = { from = from fromfrom = fromfrom } } } #Stuck in the past
+			}
+		}
+	}
+}
+
+#Leaves okay
+ship_event = {
+	id = STH_a_matter_of_time.26
+	title = STH_a_matter_of_time.26.name
+	desc = STH_a_matter_of_time.26.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.26.a #Leaves okay
+		owner = { add_resource = { physics_research = 200 society_research = 100 } }
+	}
+}
+#Stuck in the past
+ship_event = {
+	id = STH_a_matter_of_time.27
+	title = STH_a_matter_of_time.27.name
+	desc = STH_a_matter_of_time.27.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.27.a #Leaves okay
+		owner = { 
+			#Clone Time Traveller
+			clone_leader = {
+				target = Root.FROMFROM
+			}
+		}
+	}
+}
+
+#Thief?
+ship_event = {
+	id = STH_a_matter_of_time.30
+	title = STH_a_matter_of_time.30.name
+	desc = STH_a_matter_of_time.30.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.30.a #Confront
+		hidden_effect = { 
+			random_list = {
+				10 = { ship_event = { id = STH_a_matter_of_time.31 scopes = { from = from fromfrom = fromfrom } } } #Escapes
+				15 = { ship_event = { id = STH_a_matter_of_time.32 scopes = { from = from fromfrom = fromfrom } } } #Damages the ship
+				15 = { ship_event = { id = STH_a_matter_of_time.33 scopes = { from = from fromfrom = fromfrom } } } #Captured
+				10 = { ship_event = { id = STH_a_matter_of_time.34 scopes = { from = from fromfrom = fromfrom } } } #Honest Explanation
+			}
+		}
+	}
+	option = {
+		name = STH_a_matter_of_time.30.b #Ask Politely
+		hidden_effect = { 
+			random_list = {
+				15 = { ship_event = { id = STH_a_matter_of_time.31 scopes = { from = from fromfrom = fromfrom } } } #Escapes
+				10 = { ship_event = { id = STH_a_matter_of_time.32 scopes = { from = from fromfrom = fromfrom } } } #Damages the ship
+				10 = { ship_event = { id = STH_a_matter_of_time.33 scopes = { from = from fromfrom = fromfrom } } } #Captured
+				15 = { ship_event = { id = STH_a_matter_of_time.34 scopes = { from = from fromfrom = fromfrom } } } #Honest Explanation
+			}
+		}
+	}
+}
+#Escapes
+ship_event = {
+	id = STH_a_matter_of_time.31
+	title = STH_a_matter_of_time.31.name
+	desc = STH_a_matter_of_time.31.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.31.a #Escapes
+	}
+}
+#Damages the ship
+ship_event = {
+	id = STH_a_matter_of_time.32
+	title = STH_a_matter_of_time.32.name
+	desc = STH_a_matter_of_time.32.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.32.a #Escapes
+		if = {
+			limit = { has_hp_percentage > 0.25 }
+			reduce_hp_percent = 0.25
+		}
+		else_if = {
+			limit = { has_hp_percentage > 0.1 }
+			reduce_hp_percent = 0.1
+		}
+	}
+}
+#Captured
+ship_event = {
+	id = STH_a_matter_of_time.33
+	title = STH_a_matter_of_time.33.name
+	desc = STH_a_matter_of_time.33.desc
+	picture = sth_GFX_evt_aMatterOfTime2
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.33.a #Escapes
+		owner = {
+			add_resource = { engineering_research = 400 physics_research = 400 society_research = 100 }
+		}
+	}
+}
+#Honest Explanation
+ship_event = {
+	id = STH_a_matter_of_time.34
+	title = STH_a_matter_of_time.34.name
+	desc = STH_a_matter_of_time.34.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.34.a #Escapes
+		leader = { add_experience = 50 }
+	}
+}
+
+#Upset but leaves
+ship_event = {
+	id = STH_a_matter_of_time.40
+	title = STH_a_matter_of_time.40.name
+	desc = STH_a_matter_of_time.40.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.40.a #Leaves
+	}
+}
+#Beams stuff to ship
+ship_event = {
+	id = STH_a_matter_of_time.41
+	title = STH_a_matter_of_time.41.name
+	desc = STH_a_matter_of_time.41.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.41.a #Steals
+		if = {
+			limit = { has_hp_percentage > 0.25 }
+			#reduce_hp_percent = 0.25 ###TODO change to this when effect fixed.
+			reduce_hp_percent = 25
+		}
+		else_if = {
+			limit = { has_hp_percentage > 0.1 }
+			#reduce_hp_percent = 0.10 ###TODO change to this when effect fixed.
+			reduce_hp_percent = 10
+		}
+	}
+}
+
+#Captured
+ship_event = {
+	id = STH_a_matter_of_time.50
+	title = STH_a_matter_of_time.50.name
+	desc = STH_a_matter_of_time.50.desc
+	picture = sth_GFX_evt_aMatterOfTime2
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.50.a #Escapes
+		owner = {
+			add_resource = { engineering_research = 400 physics_research = 400 society_research = 100 }
+		}
+	}
+}
+#Damages the ship
+ship_event = {
+	id = STH_a_matter_of_time.51
+	title = STH_a_matter_of_time.51.name
+	desc = STH_a_matter_of_time.51.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.51.a #Escapes
+		if = {
+			limit = { has_hp_percentage > 0.25 }
+			reduce_hp_percent = 0.25
+		}
+		else_if = {
+			limit = { has_hp_percentage > 0.1 }
+			reduce_hp_percent = 0.1
+		}
+	}
+}
+#Escapes
+ship_event = {
+	id = STH_a_matter_of_time.52
+	title = STH_a_matter_of_time.52.name
+	desc = STH_a_matter_of_time.52.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.52.a #Escapes
+	}
+}
+
+#It's gone
+ship_event = {
+	id = STH_a_matter_of_time.90
+	title = STH_a_matter_of_time.90.name
+	desc = STH_a_matter_of_time.90.desc
+	picture = sth_GFX_evt_aMatterOfTime1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_a_matter_of_time.90.a #It's gone
+	}
+}

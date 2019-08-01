@@ -1,0 +1,9 @@
+############################
+#
+# Anomaly Events
+#
+# Written by Miranda van den Brink
+# STNH - Banks 2.1.0 Compat
+############################
+
+namespace = anomaly

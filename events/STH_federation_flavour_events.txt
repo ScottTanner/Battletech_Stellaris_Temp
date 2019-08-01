@@ -1,0 +1,894 @@
+#################################
+#
+# Federation Story / Crisis Events
+# by Walshicus
+#
+#################################
+
+
+namespace = STH_federation_flavour
+
+#Bajoran Accession - Religious Dress Code
+country_event = {
+	id = STH_federation_flavour.1
+	title = "STH_federation_flavour.1.name"
+	desc = "STH_federation_flavour.1.desc"
+	picture = sth_GFX_evt_vedekAssembly
+	trigger = {
+		has_country_flag = united_federation_of_planets
+		any_country = { 
+			has_country_flag = bajoran_republic
+			has_country_flag = federationAccessionState
+			check_variable = { which = "accession_progress" value < 80 } 
+		}
+		any_country = {
+			has_country_flag = bajoranReligionCountry
+			any_owned_leader = { OR = { has_leader_flag = bajoranKai } }
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = { months = 60 }
+	immediate = {
+		random_country = { 
+			limit = { has_country_flag = bajoran_republic }
+			save_event_target_as = bajoran_republic
+		}
+		random_country = {
+			limit = { has_country_flag = bajoranReligionCountry }
+			random_owned_leader = { 
+				limit = { has_leader_flag = bajoranKai }
+				save_event_target_as = bajoranKai
+			}
+		}
+	}
+	option = {
+		name = STH_federation_flavour.1.a #Discuss with the Kai
+		hidden_effect = { country_event = { id = STH_federation_flavour.2 days = 30 random = 6 } }
+		custom_tooltip = "STH_federation_flavour.1.a.tooltip"
+	}
+	option = {
+		name = STH_federation_flavour.1.b #Refuse meeting
+		hidden_effect = { event_target:bajoran_republic = { change_variable = { which = "accession_progress" value = -15 } } }
+		custom_tooltip = "STH_federation_flavour.1.b.tooltip"
+		add_resource = { unity = 10 }
+	}
+}
+country_event = {
+	id = STH_federation_flavour.2
+	title = "STH_federation_flavour.2.name"
+	desc = "STH_federation_flavour.2.desc"
+	diplomatic = yes
+	picture_event_data = {
+		portrait = event_target:bajoranKai
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = root
+	}
+	trigger = { }
+	is_triggered_only = yes
+	immediate = {
+		random_country = { 
+			limit = { has_country_flag = bajoran_republic }
+			save_event_target_as = bajoran_republic
+		}
+		random_country = {
+			limit = { has_country_flag = bajoranReligionCountry }
+			random_owned_leader = { 
+				limit = { has_leader_flag = bajoranKai }
+				save_event_target_as = bajoranKai
+			}
+		}
+	}
+	option = {
+		name = STH_federation_flavour.2.a #Accept uniform request
+		response_text = STH_federation_flavour.2.a.response
+		custom_tooltip = "STH_federation_flavour.2.a.tooltip"
+		allow = { has_resource = { type = influence amount >= 25 } }
+		hidden_effect = { event_target:bajoran_republic = { change_variable = { which = "accession_progress" value = 10 } } }
+		add_resource = { influence = -25 }
+	}
+	option = {
+		name = STH_federation_flavour.2.b #Ask for more detail
+		is_dialog_only = yes
+		response_text = STH_federation_flavour.2.b.response
+	}
+	option = {
+		name = STH_federation_flavour.2.c #Reject uniform request
+		response_text = STH_federation_flavour.2.c.response
+		custom_tooltip = "STH_federation_flavour.2.c.tooltip"
+		hidden_effect = { event_target:bajoran_republic = { change_variable = { which = "accession_progress" value = -10 } } }
+		add_resource = { unity = 10 }
+	}
+}
+
+
+#Generic Remove Authoritarian
+country_event = {
+	id = STH_federation_flavour.100
+	title = "STH_federation_flavour.100.name"
+	desc = "STH_federation_flavour.100.desc"
+	diplomatic = yes
+	picture_event_data = { portrait = event_target:accessionStateLeader room = federation_council_room }
+	trigger = {
+		has_country_flag = united_federation_of_planets
+		OR = { has_ethic = ethic_egalitarian has_ethic = ethic_fanatic_egalitarian }
+		any_country = { 
+			OR = { has_ethic = ethic_authoritarian has_ethic = ethic_fanatic_authoritarian }
+			has_country_flag = federationAccessionState
+			check_variable = { which = "accession_progress" value > 20 }
+			NOT = { has_country_flag = recent_authoritarian_shift }
+		}
+	}
+	mean_time_to_happen = { months = 60 }
+	immediate = {
+		random_country = { 
+			limit = { 
+				OR = { has_ethic = ethic_authoritarian has_ethic = ethic_fanatic_authoritarian }
+				has_country_flag = federationAccessionState
+				check_variable = { which = "accession_progress" value > 20 }
+			}
+			save_event_target_as = accessionState
+			leader = { save_event_target_as = accessionStateLeader }
+		}
+	}
+	option = {
+		name = STH_federation_flavour.100.a #Fund education campaigns
+		allow = { has_resource = { type = influence amount >= 100 } }
+		add_resource = { influence = -100 }
+		hidden_effect = {
+			event_target:accessionState = {  
+				set_timed_country_flag = { flag = recent_authoritarian_shift days = 3600 }
+				random_list = {
+					10 = { shift_ethic = "ethic_egalitarian" change_variable = { which = "accession_progress" value = 5 } }
+					10 = { shift_ethic = "ethic_egalitarian" shift_ethic = "ethic_fanatic_egalitarian" change_variable = { which = "accession_progress" value = 3 } }
+				}
+				every_owned_pop = {
+					random_list = {
+						10 = { pop_change_ethic = "ethic_fanatic_egalitarian" }
+						15 = { pop_change_ethic = "ethic_egalitarian" }
+						75 = {}
+					}
+				}
+			}
+		}
+		custom_tooltip = "STH_federation_flavour.100.a.tooltip"
+	}
+	option = {
+		name = STH_federation_flavour.100.b #Support local initiatives
+		hidden_effect = {
+			event_target:accessionState = {  
+				set_timed_country_flag = { flag = recent_authoritarian_shift days = 1200 }
+				random_list = {
+					10 = { shift_ethic = "ethic_egalitarian" change_variable = { which = "accession_progress" value = 5 } }
+					10 = { }
+				}
+				every_owned_pop = {
+					random_list = {
+						15 = { pop_change_ethic = "ethic_egalitarian" }
+						85 = {}
+					}
+				}
+			}
+		}
+		custom_tooltip = "STH_federation_flavour.100.b.tooltip"
+	}
+	option = {
+		name = STH_federation_flavour.100.c #Refuse meeting
+		hidden_effect = { event_target:accessionState = { change_variable = { which = "accession_progress" value = -15 } } }
+		custom_tooltip = "STH_federation_flavour.100.c.tooltip"
+		add_resource = { unity = 25 }
+	}
+}
+
+#Generic Remove Militarist
+country_event = {
+	id = STH_federation_flavour.101
+	title = "STH_federation_flavour.101.name"
+	desc = "STH_federation_flavour.101.desc"
+	diplomatic = yes
+	picture_event_data = { portrait = event_target:accessionStateLeader room = federation_council_room }
+	trigger = {
+		has_country_flag = united_federation_of_planets
+		OR = { has_ethic = ethic_pacifist has_ethic = ethic_fanatic_pacifist }
+		any_country = { 
+			OR = { has_ethic = ethic_militarist has_ethic = ethic_fanatic_militarist }
+			has_country_flag = federationAccessionState
+			check_variable = { which = "accession_progress" value > 20 }
+			NOT = { has_country_flag = recent_militarist_shift }
+		}
+	}
+	mean_time_to_happen = { months = 60 }
+	immediate = {
+		random_country = { 
+			limit = { 
+				OR = { has_ethic = ethic_militarist has_ethic = ethic_fanatic_militarist }
+				has_country_flag = federationAccessionState
+				check_variable = { which = "accession_progress" value > 20 }
+			}
+			save_event_target_as = accessionState
+			leader = { save_event_target_as = accessionStateLeader }
+		}
+	}
+	option = {
+		name = STH_federation_flavour.101.a #Fund education campaigns
+		allow = { has_resource = { type = influence amount >= 100 } }
+		add_resource = { influence = -100 }
+		hidden_effect = {
+			event_target:accessionState = {  
+				set_timed_country_flag = { flag = recent_militarist_shift days = 3600 }
+				random_list = {
+					10 = { shift_ethic = "ethic_pacifist" change_variable = { which = "accession_progress" value = 5 } }
+					10 = { shift_ethic = "ethic_pacifist" shift_ethic = "ethic_fanatic_pacifist" change_variable = { which = "accession_progress" value = 3 } }
+				}
+				every_owned_pop = {
+					random_list = {
+						10 = { pop_change_ethic = "ethic_fanatic_pacifist" }
+						15 = { pop_change_ethic = "ethic_pacifist" }
+						75 = {}
+					}
+				}
+			}
+		}
+		custom_tooltip = "STH_federation_flavour.101.a.tooltip"
+	}
+	option = {
+		name = STH_federation_flavour.101.b #Support local initiatives
+		hidden_effect = {
+			event_target:accessionState = {  
+				set_timed_country_flag = { flag = recent_militarist_shift days = 1200 }
+				random_list = {
+					10 = { shift_ethic = "ethic_pacifist" change_variable = { which = "accession_progress" value = 5 } }
+					10 = { }
+				}
+				every_owned_pop = {
+					random_list = {
+						15 = { pop_change_ethic = "ethic_pacifist" }
+						85 = {}
+					}
+				}
+			}
+		}
+		custom_tooltip = "STH_federation_flavour.101.b.tooltip"
+	}
+	option = {
+		name = STH_federation_flavour.101.c #Refuse meeting
+		hidden_effect = { event_target:accessionState = { change_variable = { which = "accession_progress" value = -15 } } }
+		custom_tooltip = "STH_federation_flavour.101.c.tooltip"
+		add_resource = { unity = 25 }
+	}
+}
+
+#Generic Remove Xenophobia
+country_event = {
+	id = STH_federation_flavour.102
+	title = "STH_federation_flavour.102.name"
+	desc = "STH_federation_flavour.102.desc"
+	diplomatic = yes
+	picture_event_data = { portrait = event_target:accessionStateLeader room = federation_council_room }
+	trigger = {
+		has_country_flag = united_federation_of_planets
+		OR = { has_ethic = ethic_xenophile has_ethic = ethic_fanatic_xenophile }
+		any_country = { 
+			OR = { has_ethic = ethic_xenophobe has_ethic = ethic_fanatic_xenophobe }
+			has_country_flag = federationAccessionState
+			check_variable = { which = "accession_progress" value > 20 }
+			NOT = { has_country_flag = recent_xenophobe_shift }
+		}
+	}
+	mean_time_to_happen = { months = 60 }
+	immediate = {
+		random_country = { 
+			limit = { 
+				OR = { has_ethic = ethic_xenophobe has_ethic = ethic_fanatic_xenophobe }
+				has_country_flag = federationAccessionState
+				check_variable = { which = "accession_progress" value > 20 }
+			}
+			save_event_target_as = accessionState
+			leader = { save_event_target_as = accessionStateLeader }
+		}
+	}
+	option = {
+		name = STH_federation_flavour.102.a #Fund education campaigns
+		allow = { has_resource = { type = influence amount >= 100 } }
+		add_resource = { influence = -100 }
+		hidden_effect = {
+			event_target:accessionState = {  
+				set_timed_country_flag = { flag = recent_xenophobe_shift days = 3600 }
+				random_list = {
+					10 = { shift_ethic = "ethic_xenophile" change_variable = { which = "accession_progress" value = 5 } }
+					10 = { shift_ethic = "ethic_xenophile" shift_ethic = "ethic_fanatic_xenophile" change_variable = { which = "accession_progress" value = 3 } }
+				}
+				every_owned_pop = {
+					random_list = {
+						10 = { pop_change_ethic = "ethic_fanatic_xenophile" }
+						15 = { pop_change_ethic = "ethic_xenophile" }
+						75 = {}
+					}
+				}
+			}
+		}
+		custom_tooltip = "STH_federation_flavour.102.a.tooltip"
+	}
+	option = {
+		name = STH_federation_flavour.102.b #Support local initiatives
+		hidden_effect = {
+			event_target:accessionState = {  
+				set_timed_country_flag = { flag = recent_xenophobe_shift days = 1200 }
+				random_list = {
+					10 = { shift_ethic = "ethic_xenophile" change_variable = { which = "accession_progress" value = 5 } }
+					10 = { }
+				}
+				every_owned_pop = {
+					random_list = {
+						15 = { pop_change_ethic = "ethic_xenophile" }
+						85 = {}
+					}
+				}
+			}
+		}
+		custom_tooltip = "STH_federation_flavour.102.b.tooltip"
+	}
+	option = {
+		name = STH_federation_flavour.102.c #Refuse meeting
+		hidden_effect = { event_target:accessionState = { change_variable = { which = "accession_progress" value = -15 } } }
+		custom_tooltip = "STH_federation_flavour.102.c.tooltip"
+		add_resource = { unity = 25 }
+	}
+}
+
+
+
+#Anbo-jytsu
+fleet_event = {
+	id = STH_federation_flavour.500
+	title = STH_federation_flavour.500.name
+	desc = STH_federation_flavour.500.desc
+	picture = sth_GFX_evt_anboJytsu1
+	location = ROOT
+	trigger = {
+		years_passed > 30
+		is_in_combat = no
+		exists = owner
+		owner = { NOT = { has_country_flag = hadAnboJytsuCountry } has_normal_events = yes }
+		exists = leader
+		leader = { NOT = { has_leader_flag = hadAnboJytsu } species = { is_species_class = FED } }
+	}
+	mean_time_to_happen = { years = 60 }
+	immediate = {
+		owner = { 
+			set_timed_country_flag = { flag = hadAnboJytsuCountry days = 14400 }
+			create_leader = { class = admiral species = owner_main_species name = random skill = 1 } 
+		}
+		last_created_leader = {
+			save_event_target_as = anboJytsuChampion 
+			exile_leader_as = anboJytsuChampion
+		}
+	}
+	option = {
+		name = STH_federation_flavour.500.a
+		hidden_effect = {
+			random_list = {
+				50 = { 
+					#TODO: Add modifiers
+					fleet_event = { id = STH_federation_flavour.501 days = 7 scopes = { from = event_target:anboJytsuChampion } }
+				} #Win and gain positive trait
+				50 = { 
+					fleet_event = { id = STH_federation_flavour.502 days = 7 scopes = { from = event_target:anboJytsuChampion } } 
+				} #Lose and get injured
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = STH_federation_flavour.501
+	title = STH_federation_flavour.501.name
+	desc = STH_federation_flavour.501.desc
+	picture = sth_GFX_evt_anboJytsu2
+	location = ROOT
+	is_triggered_only = yes
+	immediate = { leader = { set_leader_flag = hadAnboJytsu } }
+	option = {
+		name = STH_federation_flavour.501.a
+		leader = { 
+			random_list = {
+				10 = { add_trait = leader_trait_adaptable }
+				10 = { add_trait = leader_trait_resilient }
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = STH_federation_flavour.502
+	title = STH_federation_flavour.502.name
+	desc = STH_federation_flavour.502.desc
+	picture = sth_GFX_evt_anboJytsu3
+	location = ROOT
+	is_triggered_only = yes
+	immediate = { leader = { set_leader_flag = hadAnboJytsu } }
+	option = {
+		name = STH_federation_flavour.502.a
+		leader = { add_trait = leader_trait_maimed }
+	}
+}
+
+#######################
+### Crew Activities ###
+#######################
+
+#Ship Activities MTTH
+country_event = {
+	id = STH_federation_flavour.600
+	hide_window = yes
+	mean_time_to_happen = { years = 20 }
+	trigger = {
+		starfleet_empire = yes
+		NOT = { has_country_flag = starfleet_launched_concert }
+		any_owned_fleet = {	
+			is_ship_class = shipclass_science_ship
+			is_in_combat = no
+		}
+	}
+	immediate = {
+		set_timed_country_flag = { flag = starfleet_launched_concert days = 7200 }
+		random_owned_ship = {
+			limit = { 
+				is_ship_class = shipclass_science_ship
+				is_in_combat = no 
+			}
+			ship_event = { id = STH_federation_flavour.602 }
+		}
+	}
+}
+
+#concert, selected ship
+ship_event = {
+	id = STH_federation_flavour.602
+	title = STH_federation_flavour.602.name
+	desc = STH_federation_flavour.602.desc
+	picture = sth_GFX_evt_nebula1
+	location = ROOT
+	is_triggered_only = yes
+	option = { # A worthwhile initiative, trigger special project
+		name = STH_federation_flavour.602.a
+		hidden_effect = { 
+			enable_special_project = { name = "SHIPBOARD_EVENT_1_PROJECT" location = root owner = this }
+		}
+	}
+	option = { # this is not in starfleet's interest
+		name = STH_federation_flavour.602.b
+	}
+}
+
+#successful completion of crew activities, random choice
+ship_event = {
+	id = STH_federation_flavour.603
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_list = {
+			10 = { 
+				ship_event = { id = STH_federation_flavour.604 } # concert 1
+			} 
+			10 = { 
+				ship_event = { id = STH_federation_flavour.605 } # theatre
+			} 
+			0 = {
+				modifier = { add = 10 owner = { has_technology = "tech_physics_holodeck_26" } }
+				ship_event = { id = STH_federation_flavour.606 } # holodeck
+			}
+			10 = { 
+				ship_event = { id = STH_federation_flavour.607 }  # concert 2
+			}
+			0 = {
+				modifier = { add = 10 owner = { has_technology = "tech_physics_holodeck_26" } }
+				ship_event = { id = STH_federation_flavour.608 } # holo-novel
+			}
+			10 = { 
+				ship_event = { id = STH_federation_flavour.609 } # poker
+			}
+			0 = {
+				modifier = { add = 10 owner = { has_technology = "tech_physics_01045" } }
+				ship_event = { id = STH_federation_flavour.610 } # holo-targeting
+			}
+			0 = {
+				modifier = { add = 10 owner = { NOT = { has_country_flag = captain_day_country } } }
+				ship_event = { id = STH_federation_flavour.620 } # captain picard day
+			}
+			0 = {
+				modifier = { add = 10 owner = { has_technology = "tech_physics_holodeck_26" } }
+				ship_event = { id = STH_federation_flavour.630 } # baseball
+			} 
+		}
+	}
+}
+
+#Random choice - concert 1
+ship_event = {	
+	id = STH_federation_flavour.604
+	title = STH_federation_flavour.604.name
+	desc = STH_federation_flavour.604.desc
+	picture = sth_GFX_evt_concert1
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_concert
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.604.a
+		owner = { add_resource = { unity = 300 } }
+		leader = { 
+			add_trait = leader_trait_art_patron
+			add_experience = 100
+		}
+	}
+}
+
+#Random choice - theatre
+ship_event = {
+	id = STH_federation_flavour.605
+	title = STH_federation_flavour.605.name
+	desc = STH_federation_flavour.605.desc
+	picture = sth_GFX_evt_theatre1
+	location = ROOT
+	is_triggered_only = yes
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.604.a
+		owner = { add_resource = { unity = 300 } }
+		leader = { 
+			add_trait = leader_trait_art_patron
+			add_experience = 100
+		}
+	}
+}
+
+#Random choice - holodeck
+ship_event = {
+	id = STH_federation_flavour.606
+	title = STH_federation_flavour.606.name
+	desc = STH_federation_flavour.606.desc
+	picture = sth_GFX_evt_holodeck1
+	location = ROOT
+	is_triggered_only = yes
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.604.a
+		owner = { add_resource = { unity = 1000 } }
+		leader = { 
+			add_trait = leader_trait_art_patron
+			add_experience = 250
+		}
+	}
+}
+
+#Random choice - concert 2
+ship_event = {	
+	id = STH_federation_flavour.607
+	title = STH_federation_flavour.607.name
+	desc = STH_federation_flavour.607.desc
+	picture = sth_GFX_evt_concert2
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_concert
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.607.a
+		owner = { add_resource = { unity = 300 } }
+		leader = { 
+			add_trait = leader_trait_art_patron
+			add_experience = 100
+		}
+	}
+}
+
+#Random choice - holo-novel
+ship_event = {	
+	id = STH_federation_flavour.608
+	title = STH_federation_flavour.608.name
+	desc = STH_federation_flavour.608.desc
+	picture = sth_GFX_evt_holodeck2
+	location = ROOT
+	is_triggered_only = yes
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.608.a
+		owner = { add_modifier = { modifier = em_holo_novel years = 10 } }
+		leader = { 
+			add_trait = leader_trait_art_patron
+			add_experience = 100
+		}
+	}
+}
+
+#Random choice - poker
+ship_event = {	
+	id = STH_federation_flavour.609
+	title = STH_federation_flavour.609.name
+	desc = STH_federation_flavour.609.desc
+	picture = sth_GFX_evt_poker1
+	location = ROOT
+	is_triggered_only = yes
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.609.a
+		leader = { 
+			add_experience = 1000
+		}
+	}
+}
+
+#Random choice - holo-targeting
+ship_event = {	
+	id = STH_federation_flavour.610
+	title = STH_federation_flavour.610.name
+	desc = STH_federation_flavour.610.desc
+	picture = sth_GFX_evt_holoShootingRange1
+	location = ROOT
+	is_triggered_only = yes
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.610.a
+		leader = { 
+			add_experience = 1000
+		}
+	}
+}
+
+#Random choice - captain day
+ship_event = {	
+	id = STH_federation_flavour.620
+	title = STH_federation_flavour.620.name
+	desc = STH_federation_flavour.620.desc
+	picture = sth_GFX_evt_captainPicardDay1
+	location = ROOT
+	is_triggered_only = yes
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.620.a
+		leader = { add_experience = 250 }
+		hidden_effect = {
+			ship_event = { id = STH_federation_flavour.621 days = 360 }
+			set_ship_flag = captain_day_ship
+			leader = { set_timed_leader_flag = { flag = captain_day_leader years = 2 } }
+			owner = { set_timed_country_flag = { flag = captain_day_country years = 2 } }
+		}
+	}
+}
+
+#Captain day repeat
+ship_event = {	
+	id = STH_federation_flavour.621
+	title = STH_federation_flavour.621.name
+	desc = STH_federation_flavour.621.desc
+	picture = sth_GFX_evt_captainPicardDay1
+	location = ROOT
+	is_triggered_only = yes
+	trigger = {
+		root = { has_ship_flag = captain_day_ship }
+		leader = { has_leader_flag = captain_day_leader }
+	}
+	option = { # Appreciation, rewards, loop
+		name = STH_federation_flavour.621.a
+		allow = { owner = { has_resource = { type = energy amount >= 25 } } }
+		owner = { add_resource = { energy = -25 } }
+		leader = { add_experience = 100 }
+		hidden_effect = {
+			ship_event = { id = STH_federation_flavour.621 days = 360 }
+		}
+	}
+	option = { # Appreciation, rewards, cancel loop
+		name = STH_federation_flavour.621.b
+	}
+}
+
+#Random choice - baseball
+ship_event = {
+	id = STH_federation_flavour.630
+	title = STH_federation_flavour.630.name
+	desc = {
+		exclusive_trigger = { exists = event_target:baseballCompetitorShip }
+		text = STH_federation_flavour.630.desc.ship
+	}
+	desc = {
+		exclusive_trigger = { exists = event_target:baseballCompetitorPlanet }
+		text = STH_federation_flavour.630.desc.planet
+	}
+	desc = {
+		text = STH_federation_flavour.630.desc.intraCrew
+	}
+	picture = sth_GFX_evt_baseball1
+	location = ROOT
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { 
+				exists = solar_system 
+				solar_system = { 
+					any_ship_in_system = {
+						NOT = { is_same_value = ROOT }
+						owner = { is_same_value = ROOT.Owner }
+					} 
+				} 
+			}
+			solar_system = {
+				random_fleet_in_system = {
+					limit = { any_owned_ship = { NOT = { is_same_value = ROOT } owner = { is_same_value = ROOT.Owner } } }
+					random_owned_ship = {
+						limit = { NOT = { is_same_value = ROOT } }
+						save_event_target_as = baseballCompetitorShip
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				exists = solar_system
+				solar_system = { any_system_planet = { is_colony = yes is_owned_by = ROOT.owner } }
+			}
+			solar_system = {
+				random_system_planet = {
+					limit = { is_colony = yes is_owned_by = ROOT.owner }
+					save_event_target_as = baseballCompetitorPlanet
+				}
+			}
+		} 
+		else_if = {
+			limit = {
+				exists = solar_system
+				solar_system = { any_neighbor_system = { any_system_planet = { is_colony = yes is_owned_by = ROOT.owner } } }
+			}
+			solar_system = {
+				random_neighbor_system = {
+					limit = { any_system_planet = { is_colony = yes is_owned_by = ROOT.owner } }
+					random_system_planet = {
+						limit = { is_colony = yes is_owned_by = ROOT.owner }
+						save_event_target_as = baseballCompetitorPlanet
+					}
+				}
+			}
+		}
+	}
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.630.a
+		hidden_effect = {
+			random_list = {
+				10 = { 
+					ship_event = { id = STH_federation_flavour.631 days = 7 } # win
+				}
+				10 = { 
+					ship_event = { id = STH_federation_flavour.632 days = 7 } # lose
+				}
+			}
+		}
+	}
+}
+
+#baseball - win
+ship_event = {	
+	id = STH_federation_flavour.631
+	title = STH_federation_flavour.631.name
+	desc = {
+		exclusive_trigger = { exists = event_target:baseballCompetitorShip }
+		text = STH_federation_flavour.631.desc.ship
+	}
+	desc = {
+		exclusive_trigger = { exists = event_target:baseballCompetitorPlanet }
+		text = STH_federation_flavour.631.desc.planet
+	}
+	desc = {
+		text = STH_federation_flavour.631.desc.intraCrew
+	}
+	picture = sth_GFX_evt_baseball2
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_anthemUFP
+	option = { # Appreciation, rewards
+		name = STH_federation_flavour.631.a
+		owner = { add_resource = { unity = 500 } }
+		leader = { 
+			add_experience = 250
+		}
+	}
+}
+
+#baseball - loss
+ship_event = {
+	id = STH_federation_flavour.632
+	title = STH_federation_flavour.632.name
+	desc = {
+		exclusive_trigger = { exists = event_target:baseballCompetitorShip }
+		text = STH_federation_flavour.632.desc.ship
+	}
+	desc = {
+		exclusive_trigger = { exists = event_target:baseballCompetitorPlanet }
+		text = STH_federation_flavour.632.desc.planet
+	}
+	desc = {
+		text = STH_federation_flavour.632.desc.intraCrew
+	}
+	picture = sth_GFX_evt_baseball3
+	location = ROOT
+	is_triggered_only = yes
+	option = { 
+		# Appreciation, rewards
+		name = STH_federation_flavour.632.a
+		owner = { add_resource = { unity = 50 } }
+	}
+}
+
+###Earth Luna Development
+#Orpheus Mining
+planet_event = {
+	id = STH_federation_flavour.700
+	title = STH_federation_flavour.700.name
+	desc = STH_federation_flavour.700.desc
+	picture = sth_GFX_evt_terraPrime2
+	location = ROOT
+	is_triggered_only = yes
+	option = {
+		name = STH_federation_flavour.700.a
+		tooltip = { add_deposit = d_earth_orpheus }
+	}
+}
+
+#Armstrong City
+planet_event = {
+	id = STH_federation_flavour.701
+	title = STH_federation_flavour.701.name
+	desc = STH_federation_flavour.701.desc
+	picture = sth_GFX_evt_terraPrime3
+	location = ROOT
+	is_triggered_only = yes
+	option = { 
+		name = STH_federation_flavour.701.a
+		tooltip = { add_deposit = d_earth_armstrong_city }
+	}
+}
+
+#Tycho City
+planet_event = {
+	id = STH_federation_flavour.702
+	title = STH_federation_flavour.702.name
+	desc = STH_federation_flavour.702.desc
+	picture = sth_GFX_evt_terraPrime3
+	location = ROOT
+	is_triggered_only = yes
+	option = { 
+		name = STH_federation_flavour.702.a
+		tooltip = { add_deposit = d_earth_tycho_city }
+	}
+}
+
+#New Atlantis
+planet_event = {
+	id = STH_federation_flavour.750
+	title = STH_federation_flavour.750.name
+	desc = STH_federation_flavour.750.desc
+	picture = sth_GFX_evt_federationEarth
+	show_sound = event_activating_unknown_technology
+	location = root
+	fire_only_once = yes
+	pre_triggers = {
+		has_owner = yes
+	}	
+	trigger = {
+		has_planet_flag = sol_earth
+		owner = { 
+			last_increased_tech = "tech_society_12614" 
+		}
+	}
+	immediate = {
+		add_deposit = d_earth_atlantic_ridge
+		owner = {
+			create_saved_leader = {
+				key = atlantis_manager
+				creator = root.owner
+				name = random
+				species = root.owner_main_species
+				class = governor
+				skill = random
+				set_age = 50
+				traits = { trait = random_trait }
+				effect = { save_global_event_target_as = atlantis_manager }
+			}
+		}
+	}
+	option = {
+		name = STH_federation_flavour.750.a
+		tooltip = { add_deposit = d_earth_atlantic_ridge }
+	}
+}

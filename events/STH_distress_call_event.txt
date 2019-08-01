@@ -1,0 +1,1248 @@
+############################
+# Distress Calls
+# Written by Walshicus
+############################
+
+namespace = STH_distress_call_event
+
+country_event = {
+	id = STH_distress_call_event.1
+	title = STH_distress_call_event.1.name
+	desc = STH_distress_call_event.1.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = event_target:distressLocation
+	trackable = yes
+	trigger = { 
+		has_normal_events = yes
+		is_normal_country = yes
+		any_planet_within_border = {
+			solar_system = { NOT = { any_system_planet = { is_same_value = root.capital_scope } } }
+			is_colony = no
+			is_star = no
+		}
+	}
+	mean_time_to_happen = { years = 12 }
+	immediate = {
+		random_planet_within_border = {
+			limit = { 
+				solar_system = { NOT = { any_system_planet = { is_same_value = root.capital_scope } } } ###REMOVE COMMENT
+				is_colony = no
+				is_star = no
+			}
+			save_event_target_as = distressLocation
+		}
+	}
+	option = {
+		name = STH_distress_call_event.1.a #Accept
+		enable_special_project = { name = DISTRESS_1_PROJECT owner = root location = event_target:distressLocation }
+	}
+	option = {
+		name = STH_distress_call_event.1.b #Decline - Good Guys
+		trigger = { is_xenophilic = yes }
+		add_resource = { unity = -50 }
+	}
+	option = {
+		name = STH_distress_call_event.1.c #Decline - Bad / Neutral Guys
+		trigger = { is_xenophilic = no }
+	}
+}
+
+
+
+# Parallax
+ship_event = {
+	id = STH_distress_call_event.1000
+	title = STH_distress_call_event.1000.name
+	desc = STH_distress_call_event.1000.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	immediate = { 
+		owner = { set_country_flag = parallaxAnomaly }
+	}
+	option = {
+		name = STH_distress_call_event.1000.a #Subspace Tractor
+		hidden_effect = {
+			fleet = { set_event_locked = yes }
+			ship_event = { id = STH_distress_call_event.1001 days = 2 scopes = { from = from } }
+		}
+	}
+	option = {
+		name = STH_distress_call_event.1000.b #Full Reverse
+		hidden_effect = {
+			ship_event = { id = STH_distress_call_event.1012 days = 2 scopes = { from = from } }
+		}
+	}
+}
+
+#Damages Ship
+ship_event = {
+	id = STH_distress_call_event.1001
+	title = STH_distress_call_event.1001.name
+	desc = STH_distress_call_event.1001.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	option = {
+		name = STH_distress_call_event.1001.a #Full Reverse
+		hidden_effect = {
+			ship_event = { id = STH_distress_call_event.1002 days = 7 scopes = { from = from } }
+		}
+	}
+	option = {
+		name = STH_distress_call_event.1001.b #Keep the tractor going
+		hidden_effect = {
+			random_list = {
+				10 = { ship_event = { id = STH_distress_call_event.1010 days = 2 scopes = { from = from } } }
+				20 = { ship_event = { id = STH_distress_call_event.1011 days = 2 scopes = { from = from } } }
+			}
+		}
+	}
+}
+
+#Same anomaly!
+ship_event = {
+	id = STH_distress_call_event.1002
+	title = STH_distress_call_event.1002.name
+	desc = STH_distress_call_event.1002.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	option = {
+		name = STH_distress_call_event.1002.a #Dampening Field
+		hidden_effect = {
+			ship_event = { id = STH_distress_call_event.1003 days = 7 scopes = { from = from } }
+		}
+	}
+	option = {
+		name = STH_distress_call_event.1002.b #Fire Weapons
+		hidden_effect = {
+			random_list = {
+				15 = { ship_event = { id = STH_distress_call_event.1008 days = 2 scopes = { from = from } } }
+				20 = { ship_event = { id = STH_distress_call_event.1009 days = 2 scopes = { from = from } } }
+			}
+		}
+	}
+}
+
+#Same ship!
+ship_event = {
+	id = STH_distress_call_event.1003
+	title = STH_distress_call_event.1003.name
+	desc = STH_distress_call_event.1003.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	option = {
+		name = STH_distress_call_event.1003.a #Warp Particles
+		hidden_effect = {
+			random_list = {
+				70 = { ship_event = { id = STH_distress_call_event.1004 days = 2 scopes = { from = from } } }
+				30 = { ship_event = { id = STH_distress_call_event.1005 days = 2 scopes = { from = from } } }
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.1003.b #Tetryon Beam
+		hidden_effect = {
+			random_list = {
+				30 = { ship_event = { id = STH_distress_call_event.1004 days = 2 scopes = { from = from } } }
+				70 = { ship_event = { id = STH_distress_call_event.1005 days = 2 scopes = { from = from } } }
+			}
+		}
+	}
+}
+
+#Success!
+ship_event = {
+	id = STH_distress_call_event.1004
+	title = STH_distress_call_event.1004.name
+	desc = STH_distress_call_event.1004.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	immediate = { fleet = { set_event_locked = no } }
+	option = {
+		name = STH_distress_call_event.1004.a #Success!
+		owner = { add_resource = { physics_research = 250 } }
+		leader = { add_experience = 200 }
+	}
+}
+
+#Not Big Enough, Shuttle Used
+ship_event = {
+	id = STH_distress_call_event.1005
+	title = STH_distress_call_event.1005.name
+	desc = STH_distress_call_event.1005.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	option = {
+		name = STH_distress_call_event.1005.a #Port
+		hidden_effect = {
+			random_list = {
+				30 = { ship_event = { id = STH_distress_call_event.1006 days = 2 scopes = { from = from } } }
+				70 = { ship_event = { id = STH_distress_call_event.1007 days = 2 scopes = { from = from } } }
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.1005.b #Starboard
+		hidden_effect = {
+			random_list = {
+				70 = { ship_event = { id = STH_distress_call_event.1006 days = 2 scopes = { from = from } } }
+				30 = { ship_event = { id = STH_distress_call_event.1007 days = 2 scopes = { from = from } } }
+			}
+		}
+	}
+}
+
+#Success!
+ship_event = {
+	id = STH_distress_call_event.1006
+	title = STH_distress_call_event.1006.name
+	desc = STH_distress_call_event.1006.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	immediate = { fleet = { set_event_locked = no } }
+	option = {
+		name = STH_distress_call_event.1006.a #Success!
+		owner = { add_resource = { physics_research = 250 } }
+		leader = { add_experience = 200 }
+	}
+}
+
+#Success, but dead Captain
+ship_event = {
+	id = STH_distress_call_event.1007
+	title = STH_distress_call_event.1007.name
+	desc = STH_distress_call_event.1007.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	immediate = { fleet = { set_event_locked = no } }
+	option = {
+		name = STH_distress_call_event.1007.a #Success!
+		owner = { add_resource = { physics_research = 250 } }
+		leader = { kill_leader = { show_notification = no } }
+	}
+}
+
+#Ship Destroyed
+ship_event = {
+	id = STH_distress_call_event.1008
+	title = STH_distress_call_event.1008.name
+	desc = STH_distress_call_event.1008.desc
+	picture = GFX_evt_exploding_ship
+	location = ROOT  
+	is_triggered_only = yes
+	show_sound = event_ship_explosion
+	option = {
+		name = STH_distress_call_event.1008.a #Destroyed
+		destroy_ship = this
+	}
+}
+
+#Ship Damaged
+ship_event = {
+	id = STH_distress_call_event.1009
+	title = STH_distress_call_event.1009.name
+	desc = STH_distress_call_event.1009.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	option = {
+		name = STH_distress_call_event.1009.a #Dampening Field
+		hidden_effect = {
+			ship_event = { id = STH_distress_call_event.1003 days = 7 scopes = { from = from } }
+			if = {
+				limit = { has_hp_percentage >= 0.75 }
+				reduce_hp_percent = 50
+			}
+			else_if = {
+				limit = { has_hp_percentage >= 0.50 }
+				reduce_hp_percent = 25
+			}
+		}
+	}
+}
+
+#Ship Destroyed
+ship_event = {
+	id = STH_distress_call_event.1010
+	title = STH_distress_call_event.1010.name
+	desc = STH_distress_call_event.1010.desc
+	picture = GFX_evt_exploding_ship
+	location = ROOT  
+	is_triggered_only = yes
+	show_sound = event_ship_explosion
+	option = {
+		name = STH_distress_call_event.1010.a #Destroyed
+		destroy_ship = this
+	}
+}
+
+#Ship Damaged
+ship_event = {
+	id = STH_distress_call_event.1011
+	title = STH_distress_call_event.1011.name
+	desc = STH_distress_call_event.1011.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes	
+	option = {
+		name = STH_distress_call_event.1011.a #Dampening Field
+		hidden_effect = {
+			ship_event = { id = STH_distress_call_event.1003 days = 7 scopes = { from = from } }
+			if = {
+				limit = { has_hp_percentage >= 0.75 }
+				reduce_hp_percent = 50
+			}
+			else_if = {
+				limit = { has_hp_percentage >= 0.50 }
+				reduce_hp_percent = 25
+			}
+		}
+	}
+}
+
+#Signal and anomaly disappear
+ship_event = {
+	id = STH_distress_call_event.1012
+	title = STH_distress_call_event.1012.name
+	desc = STH_distress_call_event.1012.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = ROOT  
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.1012.a #Timeline change?
+		hidden_effect = { owner = { small_timeline_change = yes } }
+	}
+}
+
+#Eye of the Needle (Romulan Perspective)
+#From = location
+ship_event = {
+	id = STH_distress_call_event.2000
+	title = STH_distress_call_event.2000.name
+	desc = STH_distress_call_event.2000.desc
+	picture = sth_GFX_evt_romulanScoutShip
+	location = FROM
+	is_triggered_only = yes
+	immediate = {
+		from = { save_event_target_as = distressLocation } 
+        create_ambient_object = { type = sth_micro_wormhole location = event_target:distressLocation }
+        last_created_ambient_object = {
+            set_ambient_object_flag = eyeOfTheNeedleWormhole
+			save_global_event_target_as = eyeOfTheNeedleWormhole
+        }
+		set_global_flag = eyeOfTheNeedleAnomaly
+    }
+	option = {
+		name = STH_distress_call_event.2000.a
+        owner = {
+            enable_special_project = { name = EYE_OF_THE_NEEDLE_1_PROJECT owner = this location = event_target:eyeOfTheNeedleWormhole }
+        }
+	}
+}
+
+#Success
+ship_event = {
+	id = STH_distress_call_event.2001
+	title = STH_distress_call_event.2001.name
+	desc = STH_distress_call_event.2001.desc
+	picture = sth_GFX_evt_romulanScoutShip
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_distress_call_event.2001.a #Assist?
+		hidden_effect = {
+			random_list = {
+				10 = { owner = { set_country_flag = eyeOfTheNeedle_Voyager } }
+				10 = { owner = { set_country_flag = eyeOfTheNeedle_Equinox } }
+				10 = { owner = { set_country_flag = eyeOfTheNeedle_ValJean } }
+				10 = { owner = { set_country_flag = eyeOfTheNeedle_Vetar } }
+			}
+			random_list = {
+				75 = { 
+					modifier = { add = 25 exists = leader leader = { has_skill >= 2 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 3 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 4 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 5 } }
+					ship_event = { id = STH_distress_call_event.2010 days = 3 scopes = { from = from } } 
+				}
+				25 = { ship_event = { id = STH_distress_call_event.2005 days = 3 scopes = { from = from } } }
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.2001.b #A trick?
+		ship_event = { id = STH_distress_call_event.2003 days = 7 scopes = { from = from } }
+	}
+}
+
+#Didn't study in time
+country_event = {
+	id = STH_distress_call_event.2002
+	title = STH_distress_call_event.2002.name
+	desc = STH_distress_call_event.2002.desc
+	picture = sth_GFX_evt_romulanScoutShip
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_distress_call_event.2002.a #Unfortunate
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+
+#Passively observed
+ship_event = {
+	id = STH_distress_call_event.2003
+	title = STH_distress_call_event.2003.name
+	desc = STH_distress_call_event.2003.desc
+	picture = sth_GFX_evt_romulanScoutShip
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_distress_call_event.2003.a #Unfortunate
+		owner = { add_monthly_resource_mult = { resource = physics_research value = 10 } }
+		owner = { add_monthly_resource_mult = { resource = society_research value = 1 } }
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+
+#failed to connect
+ship_event = {
+	id = STH_distress_call_event.2005
+	title = STH_distress_call_event.2005.name
+	desc = STH_distress_call_event.2005.desc
+	picture = sth_GFX_evt_romulanScoutShip
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_distress_call_event.2005.a #Unfortunate
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+
+#Agree to assist
+ship_event = {
+	id = STH_distress_call_event.2010
+	title = STH_distress_call_event.2010.name
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2010.desc.voyagerKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2010.desc.voyagerUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2010.desc.equinoxKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2010.desc.equinoxUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean any_relation = { has_country_flag = maquisRebels } } }
+		text = STH_distress_call_event.2010.desc.valjeanKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean NOT = { any_relation = { has_country_flag = maquisRebels } } } }
+		text = STH_distress_call_event.2010.desc.valjeanUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar any_relation = { cardassian_empires = yes } } }
+		text = STH_distress_call_event.2010.desc.vetarKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar NOT = { any_relation = { cardassian_empires = yes } } } }
+		text = STH_distress_call_event.2010.desc.vetarUnknown
+	}
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager } } picture = sth_GFX_evt_starfleetVoyager }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox } } picture = sth_GFX_evt_starfleetEquinox }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean } } picture = sth_GFX_evt_maquisValJean }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar } } picture = sth_GFX_evt_galorCruiser }
+	location = FROM
+	is_triggered_only = yes
+	immediate = { }
+	option = {
+		name = STH_distress_call_event.2010.a #Transport
+		hidden_effect = {
+			random_list = {
+				75 = { 
+					modifier = { add = 25 exists = leader leader = { has_skill >= 2 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 3 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 4 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 5 } }
+					ship_event = { id = STH_distress_call_event.2011 days = 7 } 
+				}
+				25 = { ship_event = { id = STH_distress_call_event.2012 days = 7 } }
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.2010.b #Do Nothing
+		ship_event = { id = STH_distress_call_event.2013 days = 3 }
+	}
+}
+#Beamed Over
+ship_event = {
+	id = STH_distress_call_event.2011
+	title = STH_distress_call_event.2011.name
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2011.desc.voyagerKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2011.desc.voyagerUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2011.desc.equinoxKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2011.desc.equinoxUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean any_relation = { has_country_flag = maquisRebels } } }
+		text = STH_distress_call_event.2011.desc.valjeanKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean NOT = { any_relation = { has_country_flag = maquisRebels } } } }
+		text = STH_distress_call_event.2011.desc.valjeanUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar any_relation = { cardassian_empires = yes } } }
+		text = STH_distress_call_event.2011.desc.vetarKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar NOT = { any_relation = { cardassian_empires = yes } } } }
+		text = STH_distress_call_event.2011.desc.vetarUnknown
+	}
+	picture = sth_GFX_evt_eyeOfTheNeedle1
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.2011.a #Convey
+		owner = { country_event = { id = STH_distress_call_event.2030 scopes = { from = from } days = 18000 random = 2000 } } ##TODO change to proper delay
+		owner = { add_monthly_resource_mult = { resource = physics_research value = 10 } }
+		owner = { add_monthly_resource_mult = { resource = society_research value = 10 } }
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+	option = {
+		name = STH_distress_call_event.2011.b #Hijack
+		hidden_effect = {
+			owner = { add_monthly_resource_mult = { resource = physics_research value = 10 } }
+			owner = { add_monthly_resource_mult = { resource = society_research value = 10 } }
+			random_list = {
+				25 = { ship_event = { id = STH_distress_call_event.2015 days = 3 scopes = { from = from } } } ## Failure
+				25 = { ship_event = { id = STH_distress_call_event.2020 days = 3 scopes = { from = from } } } ## Epic Failure
+				25 = { 
+					modifier = { add = 25 exists = leader leader = { has_skill >= 2 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 3 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 4 } }
+					modifier = { add = 25 exists = leader leader = { has_skill >= 5 } }
+					ship_event = { id = STH_distress_call_event.2025 days = 3 scopes = { from = from } } 
+				} ## Success
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.2011.c #Do Nothing
+		owner = { add_monthly_resource_mult = { resource = physics_research value = 10 } }
+		owner = { add_monthly_resource_mult = { resource = society_research value = 10 } }
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+#Transport Failed
+ship_event = {
+	id = STH_distress_call_event.2012
+	title = STH_distress_call_event.2012.name
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2012.desc.voyagerKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2012.desc.voyagerUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2012.desc.equinoxKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2012.desc.equinoxUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean any_relation = { has_country_flag = maquisRebels } } }
+		text = STH_distress_call_event.2012.desc.valjeanKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean NOT = { any_relation = { has_country_flag = maquisRebels } } } }
+		text = STH_distress_call_event.2012.desc.valjeanUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar any_relation = { cardassian_empires = yes } } }
+		text = STH_distress_call_event.2012.desc.vetarKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar NOT = { any_relation = { cardassian_empires = yes } } } }
+		text = STH_distress_call_event.2012.desc.vetarUnknown
+	}
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager } } picture = sth_GFX_evt_starfleetVoyager }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox } } picture = sth_GFX_evt_starfleetEquinox }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean } } picture = sth_GFX_evt_maquisValJean }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar } } picture = sth_GFX_evt_galorCruiser }
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.2012.a #Transport Failed
+		owner = { add_monthly_resource_mult = { resource = physics_research value = 4 } }
+		owner = { add_monthly_resource_mult = { resource = society_research value = 2 } }
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+
+#Transport not attempted - too risky
+ship_event = {
+	id = STH_distress_call_event.2013
+	title = STH_distress_call_event.2013.name
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2013.desc.voyagerKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2013.desc.voyagerUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2013.desc.equinoxKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2013.desc.equinoxUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean any_relation = { has_country_flag = maquisRebels } } }
+		text = STH_distress_call_event.2013.desc.valjeanKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean NOT = { any_relation = { has_country_flag = maquisRebels } } } }
+		text = STH_distress_call_event.2013.desc.valjeanUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar any_relation = { cardassian_empires = yes } } }
+		text = STH_distress_call_event.2013.desc.vetarKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar NOT = { any_relation = { cardassian_empires = yes } } } }
+		text = STH_distress_call_event.2013.desc.vetarUnknown
+	}
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager } } picture = sth_GFX_evt_starfleetVoyager }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox } } picture = sth_GFX_evt_starfleetEquinox }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean } } picture = sth_GFX_evt_maquisValJean }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar } } picture = sth_GFX_evt_galorCruiser }
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.2013.a #Transport Failed
+		owner = { add_monthly_resource_mult = { resource = physics_research value = 4 } }
+		owner = { add_monthly_resource_mult = { resource = society_research value = 2 } }
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+
+#Hijack Failure
+ship_event = {
+	id = STH_distress_call_event.2015
+	title = STH_distress_call_event.2015.name
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2015.desc.voyagerKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2015.desc.voyagerUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2015.desc.equinoxKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2015.desc.equinoxUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean any_relation = { has_country_flag = maquisRebels } } }
+		text = STH_distress_call_event.2015.desc.valjeanKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean NOT = { any_relation = { has_country_flag = maquisRebels } } } }
+		text = STH_distress_call_event.2015.desc.valjeanUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar any_relation = { cardassian_empires = yes } } }
+		text = STH_distress_call_event.2015.desc.vetarKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar NOT = { any_relation = { cardassian_empires = yes } } } }
+		text = STH_distress_call_event.2015.desc.vetarUnknown
+	}
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager } } picture = sth_GFX_evt_starfleetVoyager }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox } } picture = sth_GFX_evt_starfleetEquinox }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean } } picture = sth_GFX_evt_maquisValJean }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar } } picture = sth_GFX_evt_galorCruiser }
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.2015.a #Failure
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+
+#Hijack Epic Failure
+ship_event = {
+	id = STH_distress_call_event.2020
+	title = STH_distress_call_event.2020.name
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2020.desc.voyagerKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2020.desc.voyagerUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2020.desc.equinoxKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2020.desc.equinoxUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean any_relation = { has_country_flag = maquisRebels } } }
+		text = STH_distress_call_event.2020.desc.valjeanKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean NOT = { any_relation = { has_country_flag = maquisRebels } } } }
+		text = STH_distress_call_event.2020.desc.valjeanUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar any_relation = { cardassian_empires = yes } } }
+		text = STH_distress_call_event.2020.desc.vetarKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar NOT = { any_relation = { cardassian_empires = yes } } } }
+		text = STH_distress_call_event.2020.desc.vetarUnknown
+	}
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager } } picture = sth_GFX_evt_starfleetVoyager }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox } } picture = sth_GFX_evt_starfleetEquinox }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean } } picture = sth_GFX_evt_maquisValJean }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar } } picture = sth_GFX_evt_galorCruiser }
+	location = FROM
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { 
+				owner = { OR = { has_country_flag = eyeOfTheNeedle_Voyager has_country_flag = eyeOfTheNeedle_Equinox } }
+				any_country = { starfleet_empire = yes }
+			}
+			random_country = {
+				limit = { starfleet_empire = yes }
+				save_event_target_as = contactCountry
+			}
+		}
+		else_if = {
+			limit = { 
+				owner = { has_country_flag = eyeOfTheNeedle_ValJean }
+				any_country = { has_country_flag = maquisRebels }
+			}
+			random_country = {
+				limit = { has_country_flag = maquisRebels }
+				save_event_target_as = contactCountry
+			}
+		}
+		else_if = {
+			limit = { 
+				owner = { has_country_flag = eyeOfTheNeedle_Vetar }
+				any_country = { cardassian_empires = yes }
+			}
+			random_country = {
+				limit = { cardassian_empires = yes }
+				save_event_target_as = contactCountry
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.2020.a #Epic Failure
+		hidden_effect = {
+			if = {
+				limit = { exists = event_target:contactCountry } 
+				event_target:contactCountry = { country_event = { id = STH_distress_call_event.2040 days = 720 random = 90 scopes = { from = root.owner } } }
+			}
+			fleet = { delete_fleet = this }
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+#Hijack Success
+ship_event = {
+	id = STH_distress_call_event.2025
+	title = STH_distress_call_event.2025.name
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2025.desc.voyagerKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2025.desc.voyagerUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2025.desc.equinoxKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox NOT = { any_relation = { starfleet_empire = yes } } } }
+		text = STH_distress_call_event.2025.desc.equinoxUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean any_relation = { has_country_flag = maquisRebels } } }
+		text = STH_distress_call_event.2025.desc.valjeanKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean NOT = { any_relation = { has_country_flag = maquisRebels } } } }
+		text = STH_distress_call_event.2025.desc.valjeanUnknown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar any_relation = { cardassian_empires = yes } } }
+		text = STH_distress_call_event.2025.desc.vetarKnown
+	}
+	desc = {
+		trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar NOT = { any_relation = { cardassian_empires = yes } } } }
+		text = STH_distress_call_event.2025.desc.vetarUnknown
+	}
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Voyager } } picture = sth_GFX_evt_starfleetVoyager }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Equinox } } picture = sth_GFX_evt_starfleetEquinox }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_ValJean } } picture = sth_GFX_evt_maquisValJean }
+	picture = { trigger = { owner = { has_country_flag = eyeOfTheNeedle_Vetar } } picture = sth_GFX_evt_galorCruiser }
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.2025.a #Success
+		owner = {
+			add_monthly_resource_mult = { resource = physics_research value = 12 }
+			add_monthly_resource_mult = { resource = engineering_research value = 12 }
+		}
+		hidden_effect = {
+			destroy_ambient_object = event_target:eyeOfTheNeedleWormhole
+		}
+	}
+}
+
+#Contact the ship's country
+country_event = {
+	id = STH_distress_call_event.2030
+	title = STH_distress_call_event.2030.name
+	desc = {
+		trigger = { has_country_flag = eyeOfTheNeedle_Voyager any_relation = { starfleet_empire = yes } }
+		text = STH_distress_call_event.2030.desc.voyagerKnown
+	}
+	desc = {
+		trigger = { has_country_flag = eyeOfTheNeedle_Voyager NOT = { any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2030.desc.voyagerUnknown
+	}
+	desc = {
+		trigger = { has_country_flag = eyeOfTheNeedle_Equinox any_relation = { starfleet_empire = yes } }
+		text = STH_distress_call_event.2030.desc.equinoxKnown
+	}
+	desc = {
+		trigger = { has_country_flag = eyeOfTheNeedle_Equinox NOT = { any_relation = { starfleet_empire = yes } } }
+		text = STH_distress_call_event.2030.desc.equinoxUnknown
+	}
+	desc = {
+		trigger = { has_country_flag = eyeOfTheNeedle_ValJean any_relation = { has_country_flag = maquisRebels } }
+		text = STH_distress_call_event.2030.desc.valjeanKnown
+	}
+	desc = {
+		trigger = { has_country_flag = eyeOfTheNeedle_ValJean NOT = { any_relation = { has_country_flag = maquisRebels } } }
+		text = STH_distress_call_event.2030.desc.valjeanUnknown
+	}
+	desc = {
+		trigger = { has_country_flag = eyeOfTheNeedle_Vetar any_relation = { cardassian_empires = yes } }
+		text = STH_distress_call_event.2030.desc.vetarKnown
+	}
+	desc = {
+		trigger = { has_country_flag = eyeOfTheNeedle_Vetar NOT = { any_relation = { cardassian_empires = yes } } }
+		text = STH_distress_call_event.2030.desc.vetarUnknown
+	}
+	picture = sth_GFX_evt_starMap
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { 
+				OR = { has_country_flag = eyeOfTheNeedle_Voyager has_country_flag = eyeOfTheNeedle_Equinox } 
+				any_relation = { starfleet_empire = yes }
+			}
+			random_relation = {
+				limit = { starfleet_empire = yes }
+				save_event_target_as = contactCountry
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = eyeOfTheNeedle_ValJean
+				any_relation = { has_country_flag = maquisRebels }
+			}
+			random_relation = {
+				limit = { has_country_flag = maquisRebels }
+				save_event_target_as = contactCountry
+			}
+		}
+		else_if = {
+			limit = { 
+				has_country_flag = eyeOfTheNeedle_Vetar
+				any_relation = { cardassian_empires = yes }
+			}
+			random_relation = {
+				limit = { cardassian_empires = yes }
+				save_event_target_as = contactCountry
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.2030.a #Contact Success
+		trigger = { exists = event_target:contactCountry }
+		allow = { exists = event_target:contactCountry }
+		hidden_effect = {
+			event_target:contactCountry = { country_event = { id = STH_distress_call_event.2035 days = 7 scopes = { from = root } } }
+		}
+	}
+	option = {
+		name = STH_distress_call_event.2030.b #Contact Failure
+		trigger = { NOT = { exists = event_target:contactCountry } }
+		allow = { NOT = { exists = event_target:contactCountry } }
+	}
+}
+
+#Ship's country contacted
+country_event = {
+	id = STH_distress_call_event.2035
+	title = STH_distress_call_event.2035.name
+	desc = STH_distress_call_event.2035.desc
+	picture = sth_GFX_evt_starMap
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.2035.a #Improved Relations
+	}
+}
+
+#Ship's country contacted by future ship
+country_event = {
+	id = STH_distress_call_event.2040
+	title = STH_distress_call_event.2040.name
+	desc = {
+		exclusive_trigger = {
+			exists = from
+			has_established_contact = from
+		}
+		text = STH_distress_call_event.2040.desc
+	}
+	desc = {
+		text = STH_distress_call_event.2040.desc.nocontact
+	}
+	picture = sth_GFX_evt_romulanScoutShip
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.2040.a #Get some tech
+		add_monthly_resource_mult = { resource = physics_research value = 12 }
+			add_monthly_resource_mult = { resource = engineering_research value = 12 }
+			add_monthly_resource_mult = { resource = society_research value = 12 }
+	}
+}
+
+###Failed to respond
+country_event = {
+	id = STH_distress_call_event.100
+	title = STH_distress_call_event.100.name
+	desc = STH_distress_call_event.100.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = event_target:distressLocation
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.100.a #Unfortunate
+		add_resource = { unity = -25 }
+	}
+}
+
+
+
+###False Alarm
+ship_event = {
+	id = STH_distress_call_event.200
+	title = STH_distress_call_event.200.name
+	desc = STH_distress_call_event.200.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = event_target:distressLocation
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.200.a #Honest mistake
+		owner = { add_monthly_resource_mult = { resource = unity value = @tier1unityreward min = @tier1unitymin max = @tier1unitymax } }
+	}
+	option = {
+		name = STH_distress_call_event.200.b #Impose fine
+		owner = { add_monthly_resource_mult = { resource = energy value = @tier1materialreward min = @tier1materialmin max = @tier1materialmax } }
+	}
+}
+
+###Damaged Freighter
+ship_event = {
+	id = STH_distress_call_event.300
+	title = STH_distress_call_event.300.name
+	desc = STH_distress_call_event.300.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = event_target:distressLocation
+	is_triggered_only = yes
+	immediate = {
+		owner = {
+			random_owned_planet = {
+				limit = { is_capital = no is_colony = yes }
+				save_event_target_as = freighterOrigin
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.300.a #Thanks for minerals
+		owner = { add_monthly_resource_mult = { resource = minerals value = @tier1materialreward min = @tier1materialmin max = @tier1materialmax } }
+	}
+	option = {
+		name = STH_distress_call_event.300.b #No reward is necessary
+		owner = { add_monthly_resource_mult = { resource = unity value = @tier1unityreward min = @tier1unitymin max = @tier1unitymax } }
+	}
+}
+
+###Damaged Freighter
+ship_event = {
+	id = STH_distress_call_event.400
+	title = STH_distress_call_event.400.name
+	desc = STH_distress_call_event.400.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = event_target:distressLocation
+	is_triggered_only = yes
+	immediate = {
+		owner = {
+			random_relation = {
+				limit = {
+					NOR = { 
+						is_at_war_with = ROOT.Owner 
+						has_closed_borders = ROOT.Owner
+					}
+					is_normal_country = yes
+					has_normal_events = yes
+				}
+				save_event_target_as = freighterOwner
+				random_owned_planet = {
+					limit = { is_colony = yes }
+					save_event_target_as = freighterOrigin
+				}
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.400.a #Thanks for minerals
+		owner = { add_monthly_resource_mult = { resource = energy value = @tier1materialreward min = @tier1materialmin max = @tier1materialmax } }
+		event_target:freighterOwner = { add_opinion_modifier = { modifier = opinion_assisted_freighter who = root.owner } }
+	}
+	option = {
+		name = STH_distress_call_event.400.b #No reward is necessary
+		owner = { add_monthly_resource_mult = { resource = influence value = @tier1influencereward min = @tier1influencemin max = @tier1influencemax } }
+		event_target:freighterOwner = { add_opinion_modifier = { modifier = opinion_assisted_freighter who = root.owner } }
+	}
+}
+
+###Alien Pirates
+ship_event = {
+	id = STH_distress_call_event.600
+	title = STH_distress_call_event.600.name
+	desc = STH_distress_call_event.600.desc
+	picture = sth_GFX_evt_spaceBattle2
+	location = event_target:distressLocation
+	is_triggered_only = yes
+	immediate = {
+		owner = {
+			random_relation = {
+				limit = {
+					OR = { 
+						is_at_war_with = ROOT.Owner 
+						has_closed_borders = ROOT.Owner
+					}
+					has_normal_events = yes
+					is_normal_country = yes
+				}
+				save_event_target_as = pirateOwner
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.600.a #Stay and Fight
+		hidden_effect = {
+			random_list = {
+				30 = {
+					modifier = { factor = 1.25 leader = { has_level = 2 } }
+					modifier = { factor = 1.50 leader = { has_level = 3 } }
+					modifier = { factor = 1.75 leader = { has_level = 4 } }
+					modifier = { factor = 2.00 leader = { has_level >= 5 } }
+					ship_event = { id = STH_distress_call_event.601 scopes = { from = from fromfrom = event_target:pirateOwner } } #Win!
+				}
+				10 = {
+					ship_event = { id = STH_distress_call_event.602 scopes = { from = from fromfrom = event_target:pirateOwner } } #Destroyed
+				}
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.600.b #Emergency Warp
+		hidden_effect = {
+			random_list = {
+				10 = {
+					modifier = { factor = 1.25 leader = { has_level = 2 } }
+					modifier = { factor = 1.50 leader = { has_level = 3 } }
+					modifier = { factor = 1.75 leader = { has_level = 4 } }
+					modifier = { factor = 2.00 leader = { has_level >= 5 } }
+					ship_event = { id = STH_distress_call_event.603 scopes = { from = from fromfrom = event_target:pirateOwner } } #Escape
+				}
+				10 = {
+					ship_event = { id = STH_distress_call_event.604 scopes = { from = from fromfrom = event_target:pirateOwner } } #Damaged
+				}
+			}
+		}
+	}
+}
+
+
+###Win
+ship_event = {
+	id = STH_distress_call_event.601
+	title = STH_distress_call_event.601.name
+	desc = STH_distress_call_event.601.desc
+	picture = GFX_evt_exploding_ship
+	location = event_target:distressLocation
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.601.a
+		owner = { add_monthly_resource_mult = { resource = influence value = @tier1influencereward min = @tier1influencemin max = @tier1influencemax } }
+		owner = { add_monthly_resource_mult = { resource = unity value = @tier1unityreward min = @tier1unitymin max = @tier1unitymax } }
+	}
+}
+
+###Destroyed
+ship_event = {
+	id = STH_distress_call_event.602
+	title = STH_distress_call_event.602.name
+	desc = STH_distress_call_event.602.desc
+	picture = GFX_evt_exploding_ship
+	location = event_target:distressLocation
+	show_sound = event_ship_explosion
+	is_triggered_only = yes
+	option = {
+		name = STH_distress_call_event.602.a
+		destroy_ship = this
+	}
+}
+
+###Escape
+ship_event = {
+	id = STH_distress_call_event.603
+	title = STH_distress_call_event.603.name
+	desc = STH_distress_call_event.603.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = event_target:distressLocation
+	show_sound = event_ship_explosion
+	is_triggered_only = yes
+	immediate = {
+		fleet = {
+			closest_system = {
+				limit = { space_owner = { is_same_value = root.owner } }
+				random_system_planet = { save_event_target_as = escapePlanet }
+			}
+			set_location = {
+				target = event_target:escapePlanet
+				distance = 300
+				direction = out_system
+				angle = random
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.603.a
+		owner = { add_monthly_resource_mult = { resource = unity value = @tier1unityreward min = @tier1unitymin max = @tier1unitymax } }
+	}
+}
+
+###Damaged
+ship_event = {
+	id = STH_distress_call_event.604
+	title = STH_distress_call_event.604.name
+	desc = STH_distress_call_event.604.desc
+	picture = sth_GFX_evt_spaceBackground
+	location = event_target:distressLocation
+	show_sound = event_ship_explosion
+	is_triggered_only = yes
+	immediate = {
+		fleet = {
+			closest_system = {
+				limit = { space_owner = { is_same_value = root.owner } }
+				random_system_planet = { save_event_target_as = escapePlanet }
+			}
+			set_location = {
+				target = event_target:escapePlanet
+				distance = 300
+				direction = out_system
+				angle = random
+			}
+		}
+	}
+	option = {
+		name = STH_distress_call_event.604.a
+		if = {
+			limit = { has_hp_percentage >= 0.75 }
+			reduce_hp_percent = 50
+		}
+		else_if = {
+			limit = { has_hp_percentage >= 0.50 }
+			reduce_hp_percent = 25
+		}
+		else_if = {
+			limit = { has_hp_percentage >= 0.25 }
+			reduce_hp_percent = 15
+		}
+	}
+}

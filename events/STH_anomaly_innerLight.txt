@@ -1,0 +1,391 @@
+############################
+#
+# Second Chance Events
+#
+# Written by Doot Doot
+# Updated by Walshicus
+#
+############################
+
+namespace = STH_innerLight_event
+
+
+#captain to sleep
+ship_event = {
+	id = STH_innerLight_event.1
+	title = STH_innerLight_event.1.name
+	desc = STH_innerLight_event.1.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	is_triggered_only = yes
+	
+	option = {
+		name = STH_innerLight_event.1.a #Shields Up
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.2 days = 3 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_innerLight_event.1.b #Fire
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.3 days = 3 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_innerLight_event.1.c #Reverse
+		hidden_effect = {
+			random_list = {
+				70 = { ship_event = { id = STH_innerLight_event.4 days = 3 scopes = { from = from } } }
+				30 = { ship_event = { id = STH_innerLight_event.10 days = 3 scopes = { from = from } } }
+			}
+		}
+	}	
+}
+
+#Shields Up
+ship_event = {
+	id = STH_innerLight_event.2
+	title = STH_innerLight_event.2.name
+	desc = STH_innerLight_event.2.desc
+	picture = sth_GFX_evt_innerLight1
+	show_sound = event_yellow_alert
+	location = Root
+	is_triggered_only = yes
+	
+	option = {
+		name = STH_innerLight_event.2.a #Damnit Shields Up
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.5 days = 3 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_innerLight_event.2.b #Reverse
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.4 days = 3 scopes = { from = from } } 
+		}
+	}
+}
+
+#Choose Intensity
+ship_event = {
+	id = STH_innerLight_event.3
+	title = STH_innerLight_event.3.name
+	desc = STH_innerLight_event.3.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root	
+	is_triggered_only = yes	
+	immediate = { set_ship_flag = innerLightFiredProbe }
+	option = {
+		name = STH_innerLight_event.3.a #Full
+		hidden_effect = {
+			random_list = {
+				10 = { ship_event = { id = STH_innerLight_event.21 days = 3 scopes = { from = from } } } #Disable Dead
+				10 = { ship_event = { id = STH_innerLight_event.22 days = 3 scopes = { from = from } } } #Disable Injured
+				20 = { ship_event = { id = STH_innerLight_event.23 days = 3 scopes = { from = from } } } #Disable Okay
+				20 = { ship_event = { id = STH_innerLight_event.24 days = 3 scopes = { from = from } } } #Destroyed Dead
+				20 = { ship_event = { id = STH_innerLight_event.25 days = 3 scopes = { from = from } } } #Destroyed Injured
+				40 = { ship_event = { id = STH_innerLight_event.26 days = 3 scopes = { from = from } } } #Destroyed
+				10 = { ship_event = { id = STH_innerLight_event.27 days = 3 scopes = { from = from } } } #No Damage
+			}
+		}
+	}
+	option = {
+		name = STH_innerLight_event.3.b #Disable
+		hidden_effect = {
+			random_list = {
+				30 = { ship_event = { id = STH_innerLight_event.21 days = 3 scopes = { from = from } } } #Disable Dead
+				20 = { ship_event = { id = STH_innerLight_event.22 days = 3 scopes = { from = from } } } #Disable Injured
+				40 = { ship_event = { id = STH_innerLight_event.23 days = 3 scopes = { from = from } } } #Disable Okay
+				10 = { ship_event = { id = STH_innerLight_event.24 days = 3 scopes = { from = from } } } #Destroyed Dead
+				20 = { ship_event = { id = STH_innerLight_event.25 days = 3 scopes = { from = from } } } #Destroyed Injured
+				10 = { ship_event = { id = STH_innerLight_event.26 days = 3 scopes = { from = from } } } #Destroyed
+				10 = { ship_event = { id = STH_innerLight_event.27 days = 3 scopes = { from = from } } } #No Damage
+			}
+		}
+	}
+}
+
+#The Drone Follows
+ship_event = {
+	id = STH_innerLight_event.4
+	title = STH_innerLight_event.4.name
+	desc = STH_innerLight_event.4.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = STH_innerLight_event.4.a #Raise Shields
+		trigger = { NOT = { has_ship_flag = innerLightRaisedShields } }
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.5 days = 3 scopes = { from = from } }
+		}
+	}
+	option = {
+		name = STH_innerLight_event.4.b #Wait
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.7 days = 3 scopes = { from = from } }
+		}
+	}
+	option = {
+		name = STH_innerLight_event.4.c #Fire
+		trigger = { NOT = { has_ship_flag = innerLightFiredProbe } }
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.3 days = 3 scopes = { from = from } }
+		}
+	}
+}
+
+#Shields up
+ship_event = {
+	id = STH_innerLight_event.5
+	title = STH_innerLight_event.5.name
+	desc = STH_innerLight_event.5.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	is_triggered_only = yes
+	immediate = { set_ship_flag = innerLightRaisedShields }
+	
+	option = {
+		name = STH_innerLight_event.5.a #Lower
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.7 days = 3 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_innerLight_event.5.b #Fire
+		trigger = { NOT = { has_ship_flag = innerLightFiredProbe } }
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.3 days = 3 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_innerLight_event.5.c #Reverse
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.4 days = 3 scopes = { from = from } } 
+		}
+	}
+}
+
+#Waiting...
+ship_event = {
+	id = STH_innerLight_event.7
+	title = STH_innerLight_event.7.name
+	desc = STH_innerLight_event.7.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = STH_innerLight_event.7.a
+		hidden_effect = {		
+			ship_event = { id = STH_innerLight_event.8 days = 3 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_innerLight_event.7.b #Fire
+		trigger = { NOT = { has_ship_flag = innerLightFiredProbe } }
+		hidden_effect = {		
+			ship_event = { id = STH_innerLight_event.3 days = 3 scopes = { from = from } } 
+		}
+	}
+	option = {
+		name = STH_innerLight_event.7.c #Raise shields
+		trigger = { NOT = { has_ship_flag = innerLightRaisedShields } }
+		hidden_effect = {		
+			ship_event = { id = STH_innerLight_event.5 days = 3 scopes = { from = from } } 
+		}
+	}
+}
+
+#Waking Dreams
+ship_event = {
+	id = STH_innerLight_event.8
+	title = STH_innerLight_event.8.name
+	desc = STH_innerLight_event.8.desc
+	picture = sth_GFX_evt_innerLight2
+	show_sound = event_innerLight
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	
+	option = {
+		name = STH_innerLight_event.8.a
+		leader = {
+			add_trait = leader_trait_second_life
+			add_experience = 1500
+		}
+	}
+}
+
+
+#Doesn't follow
+ship_event = {
+	id = STH_innerLight_event.10
+	title = STH_innerLight_event.10.name
+	desc = STH_innerLight_event.10.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = STH_innerLight_event.10.a #Keep Going
+		hidden_effect = {		
+			random_list = {
+				10 = { ship_event = { id = STH_innerLight_event.11 days = 3 scopes = { from = from } } }
+				10 = { ship_event = { id = STH_innerLight_event.11 days = 3 scopes = { from = from } } }
+			}
+		}
+	}
+	option = {
+		name = STH_innerLight_event.10.b #Hold Position
+		hidden_effect = {		
+			ship_event = { id = STH_innerLight_event.7 days = 3 scopes = { from = from } } 
+		}
+	}
+}
+
+#Wakes up
+ship_event = {
+	id = STH_innerLight_event.11
+	title = STH_innerLight_event.11.name
+	desc = STH_innerLight_event.11.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { name = STH_innerLight_event.11.a }
+}
+
+#Wakes up injured
+ship_event = {
+	id = STH_innerLight_event.12
+	title = STH_innerLight_event.12.name
+	desc = STH_innerLight_event.12.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { 
+		name = STH_innerLight_event.12.a 
+		leader = { add_trait = leader_trait_brain_damage }
+	}
+}
+
+
+#Probe disabled, captain dead
+ship_event = {
+	id = STH_innerLight_event.21
+	title = STH_innerLight_event.21.name
+	desc = STH_innerLight_event.21.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { 
+		name = STH_innerLight_event.21.a 
+		leader = { kill_leader = { show_notification = no } }
+		owner = { add_resource = { society_research = 300 } }
+	}
+}
+
+#Probe disabled, captain injured
+ship_event = {
+	id = STH_innerLight_event.22
+	title = STH_innerLight_event.22.name
+	desc = STH_innerLight_event.22.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { 
+		name = STH_innerLight_event.22.a 
+		leader = { add_trait = leader_trait_brain_damage }
+		owner = { add_resource = { society_research = 300 } }
+	}
+}
+
+#Probe disabled
+ship_event = {
+	id = STH_innerLight_event.23
+	title = STH_innerLight_event.23.name
+	desc = STH_innerLight_event.23.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { 
+		name = STH_innerLight_event.23.a 
+		owner = { add_resource = { society_research = 300 } }
+	}
+}
+
+#Probe destroyed, captain dead
+ship_event = {
+	id = STH_innerLight_event.24
+	title = STH_innerLight_event.24.name
+	desc = STH_innerLight_event.24.desc
+	picture = GFX_evt_exploding_ship
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { 
+		name = STH_innerLight_event.24.a 
+		leader = { kill_leader = { show_notification = no } }
+	}
+}
+
+#Probe destroyed, captain injured
+ship_event = {
+	id = STH_innerLight_event.25
+	title = STH_innerLight_event.25.name
+	desc = STH_innerLight_event.25.desc
+	picture = GFX_evt_exploding_ship
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { 
+		name = STH_innerLight_event.25.a 
+		leader = { add_trait = leader_trait_brain_damage }
+	}
+}
+
+#Probe destroyed
+ship_event = {
+	id = STH_innerLight_event.26
+	title = STH_innerLight_event.26.name
+	desc = STH_innerLight_event.26.desc
+	picture = GFX_evt_exploding_ship
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { 
+		name = STH_innerLight_event.26.a 
+	}
+}
+
+#No damage
+ship_event = {
+	id = STH_innerLight_event.27
+	title = STH_innerLight_event.27.name
+	desc = STH_innerLight_event.27.desc
+	picture = sth_GFX_evt_innerLight1
+	location = Root
+	is_triggered_only = yes
+	immediate = { remove_ship_flag = innerLightFiredProbe remove_ship_flag = innerLightRaisedShields }
+	option = { 
+		name = STH_innerLight_event.27.a #Shields up
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.5 days = 3 scopes = { from = from } }
+		}
+	}
+	option = { 
+		name = STH_innerLight_event.27.b #Reverse
+		hidden_effect = {
+			ship_event = { id = STH_innerLight_event.4 days = 3 scopes = { from = from } }
+		}
+	}
+}

@@ -1,0 +1,322 @@
+#########################################
+#										#
+#			Memorial					#
+#		Event Written by: Walshicus		#
+#										#
+#########################################
+
+###TODO: make more robust if initial ship destroyed etc.
+
+namespace = STH_memorial_event
+
+# Scan Planet - Dilithium Found
+ship_event = {
+	id = STH_memorial_event.1
+	title = "STH_memorial_event.1.name"
+	desc = "STH_memorial_event.1.desc"
+	picture = sth_GFX_evt_terra_nova_1
+	location = from
+	is_triggered_only = yes
+	immediate = { from = { set_planet_flag = tarakis add_modifier = { modifier = pm_tarakis_monument_hidden } } }
+	option = {
+		name = STH_memorial_event.1.a # Leave orbit
+		owner = {
+			large_scaling_dilithium_reward = yes
+		}
+		hidden_effect = {
+			ship_event = { id = STH_memorial_event.2 days = 180 random = 90 scopes = { from = from } } #Bad Dreams
+		}
+	}
+}
+
+# Nightmares
+ship_event = {
+	id = STH_memorial_event.2
+	title = "STH_memorial_event.2.name"
+	desc = "STH_memorial_event.2.desc"
+	picture = sth_GFX_evt_memorial1
+	location = from
+	is_triggered_only = yes
+	option = {
+		name = STH_memorial_event.2.a #
+		hidden_effect = {
+			random_list = {
+				10 = { ship_event = { id = STH_memorial_event.10 days = 7 random = 2 scopes = { from = from } } } #Anxiety Attack
+				5 = { ship_event = { id = STH_memorial_event.20 days = 7 random = 2 scopes = { from = from } } } #Hostage Situation
+				5 = { ship_event = { id = STH_memorial_event.21 days = 7 random = 2 scopes = { from = from } } } #Hostage Situation - One Dead
+			}
+		}
+	}
+}
+
+# Anxiety Attack
+ship_event = {
+	id = STH_memorial_event.10
+	title = "STH_memorial_event.10.name"
+	desc = "STH_memorial_event.10.desc"
+	picture = sth_GFX_evt_memorial1
+	location = root
+	is_triggered_only = yes
+	option = {
+		name = STH_memorial_event.10.a #
+		leader = { add_trait = leader_trait_post_traumatic_stress }
+		hidden_effect = {
+			ship_event = { id = STH_memorial_event.50 days = 14 random = 4 scopes = { from = from } } #More Crew Affected
+		}
+	}
+}
+
+# Hostage Situation
+ship_event = {
+	id = STH_memorial_event.20
+	title = "STH_memorial_event.20.name"
+	desc = "STH_memorial_event.20.desc"
+	picture = sth_GFX_evt_memorial1
+	location = root
+	is_triggered_only = yes
+	option = {
+		name = STH_memorial_event.20.a #
+		leader = { add_trait = leader_trait_post_traumatic_stress }
+		hidden_effect = {
+			ship_event = { id = STH_memorial_event.50 days = 14 random = 4 scopes = { from = from } } #More Crew Affected
+		}
+	}
+}
+# Hostage Situation - One Dead
+ship_event = {
+	id = STH_memorial_event.21
+	title = "STH_memorial_event.21.name"
+	desc = "STH_memorial_event.21.desc"
+	picture = sth_GFX_evt_memorial1
+	location = root
+	is_triggered_only = yes
+	option = {
+		name = STH_memorial_event.21.a #
+		leader = { add_trait = leader_trait_post_traumatic_stress }
+		owner = { add_resource = { sr_crew = -1 } }
+		hidden_effect = {
+			ship_event = { id = STH_memorial_event.50 days = 14 random = 4 scopes = { from = from } } #More Crew Affected
+		}
+	}
+}
+
+# More Crew Affected - Return to Planet
+ship_event = {
+	id = STH_memorial_event.50
+	title = "STH_memorial_event.50.name"
+	desc = "STH_memorial_event.50.desc"
+	picture = sth_GFX_evt_memorial1
+	location = root
+	is_triggered_only = yes
+	trackable = yes
+	immediate = {
+		from = { 
+			save_global_event_target_as = terakis
+			set_name = "Terakis" 
+		}
+	}
+	option = {
+		name = STH_memorial_event.50.a #
+		enable_special_project = { name = STH_MEMORIAL_1_PROJECT owner = root.owner location = event_target:terakis }
+	}
+}
+
+# Found Monument
+country_event = {
+	id = STH_memorial_event.60
+	title = "STH_memorial_event.60.name"
+	desc = "STH_memorial_event.60.desc"
+	picture = sth_GFX_evt_memorial2
+	location = from
+	is_triggered_only = yes
+	trackable = yes
+	immediate = {
+		from = { add_deposit = d_tarakis_monument_faulty remove_modifier = pm_tarakis_monument_hidden }
+		#Something about a planet modifier being removed to become a deposit?
+	}
+	option = {
+		name = STH_memorial_event.60.a #Leave Monument Alone
+		owner = { small_scaling_unity_reward = yes }
+		hidden_effect = {
+			random_list = {
+				50 = { country_event = { id = STH_memorial_event.70 days = 36000 random = 18000 scopes = { from = root.from } } } ###TODO MAKE THIS YEARS
+				50 = { country_event = { id = STH_memorial_event.71 days = 36000 random = 18000 scopes = { from = root.from } } }
+			}
+		}
+	}
+	option = {
+		name = STH_memorial_event.60.b #Repair Monument
+		allow = { owner = { has_resource = { type = energy amount >= 100 } } }
+		owner = { 
+			add_resource = { energy = -100 }
+			medium_scaling_unity_reward = yes 
+		}
+		hidden_effect = {
+			random_list = {
+				85 = { country_event = { id = STH_memorial_event.80 days = 14 random = 3 scopes = { from = root.from } } }
+				15 = { country_event = { id = STH_memorial_event.81 days = 14 random = 3 scopes = { from = root.from } } }
+			}
+		}
+	}
+	option = {
+		name = STH_memorial_event.60.c #Remove Monument
+		allow = { owner = { has_resource = { type = energy amount >= 300 } } }
+		owner = { add_resource = { energy = -300 } }
+		hidden_effect = {
+			random_list = {
+				75 = { country_event = { id = STH_memorial_event.90 days = 14 random = 3 scopes = { from = root.from } } }
+				25 = { country_event = { id = STH_memorial_event.91 days = 14 random = 3 scopes = { from = root.from } } }
+			}
+		}
+	}
+}
+
+
+# Monument Destroyed - Fine
+country_event = {
+	id = STH_memorial_event.70
+	title = "STH_memorial_event.70.name"
+	desc = "STH_memorial_event.70.desc"
+	picture = sth_GFX_evt_memorial3
+	location = from
+	is_triggered_only = yes
+	trigger = { from = { has_deposit = d_tarakis_monument_faulty } }
+	option = {
+		name = STH_memorial_event.70.a #
+		from = {
+			remove_deposit = d_tarakis_monument_faulty
+			add_deposit = d_tarakis_monument_destroyed		
+		}
+	}
+	option = {
+		name = STH_memorial_event.70.b #
+		from = {
+			remove_deposit = d_tarakis_monument_faulty
+			add_deposit = d_tarakis_monument_destroyed		
+		}
+	}
+}
+# Monument Destroyed - Blows Up
+country_event = {
+	id = STH_memorial_event.71
+	title = "STH_memorial_event.71.name"
+	desc = "STH_memorial_event.71.desc"
+	picture = sth_GFX_evt_expanseArboreal4
+	location = from
+	is_triggered_only = yes
+	trigger = { from = { has_deposit = d_tarakis_monument_faulty } }
+	option = {
+		name = STH_memorial_event.71.a #
+		from = {
+			remove_deposit = d_tarakis_monument_faulty
+			add_deposit = d_tarakis_monument_destroyed
+			add_planet_devastation = 5
+			if = {
+				limit = { num_pops > 1 }
+				random_owned_pop = { kill_pop = yes }
+			}
+		}
+	}
+}
+
+# Monument Repaired - Fine
+country_event = {
+	id = STH_memorial_event.80
+	title = "STH_memorial_event.80.name"
+	desc = "STH_memorial_event.80.desc"
+	picture = sth_GFX_evt_memorial2
+	location = from
+	is_triggered_only = yes
+	trigger = { from = { has_deposit = d_tarakis_monument_faulty } }
+	option = {
+		name = STH_memorial_event.80.a #
+		from = {
+			remove_deposit = d_tarakis_monument_faulty
+			add_deposit = d_tarakis_monument		
+		}
+		hidden_effect = {
+			country_event = { id = STH_memorial_event.100 days = 180 random = 30 scopes = { from = root.from } }
+		}
+	}
+}
+# Monument Destroyed - Blows Up
+country_event = {
+	id = STH_memorial_event.81
+	title = "STH_memorial_event.81.name"
+	desc = "STH_memorial_event.81.desc"
+	picture = sth_GFX_evt_expanseArboreal4
+	location = from
+	is_triggered_only = yes
+	trigger = { from = { has_deposit = d_tarakis_monument_faulty } }
+	option = {
+		name = STH_memorial_event.81.a #
+		from = {
+			remove_deposit = d_tarakis_monument_faulty
+			add_deposit = d_tarakis_monument_destroyed
+			add_planet_devastation = 5
+			if = {
+				limit = { num_pops > 1 }
+				random_owned_pop = { kill_pop = yes }
+			}			
+		}
+	}
+}
+
+# Monument Destroyed - Fine
+country_event = {
+	id = STH_memorial_event.90
+	title = "STH_memorial_event.90.name"
+	desc = "STH_memorial_event.90.desc"
+	picture = sth_GFX_evt_terra_nova_1
+	location = from
+	is_triggered_only = yes
+	trigger = { from = { has_deposit = d_tarakis_monument_faulty } }
+	option = {
+		name = STH_memorial_event.90.a #
+		from = {
+			remove_deposit = d_tarakis_monument_faulty
+			add_deposit = d_tarakis_monument_destroyed
+		}
+	}
+}
+# Monument Destroyed - Blows Up
+country_event = {
+	id = STH_memorial_event.91
+	title = "STH_memorial_event.91.name"
+	desc = "STH_memorial_event.91.desc"
+	picture = sth_GFX_evt_expanseArboreal4
+	location = from
+	is_triggered_only = yes
+	trigger = { from = { has_deposit = d_tarakis_monument_faulty } }
+	option = {
+		name = STH_memorial_event.91.a #
+		from = {
+			remove_deposit = d_tarakis_monument_faulty
+			add_deposit = d_tarakis_monument_destroyed
+			add_planet_devastation = 5
+			if = {
+				limit = { num_pops > 1 }
+				random_owned_pop = { kill_pop = yes }
+			}			
+		}
+	}
+}
+
+
+
+# Activated
+country_event = {
+	id = STH_memorial_event.100
+	title = "STH_memorial_event.100.name"
+	desc = "STH_memorial_event.100.desc"
+	picture = sth_GFX_evt_memorial2
+	location = from
+	is_triggered_only = yes
+	trigger = { from = { OR = { has_deposit = d_tarakis_monument has_deposit = d_tarakis_monument_deactivated } } }
+	option = {
+		name = STH_memorial_event.100.a #
+		from = { 
+			# create_archaeological_site = memorial_1
+		}
+	}
+}

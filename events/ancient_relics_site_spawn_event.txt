@@ -1,0 +1,31 @@
+################################
+#
+# Archaeology Site Spawn Event
+#
+###############################
+
+namespace = ancrel
+
+# Archaeology Site On Survey Spawn
+# ship_event = {
+	# id = ancrel.9999
+	# hide_window = yes
+
+	# is_triggered_only = yes
+
+	# immediate = {
+		# random_list = {
+			# 100 = {}
+			# 5 = {
+				# modifier = {
+					# factor = 0.2
+					# owner = { is_ai = yes }
+				# }
+				# from = {
+					# prevent_anomaly = yes
+					# create_archaeological_site = random
+				# }
+			# }
+		# }
+	# }
+# }

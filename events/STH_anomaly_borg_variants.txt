@@ -1,0 +1,65 @@
+########################
+#
+# Borg Anomaly Events
+#
+# Written by Walshicus
+#
+########################
+
+namespace = STH_borg_anomaly
+
+
+# Rogue Moon
+### rogue moon
+ship_event = {
+	id = STH_borg_anomaly.1
+	title = STH_borg_anomaly.1.name
+	desc = STH_borg_anomaly.1.desc_01
+	desc = STH_borg_anomaly.1.desc_02
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_alien_nature
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = BORG_UNDERSTOOD
+		owner = { add_monthly_resource_mult = { resource = physics_research value = @tier2researchreward min = @tier2researchmin max = @tier2researchmax } }
+	}
+}
+
+### rogue moon base
+ship_event = {
+	id = STH_borg_anomaly.2
+	title = STH_borg_anomaly.2.name
+	desc = STH_borg_anomaly.2.desc_01
+	desc = STH_borg_anomaly.2.desc_02
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_alien_nature
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = BORG_UNDERSTOOD
+		owner = { add_monthly_resource_mult = { resource = engineering_research value = @tier2researchreward min = @tier2researchmin max = @tier2researchmax } }
+	}
+}
+
+ship_event = {
+	id = STH_borg_anomaly.3
+	title = "STH_borg_anomaly.3.name"
+	desc = "STH_borg_anomaly.3.desc"
+	picture = sth_GFX_evt_deadBorgJungle
+	show_sound = event_alien_nature
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = BORG_UNDERSTOOD
+		custom_tooltip = "STH_borg_anomaly.3.tooltip"
+		hidden_effect = {
+			FROM = {
+				add_modifier = { modifier = "acid_jungles" days = -1 }
+				add_deposit = d_noxious_swamp
+				add_deposit = d_noxious_swamp
+			}
+		}
+		
+	}
+}

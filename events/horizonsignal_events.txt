@@ -1,0 +1,9 @@
+############################################
+# HORIZON SIGNAL - THE WORM-IN-WAITING	   #
+# Written and designed by Alexis Kennedy   #
+# Scripted and edited by Maximilian Olbers #
+# STNH - Capek 2.2.0 Compat
+############################################
+
+namespace = akx
+

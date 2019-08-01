@@ -1,0 +1,567 @@
+############################
+#
+# The Silent Enemy Events
+#
+# Written by Adam Coleman
+#
+############################
+
+namespace = STH_minor_anomaly
+
+
+
+### Ancient Probe
+ship_event = {
+	id = STH_minor_anomaly.1
+	title = "STH_minor_anomaly.1.name"
+	desc = "STH_minor_anomaly.1.desc"
+	picture = sth_GFX_evt_alienProbe
+	show_sound = event_sensor_ping
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.1.a
+		random_list = {
+			10 = {
+				modifier = { factor = 1.25 leader = { has_level = 2 } }
+				modifier = { factor = 1.50 leader = { has_level = 3 } }
+				modifier = { factor = 1.75 leader = { has_level = 4 } }
+				modifier = { factor = 2.00 leader = { has_level >= 5 } }
+				ship_event = { id = STH_minor_anomaly.2 days = 2 }
+			}
+			10 = {
+				ship_event = { id = STH_minor_anomaly.5 days = 2 }
+			}
+		}
+	}
+	option = { 
+		name = STH_minor_anomaly.1.b 
+	}
+}
+
+ship_event ={
+	id = STH_minor_anomaly.2
+	title = "STH_minor_anomaly.2.name"
+	desc = "STH_minor_anomaly.2.desc"
+	picture = sth_GFX_evt_alienProbe
+	location = FROM
+	is_triggered_only = yes
+	option = { 
+		name = STH_minor_anomaly.2.a 
+		owner = { add_resource = { physics_research = 100 } }
+	}
+}
+
+ship_event = {
+	id = STH_minor_anomaly.3
+	title = "STH_minor_anomaly.3.name"
+	desc = "STH_minor_anomaly.3.desc"
+	picture = sth_GFX_evt_alienProbe
+	location = FROM
+	is_triggered_only = yes
+	option = { name = STH_minor_anomaly.3.a }
+}
+
+ship_event = {
+	id = STH_minor_anomaly.4
+	title = "STH_minor_anomaly.4.name"
+	desc = "STH_minor_anomaly.4.desc"
+	picture = sth_GFX_evt_alienProbe
+	location = FROM
+	is_triggered_only = yes
+	immediate = {
+		create_country = { name = "NAME_Ancient_Civilisation" type = faction }
+		last_created_country = {
+			establish_communications_no_message = root.owner
+			create_fleet = {
+				name = "NAME_Ancient_Combat_Drone"
+				effect = {
+					set_owner = PREV
+					create_ship = { name = "NAME_Ancient_Combat_Drone" design = "NAME_Ancient_Combat_Drone" }
+					set_location = from
+				}
+			}
+			set_faction_hostility = { set_hostile = yes }
+		}
+	}
+	option = { name = STH_minor_anomaly.4.a }
+}
+
+ship_event = {
+	id = STH_minor_anomaly.5
+	title = "STH_minor_anomaly.5.name"
+	desc = "STH_minor_anomaly.5.desc"
+	picture = sth_GFX_evt_alienProbe
+	is_triggered_only = yes
+	option = { name = STH_minor_anomaly.5.a }
+}
+
+
+### Changeling Artefact
+ship_event = {
+	id = STH_minor_anomaly.100
+	title = "STH_minor_anomaly.100.name"
+	desc = {
+		exclusive_trigger = { owner = { is_changeling_empire = yes } }
+		text = "STH_minor_anomaly.100.desc.dominion"
+	}
+	desc = {
+		exclusive_trigger = { owner = { any_relation = { is_changeling_empire = yes } } }
+		text = "STH_minor_anomaly.100.desc.met_dominion"
+	}
+	desc = {
+		text = "STH_minor_anomaly.100.desc"
+	}
+	picture = sth_GFX_evt_changelingObelisk
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.100.a
+		random_list = {
+			10 = {
+				modifier = { factor = 1.25 leader = { has_level = 2 } }
+				modifier = { factor = 1.50 leader = { has_level = 3 } }
+				modifier = { factor = 1.75 leader = { has_level = 4 } }
+				modifier = { factor = 2.00 leader = { has_level >= 5 } }
+				ship_event = { id = STH_minor_anomaly.101 days = 2 scopes = { from = from } } #Changeling Obelisk
+			}
+			10 = {
+				modifier = { factor = 1.1 leader = { has_level = 2 } }
+				modifier = { factor = 1.2 leader = { has_level = 3 } }
+				modifier = { factor = 1.3 leader = { has_level = 4 } }
+				modifier = { factor = 1.4 leader = { has_level >= 5 } }
+				ship_event = { id = STH_minor_anomaly.102 days = 2 scopes = { from = from } } #Changeling Locket
+			}
+			10 = {
+				ship_event = { id = STH_minor_anomaly.103 days = 2 scopes = { from = from } } #Nothing
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = STH_minor_anomaly.101
+	title = "STH_minor_anomaly.101.name"
+	desc = {
+		exclusive_trigger = { owner = { is_changeling_empire = yes } }
+		text = "STH_minor_anomaly.101.desc.dominion"
+	}
+	desc = {
+		exclusive_trigger = { owner = { any_relation = { is_changeling_empire = yes } } }
+		text = "STH_minor_anomaly.101.desc.met_dominion"
+	}
+	desc = {
+		text = "STH_minor_anomaly.101.desc"
+	}
+	picture = sth_GFX_evt_changelingObelisk
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.101.a
+		owner = { add_resource = { society_research = 250 } }
+		leader = { add_experience = 200 }
+	}
+}
+
+ship_event = {
+	id = STH_minor_anomaly.102
+	title = "STH_minor_anomaly.102.name"
+	desc = {
+		exclusive_trigger = { owner = { is_changeling_empire = yes } }
+		text = "STH_minor_anomaly.102.desc.dominion"
+	}
+	desc = {
+		exclusive_trigger = { owner = { any_relation = { is_changeling_empire = yes } } }
+		text = "STH_minor_anomaly.102.desc.met_dominion"
+	}
+	desc = {
+		text = "STH_minor_anomaly.102.desc"
+	}
+	picture = sth_GFX_evt_changelingObelisk
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.102.a
+		owner = { add_resource = { society_research = 100 } }
+		leader = { add_experience = 100 }
+	}
+}
+
+ship_event = {
+	id = STH_minor_anomaly.103
+	title = "STH_minor_anomaly.103.name"
+	desc = {
+		exclusive_trigger = { owner = { is_changeling_empire = yes } }
+		text = "STH_minor_anomaly.103.desc.dominion"
+	}
+	desc = {
+		exclusive_trigger = { owner = { any_relation = { is_changeling_empire = yes } } }
+		text = "STH_minor_anomaly.103.desc.met_dominion"
+	}
+	desc = {
+		text = "STH_minor_anomaly.103.desc"
+	}
+	picture = sth_GFX_evt_changelingObelisk
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.103.a
+		leader = { add_experience = 50 }
+	}
+}
+
+
+
+#QLess
+### Rich Veins
+ship_event = {
+	id = STH_minor_anomaly.200
+	title = "STH_minor_anomaly.200.name"
+	desc = { text = "STH_minor_anomaly.200.desc" }
+	picture = sth_GFX_evt_doomsday_remnant
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.200.a
+		leader = { add_experience = 100 }
+		FROM = {
+			add_deposit = d_minerals_4
+			#Could be replaced by a strategic resource. Unused STH_alien_egg.1 could be used to give a different economic reward
+			#It is however unknown to me what strategic resources are available
+		}
+	}
+}
+
+### Sensor Glitch
+ship_event = {
+	id = STH_minor_anomaly.201
+	title = "STH_minor_anomaly.201.name"
+	desc = { text = "STH_minor_anomaly.201.desc" }
+	# desc = { exclusive_trigger = { leader = { is_species = "ferengi" } } text = "STH_minor_anomaly.201.desc.ferengi" }	##This works right?
+	picture = sth_GFX_evt_doomsday_remnant
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.201.a
+		leader = { add_experience = 50 }
+	}
+}
+
+### Alien Egg
+ship_event = {
+	id = STH_minor_anomaly.202
+	title = "STH_minor_anomaly.202.name"
+	desc = { text = "STH_minor_anomaly.202.desc" }
+	# desc = { exclusive_trigger = { leader = { is_species = "ferengi" } } text = "STH_minor_anomaly.202.desc.ferengi" }	##This works right?
+	picture = sth_GFX_evt_doomsday_remnant
+	location = FROM
+	is_triggered_only = yes
+	immediate = {
+		from = { 
+			save_global_event_target_as = spaceborn_alien_nest
+			##Needed to refer to the asteriod in (later) events. Called up in the localisation files by [spaceborn_alien_nest.GetName]?
+			solar_system = { save_global_event_target_as = spaceborn_alien_nest_system }
+			##Needed to refer to the system in (later) events. Called up in the localisation files by [spaceborn_alien_nest_system.GetName]?
+		}
+		owner = {
+			random_owned_planet = {
+				limit = { is_colony = yes }
+				set_planet_flag = spaceborn_alien_egg_research
+				save_global_event_target_as = alien_eggs_planet
+				owner = { set_country_flag = spaceborn_alien_egg_events }
+			}
+		}
+		leader = { add_experience = 200 }
+	}
+	
+	option = {											
+		##Option A: Sell the crystals for <LATINUM> reward.
+		name = STH_minor_anomaly.202.a						
+		##This option should have a smallish chance of triggering the alien egg events for a contacted human player
+		###Removed this aspect for now as requires events to provide list of targets for players, then permission from country to buy, and conditions for refusal etc. Simpler for now if just a cash grab.
+		trigger = { owner = { has_authority = auth_corporate } }
+		allow = { owner = { has_authority = auth_corporate } }
+		owner = { add_resource = { sr_latinum = 250 } }
+	}
+	option = {
+		##Option B: Take the crystals and study them
+		name = STH_minor_anomaly.202.b						
+		owner = {
+			add_resource = {
+				physics_research = 150
+				society_research = 150
+			}
+			hidden_effect = {
+				event_target:alien_eggs_planet = {
+					hidden_effect = { planet_event = { id = STH_minor_anomaly.203 days = 365 random = 45 scopes = { from = root.from } } }
+				}
+			}
+		}
+	}
+	option = {
+		name = STH_minor_anomaly.202.c
+		##Option C: Put it into a museum for all to be admired.
+		owner = {
+			add_resource = { unity = 300 }
+			event_target:alien_eggs_planet = {
+				hidden_effect = { planet_event = { id = STH_minor_anomaly.203 days = 365 random = 45 scopes = { from = root.from } } }
+			}
+		}
+	}
+}
+
+###If alien eggs acquired, first indication of trouble
+planet_event = {
+	id = STH_minor_anomaly.203
+	title = "STH_minor_anomaly.203.name"
+	desc = { text = "STH_minor_anomaly.203.desc" }
+	picture = GFX_evt_metropolis															##Should look for unique graphic
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.203.a
+		enable_special_project = { name = "STH_QLESS_1_PROJECT" location = this owner = root.owner }
+		add_modifier = { modifier = pm_intermittent_power_drains }
+		hidden_effect = { planet_event = { id = STH_minor_anomaly.204 days = 600 random = 300 scopes = { from = root.from } } }
+	}
+}
+##Flavour event when the event chain is active.
+planet_event = {
+	id = STH_minor_anomaly.204
+	title = "STH_minor_anomaly.204.name"
+	desc = { text = "STH_minor_anomaly.204.desc" }
+	trigger = { has_modifier = pm_intermittent_power_drains }
+	picture = GFX_evt_metropolis
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.204.a
+		add_planet_devastation = 10
+	}
+}
+
+#Special Project Succes
+ship_event = {
+	id = STH_minor_anomaly.210
+	title = "STH_minor_anomaly.210.name"
+	desc = { text = "STH_minor_anomaly.210.desc" }
+	desc = { exclusive_trigger = { owner = { has_country_flag = spaceborn_alien_egg_museum } } text = "STH_minor_anomaly.210.desc.museum" }
+	desc = { exclusive_trigger = { owner = { has_country_flag = spaceborn_alien_egg_research } } text = "STH_minor_anomaly.210.desc.research" }
+	# desc = { exclusive_trigger = { owner = { has_country_flag = spaceborn_alien_egg_bought } } text = "STH_minor_anomaly.210.desc.bought" }
+	picture = GFX_evt_metropolis
+	is_triggered_only = yes
+	immediate = { }
+	option = {		
+		#take up to the science ship
+		name = STH_minor_anomaly.210.a
+		hidden_effect = {
+			ship_event = { id = STH_minor_anomaly.211 days = 5 scopes = { from = root.from } }
+			FROM = { remove_modifier = pm_intermittent_power_drains }			
+		}
+	}
+	
+	option = {		
+		#beam into space
+		name = STH_minor_anomaly.210.b
+		allow = { owner = { has_transporters = yes } }
+		hidden_effect = {
+			ship_event = { id = STH_minor_anomaly.212 days = 5 scopes = { from = root.from } }
+			FROM = { remove_modifier = pm_intermittent_power_drains }			
+		}
+	}
+	
+	option = {		
+		#vaporise
+		name = STH_minor_anomaly.210.c
+		hidden_effect = {
+			ship_event = { id = STH_minor_anomaly.213 days = 5 scopes = { from = root.from } }
+			FROM = { remove_modifier = pm_intermittent_power_drains }			
+		}
+	}
+}
+
+### Back up the ship, which explodes
+ship_event = {
+	id = STH_minor_anomaly.211
+	title = "STH_minor_anomaly.211.name"
+	desc = { text = "STH_minor_anomaly.211.desc" }
+	picture = GFX_evt_exploding_ship
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.211.a
+		hidden_effect = {
+			owner = { add_resource = { physics_research = 100 } }
+			fleet = { destroy_fleet = this }
+			FROM = { #Target planet to clear flags?
+				remove_planet_flag = spaceborn_alien_egg_museum
+				remove_planet_flag = spaceborn_alien_egg_research
+				remove_planet_flag = spaceborn_alien_egg_bought
+			}
+			clear_global_event_target = spaceborn_alien_nest
+			clear_global_event_target = spaceborn_alien_nest_system
+			clear_global_event_target = alien_eggs_ship
+			clear_global_event_target = alien_eggs_scientist
+			clear_global_event_target = alien_eggs_planet
+		}
+	}
+}
+
+### Beamed into space, where it hatches.
+ship_event = {
+	id = STH_minor_anomaly.212
+	title = "STH_minor_anomaly.212.name"
+	desc = { text = "STH_minor_anomaly.212.desc" }
+	picture = sth_GFX_evt_qlessAlien
+	##Add Q-less alien picture
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.212.a
+		leader = {
+			add_experience = 400
+			random_list = {
+				50 = { add_trait = leader_trait_expertise_field_manipulation }
+				50 = { add_trait = leader_trait_expertise_biology }
+			}
+		}
+		owner = {
+			add_resource = {
+				physics_research = 100
+				society_research = 100
+			}
+		}
+		hidden_effect = { 
+			FROM = {		
+				#Target planet to clear flags?
+				remove_planet_flag = spaceborn_alien_egg_museum
+				remove_planet_flag = spaceborn_alien_egg_research
+				remove_planet_flag = spaceborn_alien_egg_bought
+			}
+			clear_global_event_target = spaceborn_alien_nest
+			clear_global_event_target = spaceborn_alien_nest_system
+			clear_global_event_target = alien_eggs_ship
+			clear_global_event_target = alien_eggs_scientist
+			clear_global_event_target = alien_eggs_planet
+		}
+	}
+}
+
+#Vaporise it, destroying the building
+ship_event = {
+	id = STH_minor_anomaly.213
+	title = "STH_minor_anomaly.213.name"
+	desc = { text = "STH_minor_anomaly.213.desc" }
+	picture = GFX_evt_buildingDestroyed
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.213.a
+		FROM = { add_planet_devastation = 10 }
+		owner = { add_resource = { physics_research = 100 } } #Reward might need balancing
+		hidden_effect = {
+			FROM = {		#Target planet to clear flags?
+				remove_planet_flag = spaceborn_alien_egg_museum
+				remove_planet_flag = spaceborn_alien_egg_research
+				remove_planet_flag = spaceborn_alien_egg_bought
+			}
+			clear_global_event_target = spaceborn_alien_nest
+			clear_global_event_target = spaceborn_alien_nest_system
+			clear_global_event_target = alien_eggs_ship
+			clear_global_event_target = alien_eggs_scientist
+			clear_global_event_target = alien_eggs_planet
+		}
+	}
+}
+
+##Event for when the events fail
+#Special project failed, gets another try, with less time.
+planet_event = {
+	id = STH_minor_anomaly.220
+	title = "STH_minor_anomaly.220.name"
+	desc = { text = "STH_minor_anomaly.220.desc" }
+	picture = GFX_evt_buildingDestroyed
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.220.a
+		add_planet_devastation = 10
+		owner = { add_resource = { physics_research = 50 } }
+		enable_special_project = { name = "STH_QLESS_2_PROJECT" location = this owner = root.owner }
+	}
+}
+
+#Fail second project
+planet_event = {
+	id = STH_minor_anomaly.221
+	title = "STH_minor_anomaly.221.name"
+	desc = { text = "STH_minor_anomaly.221.desc" }
+	picture = GFX_evt_buildingDestroyed
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.221.a
+		add_planet_devastation = 10
+		remove_modifier = pm_intermittent_power_drains
+		owner = { add_resource = { physics_research = 100 } }
+		hidden_effect = {
+			remove_planet_flag = spaceborn_alien_egg_museum
+			remove_planet_flag = spaceborn_alien_egg_research
+			remove_planet_flag = spaceborn_alien_egg_bought
+			clear_global_event_target = spaceborn_alien_nest
+			clear_global_event_target = spaceborn_alien_nest_system
+			clear_global_event_target = alien_eggs_ship
+			clear_global_event_target = alien_eggs_scientist
+			clear_global_event_target = alien_eggs_planet
+		}
+	}
+}
+
+
+###CHRONITON ANOMALY###
+#Nothing there
+ship_event = {
+	id = STH_minor_anomaly.300
+	title = "STH_minor_anomaly.300.name"
+	desc = "STH_minor_anomaly.300.desc"
+	picture = sth_GFX_evt_spaceBackground
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.300.a
+		leader = { add_experience = -10 }
+	}
+}
+#Interesting readings
+ship_event = {
+	id = STH_minor_anomaly.301
+	title = "STH_minor_anomaly.301.name"
+	desc = "STH_minor_anomaly.301.desc"
+	picture = sth_GFX_evt_spaceBackground
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.301.a
+		owner = { small_scaling_research_reward = { research_type = physics_research } }
+	}
+}
+#Interesting remains
+ship_event = {
+	id = STH_minor_anomaly.302
+	title = "STH_minor_anomaly.302.name"
+	desc = "STH_minor_anomaly.302.desc"
+	picture = sth_GFX_evt_spaceBackground
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.302.a
+		owner = { small_scaling_research_reward = { research_type = society_research } }
+	}
+}
+#Ship out of time dig site
+ship_event = {
+	id = STH_minor_anomaly.305
+	title = "STH_minor_anomaly.305.name"
+	desc = "STH_minor_anomaly.305.desc"
+	picture = sth_GFX_evt_spaceBackground
+	location = FROM
+	is_triggered_only = yes
+	option = {
+		name = STH_minor_anomaly.305.a
+		from = { create_archaeological_site = ship_out_of_time_1 }
+		hidden_effect = { set_global_flag = ship_out_of_time }
+	}
+}
