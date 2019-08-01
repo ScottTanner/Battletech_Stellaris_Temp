@@ -1,0 +1,51 @@
+########################
+#### Extragalactic  ####
+########################
+
+#Undine - WIP
+# UndineVanguard = {
+	# name_list="MAM1"
+	# ship_prefix="PRESCRIPTED_ship_prefix_UndineVanguard"
+	# species_name="PRESCRIPTED_species_name_UndineVanguard"
+	# species_plural="PRESCRIPTED_species_plural_UndineVanguard"
+	# species_class="UND"
+	# species_adjective="PRESCRIPTED_species_adjective_UndineVanguard"
+	# species_bio=""
+	# portrait="undine"
+	# name="UndineVanguard"
+	# adjective="PRESCRIPTED_adjective_UndineVanguard"
+	# authority = "auth_psionic_consensus"
+	# civics = { "civic_post_scarcity" "civic_spirit_exploration" }
+	# government = gov_psionic_consensus
+	# ethic = "ethic_psionic_consensus"
+	# ethic = "ethic_fanatic_xenophobe"
+	# trait="trait_charismatic"
+	# trait="trait_natural_sociologists"
+	# flags = { custom_start_screen generic_ent undine_vanguard alpha_beta_empire gamma_empire delta_empire first_alien_life first_contact_event sth_medium_galaxy }
+	# ftl=warp
+	# weapon="tech_antiproton_cannon_1"
+	# planet_name="Limin Alpha"
+	# planet_class="pc_coral_asteroid"
+	# system_name="Rachia"
+	# initializer="undine_homeworld"
+	# graphical_culture="undine_01"
+	# city_graphical_culture="undine_01"
+	# empire_flag={
+		# icon = { category = "trek" file = "8472.dds" }
+		# background = { category = "backgrounds" file = "double_hemispheres.dds" }
+		# colors = { "customcolor954" "customcolor2015" "null" "null" }
+	# }
+	# ruler={
+		# gender=male
+		# name="PRESCRIPTED_ruler_name_UndineVanguard"
+		# portrait="undine_01"
+		# texture=0
+		# hair=0
+		# clothes=0
+		# ruler_title="Archon"
+		# ruler_title_female="Archon"
+		# leader_class = ruler
+	# }
+	# spawn_enabled=always
+	# room = "undine_room"
+# }

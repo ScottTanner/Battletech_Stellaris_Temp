@@ -1,0 +1,702 @@
+### Static map. 600+ star systems. Map of Delta Quadrant.
+### This map must NOT include the zeta aquilae system, otherwise game will identify map as alpha/beta quadrant map.
+### This map must include the Signum system, , initializer signum_gm, which is used to identify the map.
+static_galaxy_scenario = {
+	name = "STH_galaxy_delta_quadrant"
+	colonizable_planet_odds = 1.0
+	priority = 5
+    num_empires = { min = 1 max = 32 }
+    num_empire_default = 1
+	num_hyperlanes = { min = 5 max = 5 }
+	num_hyperlanes_default = 5
+	advanced_empire_default = 0
+	core_radius = 0
+	fallen_empire_default = 0
+	fallen_empire_max = 0
+	random_hyperlanes = yes
+system = { id = "0" name = "" position = { x = { min = 461 max = 499 } y =  { min = -499 max = -461 } }  initializer = dosi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = dosi_confederacy } } }
+system = { id = "1" name = "" position = { x = { min = 461 max = 499 } y =  { min = -459 max = -421 } }  initializer = karemma_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = karemman_foundation } } }
+system = { id = "2" name = "" position = { x = { min = 461 max = 499 } y =  { min = -419 max = -381 } }  initializer = TRogoranHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trogoran_empire } } }
+system = { id = "3" name = "" position = { x = { min = 461 max = 499 } y =  { min = -379 max = -341 } }  initializer = ArgrathianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = argrathian_commonwealth } } }
+system = { id = "4" name = "" position = { x = { min = 461 max = 499 } y =  { min = -339 max = -301 } }  initializer = rakharian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = rakharian_free_states } } }
+system = { id = "5" name = "" position = { x = { min = 461 max = 499 } y =  { min = -299 max = -261 } }  initializer = WadiHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = wadi_emirates } } }
+system = { id = "6" name = "" position = { x = { min = 461 max = 499 } y =  { min = -259 max = -221 } }  initializer = hurq_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = hurq_stagnancy } } }
+system = { id = "7" name = "" position = { x = { min = 461 max = 499 } y =  { min = -219 max = -181 } }  initializer = founders_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = the_dominion } } }
+system = { id = "8" name = "" position = { x = { min = 461 max = 499 } y =  { min = -179 max = -141 } }  initializer = nyberrite_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = nyberrite_alliance } } }
+system = { id = "9" name = "" position = { x = { min = 461 max = 499 } y =  { min = -139 max = -101 } }  initializer = tellarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tellarian_technocracy } } }
+system = { id = "10" name = "" position = { x = { min = 461 max = 499 } y =  { min = -99 max = -61 } }  initializer = xindi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = xindi_council } } }
+system = { id = "11" name = "" position = { x = { min = 461 max = 499 } y =  { min = -59 max = -21 } }  initializer = bajoran_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bajoran_republic } } }
+system = { id = "12" name = "" position = { x = { min = 461 max = 499 } y =  { min = -19 max = 19 } }  initializer = betazoid_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = betazoid_houses } } }
+system = { id = "13" name = "" position = { x = { min = 461 max = 499 } y =  { min = 21 max = 59 } }  initializer = breen_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = breen_confederacy } } }
+system = { id = "14" name = "" position = { x = { min = 461 max = 499 } y =  { min = 61 max = 99 } }  initializer = caitian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = caitian_union } } }
+system = { id = "15" name = "" position = { x = { min = 461 max = 499 } y =  { min = 101 max = 139 } }  initializer = cardassian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cardassian_union } } }
+system = { id = "16" name = "" position = { x = { min = 461 max = 499 } y =  { min = 141 max = 179 } }  initializer = denobulan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = denobulan_unity } } }
+system = { id = "17" name = "" position = { x = { min = 461 max = 499 } y =  { min = 181 max = 219 } }  initializer = sheliak_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = sheliak_corporate } } }
+system = { id = "18" name = "" position = { x = { min = 461 max = 499 } y =  { min = 221 max = 259 } }  initializer = tamarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tamarian_unity } } }
+system = { id = "19" name = "" position = { x = { min = 461 max = 499 } y =  { min = 261 max = 299 } }  initializer = human_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = united_earth } } }
+system = { id = "20" name = "" position = { x = { min = 461 max = 499 } y =  { min = 301 max = 339 } }  initializer = tholian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tholian_assembly  } } }
+system = { id = "21" name = "" position = { x = { min = 461 max = 499 } y =  { min = 341 max = 379 } }  initializer = trill_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trill_republic } } }
+system = { id = "22" name = "" position = { x = { min = 461 max = 499 } y =  { min = 381 max = 419 } }  initializer = ferengi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = ferengi_alliance } } }
+system = { id = "23" name = "" position = { x = { min = 461 max = 499 } y =  { min = 421 max = 459 } }  initializer = vulcan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vulcan_high_command } } }
+system = { id = "24" name = "" position = { x = { min = 461 max = 499 } y =  { min = 461 max = 499 } }  initializer = cheronite_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cheronite_nation } } }
+system = { id = "25" name = "" position = { x = { min = 421 max = 459 } y =  { min = -499 max = -461 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "26" name = "" position = { x = { min = 421 max = 459 } y =  { min = -459 max = -421 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "27" name = "" position = { x = { min = 421 max = 459 } y =  { min = -419 max = -381 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "28" name = "" position = { x = { min = 421 max = 459 } y =  { min = -379 max = -341 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "29" name = "" position = { x = { min = 421 max = 459 } y =  { min = -339 max = -301 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "30" name = "" position = { x = { min = 421 max = 459 } y =  { min = -299 max = -261 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "31" name = "" position = { x = { min = 421 max = 459 } y =  { min = -259 max = -221 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "32" name = "" position = { x = { min = 421 max = 459 } y =  { min = -219 max = -181 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "33" name = "" position = { x = { min = 421 max = 459 } y =  { min = -59 max = -21 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "34" name = "" position = { x = { min = 421 max = 459 } y =  { min = -19 max = 19 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "35" name = "" position = { x = { min = 421 max = 459 } y =  { min = 21 max = 59 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "36" name = "" position = { x = { min = 421 max = 459 } y =  { min = 61 max = 99 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "37" name = "" position = { x = { min = 421 max = 459 } y =  { min = 101 max = 139 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "38" name = "" position = { x = { min = 421 max = 459 } y =  { min = 141 max = 179 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "39" name = "" position = { x = { min = 421 max = 459 } y =  { min = 181 max = 219 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "40" name = "" position = { x = { min = 421 max = 459 } y =  { min = 221 max = 259 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "41" name = "" position = { x = { min = 421 max = 459 } y =  { min = 261 max = 299 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "42" name = "" position = { x = { min = 421 max = 459 } y =  { min = 301 max = 339 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "43" name = "" position = { x = { min = 421 max = 459 } y =  { min = 341 max = 379 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "44" name = "" position = { x = { min = 421 max = 459 } y =  { min = 381 max = 419 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "45" name = "" position = { x = { min = 421 max = 459 } y =  { min = 421 max = 459 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "46" name = "" position = { x = { min = 421 max = 459 } y =  { min = 461 max = 499 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "47" name = "" position = { x = { min = 381 max = 419 } y =  { min = -459 max = -421 } }  }
+system = { id = "48" name = "" position = { x = { min = 381 max = 419 } y =  { min = -419 max = -381 } }  }
+system = { id = "49" name = "" position = { x = { min = 381 max = 419 } y =  { min = -379 max = -341 } }  }
+system = { id = "50" name = "" position = { x = { min = 381 max = 419 } y =  { min = -339 max = -301 } }  }
+system = { id = "51" name = "" position = { x = { min = 381 max = 419 } y =  { min = -299 max = -261 } }  }
+system = { id = "52" name = "" position = { x = { min = 381 max = 419 } y =  { min = -259 max = -221 } }  }
+system = { id = "53" name = "" position = { x = { min = 381 max = 419 } y =  { min = -219 max = -181 } }  }
+system = { id = "54" name = "" position = { x = { min = 381 max = 419 } y =  { min = -179 max = -141 } }  }
+system = { id = "55" name = "" position = { x = { min = 381 max = 419 } y =  { min = -59 max = -21 } }  }
+system = { id = "56" name = "" position = { x = { min = 381 max = 419 } y =  { min = -19 max = 19 } }  }
+system = { id = "57" name = "" position = { x = { min = 381 max = 419 } y =  { min = 21 max = 59 } }  }
+system = { id = "58" name = "" position = { x = { min = 381 max = 419 } y =  { min = 61 max = 99 } }  }
+system = { id = "59" name = "" position = { x = { min = 381 max = 419 } y =  { min = 101 max = 139 } }  }
+system = { id = "60" name = "" position = { x = { min = 381 max = 419 } y =  { min = 141 max = 179 } }  }
+system = { id = "61" name = "" position = { x = { min = 381 max = 419 } y =  { min = 181 max = 219 } }  }
+system = { id = "62" name = "" position = { x = { min = 381 max = 419 } y =  { min = 221 max = 259 } }  }
+system = { id = "63" name = "" position = { x = { min = 381 max = 419 } y =  { min = 261 max = 299 } }  }
+system = { id = "64" name = "" position = { x = { min = 381 max = 419 } y =  { min = 301 max = 339 } }  }
+system = { id = "65" name = "" position = { x = { min = 381 max = 419 } y =  { min = 341 max = 379 } }  }
+system = { id = "66" name = "" position = { x = { min = 381 max = 419 } y =  { min = 381 max = 419 } }  }
+system = { id = "67" name = "" position = { x = { min = 381 max = 419 } y =  { min = 421 max = 459 } }  }
+system = { id = "68" name = "" position = { x = { min = 381 max = 419 } y =  { min = 461 max = 499 } }  }
+system = { id = "69" name = "" position = { x = { min = 341 max = 379 } y =  { min = -419 max = -381 } }  }
+system = { id = "70" name = "" position = { x = { min = 341 max = 379 } y =  { min = -379 max = -341 } }  }
+system = { id = "71" name = "" position = { x = { min = 341 max = 379 } y =  { min = -339 max = -301 } }  }
+system = { id = "72" name = "" position = { x = { min = 341 max = 379 } y =  { min = -299 max = -261 } }  }
+system = { id = "73" name = "" position = { x = { min = 341 max = 379 } y =  { min = -259 max = -221 } }  }
+system = { id = "74" name = "" position = { x = { min = 341 max = 379 } y =  { min = -219 max = -181 } }  }
+system = { id = "75" name = "" position = { x = { min = 341 max = 379 } y =  { min = -179 max = -141 } }  }
+system = { id = "76" name = "" position = { x = { min = 341 max = 379 } y =  { min = -139 max = -101 } }  }
+system = { id = "77" name = "" position = { x = { min = 341 max = 379 } y =  { min = -59 max = -21 } }  }
+system = { id = "78" name = "" position = { x = { min = 341 max = 379 } y =  { min = 21 max = 59 } }  }
+system = { id = "79" name = "" position = { x = { min = 341 max = 379 } y =  { min = 61 max = 99 } }  }
+system = { id = "80" name = "" position = { x = { min = 341 max = 379 } y =  { min = 101 max = 139 } }  }
+system = { id = "81" name = "" position = { x = { min = 341 max = 379 } y =  { min = 141 max = 179 } }  }
+system = { id = "82" name = "" position = { x = { min = 341 max = 379 } y =  { min = 181 max = 219 } }  }
+system = { id = "83" name = "" position = { x = { min = 341 max = 379 } y =  { min = 221 max = 259 } }  }
+system = { id = "84" name = "" position = { x = { min = 341 max = 379 } y =  { min = 261 max = 299 } }  }
+system = { id = "85" name = "" position = { x = { min = 341 max = 379 } y =  { min = 301 max = 339 } }  }
+system = { id = "86" name = "" position = { x = { min = 341 max = 379 } y =  { min = 341 max = 379 } }  }
+system = { id = "87" name = "" position = { x = { min = 341 max = 379 } y =  { min = 381 max = 419 } }  }
+system = { id = "88" name = "" position = { x = { min = 341 max = 379 } y =  { min = 461 max = 499 } }  }
+system = { id = "89" name = "" position = { x = { min = 301 max = 339 } y =  { min = -379 max = -341 } }  }
+system = { id = "90" name = "" position = { x = { min = 301 max = 339 } y =  { min = -339 max = -301 } }  }
+system = { id = "91" name = "" position = { x = { min = 301 max = 339 } y =  { min = -299 max = -261 } }  }
+system = { id = "92" name = "" position = { x = { min = 301 max = 339 } y =  { min = -259 max = -221 } }  }
+system = { id = "93" name = "" position = { x = { min = 301 max = 339 } y =  { min = -219 max = -181 } }  }
+system = { id = "94" name = "" position = { x = { min = 301 max = 339 } y =  { min = -179 max = -141 } }  }
+system = { id = "95" name = "" position = { x = { min = 301 max = 339 } y =  { min = -139 max = -101 } }  }
+system = { id = "96" name = "" position = { x = { min = 301 max = 339 } y =  { min = -99 max = -61 } }  }
+system = { id = "97" name = "" position = { x = { min = 301 max = 339 } y =  { min = -59 max = -21 } }  }
+system = { id = "98" name = "" position = { x = { min = 301 max = 339 } y =  { min = 61 max = 99 } }  }
+system = { id = "99" name = "" position = { x = { min = 301 max = 339 } y =  { min = 101 max = 139 } }  }
+system = { id = "100" name = "" position = { x = { min = 301 max = 339 } y =  { min = 141 max = 179 } }  }
+system = { id = "101" name = "" position = { x = { min = 301 max = 339 } y =  { min = 181 max = 219 } }  }
+system = { id = "102" name = "" position = { x = { min = 301 max = 339 } y =  { min = 221 max = 259 } }  }
+system = { id = "103" name = "" position = { x = { min = 301 max = 339 } y =  { min = 261 max = 299 } }  }
+system = { id = "104" name = "" position = { x = { min = 301 max = 339 } y =  { min = 301 max = 339 } }  }
+system = { id = "105" name = "" position = { x = { min = 301 max = 339 } y =  { min = 461 max = 499 } }  }
+system = { id = "106" name = "" position = { x = { min = 261 max = 299 } y =  { min = -339 max = -301 } }  }
+system = { id = "107" name = "" position = { x = { min = 261 max = 299 } y =  { min = -299 max = -261 } }  }
+system = { id = "108" name = "" position = { x = { min = 261 max = 299 } y =  { min = -259 max = -221 } }  }
+system = { id = "109" name = "" position = { x = { min = 261 max = 299 } y =  { min = -219 max = -181 } }  }
+system = { id = "110" name = "" position = { x = { min = 261 max = 299 } y =  { min = -179 max = -141 } }  }
+system = { id = "111" name = "" position = { x = { min = 261 max = 299 } y =  { min = -139 max = -101 } }  }
+system = { id = "112" name = "" position = { x = { min = 261 max = 299 } y =  { min = -99 max = -61 } }  }
+system = { id = "113" name = "" position = { x = { min = 261 max = 299 } y =  { min = -59 max = -21 } }  }
+system = { id = "114" name = "" position = { x = { min = 261 max = 299 } y =  { min = 101 max = 139 } }  }
+system = { id = "115" name = "" position = { x = { min = 261 max = 299 } y =  { min = 141 max = 179 } }  }
+system = { id = "116" name = "" position = { x = { min = 261 max = 299 } y =  { min = 181 max = 219 } }  }
+system = { id = "117" name = "" position = { x = { min = 261 max = 299 } y =  { min = 221 max = 259 } }  }
+system = { id = "118" name = "" position = { x = { min = 261 max = 299 } y =  { min = 421 max = 459 } }  }
+system = { id = "119" name = "" position = { x = { min = 261 max = 299 } y =  { min = 461 max = 499 } }  }
+system = { id = "120" name = "" position = { x = { min = 221 max = 259 } y =  { min = -499 max = -461 } }  }
+system = { id = "121" name = "" position = { x = { min = 221 max = 259 } y =  { min = -339 max = -301 } }  }
+system = { id = "122" name = "" position = { x = { min = 221 max = 259 } y =  { min = -299 max = -261 } }  }
+system = { id = "123" name = "" position = { x = { min = 221 max = 259 } y =  { min = -259 max = -221 } }  }
+system = { id = "124" name = "" position = { x = { min = 221 max = 259 } y =  { min = -219 max = -181 } }  }
+system = { id = "125" name = "" position = { x = { min = 221 max = 259 } y =  { min = -179 max = -141 } }  }
+system = { id = "126" name = "" position = { x = { min = 221 max = 259 } y =  { min = -139 max = -101 } }  }
+system = { id = "127" name = "" position = { x = { min = 221 max = 259 } y =  { min = -99 max = -61 } }  }
+system = { id = "128" name = "" position = { x = { min = 221 max = 259 } y =  { min = -59 max = -21 } }  }
+system = { id = "129" name = "" position = { x = { min = 221 max = 259 } y =  { min = -19 max = 19 } }  }
+system = { id = "130" name = "" position = { x = { min = 221 max = 259 } y =  { min = 141 max = 179 } }  }
+system = { id = "131" name = "" position = { x = { min = 221 max = 259 } y =  { min = 181 max = 219 } }  }
+system = { id = "132" name = "" position = { x = { min = 221 max = 259 } y =  { min = 341 max = 379 } }  }
+system = { id = "133" name = "" position = { x = { min = 221 max = 259 } y =  { min = 381 max = 419 } }  }
+system = { id = "134" name = "" position = { x = { min = 221 max = 259 } y =  { min = 421 max = 459 } }  }
+system = { id = "135" name = "" position = { x = { min = 221 max = 259 } y =  { min = 461 max = 499 } }  }
+system = { id = "136" name = "" position = { x = { min = 181 max = 219 } y =  { min = -499 max = -461 } }  }
+system = { id = "137" name = "" position = { x = { min = 181 max = 219 } y =  { min = -459 max = -421 } }  }
+system = { id = "138" name = "" position = { x = { min = 181 max = 219 } y =  { min = -339 max = -301 } }  }
+system = { id = "139" name = "" position = { x = { min = 181 max = 219 } y =  { min = -259 max = -221 } }  }
+system = { id = "140" name = "" position = { x = { min = 181 max = 219 } y =  { min = -219 max = -181 } }  }
+system = { id = "141" name = "" position = { x = { min = 181 max = 219 } y =  { min = -179 max = -141 } }  }
+system = { id = "142" name = "" position = { x = { min = 181 max = 219 } y =  { min = -139 max = -101 } }  }
+system = { id = "143" name = "" position = { x = { min = 181 max = 219 } y =  { min = -99 max = -61 } }  }
+system = { id = "144" name = "" position = { x = { min = 181 max = 219 } y =  { min = -59 max = -21 } }  }
+system = { id = "145" name = "" position = { x = { min = 181 max = 219 } y =  { min = -19 max = 19 } }  }
+system = { id = "146" name = "" position = { x = { min = 181 max = 219 } y =  { min = 21 max = 59 } }  }
+system = { id = "147" name = "" position = { x = { min = 181 max = 219 } y =  { min = 341 max = 379 } }  }
+system = { id = "148" name = "" position = { x = { min = 181 max = 219 } y =  { min = 381 max = 419 } }  }
+system = { id = "149" name = "" position = { x = { min = 181 max = 219 } y =  { min = 421 max = 459 } }  }
+system = { id = "150" name = "" position = { x = { min = 141 max = 179 } y =  { min = -499 max = -461 } }  }
+system = { id = "151" name = "" position = { x = { min = 141 max = 179 } y =  { min = -459 max = -421 } }  }
+system = { id = "152" name = "" position = { x = { min = 141 max = 179 } y =  { min = -419 max = -381 } }  }
+system = { id = "153" name = "" position = { x = { min = 141 max = 179 } y =  { min = -379 max = -341 } }  }
+system = { id = "154" name = "" position = { x = { min = 141 max = 179 } y =  { min = -339 max = -301 } }  }
+system = { id = "155" name = "" position = { x = { min = 141 max = 179 } y =  { min = -219 max = -181 } }  }
+system = { id = "156" name = "" position = { x = { min = 141 max = 179 } y =  { min = -179 max = -141 } }  }
+system = { id = "157" name = "" position = { x = { min = 141 max = 179 } y =  { min = -139 max = -101 } }  }
+system = { id = "158" name = "" position = { x = { min = 141 max = 179 } y =  { min = -99 max = -61 } }  }
+system = { id = "159" name = "" position = { x = { min = 141 max = 179 } y =  { min = -59 max = -21 } }  }
+system = { id = "160" name = "" position = { x = { min = 141 max = 179 } y =  { min = -19 max = 19 } }  }
+system = { id = "161" name = "" position = { x = { min = 141 max = 179 } y =  { min = 221 max = 259 } }  }
+system = { id = "162" name = "" position = { x = { min = 141 max = 179 } y =  { min = 341 max = 379 } }  }
+system = { id = "163" name = "" position = { x = { min = 141 max = 179 } y =  { min = 381 max = 419 } }  }
+system = { id = "164" name = "" position = { x = { min = 141 max = 179 } y =  { min = 421 max = 459 } }  }
+system = { id = "165" name = "" position = { x = { min = 141 max = 179 } y =  { min = 461 max = 499 } }  }
+system = { id = "166" name = "" position = { x = { min = 101 max = 139 } y =  { min = -499 max = -461 } }  }
+system = { id = "167" name = "" position = { x = { min = 101 max = 139 } y =  { min = -459 max = -421 } }  }
+system = { id = "168" name = "" position = { x = { min = 101 max = 139 } y =  { min = -419 max = -381 } }  }
+system = { id = "169" name = "" position = { x = { min = 101 max = 139 } y =  { min = -379 max = -341 } }  }
+system = { id = "170" name = "" position = { x = { min = 101 max = 139 } y =  { min = -179 max = -141 } }  }
+system = { id = "171" name = "" position = { x = { min = 101 max = 139 } y =  { min = -139 max = -101 } }  }
+system = { id = "172" name = "" position = { x = { min = 101 max = 139 } y =  { min = -99 max = -61 } }  }
+system = { id = "173" name = "" position = { x = { min = 101 max = 139 } y =  { min = -59 max = -21 } }  }
+system = { id = "174" name = "" position = { x = { min = 101 max = 139 } y =  { min = 21 max = 59 } }  }
+system = { id = "175" name = "" position = { x = { min = 101 max = 139 } y =  { min = 61 max = 99 } }  }
+system = { id = "176" name = "" position = { x = { min = 101 max = 139 } y =  { min = 221 max = 259 } }  }
+system = { id = "177" name = "" position = { x = { min = 101 max = 139 } y =  { min = 261 max = 299 } }  }
+system = { id = "178" name = "" position = { x = { min = 101 max = 139 } y =  { min = 341 max = 379 } }  }
+system = { id = "179" name = "" position = { x = { min = 101 max = 139 } y =  { min = 381 max = 419 } }  }
+system = { id = "180" name = "" position = { x = { min = 101 max = 139 } y =  { min = 421 max = 459 } }  }
+system = { id = "181" name = "" position = { x = { min = 101 max = 139 } y =  { min = 461 max = 499 } }  }
+system = { id = "182" name = "" position = { x = { min = 61 max = 99 } y =  { min = -499 max = -461 } }  }
+system = { id = "183" name = "" position = { x = { min = 61 max = 99 } y =  { min = -459 max = -421 } }  }
+system = { id = "184" name = "" position = { x = { min = 61 max = 99 } y =  { min = -419 max = -381 } }  }
+system = { id = "185" name = "" position = { x = { min = 61 max = 99 } y =  { min = -379 max = -341 } }  }
+system = { id = "186" name = "" position = { x = { min = 61 max = 99 } y =  { min = -339 max = -301 } }  }
+system = { id = "187" name = "" position = { x = { min = 61 max = 99 } y =  { min = -139 max = -101 } }  }
+system = { id = "188" name = "" position = { x = { min = 61 max = 99 } y =  { min = -19 max = 19 } }  }
+system = { id = "189" name = "" position = { x = { min = 61 max = 99 } y =  { min = 21 max = 59 } }  }
+system = { id = "190" name = "" position = { x = { min = 61 max = 99 } y =  { min = 61 max = 99 } }  }
+system = { id = "191" name = "" position = { x = { min = 61 max = 99 } y =  { min = 101 max = 139 } }  }
+system = { id = "192" name = "" position = { x = { min = 61 max = 99 } y =  { min = 221 max = 259 } }  }
+system = { id = "193" name = "" position = { x = { min = 61 max = 99 } y =  { min = 261 max = 299 } }  }
+system = { id = "194" name = "" position = { x = { min = 61 max = 99 } y =  { min = 301 max = 339 } }  }
+system = { id = "195" name = "" position = { x = { min = 61 max = 99 } y =  { min = 341 max = 379 } }  }
+system = { id = "196" name = "" position = { x = { min = 61 max = 99 } y =  { min = 381 max = 419 } }  }
+system = { id = "197" name = "" position = { x = { min = 61 max = 99 } y =  { min = 421 max = 459 } }  }
+system = { id = "198" name = "" position = { x = { min = 61 max = 99 } y =  { min = 461 max = 499 } }  }
+system = { id = "199" name = "" position = { x = { min = 21 max = 59 } y =  { min = -459 max = -421 } }  }
+system = { id = "200" name = "" position = { x = { min = 21 max = 59 } y =  { min = -419 max = -381 } }  }
+system = { id = "201" name = "" position = { x = { min = 21 max = 59 } y =  { min = -379 max = -341 } }  }
+system = { id = "202" name = "" position = { x = { min = 21 max = 59 } y =  { min = -339 max = -301 } }  }
+system = { id = "203" name = "" position = { x = { min = 21 max = 59 } y =  { min = -299 max = -261 } }  }
+system = { id = "204" name = "" position = { x = { min = 21 max = 59 } y =  { min = -19 max = 19 } }  }
+system = { id = "205" name = "" position = { x = { min = 21 max = 59 } y =  { min = 21 max = 59 } }  }
+system = { id = "206" name = "" position = { x = { min = 21 max = 59 } y =  { min = 61 max = 99 } }  }
+system = { id = "207" name = "" position = { x = { min = 21 max = 59 } y =  { min = 101 max = 139 } }  }
+system = { id = "208" name = "" position = { x = { min = 21 max = 59 } y =  { min = 141 max = 179 } }  }
+system = { id = "209" name = "" position = { x = { min = 21 max = 59 } y =  { min = 301 max = 339 } }  }
+system = { id = "210" name = "" position = { x = { min = 21 max = 59 } y =  { min = 341 max = 379 } }  }
+system = { id = "211" name = "" position = { x = { min = 21 max = 59 } y =  { min = 381 max = 419 } }  }
+system = { id = "212" name = "" position = { x = { min = 21 max = 59 } y =  { min = 421 max = 459 } }  }
+system = { id = "213" name = "" position = { x = { min = 21 max = 59 } y =  { min = 461 max = 499 } }  }
+system = { id = "214" name = "" position = { x = { min = -19 max = 19 } y =  { min = -419 max = -381 } }  }
+system = { id = "215" name = "" position = { x = { min = -19 max = 19 } y =  { min = -379 max = -341 } }  }
+system = { id = "216" name = "" position = { x = { min = -19 max = 19 } y =  { min = -339 max = -301 } }  }
+system = { id = "217" name = "" position = { x = { min = -19 max = 19 } y =  { min = -19 max = 19 } }  }
+system = { id = "218" name = "" position = { x = { min = -19 max = 19 } y =  { min = 21 max = 59 } }  }
+system = { id = "219" name = "" position = { x = { min = -19 max = 19 } y =  { min = 61 max = 99 } }  }
+system = { id = "220" name = "" position = { x = { min = -19 max = 19 } y =  { min = 101 max = 139 } }  }
+system = { id = "221" name = "" position = { x = { min = -19 max = 19 } y =  { min = 141 max = 179 } }  }
+system = { id = "222" name = "" position = { x = { min = -19 max = 19 } y =  { min = 181 max = 219 } }  }
+system = { id = "223" name = "" position = { x = { min = -19 max = 19 } y =  { min = 341 max = 379 } }  }
+system = { id = "224" name = "" position = { x = { min = -19 max = 19 } y =  { min = 381 max = 419 } }  }
+system = { id = "225" name = "" position = { x = { min = -19 max = 19 } y =  { min = 421 max = 459 } }  }
+system = { id = "226" name = "" position = { x = { min = -19 max = 19 } y =  { min = 461 max = 499 } }  }
+system = { id = "227" name = "" position = { x = { min = -59 max = -21 } y =  { min = -499 max = -461 } }  }
+system = { id = "228" name = "" position = { x = { min = -59 max = -21 } y =  { min = -459 max = -421 } }  }
+system = { id = "229" name = "" position = { x = { min = -59 max = -21 } y =  { min = -419 max = -381 } }  }
+system = { id = "230" name = "" position = { x = { min = -59 max = -21 } y =  { min = -379 max = -341 } }  }
+system = { id = "231" name = "" position = { x = { min = -59 max = -21 } y =  { min = -339 max = -301 } }  }
+system = { id = "232" name = "" position = { x = { min = -59 max = -21 } y =  { min = -219 max = -181 } }  }
+system = { id = "233" name = "" position = { x = { min = -59 max = -21 } y =  { min = -59 max = -21 } }  }
+system = { id = "234" name = "" position = { x = { min = -59 max = -21 } y =  { min = -19 max = 19 } }  }
+system = { id = "235" name = "" position = { x = { min = -59 max = -21 } y =  { min = 61 max = 99 } }  }
+system = { id = "236" name = "" position = { x = { min = -59 max = -21 } y =  { min = 101 max = 139 } }  }
+system = { id = "237" name = "" position = { x = { min = -59 max = -21 } y =  { min = 141 max = 179 } }  }
+system = { id = "238" name = "" position = { x = { min = -59 max = -21 } y =  { min = 181 max = 219 } }  }
+system = { id = "239" name = "" position = { x = { min = -59 max = -21 } y =  { min = 221 max = 259 } }  }
+system = { id = "240" name = "" position = { x = { min = -59 max = -21 } y =  { min = 381 max = 419 } }  }
+system = { id = "241" name = "" position = { x = { min = -59 max = -21 } y =  { min = 421 max = 459 } }  }
+system = { id = "242" name = "" position = { x = { min = -59 max = -21 } y =  { min = 461 max = 499 } }  }
+system = { id = "243" name = "" position = { x = { min = -99 max = -61 } y =  { min = -499 max = -461 } }  }
+system = { id = "244" name = "" position = { x = { min = -99 max = -61 } y =  { min = -419 max = -381 } }  }
+system = { id = "245" name = "" position = { x = { min = -99 max = -61 } y =  { min = -259 max = -221 } }  }
+system = { id = "246" name = "" position = { x = { min = -99 max = -61 } y =  { min = -219 max = -181 } }  }
+system = { id = "247" name = "" position = { x = { min = -99 max = -61 } y =  { min = -179 max = -141 } }  }
+system = { id = "248" name = "" position = { x = { min = -99 max = -61 } y =  { min = -19 max = 19 } }  }
+system = { id = "249" name = "" position = { x = { min = -99 max = -61 } y =  { min = 21 max = 59 } }  }
+system = { id = "250" name = "" position = { x = { min = -99 max = -61 } y =  { min = 61 max = 99 } }  }
+system = { id = "251" name = "" position = { x = { min = -99 max = -61 } y =  { min = 101 max = 139 } }  }
+system = { id = "252" name = "" position = { x = { min = -99 max = -61 } y =  { min = 141 max = 179 } }  }
+system = { id = "253" name = "" position = { x = { min = -99 max = -61 } y =  { min = 181 max = 219 } }  }
+system = { id = "254" name = "" position = { x = { min = -99 max = -61 } y =  { min = 221 max = 259 } }  }
+system = { id = "255" name = "" position = { x = { min = -99 max = -61 } y =  { min = 261 max = 299 } }  }
+system = { id = "256" name = "" position = { x = { min = -99 max = -61 } y =  { min = 381 max = 419 } }  }
+system = { id = "257" name = "" position = { x = { min = -99 max = -61 } y =  { min = 421 max = 459 } }  }
+system = { id = "258" name = "" position = { x = { min = -99 max = -61 } y =  { min = 461 max = 499 } }  }
+system = { id = "259" name = "" position = { x = { min = -139 max = -101 } y =  { min = -459 max = -421 } }  }
+system = { id = "260" name = "" position = { x = { min = -139 max = -101 } y =  { min = -339 max = -301 } }  }
+system = { id = "261" name = "" position = { x = { min = -139 max = -101 } y =  { min = -299 max = -261 } }  }
+system = { id = "262" name = "" position = { x = { min = -139 max = -101 } y =  { min = -259 max = -221 } }  }
+system = { id = "263" name = "" position = { x = { min = -139 max = -101 } y =  { min = -219 max = -181 } }  }
+system = { id = "264" name = "" position = { x = { min = -139 max = -101 } y =  { min = -179 max = -141 } }  }
+system = { id = "265" name = "" position = { x = { min = -139 max = -101 } y =  { min = -139 max = -101 } }  }
+system = { id = "266" name = "" position = { x = { min = -139 max = -101 } y =  { min = 21 max = 59 } }  }
+system = { id = "267" name = "" position = { x = { min = -139 max = -101 } y =  { min = 61 max = 99 } }  }
+system = { id = "268" name = "" position = { x = { min = -139 max = -101 } y =  { min = 101 max = 139 } }  }
+system = { id = "269" name = "" position = { x = { min = -139 max = -101 } y =  { min = 141 max = 179 } }  }
+system = { id = "270" name = "" position = { x = { min = -139 max = -101 } y =  { min = 181 max = 219 } }  }
+system = { id = "271" name = "" position = { x = { min = -139 max = -101 } y =  { min = 221 max = 259 } }  }
+system = { id = "272" name = "" position = { x = { min = -139 max = -101 } y =  { min = 261 max = 299 } }  }
+system = { id = "273" name = "" position = { x = { min = -139 max = -101 } y =  { min = 301 max = 339 } }  }
+system = { id = "274" name = "" position = { x = { min = -139 max = -101 } y =  { min = 381 max = 419 } }  }
+system = { id = "275" name = "" position = { x = { min = -139 max = -101 } y =  { min = 461 max = 499 } }  }
+system = { id = "276" name = "" position = { x = { min = -179 max = -141 } y =  { min = -339 max = -301 } }  }
+system = { id = "277" name = "" position = { x = { min = -179 max = -141 } y =  { min = -299 max = -261 } }  }
+system = { id = "278" name = "" position = { x = { min = -179 max = -141 } y =  { min = -259 max = -221 } }  }
+system = { id = "279" name = "" position = { x = { min = -179 max = -141 } y =  { min = -219 max = -181 } }  }
+system = { id = "280" name = "" position = { x = { min = -179 max = -141 } y =  { min = -179 max = -141 } }  }
+system = { id = "281" name = "" position = { x = { min = -179 max = -141 } y =  { min = -139 max = -101 } }  }
+system = { id = "282" name = "" position = { x = { min = -179 max = -141 } y =  { min = -99 max = -61 } }  }
+system = { id = "283" name = "" position = { x = { min = -179 max = -141 } y =  { min = 61 max = 99 } }  }
+system = { id = "284" name = "" position = { x = { min = -179 max = -141 } y =  { min = 101 max = 139 } }  }
+system = { id = "285" name = "" position = { x = { min = -179 max = -141 } y =  { min = 141 max = 179 } }  }
+system = { id = "286" name = "" position = { x = { min = -179 max = -141 } y =  { min = 181 max = 219 } }  }
+system = { id = "287" name = "" position = { x = { min = -179 max = -141 } y =  { min = 221 max = 259 } }  }
+system = { id = "288" name = "" position = { x = { min = -179 max = -141 } y =  { min = 261 max = 299 } }  }
+system = { id = "289" name = "" position = { x = { min = -179 max = -141 } y =  { min = 301 max = 339 } }  }
+system = { id = "290" name = "" position = { x = { min = -179 max = -141 } y =  { min = 341 max = 379 } }  }
+system = { id = "291" name = "" position = { x = { min = -179 max = -141 } y =  { min = 381 max = 419 } }  }
+system = { id = "292" name = "" position = { x = { min = -219 max = -181 } y =  { min = -419 max = -381 } }  }
+system = { id = "293" name = "" position = { x = { min = -219 max = -181 } y =  { min = -379 max = -341 } }  }
+system = { id = "294" name = "" position = { x = { min = -219 max = -181 } y =  { min = -339 max = -301 } }  }
+system = { id = "295" name = "" position = { x = { min = -219 max = -181 } y =  { min = -299 max = -261 } }  }
+system = { id = "296" name = "" position = { x = { min = -219 max = -181 } y =  { min = -259 max = -221 } }  }
+system = { id = "297" name = "" position = { x = { min = -219 max = -181 } y =  { min = -219 max = -181 } }  }
+system = { id = "298" name = "" position = { x = { min = -219 max = -181 } y =  { min = -179 max = -141 } }  }
+system = { id = "299" name = "" position = { x = { min = -219 max = -181 } y =  { min = -139 max = -101 } }  }
+system = { id = "300" name = "" position = { x = { min = -219 max = -181 } y =  { min = -99 max = -61 } }  }
+system = { id = "301" name = "" position = { x = { min = -219 max = -181 } y =  { min = -59 max = -21 } }  }
+system = { id = "302" name = "" position = { x = { min = -219 max = -181 } y =  { min = 101 max = 139 } }  }
+system = { id = "303" name = "" position = { x = { min = -219 max = -181 } y =  { min = 141 max = 179 } }  }
+system = { id = "304" name = "" position = { x = { min = -219 max = -181 } y =  { min = 181 max = 219 } }  }
+system = { id = "305" name = "" position = { x = { min = -219 max = -181 } y =  { min = 221 max = 259 } }  }
+system = { id = "306" name = "" position = { x = { min = -219 max = -181 } y =  { min = 261 max = 299 } }  }
+system = { id = "307" name = "" position = { x = { min = -219 max = -181 } y =  { min = 301 max = 339 } }  }
+system = { id = "308" name = "" position = { x = { min = -219 max = -181 } y =  { min = 341 max = 379 } }  }
+system = { id = "309" name = "" position = { x = { min = -219 max = -181 } y =  { min = 381 max = 419 } }  }
+system = { id = "310" name = "" position = { x = { min = -259 max = -221 } y =  { min = -459 max = -421 } }  }
+system = { id = "311" name = "" position = { x = { min = -259 max = -221 } y =  { min = -419 max = -381 } }  }
+system = { id = "312" name = "" position = { x = { min = -259 max = -221 } y =  { min = -379 max = -341 } }  }
+system = { id = "313" name = "" position = { x = { min = -259 max = -221 } y =  { min = -339 max = -301 } }  }
+system = { id = "314" name = "" position = { x = { min = -259 max = -221 } y =  { min = -299 max = -261 } }  }
+system = { id = "315" name = "" position = { x = { min = -259 max = -221 } y =  { min = -259 max = -221 } }  }
+system = { id = "316" name = "" position = { x = { min = -259 max = -221 } y =  { min = -219 max = -181 } }  }
+system = { id = "317" name = "" position = { x = { min = -259 max = -221 } y =  { min = -179 max = -141 } }  }
+system = { id = "318" name = "" position = { x = { min = -259 max = -221 } y =  { min = -139 max = -101 } }  }
+system = { id = "319" name = "" position = { x = { min = -259 max = -221 } y =  { min = -99 max = -61 } }  }
+system = { id = "320" name = "" position = { x = { min = -259 max = -221 } y =  { min = -59 max = -21 } }  }
+system = { id = "321" name = "" position = { x = { min = -259 max = -221 } y =  { min = -19 max = 19 } }  }
+system = { id = "322" name = "" position = { x = { min = -259 max = -221 } y =  { min = 101 max = 139 } }  }
+system = { id = "323" name = "" position = { x = { min = -259 max = -221 } y =  { min = 141 max = 179 } }  }
+system = { id = "324" name = "" position = { x = { min = -259 max = -221 } y =  { min = 181 max = 219 } }  }
+system = { id = "325" name = "" position = { x = { min = -259 max = -221 } y =  { min = 221 max = 259 } }  }
+system = { id = "326" name = "" position = { x = { min = -259 max = -221 } y =  { min = 261 max = 299 } }  }
+system = { id = "327" name = "" position = { x = { min = -259 max = -221 } y =  { min = 301 max = 339 } }  }
+system = { id = "328" name = "" position = { x = { min = -259 max = -221 } y =  { min = 341 max = 379 } }  }
+system = { id = "329" name = "" position = { x = { min = -259 max = -221 } y =  { min = 381 max = 419 } }  }
+system = { id = "330" name = "" position = { x = { min = -259 max = -221 } y =  { min = 421 max = 459 } }  }
+system = { id = "331" name = "" position = { x = { min = -259 max = -221 } y =  { min = 461 max = 499 } }  }
+system = { id = "332" name = "" position = { x = { min = -299 max = -261 } y =  { min = -499 max = -461 } }  }
+system = { id = "333" name = "" position = { x = { min = -299 max = -261 } y =  { min = -459 max = -421 } }  }
+system = { id = "334" name = "" position = { x = { min = -299 max = -261 } y =  { min = -419 max = -381 } }  }
+system = { id = "335" name = "" position = { x = { min = -299 max = -261 } y =  { min = -379 max = -341 } }  }
+system = { id = "336" name = "" position = { x = { min = -299 max = -261 } y =  { min = -339 max = -301 } }  }
+system = { id = "337" name = "" position = { x = { min = -299 max = -261 } y =  { min = -299 max = -261 } }  }
+system = { id = "338" name = "" position = { x = { min = -299 max = -261 } y =  { min = -259 max = -221 } }  }
+system = { id = "339" name = "" position = { x = { min = -299 max = -261 } y =  { min = -219 max = -181 } }  }
+system = { id = "340" name = "" position = { x = { min = -299 max = -261 } y =  { min = -179 max = -141 } }  }
+system = { id = "341" name = "" position = { x = { min = -299 max = -261 } y =  { min = -139 max = -101 } }  }
+system = { id = "342" name = "" position = { x = { min = -299 max = -261 } y =  { min = -99 max = -61 } }  }
+system = { id = "343" name = "" position = { x = { min = -299 max = -261 } y =  { min = -59 max = -21 } }  }
+system = { id = "344" name = "" position = { x = { min = -299 max = -261 } y =  { min = -19 max = 19 } }  }
+system = { id = "345" name = "" position = { x = { min = -299 max = -261 } y =  { min = 21 max = 59 } }  }
+system = { id = "346" name = "" position = { x = { min = -299 max = -261 } y =  { min = 101 max = 139 } }  }
+system = { id = "347" name = "" position = { x = { min = -299 max = -261 } y =  { min = 181 max = 219 } }  }
+system = { id = "348" name = "" position = { x = { min = -299 max = -261 } y =  { min = 221 max = 259 } }  }
+system = { id = "349" name = "" position = { x = { min = -299 max = -261 } y =  { min = 261 max = 299 } }  }
+system = { id = "350" name = "" position = { x = { min = -299 max = -261 } y =  { min = 301 max = 339 } }  }
+system = { id = "351" name = "" position = { x = { min = -299 max = -261 } y =  { min = 341 max = 379 } }  }
+system = { id = "352" name = "" position = { x = { min = -299 max = -261 } y =  { min = 381 max = 419 } }  }
+system = { id = "353" name = "" position = { x = { min = -299 max = -261 } y =  { min = 421 max = 459 } }  }
+system = { id = "354" name = "" position = { x = { min = -299 max = -261 } y =  { min = 461 max = 499 } }  }
+system = { id = "355" name = "" position = { x = { min = -339 max = -301 } y =  { min = -499 max = -461 } }  }
+system = { id = "356" name = "" position = { x = { min = -339 max = -301 } y =  { min = -459 max = -421 } }  }
+system = { id = "357" name = "" position = { x = { min = -339 max = -301 } y =  { min = -419 max = -381 } }  }
+system = { id = "358" name = "" position = { x = { min = -339 max = -301 } y =  { min = -379 max = -341 } }  }
+system = { id = "359" name = "" position = { x = { min = -339 max = -301 } y =  { min = -339 max = -301 } }  }
+system = { id = "360" name = "" position = { x = { min = -339 max = -301 } y =  { min = -299 max = -261 } }  }
+system = { id = "361" name = "" position = { x = { min = -339 max = -301 } y =  { min = -259 max = -221 } }  }
+system = { id = "362" name = "" position = { x = { min = -339 max = -301 } y =  { min = -219 max = -181 } }  }
+system = { id = "363" name = "" position = { x = { min = -339 max = -301 } y =  { min = -179 max = -141 } }  }
+system = { id = "364" name = "" position = { x = { min = -339 max = -301 } y =  { min = -139 max = -101 } }  }
+system = { id = "365" name = "" position = { x = { min = -339 max = -301 } y =  { min = -99 max = -61 } }  }
+system = { id = "366" name = "" position = { x = { min = -339 max = -301 } y =  { min = -59 max = -21 } }  }
+system = { id = "367" name = "" position = { x = { min = -339 max = -301 } y =  { min = -19 max = 19 } }  }
+system = { id = "368" name = "" position = { x = { min = -339 max = -301 } y =  { min = 21 max = 59 } }  }
+system = { id = "369" name = "" position = { x = { min = -339 max = -301 } y =  { min = 61 max = 99 } }  }
+system = { id = "370" name = "" position = { x = { min = -339 max = -301 } y =  { min = 101 max = 139 } }  }
+system = { id = "371" name = "" position = { x = { min = -339 max = -301 } y =  { min = 221 max = 259 } }  }
+system = { id = "372" name = "" position = { x = { min = -339 max = -301 } y =  { min = 261 max = 299 } }  }
+system = { id = "373" name = "" position = { x = { min = -339 max = -301 } y =  { min = 301 max = 339 } }  }
+system = { id = "374" name = "" position = { x = { min = -339 max = -301 } y =  { min = 341 max = 379 } }  }
+system = { id = "375" name = "" position = { x = { min = -339 max = -301 } y =  { min = 381 max = 419 } }  }
+system = { id = "376" name = "" position = { x = { min = -339 max = -301 } y =  { min = 421 max = 459 } }  }
+system = { id = "377" name = "" position = { x = { min = -339 max = -301 } y =  { min = 461 max = 499 } }  }
+system = { id = "378" name = "" position = { x = { min = -379 max = -341 } y =  { min = -499 max = -461 } }  }
+system = { id = "379" name = "" position = { x = { min = -379 max = -341 } y =  { min = -459 max = -421 } }  }
+system = { id = "380" name = "" position = { x = { min = -379 max = -341 } y =  { min = -419 max = -381 } }  }
+system = { id = "381" name = "" position = { x = { min = -379 max = -341 } y =  { min = -379 max = -341 } }  }
+system = { id = "382" name = "" position = { x = { min = -379 max = -341 } y =  { min = -339 max = -301 } }  }
+system = { id = "383" name = "" position = { x = { min = -379 max = -341 } y =  { min = -299 max = -261 } }  }
+system = { id = "384" name = "" position = { x = { min = -379 max = -341 } y =  { min = -259 max = -221 } }  }
+system = { id = "385" name = "" position = { x = { min = -379 max = -341 } y =  { min = -219 max = -181 } }  }
+system = { id = "386" name = "" position = { x = { min = -379 max = -341 } y =  { min = -179 max = -141 } }  }
+system = { id = "387" name = "" position = { x = { min = -379 max = -341 } y =  { min = -139 max = -101 } }  }
+system = { id = "388" name = "" position = { x = { min = -379 max = -341 } y =  { min = -99 max = -61 } }  }
+system = { id = "389" name = "" position = { x = { min = -379 max = -341 } y =  { min = -59 max = -21 } }  }
+system = { id = "390" name = "" position = { x = { min = -379 max = -341 } y =  { min = -19 max = 19 } }  }
+system = { id = "391" name = "" position = { x = { min = -379 max = -341 } y =  { min = 21 max = 59 } }  }
+system = { id = "392" name = "" position = { x = { min = -379 max = -341 } y =  { min = 61 max = 99 } }  }
+system = { id = "393" name = "" position = { x = { min = -379 max = -341 } y =  { min = 101 max = 139 } }  }
+system = { id = "394" name = "" position = { x = { min = -379 max = -341 } y =  { min = 261 max = 299 } }  }
+system = { id = "395" name = "" position = { x = { min = -379 max = -341 } y =  { min = 301 max = 339 } }  }
+system = { id = "396" name = "" position = { x = { min = -379 max = -341 } y =  { min = 341 max = 379 } }  }
+system = { id = "397" name = "" position = { x = { min = -379 max = -341 } y =  { min = 381 max = 419 } }  }
+system = { id = "398" name = "" position = { x = { min = -379 max = -341 } y =  { min = 421 max = 459 } }  }
+system = { id = "399" name = "" position = { x = { min = -379 max = -341 } y =  { min = 461 max = 499 } }  }
+system = { id = "400" name = "" position = { x = { min = -419 max = -381 } y =  { min = -499 max = -461 } }  }
+system = { id = "401" name = "" position = { x = { min = -419 max = -381 } y =  { min = -459 max = -421 } }  }
+system = { id = "402" name = "" position = { x = { min = -419 max = -381 } y =  { min = -419 max = -381 } }  }
+system = { id = "403" name = "" position = { x = { min = -419 max = -381 } y =  { min = -379 max = -341 } }  }
+system = { id = "404" name = "" position = { x = { min = -419 max = -381 } y =  { min = -339 max = -301 } }  }
+system = { id = "405" name = "" position = { x = { min = -419 max = -381 } y =  { min = -299 max = -261 } }  }
+system = { id = "406" name = "" position = { x = { min = -419 max = -381 } y =  { min = -259 max = -221 } }  }
+system = { id = "407" name = "" position = { x = { min = -419 max = -381 } y =  { min = -219 max = -181 } }  }
+system = { id = "408" name = "" position = { x = { min = -419 max = -381 } y =  { min = -179 max = -141 } }  }
+system = { id = "409" name = "" position = { x = { min = -419 max = -381 } y =  { min = -139 max = -101 } }  }
+system = { id = "410" name = "" position = { x = { min = -419 max = -381 } y =  { min = -99 max = -61 } }  }
+system = { id = "411" name = "" position = { x = { min = -419 max = -381 } y =  { min = -59 max = -21 } }  }
+system = { id = "412" name = "" position = { x = { min = -419 max = -381 } y =  { min = -19 max = 19 } }  }
+system = { id = "413" name = "" position = { x = { min = -419 max = -381 } y =  { min = 21 max = 59 } }  }
+system = { id = "414" name = "" position = { x = { min = -419 max = -381 } y =  { min = 61 max = 99 } }  }
+system = { id = "415" name = "" position = { x = { min = -419 max = -381 } y =  { min = 101 max = 139 } }  }
+system = { id = "416" name = "" position = { x = { min = -419 max = -381 } y =  { min = 141 max = 179 } }  }
+system = { id = "417" name = "" position = { x = { min = -419 max = -381 } y =  { min = 301 max = 339 } }  }
+system = { id = "418" name = "" position = { x = { min = -419 max = -381 } y =  { min = 341 max = 379 } }  }
+system = { id = "419" name = "" position = { x = { min = -419 max = -381 } y =  { min = 381 max = 419 } }  }
+system = { id = "420" name = "" position = { x = { min = -419 max = -381 } y =  { min = 421 max = 459 } }  }
+system = { id = "421" name = "" position = { x = { min = -419 max = -381 } y =  { min = 461 max = 499 } }  }
+system = { id = "422" name = "" position = { x = { min = -459 max = -421 } y =  { min = -499 max = -461 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "423" name = "" position = { x = { min = -459 max = -421 } y =  { min = -459 max = -421 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "424" name = "" position = { x = { min = -459 max = -421 } y =  { min = -419 max = -381 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "425" name = "" position = { x = { min = -459 max = -421 } y =  { min = -379 max = -341 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "426" name = "" position = { x = { min = -459 max = -421 } y =  { min = -339 max = -301 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "427" name = "" position = { x = { min = -459 max = -421 } y =  { min = -299 max = -261 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "428" name = "" position = { x = { min = -459 max = -421 } y =  { min = -259 max = -221 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "429" name = "" position = { x = { min = -459 max = -421 } y =  { min = -219 max = -181 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "430" name = "" position = { x = { min = -459 max = -421 } y =  { min = -179 max = -141 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "431" name = "" position = { x = { min = -459 max = -421 } y =  { min = -139 max = -101 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "432" name = "" position = { x = { min = -459 max = -421 } y =  { min = -99 max = -61 } }  }
+system = { id = "433" name = "" position = { x = { min = -459 max = -421 } y =  { min = -59 max = -21 } }  }
+system = { id = "434" name = "" position = { x = { min = -459 max = -421 } y =  { min = -19 max = 19 } }  }
+system = { id = "435" name = "" position = { x = { min = -459 max = -421 } y =  { min = 21 max = 59 } }  }
+system = { id = "436" name = "" position = { x = { min = -459 max = -421 } y =  { min = 61 max = 99 } }  }
+system = { id = "437" name = "" position = { x = { min = -459 max = -421 } y =  { min = 101 max = 139 } }  }
+system = { id = "438" name = "" position = { x = { min = -459 max = -421 } y =  { min = 141 max = 179 } }  initializer = oschean_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = oschean_hunters } } }
+system = { id = "439" name = "" position = { x = { min = -459 max = -421 } y =  { min = 181 max = 219 } }  initializer = skrreean_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = skrreean_republic } } }
+system = { id = "440" name = "" position = { x = { min = -459 max = -421 } y =  { min = 341 max = 379 } }  }
+system = { id = "441" name = "" position = { x = { min = -459 max = -421 } y =  { min = 381 max = 419 } }  }
+system = { id = "442" name = "" position = { x = { min = -459 max = -421 } y =  { min = 421 max = 459 } }  }
+system = { id = "443" name = "" position = { x = { min = -459 max = -421 } y =  { min = 461 max = 499 } }  initializer = kelpien_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kelpian_duchies } } }
+system = { id = "444" name = "" position = { x = { min = -499 max = -461 } y =  { min = -499 max = -461 } }  initializer = signum_dm }
+system = { id = "445" name = "" position = { x = { min = -499 max = -461 } y =  { min = -459 max = -421 } }  initializer = signum_dm }
+system = { id = "446" name = "" position = { x = { min = -499 max = -461 } y =  { min = -419 max = -381 } }  initializer = signum_dm }
+system = { id = "447" name = "" position = { x = { min = -499 max = -461 } y =  { min = -379 max = -341 } }  initializer = signum_dm }
+system = { id = "448" name = "" position = { x = { min = -499 max = -461 } y =  { min = -339 max = -301 } }  initializer = signum_dm }
+system = { id = "449" name = "" position = { x = { min = -499 max = -461 } y =  { min = -299 max = -261 } }  initializer = signum_dm }
+system = { id = "450" name = "" position = { x = { min = -499 max = -461 } y =  { min = -259 max = -221 } }  initializer = rigellian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = rigellian_consortium } } }
+system = { id = "451" name = "" position = { x = { min = -499 max = -461 } y =  { min = -219 max = -181 } }  initializer = bolian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bolian_league } } }
+system = { id = "452" name = "" position = { x = { min = -499 max = -461 } y =  { min = -179 max = -141 } }  initializer = benzarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = benzarian_commonwealth } } }
+system = { id = "453" name = "" position = { x = { min = -499 max = -461 } y =  { min = -139 max = -101 } }  initializer = suliban_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = suliban_cabal } } }
+system = { id = "454" name = "" position = { x = { min = -499 max = -461 } y =  { min = -99 max = -61 } }  initializer = FlaxianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = flaxian_hegemony } } }
+system = { id = "455" name = "" position = { x = { min = -499 max = -461 } y =  { min = -59 max = -21 } }  initializer = garidian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = garidian_republic } } }
+system = { id = "456" name = "" position = { x = { min = -499 max = -461 } y =  { min = -19 max = 19 } }  initializer = husnock_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = husnock_ascendency } } }
+system = { id = "457" name = "" position = { x = { min = -499 max = -461 } y =  { min = 21 max = 59 } }  initializer = nausicaan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = nausicaan_tribes } } }
+system = { id = "458" name = "" position = { x = { min = -499 max = -461 } y =  { min = 61 max = 99 } }  initializer = orion_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = orion_free_states } } }
+system = { id = "459" name = "" position = { x = { min = -499 max = -461 } y =  { min = 101 max = 139 } }  initializer = andorian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = andorian_empire } } }
+system = { id = "460" name = "" position = { x = { min = -499 max = -461 } y =  { min = 141 max = 179 } }  initializer = klingon_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = klingon_empire } } }
+system = { id = "461" name = "" position = { x = { min = -499 max = -461 } y =  { min = 181 max = 219 } }  initializer = romulan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = romulan_star_empire } } }
+system = { id = "462" name = "" position = { x = { min = -499 max = -461 } y =  { min = 221 max = 259 } }  initializer = MoraliHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = morali_states } } }
+system = { id = "463" name = "" position = { x = { min = -499 max = -461 } y =  { min = 261 max = 299 } }  initializer = gorn_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = gorn_empire } } }
+system = { id = "464" name = "" position = { x = { min = -499 max = -461 } y =  { min = 301 max = 339 } }  initializer = antican_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = antican_packs } } }
+system = { id = "465" name = "" position = { x = { min = -499 max = -461 } y =  { min = 341 max = 379 } }  initializer = selay_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = selay_clutches } } }
+system = { id = "466" name = "" position = { x = { min = -499 max = -461 } y =  { min = 381 max = 419 } }  initializer = bynar_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bynar_domains } } }
+system = { id = "467" name = "" position = { x = { min = -499 max = -461 } y =  { min = 421 max = 459 } }  initializer = zakdorn_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = zakdorn_alliance } } }
+system = { id = "468" name = "" position = { x = { min = -499 max = -461 } y =  { min = 461 max = 499 } }  initializer = yaderan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = yaderan_republic } } }
+system = { id = "469" name = "Jibalia" position = { x = -191 y = -491 } }
+system = { id = "470" name = "Gree" position = { x = -130 y = -490 } }
+system = { id = "471" name = "Oshionian" position = { x = -222 y = -488 } }
+system = { id = "472" name = "Mithren" position = { x = -108 y = -487 } }
+system = { id = "473" name = "Talax" position = { x = -141 y = -487 } initializer = talaxian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = talaxian_empire } } }
+system = { id = "474" name = "Mylea" position = { x = -138 y = -483 } }
+system = { id = "475" name = "Trabal" position = { x = -166 y = -482 } }
+system = { id = "476" name = "Keloda" position = { x = -229 y = -481 } }
+system = { id = "477" name = "Rekarr" position = { x = -122 y = -477 } }
+system = { id = "478" name = "Ocampa" position = { x = -200 y = -476 } initializer = ocampa_b }
+system = { id = "479" name = "Rectilia" position = { x = -147 y = -468 } }
+system = { id = "480" name = "Deep Space" position = { x = -10 y = -468 } initializer = voth_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = voth_theocracy } } }
+system = { id = "481" name = "" position = { x = 20 y = -468 } }
+system = { id = "482" name = "" position = { x = 5 y = -449 } }
+system = { id = "483" name = "Haakon" position = { x = -151 y = -456 } initializer = haakonian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = haakonian_order } } }
+system = { id = "484" name = "Oblissa" position = { x = -187 y = -450 } }
+system = { id = "485" name = "Markov-Kalto" position = { x = -185 y = -449 } }
+system = { id = "486" name = "Rogue Planetoid" position = { x = -174 y = -446 } }
+system = { id = "487" name = "Yalita" position = { x = -147 y = -444 } }
+system = { id = "488" name = "Numiri" position = { x = -167 y = -438 } }
+system = { id = "489" name = "Banea" position = { x = -175 y = -438 } initializer = banean_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = united_congress_of_banea } } }
+system = { id = "490" name = "Kazpm" position = { x = -190 y = -438 } initializer = kazon_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kazon_sects } } }
+system = { id = "491" name = "FGC-486237" position = { x = -182 y = -432 } }
+system = { id = "492" name = "Sikaris" position = { x = -170 y = -430 } }
+system = { id = "493" name = "Type-4 Quantum Singularity" position = { x = -163 y = -421 } }
+system = { id = "494" name = "Ilidaria" position = { x = -161 y = -419 } }
+system = { id = "495" name = "Via" position = { x = -70 y = -423 } initializer = vidiian_homeworld   spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vidiian_sodality  } } }
+system = { id = "496" name = "Avery" position = { x = -152 y = -417 } }
+system = { id = "497" name = "Briori" position = { x = -129 y = -396 } }
+system = { id = "498" name = "Tarok" position = { x = -129 y = -394 } }
+system = { id = "499" name = "Sky Spirits System" position = { x = -122 y = -388 } }
+system = { id = "500" name = "PLANET HELL" position = { x = -125 y = -386 } }
+system = { id = "501" name = "Cravic" position = { x = -98 y = -370 } initializer = cravic_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cravic_imperative } } }
+system = { id = "502" name = "Pralor" position = { x = -123 y = -369 } initializer = pralor_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = pralor_auxiliary } } }
+system = { id = "503" name = "Mokra" position = { x = -117 y = -366 } }
+system = { id = "504" name = "Sobras" position = { x = -119 y = -358 } }
+system = { id = "505" name = "Trabe" position = { x = -146 y = -350 } initializer = trabe_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trabe_alliance } } }
+system = { id = "506" name = "Rakosa" position = { x = -94 y = -346 } }
+system = { id = "507" name = "Kokati" position = { x = -74 y = -344 } }
+system = { id = "508" name = "Hemikek" position = { x = -96 y = -340 } }
+system = { id = "509" name = "Fina" position = { x = -83 y = -339 } }
+system = { id = "510" name = "Kohlari" position = { x = -79 y = -338 } }
+system = { id = "511" name = "Vidiia" position = { x = -71 y = -336 } }
+system = { id = "512" name = "Draya" position = { x = -83 y = -334 } }
+system = { id = "513" name = "Kohl" position = { x = -85 y = -333 } }
+system = { id = "514" name = "" position = { x = -74 y = -320 } initializer = new_earth_b }
+system = { id = "515" name = "Gema" position = { x = -66 y = -286 } }
+system = { id = "516" name = "Hanon" position = { x = -51 y = -285 } }
+system = { id = "517" name = "Prema" position = { x = -32 y = -285 } }
+system = { id = "518" name = "Nechani" position = { x = -33 y = -282 } }
+system = { id = "519" name = "Takar" position = { x = -24 y = -280 } }
+system = { id = "520" name = "Porakas" position = { x = -20 y = -278 } }
+system = { id = "521" name = "Heva" position = { x = -21 y = -274 } }
+system = { id = "522" name = "Akritiri" position = { x = -16 y = -273 } initializer = akritiri_b }
+system = { id = "523" name = "Enara" position = { x = -24 y = -271 } }
+system = { id = "524" name = "Gand" position = { x = -80 y = -271 } }
+system = { id = "525" name = "Firma" position = { x = -26 y = -270 } }
+system = { id = "526" name = "Mislen" position = { x = -26 y = -268 } }
+system = { id = "527" name = "Tak-Tak" position = { x = -19 y = -242 } }
+system = { id = "528" name = "Toffa" position = { x = -6 y = -241 } }
+system = { id = "529" name = "Garan" position = { x = -21 y = -241 } }
+system = { id = "530" name = "Arakis" position = { x = -15 y = -239 } }
+system = { id = "531" name = "Ubea" position = { x = -7 y = -239 } }
+system = { id = "532" name = "Kolaati" position = { x = -33 y = -238 } }
+system = { id = "533" name = "FGC-505183" position = { x = -5 y = -222 } }
+system = { id = "534" name = "Sakari" position = { x = -3 y = -218 } }
+system = { id = "535" name = "Farn" position = { x = -17 y = -205 } }
+system = { id = "536" name = "Parein" position = { x = -3 y = -202 } }
+system = { id = "537" name = "Nezu" position = { x = 6 y = -195 } }
+system = { id = "538" name = "Jarleth" position = { x = 58 y = -194 } }
+system = { id = "539" name = "FGC-506930" position = { x = 0 y = -191 } }
+system = { id = "540" name = "Nasari" position = { x = -2 y = -190 } }
+system = { id = "541" name = "Taresia" position = { x = 10 y = -189 } }
+system = { id = "542" name = "Argala" position = { x = -18 y = -210 } }
+system = { id = "543" name = "Nyria" position = { x = 22 y = -183 } }
+system = { id = "544" name = "Kradin-Vori" position = { x = 20 y = -100 } }
+system = { id = "545" name = "Arrithea" position = { x = 15 y = -97 } }
+system = { id = "546" name = "Garenor" position = { x = 21 y = -94 } }
+system = { id = "547" name = "Seros" position = { x = -12 y = -92 } }
+system = { id = "548" name = "Rilnar" position = { x = 40 y = -91 } }
+system = { id = "549" name = "Malkothia" position = { x = 54 y = -88 } }
+system = { id = "550" name = "Nihydron" position = { x = 18 y = -87 } }
+system = { id = "551" name = "Kyana" position = { x = -2 y = -84 } }
+system = { id = "552" name = "Mawasi" position = { x = 40 y = -82 } }
+system = { id = "553" name = "Zahl" position = { x = 75 y = -79 } initializer = zahl_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = zahl_technocracy } } }
+system = { id = "554" name = "Nassordin" position = { x = 48 y = -76 } }
+system = { id = "555" name = "Ram Izad" position = { x = 29 y = -74 } }
+system = { id = "556" name = "FGC-7861340" position = { x = 62 y = -73 } }
+system = { id = "557" name = "" position = { x = 33 y = -71 } initializer = binary_pulsar_b }
+system = { id = "558" name = "Mari" position = { x = 31 y = -67 } }
+system = { id = "559" name = "Krenim" position = { x = -11 y = -67 } initializer = krenim_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = krenim_imperium } } }
+system = { id = "560" name = "" position = { x = -45 y = -67 } initializer = krenim_satellite_1 }
+system = { id = "561" name = "" position = { x = -63 y = -60 } initializer = krenim_satellite_2 }
+system = { id = "562" name = "" position = { x = -27 y = -65 } initializer = krenim_satellite_3 }
+system = { id = "563" name = "Tau" position = { x = 24 y = -64 } }
+system = { id = "564" name = "" position = { x = 16 y = -55 } }
+system = { id = "565" name = "Kobali" position = { x = 6 y = -47 } initializer = kobali_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kobali_republic } } }
+system = { id = "566" name = "Enthara" position = { x = 24 y = -45 } }
+system = { id = "567" name = "Kendren" position = { x = 37 y = -42 } }
+system = { id = "568" name = "Benthos" position = { x = 48 y = -40 } }
+system = { id = "569" name = "Trakia" position = { x = 22 y = -40 } }
+system = { id = "570" name = "Entaba" position = { x = 40 y = -39 } }
+system = { id = "571" name = "Nanipa" position = { x = 15 y = -37 } }
+system = { id = "572" name = "Omega" position = { x = 49 y = -35 } }
+system = { id = "573" name = "Mikah" position = { x = 57 y = -33 } }
+system = { id = "574" name = "Unimatrix One" position = { x = -45 y = 45 } initializer = borg_initializer  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = the_borg_collective } } }
+system = { id = "575" name = "Vaskan-Kyrian" position = { x = 61 y = -32 } }
+system = { id = "576" name = "" position = { x = 63 y = -29 } initializer = sth_class_y_init }
+system = { id = "577" name = "" position = { x = 124 y = -3 } }
+system = { id = "578" name = "FGC-521443" position = { x = 136 y = 8 } }
+system = { id = "579" name = "Tekara" position = { x = 126 y = 11 } }
+system = { id = "580" name = "FGC-521407" position = { x = 134 y = 14 } }
+system = { id = "581" name = "Monea" position = { x = 146 y = 59 } }
+system = { id = "582" name = "La'Voti" position = { x = 148 y = 63 } }
+system = { id = "583" name = "Tehara" position = { x = 163 y = 69 } }
+system = { id = "584" name = "Devore" position = { x = 187 y = 69 } initializer = devorian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = devorian_solidarity } } }
+system = { id = "585" name = "Torat" position = { x = 147 y = 71 } }
+system = { id = "586" name = "Noss" position = { x = 206 y = 84 } }
+system = { id = "587" name = "Natori" position = { x = 171 y = 86 } }
+system = { id = "588" name = "Rivos" position = { x = 192 y = 213 } }
+system = { id = "589" name = "FGC-527205" position = { x = 184 y = 213 } }
+system = { id = "590" name = "Hazari" position = { x = 219 y = 219 } }
+system = { id = "591" name = "FGC-527609" position = { x = 186 y = 219 } }
+system = { id = "592" name = "Kadi" position = { x = 195 y = 223 } }
+system = { id = "593" name = "FGC-529006" position = { x = 199 y = 233 } }
+system = { id = "594" name = "Druoda" position = { x = 231 y = 233 } }
+system = { id = "595" name = "Salinia" position = { x = 196 y = 234 } }
+system = { id = "596" name = "FGC 530007" position = { x = 197 y = 246 } }
+system = { id = "597" name = "Shivolia" position = { x = 209 y = 250 } }
+system = { id = "598" name = "Markonia" position = { x = 192 y = 250 } }
+system = { id = "599" name = "Murphinia" position = { x = 205 y = 252 } }
+system = { id = "600" name = "Orendal" position = { x = 194 y = 252 } }
+system = { id = "601" name = "Kinbar" position = { x = 199 y = 253 } }
+system = { id = "602" name = "" position = { x = 211 y = 257 } }
+system = { id = "603" name = "Turei" position = { x = 232 y = 258 } }
+system = { id = "604" name = "FGC-531672" position = { x = 215 y = 259 } }
+system = { id = "605" position = { x = 202 y = 260 } initializer = vaadwaur_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vaadwaur_supremacy } } }
+system = { id = "606" name = "" position = { x = 171 y = 260 } initializer = vaadwaur_satellite }
+system = { id = "607" name = "FGC-532636" position = { x = 257 y = 268 } }
+system = { id = "608" name = "Harkonia" position = { x = 190 y = 270 } }
+system = { id = "609" name = "Ba'Neth" position = { x = 233 y = 271 } }
+system = { id = "610" name = "Kassat" position = { x = 217 y = 274 } }
+system = { id = "611" name = "Dalmine" position = { x = 222 y = 276 } }
+system = { id = "612" name = "Kartella" position = { x = 225 y = 277 } }
+system = { id = "613" name = "Brothra" position = { x = 184 y = 279 } }
+system = { id = "614" name = "Pendari" position = { x = 257 y = 287 } }
+system = { id = "615" name = "Tarkana" position = { x = 241 y = 288 } }
+system = { id = "616" name = "Norcadia" position = { x = 251 y = 289 } initializer = NorcadianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = norcadian_harmony } } }
+system = { id = "617" name = "Pensarka" position = { x = 261 y = 290 } }
+system = { id = "618" name = "Vensiddia" position = { x = 248 y = 291 } }
+system = { id = "619" name = "" position = { x = 250 y = 299 } }
+system = { id = "620" name = "Wysanti" position = { x = 165 y = 302 } }
+system = { id = "621" name = "Qomar" position = { x = 244 y = 304 } initializer = qomar_b }
+system = { id = "622" name = "Idrin's Star" position = { x = 129 y = 304 } initializer = hirogen_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = hirogen_hunters } } }
+system = { id = "623" name = "Tarakis" position = { x = 225 y = 308 } }
+system = { id = "624" name = "Hodos" position = { x = 267 y = 309 } }
+system = { id = "625" name = "Toranius" position = { x = 216 y = 312 } }
+system = { id = "626" name = "Nakan" position = { x = 225 y = 314 } }
+system = { id = "627" name = "Kelsid" position = { x = 250 y = 319 } }
+system = { id = "628" name = "Brunal" position = { x = 262 y = 321 } initializer = BrunaliHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = brunali_empire } } }
+system = { id = "629" name = "Selnia" position = { x = 256 y = 331 } }
+system = { id = "630" name = "Wyanti" position = { x = 261 y = 335 } }
+system = { id = "631" name = "FGC-538960" position = { x = 261 y = 340 } }
+system = { id = "632" name = "Terrellia" position = { x = 296 y = 358 } }
+system = { id = "633" name = "Antaria" position = { x = 273 y = 360 } }
+system = { id = "634" name = "Aksani" position = { x = 286 y = 361 } }
+system = { id = "635" name = "Imhotep" position = { x = 269 y = 361 } }
+system = { id = "636" name = "Chessu" position = { x = 273 y = 364 } }
+system = { id = "637" name = "Dralia" position = { x = 289 y = 365 } }
+system = { id = "638" name = "Selek" position = { x = 303 y = 366 } }
+system = { id = "639" name = "Velos" position = { x = 264 y = 367 } }
+system = { id = "640" name = "Dinaarl" position = { x = 287 y = 367 } }
+system = { id = "641" name = "Jye" position = { x = 273 y = 370 } }
+system = { id = "642" name = "FGC-542081" position = { x = 286 y = 374 } }
+system = { id = "643" name = "Lokirrim" position = { x = 303 y = 379 } }
+system = { id = "644" name = "Nuu-Bar" position = { x = 271 y = 382 } }
+system = { id = "645" name = "Annari" position = { x = 300 y = 383 } }
+system = { id = "646" name = "Maldor" position = { x = 314 y = 384 } }
+system = { id = "647" name = "Kraylor" position = { x = 282 y = 385 } initializer = kraylor_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kraylor_republic } } }
+system = { id = "648" name = "Benkar" position = { x = 296 y = 399 } }
+system = { id = "649" name = "Nygea" position = { x = 299 y = 400 } }
+system = { id = "650" name = "Wyngar" position = { x = 313 y = 405 } }
+system = { id = "651" name = "Vojean" position = { x = 310 y = 407 } }
+system = { id = "652" name = "Jelinia" position = { x = 285 y = 409 } }
+system = { id = "653" name = "Quarra" position = { x = 317 y = 414 } }
+system = { id = "654" name = "Nal Shadaan" position = { x = 304 y = 419 } }
+system = { id = "655" name = "Norvalia" position = { x = 331 y = 420 } }
+system = { id = "656" name = "Lyridia" position = { x = 303 y = 420 } initializer = LyridianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = lyridian_diaspora } } }
+system = { id = "657" name = "Uxal" position = { x = 348 y = 435 } }
+system = { id = "658" name = "Ledos" position = { x = 343 y = 445 } }
+system = { id = "659" name = "New Talax" position = { x = 339 y = 450 } }
+system = { id = "660" name = "Noconia" position = { x = 327 y = 452 } }
+system = { id = "661" name = "Fen Domar" position = { x = 213 y = 460 } initializer = FenDomarHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = fen_domar_states } } }
+nebula = { name = "Komar Nebula" position = { x = -161 y = -417 } radius = 20 }
+nebula = { name = "Class 17 Nebula" position = { x = -26 y = -276 } radius = 20 }
+nebula = { name = "The Swarm" position = { x = -26 y = -257 } radius = 20 }
+nebula = { name = "Inversion Nebula" position = { x = -21 y = -232 } radius = 20 }
+nebula = { name = "Nekrit Expanse" position = { x = -3 y = -200 } radius = 20 }
+nebula = { name = "Class 9 Nebula" position = { x = 18 y = -87 } radius = 20 }
+nebula = { name = "Agrat-Mot Nebula" position = { x = 62 y = -73 } radius = 20 }
+nebula = { name = "Class 1 Nebula" position = { x = 16 y = -58 } radius = 20 }
+nebula = { name = "Swallow Nebula" position = { x = 63 y = -16 } radius = 40 }
+nebula = { name = "Proton Nebula" position = { x = 130 y = 6 } radius = 20 }
+nebula = { name = "Mutara Class Nebula" position = { x = 153 y = 74 } radius = 20 }
+nebula = { name = "Class 3 Nebula" position = { x = 187 y = 89 } radius = 10 }
+nebula = { name = "Class Y Cluster" position = { x = 195 y = 230 } radius = 10 }
+nebula = { name = "Class T Nebula" position = { x = 199 y = 256 } radius = 10 }
+nebula = { name = "Class K Nebula" position = { x = 237 y = 277 } radius = 10 }
+nebula = { name = "Orlitus Cluster" position = { x = 267 y = 316 } radius = 10 }
+nebula = { name = "Orpisay Nebula" position = { x = 198 y = 321 } radius = 20 }
+nebula = { position = { x = { min = 350 max = 450 } y = { min = -450 max = -350 } } radius = 40 }
+nebula = { position = { x = { min = 350 max = 450 } y = { min = -300 max = -100 } } radius = 40 }
+nebula = { position = { x = { min = 350 max = 450 } y = { min = 0 max = 300 } } radius = 40 }
+nebula = { position = { x = { min = -450 max = -350 } y = { min = -450 max = -350 } } radius = 40 }
+nebula = { position = { x = { min = -450 max = -350 } y = { min = -300 max = -100 } } radius = 40 }
+nebula = { position = { x = { min = -450 max = -350 } y = { min = 0 max = 300 } } radius = 40 }
+}

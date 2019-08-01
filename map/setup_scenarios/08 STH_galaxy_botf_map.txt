@@ -1,0 +1,1377 @@
+### Static map. 468 star systems. BotF map.
+### This map must NOT include the zeta aquilae system, otherwise game will identify map as alpha/beta quadrant map.
+### This map must include the Signum system, , initializer signum_botf, which is used to identify the map.
+static_galaxy_scenario = {
+	name = "STH_botf_map"
+	colonizable_planet_odds = 1.0
+	priority = 8
+    num_empires = { min = 1 max = 32 }
+    num_empire_default = 1
+	num_hyperlanes = { min = 5 max = 5 }
+	num_hyperlanes_default = 5
+	advanced_empire_default = 0
+	core_radius = 0
+	fallen_empire_default = 0
+	fallen_empire_max = 0
+	random_hyperlanes = yes
+system = { id = "0" name = "" position = { x = { min = 325 max = 325 } y =  { min = -225 max = -225 } }  initializer = BrunaliHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = brunali_empire } } }
+system = { id = "1" name = "" position = { x = { min = 325 max = 325 } y =  { min = -200 max = -200 } }  initializer = devorian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = devorian_solidarity } } }
+system = { id = "2" name = "" position = { x = { min = 325 max = 325 } y =  { min = -175 max = -175 } }  initializer = FenDomarHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = fen_domar_states } } }
+system = { id = "3" name = "" position = { x = { min = 325 max = 325 } y =  { min = -150 max = -150 } }  initializer = hirogen_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = hirogen_hunters } } }
+system = { id = "4" name = "" position = { x = { min = 325 max = 325 } y =  { min = -125 max = -125 } }  initializer = kazon_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kazon_sects } } }
+system = { id = "5" name = "" position = { x = { min = 325 max = 325 } y =  { min = -100 max = -100 } }  initializer = kraylor_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kraylor_republic } } }
+system = { id = "6" name = "" position = { x = { min = 325 max = 325 } y =  { min = -75 max = -75 } }  initializer = krenim_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = krenim_imperium } } }
+system = { id = "7" name = "" position = { x = { min = 325 max = 325 } y =  { min = -50 max = -50 } }  initializer = LyridianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = lyridian_diaspora } } }
+system = { id = "8" name = "" position = { x = { min = 325 max = 325 } y =  { min = -25 max = -25 } }  initializer = NorcadianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = norcadian_harmony } } }
+system = { id = "9" name = "" position = { x = { min = 325 max = 325 } y =  { min = 0 max = 0 } }  initializer = talaxian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = talaxian_empire } } }
+system = { id = "10" name = "" position = { x = { min = 325 max = 325 } y =  { min = 25 max = 25 } }  initializer = vaadwaur_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vaadwaur_supremacy } } }
+system = { id = "11" name = "" position = { x = { min = 325 max = 325 } y =  { min = 50 max = 50 } }  initializer = vidiian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vidiian_sodality } } }
+system = { id = "12" name = "" position = { x = { min = 325 max = 325 } y =  { min = 75 max = 75 } }  initializer = voth_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = voth_theocracy } } }
+system = { id = "13" name = "" position = { x = { min = 325 max = 325 } y =  { min = 100 max = 100 } }  initializer = zahl_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = zahl_technocracy } } }
+system = { id = "14" name = "" position = { x = { min = 325 max = 325 } y =  { min = 125 max = 125 } }  initializer = borg_initializer  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = the_borg_collective } } }
+system = { id = "15" name = "" position = { x = { min = 325 max = 325 } y =  { min = 150 max = 150 } }  initializer = kobali_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kobali_republic } } }
+system = { id = "16" name = "" position = { x = { min = 325 max = 325 } y =  { min = 175 max = 175 } }  initializer = pralor_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = pralor_auxiliary } } }
+system = { id = "17" name = "" position = { x = { min = 325 max = 325 } y =  { min = 200 max = 200 } }  initializer = cravic_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cravic_imperative } } }
+system = { id = "18" name = "" position = { x = { min = 300 max = 300 } y =  { min = -225 max = -225 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "19" name = "" position = { x = { min = 300 max = 300 } y =  { min = -200 max = -200 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "20" name = "" position = { x = { min = 300 max = 300 } y =  { min = -175 max = -175 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "21" name = "" position = { x = { min = 300 max = 300 } y =  { min = -150 max = -150 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "22" name = "" position = { x = { min = 300 max = 300 } y =  { min = -125 max = -125 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "23" name = "" position = { x = { min = 300 max = 300 } y =  { min = -100 max = -100 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "24" name = "" position = { x = { min = 300 max = 300 } y =  { min = -75 max = -75 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "25" name = "" position = { x = { min = 300 max = 300 } y =  { min = -50 max = -50 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "26" name = "" position = { x = { min = 300 max = 300 } y =  { min = -25 max = -25 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "27" name = "" position = { x = { min = 300 max = 300 } y =  { min = 0 max = 0 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "28" name = "" position = { x = { min = 300 max = 300 } y =  { min = 25 max = 25 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "29" name = "" position = { x = { min = 300 max = 300 } y =  { min = 50 max = 50 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "30" name = "" position = { x = { min = 300 max = 300 } y =  { min = 75 max = 75 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "31" name = "" position = { x = { min = 300 max = 300 } y =  { min = 100 max = 100 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "32" name = "" position = { x = { min = 300 max = 300 } y =  { min = 125 max = 125 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "33" name = "" position = { x = { min = 300 max = 300 } y =  { min = 150 max = 150 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "34" name = "" position = { x = { min = 300 max = 300 } y =  { min = 175 max = 175 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "35" name = "" position = { x = { min = 300 max = 300 } y =  { min = 200 max = 200 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "36" name = "" position = { x = { min = 275 max = 275 } y =  { min = -225 max = -225 } }  }
+system = { id = "37" name = "" position = { x = { min = 275 max = 275 } y =  { min = -200 max = -200 } }  }
+system = { id = "38" name = "" position = { x = { min = 275 max = 275 } y =  { min = -175 max = -175 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "39" name = "" position = { x = { min = 275 max = 275 } y =  { min = -150 max = -150 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "40" name = "" position = { x = { min = 275 max = 275 } y =  { min = -125 max = -125 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "41" name = "" position = { x = { min = 275 max = 275 } y =  { min = -100 max = -100 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "42" name = "" position = { x = { min = 275 max = 275 } y =  { min = -75 max = -75 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "43" name = "" position = { x = { min = 275 max = 275 } y =  { min = -50 max = -50 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "44" name = "" position = { x = { min = 275 max = 275 } y =  { min = -25 max = -25 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "45" name = "" position = { x = { min = 275 max = 275 } y =  { min = 0 max = 0 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "46" name = "" position = { x = { min = 275 max = 275 } y =  { min = 25 max = 25 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "47" name = "" position = { x = { min = 275 max = 275 } y =  { min = 50 max = 50 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "48" name = "" position = { x = { min = 275 max = 275 } y =  { min = 75 max = 75 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "49" name = "" position = { x = { min = 275 max = 275 } y =  { min = 100 max = 100 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "50" name = "" position = { x = { min = 275 max = 275 } y =  { min = 125 max = 125 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "51" name = "" position = { x = { min = 275 max = 275 } y =  { min = 150 max = 150 } }  initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "52" name = "" position = { x = { min = 275 max = 275 } y =  { min = 175 max = 175 } }  initializer = tholian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tholian_assembly } } }
+system = { id = "53" name = "" position = { x = { min = 275 max = 275 } y =  { min = 200 max = 200 } }  }
+system = { id = "54" name = "" position = { x = { min = 250 max = 250 } y =  { min = -225 max = -225 } }  }
+system = { id = "55" name = "" position = { x = { min = 250 max = 250 } y =  { min = -200 max = -200 } }  initializer = breen_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = breen_confederacy } } }
+system = { id = "56" name = "" position = { x = { min = 250 max = 250 } y =  { min = -175 max = -175 } }  }
+system = { id = "57" name = "" position = { x = { min = 250 max = 250 } y =  { min = -150 max = -150 } }  }
+system = { id = "58" name = "" position = { x = { min = 250 max = 250 } y =  { min = -125 max = -125 } }  }
+system = { id = "59" name = "" position = { x = { min = 250 max = 250 } y =  { min = -100 max = -100 } }  }
+system = { id = "60" name = "" position = { x = { min = 250 max = 250 } y =  { min = -75 max = -75 } }  }
+system = { id = "61" name = "" position = { x = { min = 250 max = 250 } y =  { min = -50 max = -50 } }  }
+system = { id = "62" name = "" position = { x = { min = 250 max = 250 } y =  { min = -25 max = -25 } }  }
+system = { id = "63" name = "" position = { x = { min = 250 max = 250 } y =  { min = 0 max = 0 } }  }
+system = { id = "64" name = "" position = { x = { min = 250 max = 250 } y =  { min = 25 max = 25 } }  }
+system = { id = "65" name = "" position = { x = { min = 250 max = 250 } y =  { min = 50 max = 50 } }  }
+system = { id = "66" name = "" position = { x = { min = 250 max = 250 } y =  { min = 75 max = 75 } }  }
+system = { id = "67" name = "" position = { x = { min = 250 max = 250 } y =  { min = 100 max = 100 } }  }
+system = { id = "68" name = "" position = { x = { min = 250 max = 250 } y =  { min = 125 max = 125 } }  }
+system = { id = "69" name = "" position = { x = { min = 250 max = 250 } y =  { min = 150 max = 150 } }  }
+system = { id = "70" name = "" position = { x = { min = 250 max = 250 } y =  { min = 175 max = 175 } }  }
+system = { id = "71" name = "" position = { x = { min = 250 max = 250 } y =  { min = 200 max = 200 } }  }
+system = { id = "72" name = "" position = { x = { min = 225 max = 225 } y =  { min = -225 max = -225 } }  }
+system = { id = "73" name = "" position = { x = { min = 225 max = 225 } y =  { min = -200 max = -200 } }  }
+system = { id = "74" name = "" position = { x = { min = 225 max = 225 } y =  { min = -175 max = -175 } }  }
+system = { id = "75" name = "" position = { x = { min = 225 max = 225 } y =  { min = -150 max = -150 } }  initializer = ferengi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = ferengi_alliance } } }
+system = { id = "76" name = "" position = { x = { min = 225 max = 225 } y =  { min = -125 max = -125 } }  }
+system = { id = "77" name = "" position = { x = { min = 225 max = 225 } y =  { min = -100 max = -100 } }  }
+system = { id = "78" name = "" position = { x = { min = 225 max = 225 } y =  { min = -75 max = -75 } }  }
+system = { id = "79" name = "" position = { x = { min = 225 max = 225 } y =  { min = -50 max = -50 } }  }
+system = { id = "80" name = "" position = { x = { min = 225 max = 225 } y =  { min = -25 max = -25 } }  }
+system = { id = "81" name = "" position = { x = { min = 225 max = 225 } y =  { min = 0 max = 0 } }  }
+system = { id = "82" name = "" position = { x = { min = 225 max = 225 } y =  { min = 25 max = 25 } }  }
+system = { id = "83" name = "" position = { x = { min = 225 max = 225 } y =  { min = 50 max = 50 } }  }
+system = { id = "84" name = "" position = { x = { min = 225 max = 225 } y =  { min = 75 max = 75 } }  }
+system = { id = "85" name = "" position = { x = { min = 225 max = 225 } y =  { min = 100 max = 100 } }  }
+system = { id = "86" name = "" position = { x = { min = 225 max = 225 } y =  { min = 125 max = 125 } }  initializer = cardassian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cardassian_union } } }
+system = { id = "87" name = "" position = { x = { min = 225 max = 225 } y =  { min = 150 max = 150 } }  }
+system = { id = "88" name = "" position = { x = { min = 225 max = 225 } y =  { min = 175 max = 175 } }  }
+system = { id = "89" name = "" position = { x = { min = 225 max = 225 } y =  { min = 200 max = 200 } }  initializer = antican_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = antican_packs } } }
+system = { id = "90" name = "" position = { x = { min = 200 max = 200 } y =  { min = -225 max = -225 } }  initializer = sheliak_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = sheliak_corporate } } }
+system = { id = "91" name = "" position = { x = { min = 200 max = 200 } y =  { min = -200 max = -200 } }  }
+system = { id = "92" name = "" position = { x = { min = 200 max = 200 } y =  { min = -175 max = -175 } }  }
+system = { id = "93" name = "" position = { x = { min = 200 max = 200 } y =  { min = -150 max = -150 } }  }
+system = { id = "94" name = "" position = { x = { min = 200 max = 200 } y =  { min = -125 max = -125 } }  }
+system = { id = "95" name = "" position = { x = { min = 200 max = 200 } y =  { min = -100 max = -100 } }  }
+system = { id = "96" name = "" position = { x = { min = 200 max = 200 } y =  { min = -75 max = -75 } }  }
+system = { id = "97" name = "" position = { x = { min = 200 max = 200 } y =  { min = -50 max = -50 } }  }
+system = { id = "98" name = "" position = { x = { min = 200 max = 200 } y =  { min = -25 max = -25 } }  }
+system = { id = "99" name = "" position = { x = { min = 200 max = 200 } y =  { min = 0 max = 0 } }  }
+system = { id = "100" name = "" position = { x = { min = 200 max = 200 } y =  { min = 25 max = 25 } }  }
+system = { id = "101" name = "" position = { x = { min = 200 max = 200 } y =  { min = 50 max = 50 } }  }
+system = { id = "102" name = "" position = { x = { min = 200 max = 200 } y =  { min = 75 max = 75 } }  }
+system = { id = "103" name = "" position = { x = { min = 200 max = 200 } y =  { min = 100 max = 100 } }  }
+system = { id = "104" name = "" position = { x = { min = 200 max = 200 } y =  { min = 125 max = 125 } }  }
+system = { id = "105" name = "" position = { x = { min = 200 max = 200 } y =  { min = 150 max = 150 } }  initializer = bajoran_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bajoran_republic } } }
+system = { id = "106" name = "" position = { x = { min = 200 max = 200 } y =  { min = 175 max = 175 } }  }
+system = { id = "107" name = "" position = { x = { min = 200 max = 200 } y =  { min = 200 max = 200 } }  initializer = selay_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = selay_clutches } } }
+system = { id = "108" name = "" position = { x = { min = 175 max = 175 } y =  { min = -225 max = -225 } }  }
+system = { id = "109" name = "" position = { x = { min = 175 max = 175 } y =  { min = -200 max = -200 } }  }
+system = { id = "110" name = "" position = { x = { min = 175 max = 175 } y =  { min = -175 max = -175 } }  }
+system = { id = "111" name = "" position = { x = { min = 175 max = 175 } y =  { min = -150 max = -150 } }  }
+system = { id = "112" name = "" position = { x = { min = 175 max = 175 } y =  { min = -125 max = -125 } }  }
+system = { id = "113" name = "" position = { x = { min = 175 max = 175 } y =  { min = -100 max = -100 } }  }
+system = { id = "114" name = "" position = { x = { min = 175 max = 175 } y =  { min = -75 max = -75 } }  }
+system = { id = "115" name = "" position = { x = { min = 175 max = 175 } y =  { min = -50 max = -50 } }  }
+system = { id = "116" name = "" position = { x = { min = 175 max = 175 } y =  { min = -25 max = -25 } }  }
+system = { id = "117" name = "" position = { x = { min = 175 max = 175 } y =  { min = 0 max = 0 } }  }
+system = { id = "118" name = "" position = { x = { min = 175 max = 175 } y =  { min = 25 max = 25 } }  }
+system = { id = "119" name = "" position = { x = { min = 175 max = 175 } y =  { min = 50 max = 50 } }  }
+system = { id = "120" name = "" position = { x = { min = 175 max = 175 } y =  { min = 75 max = 75 } }  }
+system = { id = "121" name = "" position = { x = { min = 175 max = 175 } y =  { min = 100 max = 100 } }  }
+system = { id = "122" name = "" position = { x = { min = 175 max = 175 } y =  { min = 125 max = 125 } }  }
+system = { id = "123" name = "" position = { x = { min = 175 max = 175 } y =  { min = 150 max = 150 } }  }
+system = { id = "124" name = "" position = { x = { min = 175 max = 175 } y =  { min = 175 max = 175 } }  }
+system = { id = "125" name = "" position = { x = { min = 175 max = 175 } y =  { min = 200 max = 200 } }  }
+system = { id = "126" name = "" position = { x = { min = 150 max = 150 } y =  { min = -225 max = -225 } }  }
+system = { id = "127" name = "" position = { x = { min = 150 max = 150 } y =  { min = -200 max = -200 } }  }
+system = { id = "128" name = "" position = { x = { min = 150 max = 150 } y =  { min = -175 max = -175 } }  }
+system = { id = "129" name = "" position = { x = { min = 150 max = 150 } y =  { min = -150 max = -150 } }  }
+system = { id = "130" name = "" position = { x = { min = 150 max = 150 } y =  { min = -125 max = -125 } }  }
+system = { id = "131" name = "" position = { x = { min = 150 max = 150 } y =  { min = -100 max = -100 } }  }
+system = { id = "132" name = "" position = { x = { min = 150 max = 150 } y =  { min = -75 max = -75 } }  }
+system = { id = "133" name = "" position = { x = { min = 150 max = 150 } y =  { min = -50 max = -50 } }  }
+system = { id = "134" name = "" position = { x = { min = 150 max = 150 } y =  { min = -25 max = -25 } }  initializer = denobulan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = denobulan_unity } } }
+system = { id = "135" name = "" position = { x = { min = 150 max = 150 } y =  { min = 0 max = 0 } }  }
+system = { id = "136" name = "" position = { x = { min = 150 max = 150 } y =  { min = 25 max = 25 } }  }
+system = { id = "137" name = "" position = { x = { min = 150 max = 150 } y =  { min = 50 max = 50 } }  }
+system = { id = "138" name = "" position = { x = { min = 150 max = 150 } y =  { min = 75 max = 75 } }  }
+system = { id = "139" name = "" position = { x = { min = 150 max = 150 } y =  { min = 100 max = 100 } }  }
+system = { id = "140" name = "" position = { x = { min = 150 max = 150 } y =  { min = 125 max = 125 } }  }
+system = { id = "141" name = "" position = { x = { min = 150 max = 150 } y =  { min = 150 max = 150 } }  }
+system = { id = "142" name = "" position = { x = { min = 150 max = 150 } y =  { min = 175 max = 175 } }  }
+system = { id = "143" name = "" position = { x = { min = 150 max = 150 } y =  { min = 200 max = 200 } }  }
+system = { id = "144" name = "" position = { x = { min = 125 max = 125 } y =  { min = -225 max = -225 } }  }
+system = { id = "145" name = "" position = { x = { min = 125 max = 125 } y =  { min = -200 max = -200 } }  }
+system = { id = "146" name = "" position = { x = { min = 125 max = 125 } y =  { min = -175 max = -175 } }  }
+system = { id = "147" name = "" position = { x = { min = 125 max = 125 } y =  { min = -150 max = -150 } }  }
+system = { id = "148" name = "" position = { x = { min = 125 max = 125 } y =  { min = -125 max = -125 } }  }
+system = { id = "149" name = "" position = { x = { min = 125 max = 125 } y =  { min = -100 max = -100 } }  }
+system = { id = "150" name = "" position = { x = { min = 125 max = 125 } y =  { min = -75 max = -75 } }  }
+system = { id = "151" name = "" position = { x = { min = 125 max = 125 } y =  { min = -50 max = -50 } }  }
+system = { id = "152" name = "" position = { x = { min = 125 max = 125 } y =  { min = -25 max = -25 } }  }
+system = { id = "153" name = "" position = { x = { min = 125 max = 125 } y =  { min = 0 max = 0 } }  }
+system = { id = "154" name = "" position = { x = { min = 125 max = 125 } y =  { min = 25 max = 25 } }  }
+system = { id = "155" name = "" position = { x = { min = 125 max = 125 } y =  { min = 50 max = 50 } }  initializer = trill_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trill_republic } } }
+system = { id = "156" name = "" position = { x = { min = 125 max = 125 } y =  { min = 75 max = 75 } }  }
+system = { id = "157" name = "" position = { x = { min = 125 max = 125 } y =  { min = 100 max = 100 } }  }
+system = { id = "158" name = "" position = { x = { min = 125 max = 125 } y =  { min = 125 max = 125 } }  }
+system = { id = "159" name = "" position = { x = { min = 125 max = 125 } y =  { min = 150 max = 150 } }  }
+system = { id = "160" name = "" position = { x = { min = 125 max = 125 } y =  { min = 175 max = 175 } }  initializer = caitian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = caitian_union } } }
+system = { id = "161" name = "" position = { x = { min = 125 max = 125 } y =  { min = 200 max = 200 } }  }
+system = { id = "162" name = "" position = { x = { min = 100 max = 100 } y =  { min = -225 max = -225 } }  }
+system = { id = "163" name = "" position = { x = { min = 100 max = 100 } y =  { min = -200 max = -200 } }  }
+system = { id = "164" name = "" position = { x = { min = 100 max = 100 } y =  { min = -175 max = -175 } }  }
+system = { id = "165" name = "" position = { x = { min = 100 max = 100 } y =  { min = -150 max = -150 } }  }
+system = { id = "166" name = "" position = { x = { min = 100 max = 100 } y =  { min = -125 max = -125 } }  }
+system = { id = "167" name = "" position = { x = { min = 100 max = 100 } y =  { min = -100 max = -100 } }  }
+system = { id = "168" name = "" position = { x = { min = 100 max = 100 } y =  { min = -75 max = -75 } }  }
+system = { id = "169" name = "" position = { x = { min = 100 max = 100 } y =  { min = -50 max = -50 } }  }
+system = { id = "170" name = "" position = { x = { min = 100 max = 100 } y =  { min = -25 max = -25 } }  initializer = tellarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tellarian_technocracy } } }
+system = { id = "171" name = "" position = { x = { min = 100 max = 100 } y =  { min = 0 max = 0 } }  }
+system = { id = "172" name = "" position = { x = { min = 100 max = 100 } y =  { min = 25 max = 25 } }  }
+system = { id = "173" name = "" position = { x = { min = 100 max = 100 } y =  { min = 50 max = 50 } }  }
+system = { id = "174" name = "" position = { x = { min = 100 max = 100 } y =  { min = 75 max = 75 } }  }
+system = { id = "175" name = "" position = { x = { min = 100 max = 100 } y =  { min = 100 max = 100 } }  }
+system = { id = "176" name = "" position = { x = { min = 100 max = 100 } y =  { min = 125 max = 125 } }  }
+system = { id = "177" name = "" position = { x = { min = 100 max = 100 } y =  { min = 150 max = 150 } }  }
+system = { id = "178" name = "" position = { x = { min = 100 max = 100 } y =  { min = 175 max = 175 } }  }
+system = { id = "179" name = "" position = { x = { min = 100 max = 100 } y =  { min = 200 max = 200 } }  }
+system = { id = "180" name = "" position = { x = { min = 75 max = 75 } y =  { min = -225 max = -225 } }  }
+system = { id = "181" name = "" position = { x = { min = 75 max = 75 } y =  { min = -200 max = -200 } }  }
+system = { id = "182" name = "" position = { x = { min = 75 max = 75 } y =  { min = -175 max = -175 } }  }
+system = { id = "183" name = "" position = { x = { min = 75 max = 75 } y =  { min = -150 max = -150 } }  }
+system = { id = "184" name = "" position = { x = { min = 75 max = 75 } y =  { min = -125 max = -125 } }  }
+system = { id = "185" name = "" position = { x = { min = 75 max = 75 } y =  { min = -100 max = -100 } }  }
+system = { id = "186" name = "" position = { x = { min = 75 max = 75 } y =  { min = -75 max = -75 } }  }
+system = { id = "187" name = "" position = { x = { min = 75 max = 75 } y =  { min = -50 max = -50 } }  }
+system = { id = "188" name = "" position = { x = { min = 75 max = 75 } y =  { min = -25 max = -25 } }  }
+system = { id = "189" name = "" position = { x = { min = 75 max = 75 } y =  { min = 0 max = 0 } }  }
+system = { id = "190" name = "" position = { x = { min = 75 max = 75 } y =  { min = 25 max = 25 } }  }
+system = { id = "191" name = "" position = { x = { min = 75 max = 75 } y =  { min = 50 max = 50 } }  }
+system = { id = "192" name = "" position = { x = { min = 75 max = 75 } y =  { min = 75 max = 75 } }  }
+system = { id = "193" name = "" position = { x = { min = 75 max = 75 } y =  { min = 100 max = 100 } }  }
+system = { id = "194" name = "" position = { x = { min = 75 max = 75 } y =  { min = 125 max = 125 } }  }
+system = { id = "195" name = "" position = { x = { min = 75 max = 75 } y =  { min = 150 max = 150 } }  }
+system = { id = "196" name = "" position = { x = { min = 75 max = 75 } y =  { min = 175 max = 175 } }  }
+system = { id = "197" name = "" position = { x = { min = 75 max = 75 } y =  { min = 200 max = 200 } }  }
+system = { id = "198" name = "" position = { x = { min = 50 max = 50 } y =  { min = -225 max = -225 } }  }
+system = { id = "199" name = "" position = { x = { min = 50 max = 50 } y =  { min = -200 max = -200 } }  }
+system = { id = "200" name = "" position = { x = { min = 50 max = 50 } y =  { min = -175 max = -175 } }  }
+system = { id = "201" name = "" position = { x = { min = 50 max = 50 } y =  { min = -150 max = -150 } }  }
+system = { id = "202" name = "" position = { x = { min = 50 max = 50 } y =  { min = -125 max = -125 } }  }
+system = { id = "203" name = "" position = { x = { min = 50 max = 50 } y =  { min = -100 max = -100 } }  }
+system = { id = "204" name = "" position = { x = { min = 50 max = 50 } y =  { min = -75 max = -75 } }  }
+system = { id = "205" name = "" position = { x = { min = 50 max = 50 } y =  { min = -50 max = -50 } }  }
+system = { id = "206" name = "" position = { x = { min = 50 max = 50 } y =  { min = -25 max = -25 } }  }
+system = { id = "207" name = "" position = { x = { min = 50 max = 50 } y =  { min = 0 max = 0 } }  }
+system = { id = "208" name = "" position = { x = { min = 50 max = 50 } y =  { min = 25 max = 25 } }  }
+system = { id = "209" name = "" position = { x = { min = 50 max = 50 } y =  { min = 50 max = 50 } }  }
+system = { id = "210" name = "" position = { x = { min = 50 max = 50 } y =  { min = 75 max = 75 } }  initializer = betazoid_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = betazoid_houses } } }
+system = { id = "211" name = "" position = { x = { min = 50 max = 50 } y =  { min = 100 max = 100 } }  }
+system = { id = "212" name = "" position = { x = { min = 50 max = 50 } y =  { min = 125 max = 125 } }  }
+system = { id = "213" name = "" position = { x = { min = 50 max = 50 } y =  { min = 150 max = 150 } }  initializer = tamarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tamarian_unity } } }
+system = { id = "214" name = "" position = { x = { min = 50 max = 50 } y =  { min = 175 max = 175 } }  }
+system = { id = "215" name = "" position = { x = { min = 50 max = 50 } y =  { min = 200 max = 200 } }  }
+system = { id = "216" name = "" position = { x = { min = 25 max = 25 } y =  { min = -225 max = -225 } }  initializer = bynar_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bynar_domains } } }
+system = { id = "217" name = "" position = { x = { min = 25 max = 25 } y =  { min = -200 max = -200 } }  }
+system = { id = "218" name = "" position = { x = { min = 25 max = 25 } y =  { min = -175 max = -175 } }  }
+system = { id = "219" name = "" position = { x = { min = 25 max = 25 } y =  { min = -150 max = -150 } }  }
+system = { id = "220" name = "" position = { x = { min = 25 max = 25 } y =  { min = -125 max = -125 } }  }
+system = { id = "221" name = "" position = { x = { min = 25 max = 25 } y =  { min = -100 max = -100 } }  }
+system = { id = "222" name = "" position = { x = { min = 25 max = 25 } y =  { min = -75 max = -75 } }  }
+system = { id = "223" name = "" position = { x = { min = 25 max = 25 } y =  { min = -50 max = -50 } }  }
+system = { id = "224" name = "" position = { x = { min = 25 max = 25 } y =  { min = -25 max = -25 } }  initializer = human_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = united_earth } } }
+system = { id = "225" name = "" position = { x = { min = 25 max = 25 } y =  { min = 0 max = 0 } }  }
+system = { id = "226" name = "" position = { x = { min = 25 max = 25 } y =  { min = 25 max = 25 } }  }
+system = { id = "227" name = "" position = { x = { min = 25 max = 25 } y =  { min = 50 max = 50 } }  }
+system = { id = "228" name = "" position = { x = { min = 25 max = 25 } y =  { min = 75 max = 75 } }  }
+system = { id = "229" name = "" position = { x = { min = 25 max = 25 } y =  { min = 100 max = 100 } }  }
+system = { id = "230" name = "" position = { x = { min = 25 max = 25 } y =  { min = 125 max = 125 } }  }
+system = { id = "231" name = "" position = { x = { min = 25 max = 25 } y =  { min = 150 max = 150 } }  }
+system = { id = "232" name = "" position = { x = { min = 25 max = 25 } y =  { min = 175 max = 175 } }  }
+system = { id = "233" name = "" position = { x = { min = 25 max = 25 } y =  { min = 200 max = 200 } }  }
+system = { id = "234" name = "" position = { x = { min = 0 max = 0 } y =  { min = -225 max = -225 } }  }
+system = { id = "235" name = "" position = { x = { min = 0 max = 0 } y =  { min = -200 max = -200 } }  }
+system = { id = "236" name = "" position = { x = { min = 0 max = 0 } y =  { min = -175 max = -175 } }  }
+system = { id = "237" name = "" position = { x = { min = 0 max = 0 } y =  { min = -150 max = -150 } }  }
+system = { id = "238" name = "" position = { x = { min = 0 max = 0 } y =  { min = -125 max = -125 } }  }
+system = { id = "239" name = "" position = { x = { min = 0 max = 0 } y =  { min = -100 max = -100 } }  }
+system = { id = "240" name = "" position = { x = { min = 0 max = 0 } y =  { min = -75 max = -75 } }  }
+system = { id = "241" name = "" position = { x = { min = 0 max = 0 } y =  { min = -50 max = -50 } }  }
+system = { id = "242" name = "" position = { x = { min = 0 max = 0 } y =  { min = -25 max = -25 } }  }
+system = { id = "243" name = "" position = { x = { min = 0 max = 0 } y =  { min = 0 max = 0 } }  }
+system = { id = "244" name = "" position = { x = { min = 0 max = 0 } y =  { min = 25 max = 25 } }  initializer = vulcan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vulcan_high_command } } }
+system = { id = "245" name = "" position = { x = { min = 0 max = 0 } y =  { min = 50 max = 50 } }  }
+system = { id = "246" name = "" position = { x = { min = 0 max = 0 } y =  { min = 75 max = 75 } }  }
+system = { id = "247" name = "" position = { x = { min = 0 max = 0 } y =  { min = 100 max = 100 } }  }
+system = { id = "248" name = "" position = { x = { min = 0 max = 0 } y =  { min = 125 max = 125 } }  }
+system = { id = "249" name = "" position = { x = { min = 0 max = 0 } y =  { min = 150 max = 150 } }  }
+system = { id = "250" name = "" position = { x = { min = 0 max = 0 } y =  { min = 175 max = 175 } }  }
+system = { id = "251" name = "" position = { x = { min = 0 max = 0 } y =  { min = 200 max = 200 } }  }
+system = { id = "252" name = "" position = { x = { min = -25 max = -25 } y =  { min = -225 max = -225 } }  }
+system = { id = "253" name = "" position = { x = { min = -25 max = -25 } y =  { min = -200 max = -200 } }  }
+system = { id = "254" name = "" position = { x = { min = -25 max = -25 } y =  { min = -175 max = -175 } }  }
+system = { id = "255" name = "" position = { x = { min = -25 max = -25 } y =  { min = -150 max = -150 } }  }
+system = { id = "256" name = "" position = { x = { min = -25 max = -25 } y =  { min = -125 max = -125 } }  }
+system = { id = "257" name = "" position = { x = { min = -25 max = -25 } y =  { min = -100 max = -100 } }  }
+system = { id = "258" name = "" position = { x = { min = -25 max = -25 } y =  { min = -75 max = -75 } }  initializer = benzarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = benzarian_commonwealth } } }
+system = { id = "259" name = "" position = { x = { min = -25 max = -25 } y =  { min = -50 max = -50 } }  }
+system = { id = "260" name = "" position = { x = { min = -25 max = -25 } y =  { min = -25 max = -25 } }  }
+system = { id = "261" name = "" position = { x = { min = -25 max = -25 } y =  { min = 0 max = 0 } }  }
+system = { id = "262" name = "" position = { x = { min = -25 max = -25 } y =  { min = 25 max = 25 } }  }
+system = { id = "263" name = "" position = { x = { min = -25 max = -25 } y =  { min = 50 max = 50 } }  initializer = orion_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = orion_free_states } } }
+system = { id = "264" name = "" position = { x = { min = -25 max = -25 } y =  { min = 75 max = 75 } }  initializer = rigellian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = rigellian_consortium } } }
+system = { id = "265" name = "" position = { x = { min = -25 max = -25 } y =  { min = 100 max = 100 } }  }
+system = { id = "266" name = "" position = { x = { min = -25 max = -25 } y =  { min = 125 max = 125 } }  }
+system = { id = "267" name = "" position = { x = { min = -25 max = -25 } y =  { min = 150 max = 150 } }  initializer = kelpien_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kelpian_duchies } } }
+system = { id = "268" name = "" position = { x = { min = -25 max = -25 } y =  { min = 175 max = 175 } }  }
+system = { id = "269" name = "" position = { x = { min = -25 max = -25 } y =  { min = 200 max = 200 } }  }
+system = { id = "270" name = "" position = { x = { min = -50 max = -50 } y =  { min = -225 max = -225 } }  }
+system = { id = "271" name = "" position = { x = { min = -50 max = -50 } y =  { min = -200 max = -200 } }  }
+system = { id = "272" name = "" position = { x = { min = -50 max = -50 } y =  { min = -175 max = -175 } }  }
+system = { id = "273" name = "" position = { x = { min = -50 max = -50 } y =  { min = -150 max = -150 } }  }
+system = { id = "274" name = "" position = { x = { min = -50 max = -50 } y =  { min = -125 max = -125 } }  }
+system = { id = "275" name = "" position = { x = { min = -50 max = -50 } y =  { min = -100 max = -100 } }  }
+system = { id = "276" name = "" position = { x = { min = -50 max = -50 } y =  { min = -75 max = -75 } }  }
+system = { id = "277" name = "" position = { x = { min = -50 max = -50 } y =  { min = -50 max = -50 } }  }
+system = { id = "278" name = "" position = { x = { min = -50 max = -50 } y =  { min = -25 max = -25 } }  initializer = andorian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = andorian_empire } } }
+system = { id = "279" name = "" position = { x = { min = -50 max = -50 } y =  { min = 0 max = 0 } }  }
+system = { id = "280" name = "" position = { x = { min = -50 max = -50 } y =  { min = 25 max = 25 } }  }
+system = { id = "281" name = "" position = { x = { min = -50 max = -50 } y =  { min = 50 max = 50 } }  }
+system = { id = "282" name = "" position = { x = { min = -50 max = -50 } y =  { min = 75 max = 75 } }  }
+system = { id = "283" name = "" position = { x = { min = -50 max = -50 } y =  { min = 100 max = 100 } }  }
+system = { id = "284" name = "" position = { x = { min = -50 max = -50 } y =  { min = 125 max = 125 } }  }
+system = { id = "285" name = "" position = { x = { min = -50 max = -50 } y =  { min = 150 max = 150 } }  }
+system = { id = "286" name = "" position = { x = { min = -50 max = -50 } y =  { min = 175 max = 175 } }  }
+system = { id = "287" name = "" position = { x = { min = -50 max = -50 } y =  { min = 200 max = 200 } }  }
+system = { id = "288" name = "" position = { x = { min = -75 max = -75 } y =  { min = -225 max = -225 } }  }
+system = { id = "289" name = "" position = { x = { min = -75 max = -75 } y =  { min = -200 max = -200 } }  }
+system = { id = "290" name = "" position = { x = { min = -75 max = -75 } y =  { min = -175 max = -175 } }  }
+system = { id = "291" name = "" position = { x = { min = -75 max = -75 } y =  { min = -150 max = -150 } }  }
+system = { id = "292" name = "" position = { x = { min = -75 max = -75 } y =  { min = -125 max = -125 } }  initializer = bolian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bolian_league } } }
+system = { id = "293" name = "" position = { x = { min = -75 max = -75 } y =  { min = -100 max = -100 } }  }
+system = { id = "294" name = "" position = { x = { min = -75 max = -75 } y =  { min = -75 max = -75 } }  }
+system = { id = "295" name = "" position = { x = { min = -75 max = -75 } y =  { min = -50 max = -50 } }  }
+system = { id = "296" name = "" position = { x = { min = -75 max = -75 } y =  { min = -25 max = -25 } }  }
+system = { id = "297" name = "" position = { x = { min = -75 max = -75 } y =  { min = 0 max = 0 } }  }
+system = { id = "298" name = "" position = { x = { min = -75 max = -75 } y =  { min = 25 max = 25 } }  initializer = cheronite_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cheronite_nation } } }
+system = { id = "299" name = "" position = { x = { min = -75 max = -75 } y =  { min = 50 max = 50 } }  }
+system = { id = "300" name = "" position = { x = { min = -75 max = -75 } y =  { min = 75 max = 75 } }  }
+system = { id = "301" name = "" position = { x = { min = -75 max = -75 } y =  { min = 100 max = 100 } }  }
+system = { id = "302" name = "" position = { x = { min = -75 max = -75 } y =  { min = 125 max = 125 } }  }
+system = { id = "303" name = "" position = { x = { min = -75 max = -75 } y =  { min = 150 max = 150 } }  }
+system = { id = "304" name = "" position = { x = { min = -75 max = -75 } y =  { min = 175 max = 175 } }  }
+system = { id = "305" name = "" position = { x = { min = -75 max = -75 } y =  { min = 200 max = 200 } }  }
+system = { id = "306" name = "" position = { x = { min = -100 max = -100 } y =  { min = -225 max = -225 } }  }
+system = { id = "307" name = "" position = { x = { min = -100 max = -100 } y =  { min = -200 max = -200 } }  }
+system = { id = "308" name = "" position = { x = { min = -100 max = -100 } y =  { min = -175 max = -175 } }  }
+system = { id = "309" name = "" position = { x = { min = -100 max = -100 } y =  { min = -150 max = -150 } }  }
+system = { id = "310" name = "" position = { x = { min = -100 max = -100 } y =  { min = -125 max = -125 } }  }
+system = { id = "311" name = "" position = { x = { min = -100 max = -100 } y =  { min = -100 max = -100 } }  }
+system = { id = "312" name = "" position = { x = { min = -100 max = -100 } y =  { min = -75 max = -75 } }  }
+system = { id = "313" name = "" position = { x = { min = -100 max = -100 } y =  { min = -50 max = -50 } }  }
+system = { id = "314" name = "" position = { x = { min = -100 max = -100 } y =  { min = -25 max = -25 } }  }
+system = { id = "315" name = "" position = { x = { min = -100 max = -100 } y =  { min = 0 max = 0 } }  }
+system = { id = "316" name = "" position = { x = { min = -100 max = -100 } y =  { min = 25 max = 25 } }  }
+system = { id = "317" name = "" position = { x = { min = -100 max = -100 } y =  { min = 50 max = 50 } }  }
+system = { id = "318" name = "" position = { x = { min = -100 max = -100 } y =  { min = 75 max = 75 } }  initializer = nausicaan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = nausicaan_tribes } } }
+system = { id = "319" name = "" position = { x = { min = -100 max = -100 } y =  { min = 100 max = 100 } }  }
+system = { id = "320" name = "" position = { x = { min = -100 max = -100 } y =  { min = 125 max = 125 } }  }
+system = { id = "321" name = "" position = { x = { min = -100 max = -100 } y =  { min = 150 max = 150 } }  }
+system = { id = "322" name = "" position = { x = { min = -100 max = -100 } y =  { min = 175 max = 175 } }  }
+system = { id = "323" name = "" position = { x = { min = -100 max = -100 } y =  { min = 200 max = 200 } }  }
+system = { id = "324" name = "" position = { x = { min = -125 max = -125 } y =  { min = -225 max = -225 } }  }
+system = { id = "325" name = "" position = { x = { min = -125 max = -125 } y =  { min = -200 max = -200 } }  }
+system = { id = "326" name = "" position = { x = { min = -125 max = -125 } y =  { min = -175 max = -175 } }  }
+system = { id = "327" name = "" position = { x = { min = -125 max = -125 } y =  { min = -150 max = -150 } }  }
+system = { id = "328" name = "" position = { x = { min = -125 max = -125 } y =  { min = -125 max = -125 } }  }
+system = { id = "329" name = "" position = { x = { min = -125 max = -125 } y =  { min = -100 max = -100 } }  }
+system = { id = "330" name = "" position = { x = { min = -125 max = -125 } y =  { min = -75 max = -75 } }  }
+system = { id = "331" name = "" position = { x = { min = -125 max = -125 } y =  { min = -50 max = -50 } }  }
+system = { id = "332" name = "" position = { x = { min = -125 max = -125 } y =  { min = -25 max = -25 } }  }
+system = { id = "333" name = "" position = { x = { min = -125 max = -125 } y =  { min = 0 max = 0 } }  }
+system = { id = "334" name = "" position = { x = { min = -125 max = -125 } y =  { min = 25 max = 25 } }  }
+system = { id = "335" name = "" position = { x = { min = -125 max = -125 } y =  { min = 50 max = 50 } }  }
+system = { id = "336" name = "" position = { x = { min = -125 max = -125 } y =  { min = 75 max = 75 } }  }
+system = { id = "337" name = "" position = { x = { min = -125 max = -125 } y =  { min = 100 max = 100 } }  }
+system = { id = "338" name = "" position = { x = { min = -125 max = -125 } y =  { min = 125 max = 125 } }  }
+system = { id = "339" name = "" position = { x = { min = -125 max = -125 } y =  { min = 150 max = 150 } }  }
+system = { id = "340" name = "" position = { x = { min = -125 max = -125 } y =  { min = 175 max = 175 } }  }
+system = { id = "341" name = "" position = { x = { min = -125 max = -125 } y =  { min = 200 max = 200 } }  }
+system = { id = "342" name = "" position = { x = { min = -150 max = -150 } y =  { min = -225 max = -225 } }  }
+system = { id = "343" name = "" position = { x = { min = -150 max = -150 } y =  { min = -200 max = -200 } }  }
+system = { id = "344" name = "" position = { x = { min = -150 max = -150 } y =  { min = -175 max = -175 } }  }
+system = { id = "345" name = "" position = { x = { min = -150 max = -150 } y =  { min = -150 max = -150 } }  }
+system = { id = "346" name = "" position = { x = { min = -150 max = -150 } y =  { min = -125 max = -125 } }  }
+system = { id = "347" name = "" position = { x = { min = -150 max = -150 } y =  { min = -100 max = -100 } }  }
+system = { id = "348" name = "" position = { x = { min = -150 max = -150 } y =  { min = -75 max = -75 } }  }
+system = { id = "349" name = "" position = { x = { min = -150 max = -150 } y =  { min = -50 max = -50 } }  }
+system = { id = "350" name = "" position = { x = { min = -150 max = -150 } y =  { min = -25 max = -25 } }  }
+system = { id = "351" name = "" position = { x = { min = -150 max = -150 } y =  { min = 0 max = 0 } }  }
+system = { id = "352" name = "" position = { x = { min = -150 max = -150 } y =  { min = 25 max = 25 } }  }
+system = { id = "353" name = "" position = { x = { min = -150 max = -150 } y =  { min = 50 max = 50 } }  }
+system = { id = "354" name = "" position = { x = { min = -150 max = -150 } y =  { min = 75 max = 75 } }  }
+system = { id = "355" name = "" position = { x = { min = -150 max = -150 } y =  { min = 100 max = 100 } }  }
+system = { id = "356" name = "" position = { x = { min = -150 max = -150 } y =  { min = 125 max = 125 } }  }
+system = { id = "357" name = "" position = { x = { min = -150 max = -150 } y =  { min = 150 max = 150 } }  }
+system = { id = "358" name = "" position = { x = { min = -150 max = -150 } y =  { min = 175 max = 175 } }  }
+system = { id = "359" name = "" position = { x = { min = -150 max = -150 } y =  { min = 200 max = 200 } }  initializer = gorn_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = gorn_empire } } }
+system = { id = "360" name = "" position = { x = { min = -175 max = -175 } y =  { min = -225 max = -225 } }  }
+system = { id = "361" name = "" position = { x = { min = -175 max = -175 } y =  { min = -200 max = -200 } }  }
+system = { id = "362" name = "" position = { x = { min = -175 max = -175 } y =  { min = -175 max = -175 } }  }
+system = { id = "363" name = "" position = { x = { min = -175 max = -175 } y =  { min = -150 max = -150 } }  initializer = romulan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = romulan_star_empire } } }
+system = { id = "364" name = "" position = { x = { min = -175 max = -175 } y =  { min = -125 max = -125 } }  }
+system = { id = "365" name = "" position = { x = { min = -175 max = -175 } y =  { min = -100 max = -100 } }  }
+system = { id = "366" name = "" position = { x = { min = -175 max = -175 } y =  { min = -75 max = -75 } }  }
+system = { id = "367" name = "" position = { x = { min = -175 max = -175 } y =  { min = -50 max = -50 } }  }
+system = { id = "368" name = "" position = { x = { min = -175 max = -175 } y =  { min = -25 max = -25 } }  }
+system = { id = "369" name = "" position = { x = { min = -175 max = -175 } y =  { min = 0 max = 0 } }  initializer = suliban_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = suliban_cabal } } }
+system = { id = "370" name = "" position = { x = { min = -175 max = -175 } y =  { min = 25 max = 25 } }  }
+system = { id = "371" name = "" position = { x = { min = -175 max = -175 } y =  { min = 50 max = 50 } }  }
+system = { id = "372" name = "" position = { x = { min = -175 max = -175 } y =  { min = 75 max = 75 } }  }
+system = { id = "373" name = "" position = { x = { min = -175 max = -175 } y =  { min = 100 max = 100 } }  }
+system = { id = "374" name = "" position = { x = { min = -175 max = -175 } y =  { min = 125 max = 125 } }  initializer = klingon_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = klingon_empire } } }
+system = { id = "375" name = "" position = { x = { min = -175 max = -175 } y =  { min = 150 max = 150 } }  }
+system = { id = "376" name = "" position = { x = { min = -175 max = -175 } y =  { min = 175 max = 175 } }  }
+system = { id = "377" name = "" position = { x = { min = -175 max = -175 } y =  { min = 200 max = 200 } }  }
+system = { id = "378" name = "" position = { x = { min = -200 max = -200 } y =  { min = -225 max = -225 } }  }
+system = { id = "379" name = "" position = { x = { min = -200 max = -200 } y =  { min = -200 max = -200 } }  }
+system = { id = "380" name = "" position = { x = { min = -200 max = -200 } y =  { min = -175 max = -175 } }  }
+system = { id = "381" name = "" position = { x = { min = -200 max = -200 } y =  { min = -150 max = -150 } }  }
+system = { id = "382" name = "" position = { x = { min = -200 max = -200 } y =  { min = -125 max = -125 } }  }
+system = { id = "383" name = "" position = { x = { min = -200 max = -200 } y =  { min = -100 max = -100 } }  }
+system = { id = "384" name = "" position = { x = { min = -200 max = -200 } y =  { min = -75 max = -75 } }  }
+system = { id = "385" name = "" position = { x = { min = -200 max = -200 } y =  { min = -50 max = -50 } }  }
+system = { id = "386" name = "" position = { x = { min = -200 max = -200 } y =  { min = -25 max = -25 } }  initializer = FlaxianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = flaxian_hegemony } } }
+system = { id = "387" name = "" position = { x = { min = -200 max = -200 } y =  { min = 0 max = 0 } }  }
+system = { id = "388" name = "" position = { x = { min = -200 max = -200 } y =  { min = 25 max = 25 } }  }
+system = { id = "389" name = "" position = { x = { min = -200 max = -200 } y =  { min = 50 max = 50 } }  }
+system = { id = "390" name = "" position = { x = { min = -200 max = -200 } y =  { min = 75 max = 75 } }  initializer = zakdorn_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = zakdorn_alliance } } }
+system = { id = "391" name = "" position = { x = { min = -200 max = -200 } y =  { min = 100 max = 100 } }  }
+system = { id = "392" name = "" position = { x = { min = -200 max = -200 } y =  { min = 125 max = 125 } }  }
+system = { id = "393" name = "" position = { x = { min = -200 max = -200 } y =  { min = 150 max = 150 } }  }
+system = { id = "394" name = "" position = { x = { min = -200 max = -200 } y =  { min = 175 max = 175 } }  }
+system = { id = "395" name = "" position = { x = { min = -200 max = -200 } y =  { min = 200 max = 200 } }  }
+system = { id = "396" name = "" position = { x = { min = -225 max = -225 } y =  { min = -225 max = -225 } }  }
+system = { id = "397" name = "" position = { x = { min = -225 max = -225 } y =  { min = -200 max = -200 } }  }
+system = { id = "398" name = "" position = { x = { min = -225 max = -225 } y =  { min = -175 max = -175 } }  initializer = garidian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = garidian_republic } } }
+system = { id = "399" name = "" position = { x = { min = -225 max = -225 } y =  { min = -150 max = -150 } }  }
+system = { id = "400" name = "" position = { x = { min = -225 max = -225 } y =  { min = -125 max = -125 } }  }
+system = { id = "401" name = "" position = { x = { min = -225 max = -225 } y =  { min = -100 max = -100 } }  }
+system = { id = "402" name = "" position = { x = { min = -225 max = -225 } y =  { min = -75 max = -75 } }  }
+system = { id = "403" name = "" position = { x = { min = -225 max = -225 } y =  { min = -50 max = -50 } }  }
+system = { id = "404" name = "" position = { x = { min = -225 max = -225 } y =  { min = -25 max = -25 } }  }
+system = { id = "405" name = "" position = { x = { min = -225 max = -225 } y =  { min = 0 max = 0 } }  }
+system = { id = "406" name = "" position = { x = { min = -225 max = -225 } y =  { min = 25 max = 25 } }  }
+system = { id = "407" name = "" position = { x = { min = -225 max = -225 } y =  { min = 50 max = 50 } }  }
+system = { id = "408" name = "" position = { x = { min = -225 max = -225 } y =  { min = 75 max = 75 } }  }
+system = { id = "409" name = "" position = { x = { min = -225 max = -225 } y =  { min = 100 max = 100 } }  }
+system = { id = "410" name = "" position = { x = { min = -225 max = -225 } y =  { min = 125 max = 125 } }  }
+system = { id = "411" name = "" position = { x = { min = -225 max = -225 } y =  { min = 150 max = 150 } }  }
+system = { id = "412" name = "" position = { x = { min = -225 max = -225 } y =  { min = 175 max = 175 } }  }
+system = { id = "413" name = "" position = { x = { min = -225 max = -225 } y =  { min = 200 max = 200 } }  }
+system = { id = "414" name = "" position = { x = { min = -250 max = -250 } y =  { min = -225 max = -225 } }  }
+system = { id = "415" name = "" position = { x = { min = -250 max = -250 } y =  { min = -200 max = -200 } }  }
+system = { id = "416" name = "" position = { x = { min = -250 max = -250 } y =  { min = -175 max = -175 } }  }
+system = { id = "417" name = "" position = { x = { min = -250 max = -250 } y =  { min = -150 max = -150 } }  }
+system = { id = "418" name = "" position = { x = { min = -250 max = -250 } y =  { min = -125 max = -125 } }  }
+system = { id = "419" name = "" position = { x = { min = -250 max = -250 } y =  { min = -100 max = -100 } }  initializer = MoraliHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = morali_states } } }
+system = { id = "420" name = "" position = { x = { min = -250 max = -250 } y =  { min = -75 max = -75 } }  }
+system = { id = "421" name = "" position = { x = { min = -250 max = -250 } y =  { min = -50 max = -50 } }  }
+system = { id = "422" name = "" position = { x = { min = -250 max = -250 } y =  { min = -25 max = -25 } }  }
+system = { id = "423" name = "" position = { x = { min = -250 max = -250 } y =  { min = 0 max = 0 } }  }
+system = { id = "424" name = "" position = { x = { min = -250 max = -250 } y =  { min = 25 max = 25 } }  }
+system = { id = "425" name = "" position = { x = { min = -250 max = -250 } y =  { min = 50 max = 50 } }  }
+system = { id = "426" name = "" position = { x = { min = -250 max = -250 } y =  { min = 75 max = 75 } }  }
+system = { id = "427" name = "" position = { x = { min = -250 max = -250 } y =  { min = 100 max = 100 } }  }
+system = { id = "428" name = "" position = { x = { min = -250 max = -250 } y =  { min = 125 max = 125 } }  }
+system = { id = "429" name = "" position = { x = { min = -250 max = -250 } y =  { min = 150 max = 150 } }  }
+system = { id = "430" name = "" position = { x = { min = -250 max = -250 } y =  { min = 175 max = 175 } }  }
+system = { id = "431" name = "" position = { x = { min = -250 max = -250 } y =  { min = 200 max = 200 } }  }
+system = { id = "432" name = "" position = { x = { min = -275 max = -275 } y =  { min = -225 max = -225 } }  }
+system = { id = "433" name = "" position = { x = { min = -275 max = -275 } y =  { min = -200 max = -200 } }  }
+system = { id = "434" name = "" position = { x = { min = -275 max = -275 } y =  { min = -175 max = -175 } }  }
+system = { id = "435" name = "" position = { x = { min = -275 max = -275 } y =  { min = -150 max = -150 } }  }
+system = { id = "436" name = "" position = { x = { min = -275 max = -275 } y =  { min = -125 max = -125 } }  }
+system = { id = "437" name = "" position = { x = { min = -275 max = -275 } y =  { min = -100 max = -100 } }  }
+system = { id = "438" name = "" position = { x = { min = -275 max = -275 } y =  { min = -75 max = -75 } }  }
+system = { id = "439" name = "" position = { x = { min = -275 max = -275 } y =  { min = -50 max = -50 } }  }
+system = { id = "440" name = "" position = { x = { min = -275 max = -275 } y =  { min = -25 max = -25 } }  }
+system = { id = "441" name = "" position = { x = { min = -275 max = -275 } y =  { min = 0 max = 0 } }  }
+system = { id = "442" name = "" position = { x = { min = -275 max = -275 } y =  { min = 25 max = 25 } }  }
+system = { id = "443" name = "" position = { x = { min = -275 max = -275 } y =  { min = 50 max = 50 } }  }
+system = { id = "444" name = "" position = { x = { min = -275 max = -275 } y =  { min = 75 max = 75 } }  }
+system = { id = "445" name = "" position = { x = { min = -275 max = -275 } y =  { min = 100 max = 100 } }  }
+system = { id = "446" name = "" position = { x = { min = -275 max = -275 } y =  { min = 125 max = 125 } }  initializer = trabe_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trabe_alliance } } }
+system = { id = "447" name = "" position = { x = { min = -275 max = -275 } y =  { min = 150 max = 150 } }  initializer = xindi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = xindi_council } } }
+system = { id = "448" name = "" position = { x = { min = -275 max = -275 } y =  { min = 175 max = 175 } }  initializer = oschean_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = oschean_hunters } } }
+system = { id = "449" name = "" position = { x = { min = -275 max = -275 } y =  { min = 200 max = 200 } }  initializer = skrreean_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = skrreean_republic } } }
+system = { id = "450" name = "" position = { x = { min = -300 max = -300 } y =  { min = -225 max = -225 } }  initializer = ArgrathianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = argrathian_commonwealth } } }
+system = { id = "451" name = "" position = { x = { min = -300 max = -300 } y =  { min = -200 max = -200 } }  initializer = dosi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = dosi_confederacy } } }
+system = { id = "452" name = "" position = { x = { min = -300 max = -300 } y =  { min = -175 max = -175 } }  initializer = founders_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = the_dominion } } }
+system = { id = "453" name = "" position = { x = { min = -300 max = -300 } y =  { min = -150 max = -150 } }  initializer = hurq_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = hurq_stagnancy } } }
+system = { id = "454" name = "" position = { x = { min = -300 max = -300 } y =  { min = -125 max = -125 } }  initializer = karemma_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = karemman_foundation } } }
+system = { id = "455" name = "" position = { x = { min = -300 max = -300 } y =  { min = -100 max = -100 } }  initializer = nyberrite_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = nyberrite_alliance } } }
+system = { id = "456" name = "" position = { x = { min = -300 max = -300 } y =  { min = -75 max = -75 } }  initializer = rakharian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = rakharian_free_states } } }
+system = { id = "457" name = "" position = { x = { min = -300 max = -300 } y =  { min = -50 max = -50 } }  initializer = TRogoranHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trogoran_empire } } }
+system = { id = "458" name = "" position = { x = { min = -300 max = -300 } y =  { min = -25 max = -25 } }  initializer = WadiHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = wadi_emirates } } }
+system = { id = "459" name = "" position = { x = { min = -300 max = -300 } y =  { min = 0 max = 0 } }  initializer = yaderan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = yaderan_republic } } }
+system = { id = "460" name = "" position = { x = { min = -300 max = -300 } y =  { min = 25 max = 25 } }  initializer = husnock_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = husnock_ascendency } } }
+system = { id = "461" name = "" position = { x = { min = -300 max = -300 } y =  { min = 50 max = 50 } }  initializer = xindi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = xindi_council } } }
+system = { id = "462" name = "" position = { x = { min = -300 max = -300 } y =  { min = 75 max = 75 } }  initializer = signum_botf }
+system = { id = "463" name = "" position = { x = { min = -300 max = -300 } y =  { min = 100 max = 100 } }  initializer = signum_botf }
+system = { id = "464" name = "" position = { x = { min = -300 max = -300 } y =  { min = 125 max = 125 } }  initializer = signum_botf }
+system = { id = "465" name = "" position = { x = { min = -300 max = -300 } y =  { min = 150 max = 150 } }  initializer = signum_botf }
+system = { id = "466" name = "" position = { x = { min = -300 max = -300 } y =  { min = 175 max = 175 } }  initializer = signum_botf }
+system = { id = "467" name = "" position = { x = { min = -300 max = -300 } y =  { min = 200 max = 200 } }  initializer = signum_botf }
+add_hyperlane = { from = "0" to = "1" }
+add_hyperlane = { from = "1" to = "2" }
+add_hyperlane = { from = "2" to = "3" }
+add_hyperlane = { from = "3" to = "4" }
+add_hyperlane = { from = "4" to = "5" }
+add_hyperlane = { from = "5" to = "6" }
+add_hyperlane = { from = "6" to = "7" }
+add_hyperlane = { from = "7" to = "8" }
+add_hyperlane = { from = "8" to = "9" }
+add_hyperlane = { from = "9" to = "10" }
+add_hyperlane = { from = "10" to = "11" }
+add_hyperlane = { from = "11" to = "12" }
+add_hyperlane = { from = "12" to = "13" }
+add_hyperlane = { from = "13" to = "14" }
+add_hyperlane = { from = "14" to = "15" }
+add_hyperlane = { from = "15" to = "16" }
+add_hyperlane = { from = "16" to = "17" }
+add_hyperlane = { from = "18" to = "19" }
+add_hyperlane = { from = "19" to = "20" }
+add_hyperlane = { from = "20" to = "21" }
+add_hyperlane = { from = "21" to = "22" }
+add_hyperlane = { from = "22" to = "23" }
+add_hyperlane = { from = "23" to = "24" }
+add_hyperlane = { from = "24" to = "25" }
+add_hyperlane = { from = "25" to = "26" }
+add_hyperlane = { from = "26" to = "27" }
+add_hyperlane = { from = "27" to = "28" }
+add_hyperlane = { from = "28" to = "29" }
+add_hyperlane = { from = "29" to = "30" }
+add_hyperlane = { from = "30" to = "31" }
+add_hyperlane = { from = "31" to = "32" }
+add_hyperlane = { from = "32" to = "33" }
+add_hyperlane = { from = "33" to = "34" }
+add_hyperlane = { from = "34" to = "35" }
+add_hyperlane = { from = "36" to = "37" }
+add_hyperlane = { from = "37" to = "38" }
+add_hyperlane = { from = "38" to = "39" }
+add_hyperlane = { from = "39" to = "40" }
+add_hyperlane = { from = "40" to = "41" }
+add_hyperlane = { from = "41" to = "42" }
+add_hyperlane = { from = "42" to = "43" }
+add_hyperlane = { from = "43" to = "44" }
+add_hyperlane = { from = "44" to = "45" }
+add_hyperlane = { from = "45" to = "46" }
+add_hyperlane = { from = "46" to = "47" }
+add_hyperlane = { from = "47" to = "48" }
+add_hyperlane = { from = "48" to = "49" }
+add_hyperlane = { from = "49" to = "50" }
+add_hyperlane = { from = "50" to = "51" }
+add_hyperlane = { from = "51" to = "52" }
+add_hyperlane = { from = "52" to = "53" }
+add_hyperlane = { from = "54" to = "55" }
+add_hyperlane = { from = "55" to = "56" }
+add_hyperlane = { from = "56" to = "57" }
+add_hyperlane = { from = "57" to = "58" }
+add_hyperlane = { from = "58" to = "59" }
+add_hyperlane = { from = "59" to = "60" }
+add_hyperlane = { from = "60" to = "61" }
+add_hyperlane = { from = "61" to = "62" }
+add_hyperlane = { from = "62" to = "63" }
+add_hyperlane = { from = "63" to = "64" }
+add_hyperlane = { from = "64" to = "65" }
+add_hyperlane = { from = "65" to = "66" }
+add_hyperlane = { from = "66" to = "67" }
+add_hyperlane = { from = "67" to = "68" }
+add_hyperlane = { from = "68" to = "69" }
+add_hyperlane = { from = "69" to = "70" }
+add_hyperlane = { from = "70" to = "71" }
+add_hyperlane = { from = "72" to = "73" }
+add_hyperlane = { from = "73" to = "74" }
+add_hyperlane = { from = "74" to = "75" }
+add_hyperlane = { from = "75" to = "76" }
+add_hyperlane = { from = "76" to = "77" }
+add_hyperlane = { from = "77" to = "78" }
+add_hyperlane = { from = "78" to = "79" }
+add_hyperlane = { from = "79" to = "80" }
+add_hyperlane = { from = "80" to = "81" }
+add_hyperlane = { from = "81" to = "82" }
+add_hyperlane = { from = "82" to = "83" }
+add_hyperlane = { from = "83" to = "84" }
+add_hyperlane = { from = "84" to = "85" }
+add_hyperlane = { from = "85" to = "86" }
+add_hyperlane = { from = "86" to = "87" }
+add_hyperlane = { from = "87" to = "88" }
+add_hyperlane = { from = "88" to = "89" }
+add_hyperlane = { from = "90" to = "91" }
+add_hyperlane = { from = "91" to = "92" }
+add_hyperlane = { from = "92" to = "93" }
+add_hyperlane = { from = "93" to = "94" }
+add_hyperlane = { from = "94" to = "95" }
+add_hyperlane = { from = "95" to = "96" }
+add_hyperlane = { from = "96" to = "97" }
+add_hyperlane = { from = "97" to = "98" }
+add_hyperlane = { from = "98" to = "99" }
+add_hyperlane = { from = "99" to = "100" }
+add_hyperlane = { from = "100" to = "101" }
+add_hyperlane = { from = "101" to = "102" }
+add_hyperlane = { from = "102" to = "103" }
+add_hyperlane = { from = "103" to = "104" }
+add_hyperlane = { from = "104" to = "105" }
+add_hyperlane = { from = "105" to = "106" }
+add_hyperlane = { from = "106" to = "107" }
+add_hyperlane = { from = "108" to = "109" }
+add_hyperlane = { from = "109" to = "110" }
+add_hyperlane = { from = "110" to = "111" }
+add_hyperlane = { from = "111" to = "112" }
+add_hyperlane = { from = "112" to = "113" }
+add_hyperlane = { from = "113" to = "114" }
+add_hyperlane = { from = "114" to = "115" }
+add_hyperlane = { from = "115" to = "116" }
+add_hyperlane = { from = "116" to = "117" }
+add_hyperlane = { from = "117" to = "118" }
+add_hyperlane = { from = "118" to = "119" }
+add_hyperlane = { from = "119" to = "120" }
+add_hyperlane = { from = "120" to = "121" }
+add_hyperlane = { from = "121" to = "122" }
+add_hyperlane = { from = "122" to = "123" }
+add_hyperlane = { from = "123" to = "124" }
+add_hyperlane = { from = "124" to = "125" }
+add_hyperlane = { from = "126" to = "127" }
+add_hyperlane = { from = "127" to = "128" }
+add_hyperlane = { from = "128" to = "129" }
+add_hyperlane = { from = "129" to = "130" }
+add_hyperlane = { from = "130" to = "131" }
+add_hyperlane = { from = "131" to = "132" }
+add_hyperlane = { from = "132" to = "133" }
+add_hyperlane = { from = "133" to = "134" }
+add_hyperlane = { from = "134" to = "135" }
+add_hyperlane = { from = "135" to = "136" }
+add_hyperlane = { from = "136" to = "137" }
+add_hyperlane = { from = "137" to = "138" }
+add_hyperlane = { from = "138" to = "139" }
+add_hyperlane = { from = "139" to = "140" }
+add_hyperlane = { from = "140" to = "141" }
+add_hyperlane = { from = "141" to = "142" }
+add_hyperlane = { from = "142" to = "143" }
+add_hyperlane = { from = "144" to = "145" }
+add_hyperlane = { from = "145" to = "146" }
+add_hyperlane = { from = "146" to = "147" }
+add_hyperlane = { from = "147" to = "148" }
+add_hyperlane = { from = "148" to = "149" }
+add_hyperlane = { from = "149" to = "150" }
+add_hyperlane = { from = "150" to = "151" }
+add_hyperlane = { from = "151" to = "152" }
+add_hyperlane = { from = "152" to = "153" }
+add_hyperlane = { from = "153" to = "154" }
+add_hyperlane = { from = "154" to = "155" }
+add_hyperlane = { from = "155" to = "156" }
+add_hyperlane = { from = "156" to = "157" }
+add_hyperlane = { from = "157" to = "158" }
+add_hyperlane = { from = "158" to = "159" }
+add_hyperlane = { from = "159" to = "160" }
+add_hyperlane = { from = "160" to = "161" }
+add_hyperlane = { from = "162" to = "163" }
+add_hyperlane = { from = "163" to = "164" }
+add_hyperlane = { from = "164" to = "165" }
+add_hyperlane = { from = "165" to = "166" }
+add_hyperlane = { from = "166" to = "167" }
+add_hyperlane = { from = "167" to = "168" }
+add_hyperlane = { from = "168" to = "169" }
+add_hyperlane = { from = "169" to = "170" }
+add_hyperlane = { from = "170" to = "171" }
+add_hyperlane = { from = "171" to = "172" }
+add_hyperlane = { from = "172" to = "173" }
+add_hyperlane = { from = "173" to = "174" }
+add_hyperlane = { from = "174" to = "175" }
+add_hyperlane = { from = "175" to = "176" }
+add_hyperlane = { from = "176" to = "177" }
+add_hyperlane = { from = "177" to = "178" }
+add_hyperlane = { from = "178" to = "179" }
+add_hyperlane = { from = "180" to = "181" }
+add_hyperlane = { from = "181" to = "182" }
+add_hyperlane = { from = "182" to = "183" }
+add_hyperlane = { from = "183" to = "184" }
+add_hyperlane = { from = "184" to = "185" }
+add_hyperlane = { from = "185" to = "186" }
+add_hyperlane = { from = "186" to = "187" }
+add_hyperlane = { from = "187" to = "188" }
+add_hyperlane = { from = "188" to = "189" }
+add_hyperlane = { from = "189" to = "190" }
+add_hyperlane = { from = "190" to = "191" }
+add_hyperlane = { from = "191" to = "192" }
+add_hyperlane = { from = "192" to = "193" }
+add_hyperlane = { from = "193" to = "194" }
+add_hyperlane = { from = "194" to = "195" }
+add_hyperlane = { from = "195" to = "196" }
+add_hyperlane = { from = "196" to = "197" }
+add_hyperlane = { from = "198" to = "199" }
+add_hyperlane = { from = "199" to = "200" }
+add_hyperlane = { from = "200" to = "201" }
+add_hyperlane = { from = "201" to = "202" }
+add_hyperlane = { from = "202" to = "203" }
+add_hyperlane = { from = "203" to = "204" }
+add_hyperlane = { from = "204" to = "205" }
+add_hyperlane = { from = "205" to = "206" }
+add_hyperlane = { from = "206" to = "207" }
+add_hyperlane = { from = "207" to = "208" }
+add_hyperlane = { from = "208" to = "209" }
+add_hyperlane = { from = "209" to = "210" }
+add_hyperlane = { from = "210" to = "211" }
+add_hyperlane = { from = "211" to = "212" }
+add_hyperlane = { from = "212" to = "213" }
+add_hyperlane = { from = "213" to = "214" }
+add_hyperlane = { from = "214" to = "215" }
+add_hyperlane = { from = "216" to = "217" }
+add_hyperlane = { from = "217" to = "218" }
+add_hyperlane = { from = "218" to = "219" }
+add_hyperlane = { from = "219" to = "220" }
+add_hyperlane = { from = "220" to = "221" }
+add_hyperlane = { from = "221" to = "222" }
+add_hyperlane = { from = "222" to = "223" }
+add_hyperlane = { from = "223" to = "224" }
+add_hyperlane = { from = "224" to = "225" }
+add_hyperlane = { from = "225" to = "226" }
+add_hyperlane = { from = "226" to = "227" }
+add_hyperlane = { from = "227" to = "228" }
+add_hyperlane = { from = "228" to = "229" }
+add_hyperlane = { from = "229" to = "230" }
+add_hyperlane = { from = "230" to = "231" }
+add_hyperlane = { from = "231" to = "232" }
+add_hyperlane = { from = "232" to = "233" }
+add_hyperlane = { from = "234" to = "235" }
+add_hyperlane = { from = "235" to = "236" }
+add_hyperlane = { from = "236" to = "237" }
+add_hyperlane = { from = "237" to = "238" }
+add_hyperlane = { from = "238" to = "239" }
+add_hyperlane = { from = "239" to = "240" }
+add_hyperlane = { from = "240" to = "241" }
+add_hyperlane = { from = "241" to = "242" }
+add_hyperlane = { from = "242" to = "243" }
+add_hyperlane = { from = "243" to = "244" }
+add_hyperlane = { from = "244" to = "245" }
+add_hyperlane = { from = "245" to = "246" }
+add_hyperlane = { from = "246" to = "247" }
+add_hyperlane = { from = "247" to = "248" }
+add_hyperlane = { from = "248" to = "249" }
+add_hyperlane = { from = "249" to = "250" }
+add_hyperlane = { from = "250" to = "251" }
+add_hyperlane = { from = "252" to = "253" }
+add_hyperlane = { from = "253" to = "254" }
+add_hyperlane = { from = "254" to = "255" }
+add_hyperlane = { from = "255" to = "256" }
+add_hyperlane = { from = "256" to = "257" }
+add_hyperlane = { from = "257" to = "258" }
+add_hyperlane = { from = "258" to = "259" }
+add_hyperlane = { from = "259" to = "260" }
+add_hyperlane = { from = "260" to = "261" }
+add_hyperlane = { from = "261" to = "262" }
+add_hyperlane = { from = "262" to = "263" }
+add_hyperlane = { from = "263" to = "264" }
+add_hyperlane = { from = "264" to = "265" }
+add_hyperlane = { from = "265" to = "266" }
+add_hyperlane = { from = "266" to = "267" }
+add_hyperlane = { from = "267" to = "268" }
+add_hyperlane = { from = "268" to = "269" }
+add_hyperlane = { from = "270" to = "271" }
+add_hyperlane = { from = "271" to = "272" }
+add_hyperlane = { from = "272" to = "273" }
+add_hyperlane = { from = "273" to = "274" }
+add_hyperlane = { from = "274" to = "275" }
+add_hyperlane = { from = "275" to = "276" }
+add_hyperlane = { from = "276" to = "277" }
+add_hyperlane = { from = "277" to = "278" }
+add_hyperlane = { from = "278" to = "279" }
+add_hyperlane = { from = "279" to = "280" }
+add_hyperlane = { from = "280" to = "281" }
+add_hyperlane = { from = "281" to = "282" }
+add_hyperlane = { from = "282" to = "283" }
+add_hyperlane = { from = "283" to = "284" }
+add_hyperlane = { from = "284" to = "285" }
+add_hyperlane = { from = "285" to = "286" }
+add_hyperlane = { from = "286" to = "287" }
+add_hyperlane = { from = "288" to = "289" }
+add_hyperlane = { from = "289" to = "290" }
+add_hyperlane = { from = "290" to = "291" }
+add_hyperlane = { from = "291" to = "292" }
+add_hyperlane = { from = "292" to = "293" }
+add_hyperlane = { from = "293" to = "294" }
+add_hyperlane = { from = "294" to = "295" }
+add_hyperlane = { from = "295" to = "296" }
+add_hyperlane = { from = "296" to = "297" }
+add_hyperlane = { from = "297" to = "298" }
+add_hyperlane = { from = "298" to = "299" }
+add_hyperlane = { from = "299" to = "300" }
+add_hyperlane = { from = "300" to = "301" }
+add_hyperlane = { from = "301" to = "302" }
+add_hyperlane = { from = "302" to = "303" }
+add_hyperlane = { from = "303" to = "304" }
+add_hyperlane = { from = "304" to = "305" }
+add_hyperlane = { from = "306" to = "307" }
+add_hyperlane = { from = "307" to = "308" }
+add_hyperlane = { from = "308" to = "309" }
+add_hyperlane = { from = "309" to = "310" }
+add_hyperlane = { from = "310" to = "311" }
+add_hyperlane = { from = "311" to = "312" }
+add_hyperlane = { from = "312" to = "313" }
+add_hyperlane = { from = "313" to = "314" }
+add_hyperlane = { from = "314" to = "315" }
+add_hyperlane = { from = "315" to = "316" }
+add_hyperlane = { from = "316" to = "317" }
+add_hyperlane = { from = "317" to = "318" }
+add_hyperlane = { from = "318" to = "319" }
+add_hyperlane = { from = "319" to = "320" }
+add_hyperlane = { from = "320" to = "321" }
+add_hyperlane = { from = "321" to = "322" }
+add_hyperlane = { from = "322" to = "323" }
+add_hyperlane = { from = "324" to = "325" }
+add_hyperlane = { from = "325" to = "326" }
+add_hyperlane = { from = "326" to = "327" }
+add_hyperlane = { from = "327" to = "328" }
+add_hyperlane = { from = "328" to = "329" }
+add_hyperlane = { from = "329" to = "330" }
+add_hyperlane = { from = "330" to = "331" }
+add_hyperlane = { from = "331" to = "332" }
+add_hyperlane = { from = "332" to = "333" }
+add_hyperlane = { from = "333" to = "334" }
+add_hyperlane = { from = "334" to = "335" }
+add_hyperlane = { from = "335" to = "336" }
+add_hyperlane = { from = "336" to = "337" }
+add_hyperlane = { from = "337" to = "338" }
+add_hyperlane = { from = "338" to = "339" }
+add_hyperlane = { from = "339" to = "340" }
+add_hyperlane = { from = "340" to = "341" }
+add_hyperlane = { from = "342" to = "343" }
+add_hyperlane = { from = "343" to = "344" }
+add_hyperlane = { from = "344" to = "345" }
+add_hyperlane = { from = "345" to = "346" }
+add_hyperlane = { from = "346" to = "347" }
+add_hyperlane = { from = "347" to = "348" }
+add_hyperlane = { from = "348" to = "349" }
+add_hyperlane = { from = "349" to = "350" }
+add_hyperlane = { from = "350" to = "351" }
+add_hyperlane = { from = "351" to = "352" }
+add_hyperlane = { from = "352" to = "353" }
+add_hyperlane = { from = "353" to = "354" }
+add_hyperlane = { from = "354" to = "355" }
+add_hyperlane = { from = "355" to = "356" }
+add_hyperlane = { from = "356" to = "357" }
+add_hyperlane = { from = "357" to = "358" }
+add_hyperlane = { from = "358" to = "359" }
+add_hyperlane = { from = "360" to = "361" }
+add_hyperlane = { from = "361" to = "362" }
+add_hyperlane = { from = "362" to = "363" }
+add_hyperlane = { from = "363" to = "364" }
+add_hyperlane = { from = "364" to = "365" }
+add_hyperlane = { from = "365" to = "366" }
+add_hyperlane = { from = "366" to = "367" }
+add_hyperlane = { from = "367" to = "368" }
+add_hyperlane = { from = "368" to = "369" }
+add_hyperlane = { from = "369" to = "370" }
+add_hyperlane = { from = "370" to = "371" }
+add_hyperlane = { from = "371" to = "372" }
+add_hyperlane = { from = "372" to = "373" }
+add_hyperlane = { from = "373" to = "374" }
+add_hyperlane = { from = "374" to = "375" }
+add_hyperlane = { from = "375" to = "376" }
+add_hyperlane = { from = "376" to = "377" }
+add_hyperlane = { from = "378" to = "379" }
+add_hyperlane = { from = "379" to = "380" }
+add_hyperlane = { from = "380" to = "381" }
+add_hyperlane = { from = "381" to = "382" }
+add_hyperlane = { from = "382" to = "383" }
+add_hyperlane = { from = "383" to = "384" }
+add_hyperlane = { from = "384" to = "385" }
+add_hyperlane = { from = "385" to = "386" }
+add_hyperlane = { from = "386" to = "387" }
+add_hyperlane = { from = "387" to = "388" }
+add_hyperlane = { from = "388" to = "389" }
+add_hyperlane = { from = "389" to = "390" }
+add_hyperlane = { from = "390" to = "391" }
+add_hyperlane = { from = "391" to = "392" }
+add_hyperlane = { from = "392" to = "393" }
+add_hyperlane = { from = "393" to = "394" }
+add_hyperlane = { from = "394" to = "395" }
+add_hyperlane = { from = "396" to = "397" }
+add_hyperlane = { from = "397" to = "398" }
+add_hyperlane = { from = "398" to = "399" }
+add_hyperlane = { from = "399" to = "400" }
+add_hyperlane = { from = "400" to = "401" }
+add_hyperlane = { from = "401" to = "402" }
+add_hyperlane = { from = "402" to = "403" }
+add_hyperlane = { from = "403" to = "404" }
+add_hyperlane = { from = "404" to = "405" }
+add_hyperlane = { from = "405" to = "406" }
+add_hyperlane = { from = "406" to = "407" }
+add_hyperlane = { from = "407" to = "408" }
+add_hyperlane = { from = "408" to = "409" }
+add_hyperlane = { from = "409" to = "410" }
+add_hyperlane = { from = "410" to = "411" }
+add_hyperlane = { from = "411" to = "412" }
+add_hyperlane = { from = "412" to = "413" }
+add_hyperlane = { from = "414" to = "415" }
+add_hyperlane = { from = "415" to = "416" }
+add_hyperlane = { from = "416" to = "417" }
+add_hyperlane = { from = "417" to = "418" }
+add_hyperlane = { from = "418" to = "419" }
+add_hyperlane = { from = "419" to = "420" }
+add_hyperlane = { from = "420" to = "421" }
+add_hyperlane = { from = "421" to = "422" }
+add_hyperlane = { from = "422" to = "423" }
+add_hyperlane = { from = "423" to = "424" }
+add_hyperlane = { from = "424" to = "425" }
+add_hyperlane = { from = "425" to = "426" }
+add_hyperlane = { from = "426" to = "427" }
+add_hyperlane = { from = "427" to = "428" }
+add_hyperlane = { from = "428" to = "429" }
+add_hyperlane = { from = "429" to = "430" }
+add_hyperlane = { from = "430" to = "431" }
+add_hyperlane = { from = "432" to = "433" }
+add_hyperlane = { from = "433" to = "434" }
+add_hyperlane = { from = "434" to = "435" }
+add_hyperlane = { from = "435" to = "436" }
+add_hyperlane = { from = "436" to = "437" }
+add_hyperlane = { from = "437" to = "438" }
+add_hyperlane = { from = "438" to = "439" }
+add_hyperlane = { from = "439" to = "440" }
+add_hyperlane = { from = "440" to = "441" }
+add_hyperlane = { from = "441" to = "442" }
+add_hyperlane = { from = "442" to = "443" }
+add_hyperlane = { from = "443" to = "444" }
+add_hyperlane = { from = "444" to = "445" }
+add_hyperlane = { from = "445" to = "446" }
+add_hyperlane = { from = "446" to = "447" }
+add_hyperlane = { from = "447" to = "448" }
+add_hyperlane = { from = "448" to = "449" }
+add_hyperlane = { from = "450" to = "451" }
+add_hyperlane = { from = "451" to = "452" }
+add_hyperlane = { from = "452" to = "453" }
+add_hyperlane = { from = "453" to = "454" }
+add_hyperlane = { from = "454" to = "455" }
+add_hyperlane = { from = "455" to = "456" }
+add_hyperlane = { from = "456" to = "457" }
+add_hyperlane = { from = "457" to = "458" }
+add_hyperlane = { from = "458" to = "459" }
+add_hyperlane = { from = "459" to = "460" }
+add_hyperlane = { from = "460" to = "461" }
+add_hyperlane = { from = "461" to = "462" }
+add_hyperlane = { from = "462" to = "463" }
+add_hyperlane = { from = "463" to = "464" }
+add_hyperlane = { from = "464" to = "465" }
+add_hyperlane = { from = "465" to = "466" }
+add_hyperlane = { from = "466" to = "467" }
+add_hyperlane = { from = "0" to = "18" }
+add_hyperlane = { from = "1" to = "19" }
+add_hyperlane = { from = "2" to = "20" }
+add_hyperlane = { from = "3" to = "21" }
+add_hyperlane = { from = "4" to = "22" }
+add_hyperlane = { from = "5" to = "23" }
+add_hyperlane = { from = "6" to = "24" }
+add_hyperlane = { from = "7" to = "25" }
+add_hyperlane = { from = "8" to = "26" }
+add_hyperlane = { from = "9" to = "27" }
+add_hyperlane = { from = "10" to = "28" }
+add_hyperlane = { from = "11" to = "29" }
+add_hyperlane = { from = "12" to = "30" }
+add_hyperlane = { from = "13" to = "31" }
+add_hyperlane = { from = "14" to = "32" }
+add_hyperlane = { from = "15" to = "33" }
+add_hyperlane = { from = "16" to = "34" }
+add_hyperlane = { from = "17" to = "35" }
+add_hyperlane = { from = "18" to = "36" }
+add_hyperlane = { from = "19" to = "37" }
+add_hyperlane = { from = "20" to = "38" }
+add_hyperlane = { from = "21" to = "39" }
+add_hyperlane = { from = "22" to = "40" }
+add_hyperlane = { from = "23" to = "41" }
+add_hyperlane = { from = "24" to = "42" }
+add_hyperlane = { from = "25" to = "43" }
+add_hyperlane = { from = "26" to = "44" }
+add_hyperlane = { from = "27" to = "45" }
+add_hyperlane = { from = "28" to = "46" }
+add_hyperlane = { from = "29" to = "47" }
+add_hyperlane = { from = "30" to = "48" }
+add_hyperlane = { from = "31" to = "49" }
+add_hyperlane = { from = "32" to = "50" }
+add_hyperlane = { from = "33" to = "51" }
+add_hyperlane = { from = "34" to = "52" }
+add_hyperlane = { from = "35" to = "53" }
+add_hyperlane = { from = "36" to = "54" }
+add_hyperlane = { from = "37" to = "55" }
+add_hyperlane = { from = "38" to = "56" }
+add_hyperlane = { from = "39" to = "57" }
+add_hyperlane = { from = "40" to = "58" }
+add_hyperlane = { from = "41" to = "59" }
+add_hyperlane = { from = "42" to = "60" }
+add_hyperlane = { from = "43" to = "61" }
+add_hyperlane = { from = "44" to = "62" }
+add_hyperlane = { from = "45" to = "63" }
+add_hyperlane = { from = "46" to = "64" }
+add_hyperlane = { from = "47" to = "65" }
+add_hyperlane = { from = "48" to = "66" }
+add_hyperlane = { from = "49" to = "67" }
+add_hyperlane = { from = "50" to = "68" }
+add_hyperlane = { from = "51" to = "69" }
+add_hyperlane = { from = "52" to = "70" }
+add_hyperlane = { from = "53" to = "71" }
+add_hyperlane = { from = "54" to = "72" }
+add_hyperlane = { from = "55" to = "73" }
+add_hyperlane = { from = "56" to = "74" }
+add_hyperlane = { from = "57" to = "75" }
+add_hyperlane = { from = "58" to = "76" }
+add_hyperlane = { from = "59" to = "77" }
+add_hyperlane = { from = "60" to = "78" }
+add_hyperlane = { from = "61" to = "79" }
+add_hyperlane = { from = "62" to = "80" }
+add_hyperlane = { from = "63" to = "81" }
+add_hyperlane = { from = "64" to = "82" }
+add_hyperlane = { from = "65" to = "83" }
+add_hyperlane = { from = "66" to = "84" }
+add_hyperlane = { from = "67" to = "85" }
+add_hyperlane = { from = "68" to = "86" }
+add_hyperlane = { from = "69" to = "87" }
+add_hyperlane = { from = "70" to = "88" }
+add_hyperlane = { from = "71" to = "89" }
+add_hyperlane = { from = "72" to = "90" }
+add_hyperlane = { from = "73" to = "91" }
+add_hyperlane = { from = "74" to = "92" }
+add_hyperlane = { from = "75" to = "93" }
+add_hyperlane = { from = "76" to = "94" }
+add_hyperlane = { from = "77" to = "95" }
+add_hyperlane = { from = "78" to = "96" }
+add_hyperlane = { from = "79" to = "97" }
+add_hyperlane = { from = "80" to = "98" }
+add_hyperlane = { from = "81" to = "99" }
+add_hyperlane = { from = "82" to = "100" }
+add_hyperlane = { from = "83" to = "101" }
+add_hyperlane = { from = "84" to = "102" }
+add_hyperlane = { from = "85" to = "103" }
+add_hyperlane = { from = "86" to = "104" }
+add_hyperlane = { from = "87" to = "105" }
+add_hyperlane = { from = "88" to = "106" }
+add_hyperlane = { from = "89" to = "107" }
+add_hyperlane = { from = "90" to = "108" }
+add_hyperlane = { from = "91" to = "109" }
+add_hyperlane = { from = "92" to = "110" }
+add_hyperlane = { from = "93" to = "111" }
+add_hyperlane = { from = "94" to = "112" }
+add_hyperlane = { from = "95" to = "113" }
+add_hyperlane = { from = "96" to = "114" }
+add_hyperlane = { from = "97" to = "115" }
+add_hyperlane = { from = "98" to = "116" }
+add_hyperlane = { from = "99" to = "117" }
+add_hyperlane = { from = "100" to = "118" }
+add_hyperlane = { from = "101" to = "119" }
+add_hyperlane = { from = "102" to = "120" }
+add_hyperlane = { from = "103" to = "121" }
+add_hyperlane = { from = "104" to = "122" }
+add_hyperlane = { from = "105" to = "123" }
+add_hyperlane = { from = "106" to = "124" }
+add_hyperlane = { from = "107" to = "125" }
+add_hyperlane = { from = "108" to = "126" }
+add_hyperlane = { from = "109" to = "127" }
+add_hyperlane = { from = "110" to = "128" }
+add_hyperlane = { from = "111" to = "129" }
+add_hyperlane = { from = "112" to = "130" }
+add_hyperlane = { from = "113" to = "131" }
+add_hyperlane = { from = "114" to = "132" }
+add_hyperlane = { from = "115" to = "133" }
+add_hyperlane = { from = "116" to = "134" }
+add_hyperlane = { from = "117" to = "135" }
+add_hyperlane = { from = "118" to = "136" }
+add_hyperlane = { from = "119" to = "137" }
+add_hyperlane = { from = "120" to = "138" }
+add_hyperlane = { from = "121" to = "139" }
+add_hyperlane = { from = "122" to = "140" }
+add_hyperlane = { from = "123" to = "141" }
+add_hyperlane = { from = "124" to = "142" }
+add_hyperlane = { from = "125" to = "143" }
+add_hyperlane = { from = "126" to = "144" }
+add_hyperlane = { from = "127" to = "145" }
+add_hyperlane = { from = "128" to = "146" }
+add_hyperlane = { from = "129" to = "147" }
+add_hyperlane = { from = "130" to = "148" }
+add_hyperlane = { from = "131" to = "149" }
+add_hyperlane = { from = "132" to = "150" }
+add_hyperlane = { from = "133" to = "151" }
+add_hyperlane = { from = "134" to = "152" }
+add_hyperlane = { from = "135" to = "153" }
+add_hyperlane = { from = "136" to = "154" }
+add_hyperlane = { from = "137" to = "155" }
+add_hyperlane = { from = "138" to = "156" }
+add_hyperlane = { from = "139" to = "157" }
+add_hyperlane = { from = "140" to = "158" }
+add_hyperlane = { from = "141" to = "159" }
+add_hyperlane = { from = "142" to = "160" }
+add_hyperlane = { from = "143" to = "161" }
+add_hyperlane = { from = "144" to = "162" }
+add_hyperlane = { from = "145" to = "163" }
+add_hyperlane = { from = "146" to = "164" }
+add_hyperlane = { from = "147" to = "165" }
+add_hyperlane = { from = "148" to = "166" }
+add_hyperlane = { from = "149" to = "167" }
+add_hyperlane = { from = "150" to = "168" }
+add_hyperlane = { from = "151" to = "169" }
+add_hyperlane = { from = "152" to = "170" }
+add_hyperlane = { from = "153" to = "171" }
+add_hyperlane = { from = "154" to = "172" }
+add_hyperlane = { from = "155" to = "173" }
+add_hyperlane = { from = "156" to = "174" }
+add_hyperlane = { from = "157" to = "175" }
+add_hyperlane = { from = "158" to = "176" }
+add_hyperlane = { from = "159" to = "177" }
+add_hyperlane = { from = "160" to = "178" }
+add_hyperlane = { from = "161" to = "179" }
+add_hyperlane = { from = "162" to = "180" }
+add_hyperlane = { from = "163" to = "181" }
+add_hyperlane = { from = "164" to = "182" }
+add_hyperlane = { from = "165" to = "183" }
+add_hyperlane = { from = "166" to = "184" }
+add_hyperlane = { from = "167" to = "185" }
+add_hyperlane = { from = "168" to = "186" }
+add_hyperlane = { from = "169" to = "187" }
+add_hyperlane = { from = "170" to = "188" }
+add_hyperlane = { from = "171" to = "189" }
+add_hyperlane = { from = "172" to = "190" }
+add_hyperlane = { from = "173" to = "191" }
+add_hyperlane = { from = "174" to = "192" }
+add_hyperlane = { from = "175" to = "193" }
+add_hyperlane = { from = "176" to = "194" }
+add_hyperlane = { from = "177" to = "195" }
+add_hyperlane = { from = "178" to = "196" }
+add_hyperlane = { from = "179" to = "197" }
+add_hyperlane = { from = "180" to = "198" }
+add_hyperlane = { from = "181" to = "199" }
+add_hyperlane = { from = "182" to = "200" }
+add_hyperlane = { from = "183" to = "201" }
+add_hyperlane = { from = "184" to = "202" }
+add_hyperlane = { from = "185" to = "203" }
+add_hyperlane = { from = "186" to = "204" }
+add_hyperlane = { from = "187" to = "205" }
+add_hyperlane = { from = "188" to = "206" }
+add_hyperlane = { from = "189" to = "207" }
+add_hyperlane = { from = "190" to = "208" }
+add_hyperlane = { from = "191" to = "209" }
+add_hyperlane = { from = "192" to = "210" }
+add_hyperlane = { from = "193" to = "211" }
+add_hyperlane = { from = "194" to = "212" }
+add_hyperlane = { from = "195" to = "213" }
+add_hyperlane = { from = "196" to = "214" }
+add_hyperlane = { from = "197" to = "215" }
+add_hyperlane = { from = "198" to = "216" }
+add_hyperlane = { from = "199" to = "217" }
+add_hyperlane = { from = "200" to = "218" }
+add_hyperlane = { from = "201" to = "219" }
+add_hyperlane = { from = "202" to = "220" }
+add_hyperlane = { from = "203" to = "221" }
+add_hyperlane = { from = "204" to = "222" }
+add_hyperlane = { from = "205" to = "223" }
+add_hyperlane = { from = "206" to = "224" }
+add_hyperlane = { from = "207" to = "225" }
+add_hyperlane = { from = "208" to = "226" }
+add_hyperlane = { from = "209" to = "227" }
+add_hyperlane = { from = "210" to = "228" }
+add_hyperlane = { from = "211" to = "229" }
+add_hyperlane = { from = "212" to = "230" }
+add_hyperlane = { from = "213" to = "231" }
+add_hyperlane = { from = "214" to = "232" }
+add_hyperlane = { from = "215" to = "233" }
+add_hyperlane = { from = "216" to = "234" }
+add_hyperlane = { from = "217" to = "235" }
+add_hyperlane = { from = "218" to = "236" }
+add_hyperlane = { from = "219" to = "237" }
+add_hyperlane = { from = "220" to = "238" }
+add_hyperlane = { from = "221" to = "239" }
+add_hyperlane = { from = "222" to = "240" }
+add_hyperlane = { from = "223" to = "241" }
+add_hyperlane = { from = "224" to = "242" }
+add_hyperlane = { from = "225" to = "243" }
+add_hyperlane = { from = "226" to = "244" }
+add_hyperlane = { from = "227" to = "245" }
+add_hyperlane = { from = "228" to = "246" }
+add_hyperlane = { from = "229" to = "247" }
+add_hyperlane = { from = "230" to = "248" }
+add_hyperlane = { from = "231" to = "249" }
+add_hyperlane = { from = "232" to = "250" }
+add_hyperlane = { from = "233" to = "251" }
+add_hyperlane = { from = "234" to = "252" }
+add_hyperlane = { from = "235" to = "253" }
+add_hyperlane = { from = "236" to = "254" }
+add_hyperlane = { from = "237" to = "255" }
+add_hyperlane = { from = "238" to = "256" }
+add_hyperlane = { from = "239" to = "257" }
+add_hyperlane = { from = "240" to = "258" }
+add_hyperlane = { from = "241" to = "259" }
+add_hyperlane = { from = "242" to = "260" }
+add_hyperlane = { from = "243" to = "261" }
+add_hyperlane = { from = "244" to = "262" }
+add_hyperlane = { from = "245" to = "263" }
+add_hyperlane = { from = "246" to = "264" }
+add_hyperlane = { from = "247" to = "265" }
+add_hyperlane = { from = "248" to = "266" }
+add_hyperlane = { from = "249" to = "267" }
+add_hyperlane = { from = "250" to = "268" }
+add_hyperlane = { from = "251" to = "269" }
+add_hyperlane = { from = "252" to = "270" }
+add_hyperlane = { from = "253" to = "271" }
+add_hyperlane = { from = "254" to = "272" }
+add_hyperlane = { from = "255" to = "273" }
+add_hyperlane = { from = "256" to = "274" }
+add_hyperlane = { from = "257" to = "275" }
+add_hyperlane = { from = "258" to = "276" }
+add_hyperlane = { from = "259" to = "277" }
+add_hyperlane = { from = "260" to = "278" }
+add_hyperlane = { from = "261" to = "279" }
+add_hyperlane = { from = "262" to = "280" }
+add_hyperlane = { from = "263" to = "281" }
+add_hyperlane = { from = "264" to = "282" }
+add_hyperlane = { from = "265" to = "283" }
+add_hyperlane = { from = "266" to = "284" }
+add_hyperlane = { from = "267" to = "285" }
+add_hyperlane = { from = "268" to = "286" }
+add_hyperlane = { from = "269" to = "287" }
+add_hyperlane = { from = "270" to = "288" }
+add_hyperlane = { from = "271" to = "289" }
+add_hyperlane = { from = "272" to = "290" }
+add_hyperlane = { from = "273" to = "291" }
+add_hyperlane = { from = "274" to = "292" }
+add_hyperlane = { from = "275" to = "293" }
+add_hyperlane = { from = "276" to = "294" }
+add_hyperlane = { from = "277" to = "295" }
+add_hyperlane = { from = "278" to = "296" }
+add_hyperlane = { from = "279" to = "297" }
+add_hyperlane = { from = "280" to = "298" }
+add_hyperlane = { from = "281" to = "299" }
+add_hyperlane = { from = "282" to = "300" }
+add_hyperlane = { from = "283" to = "301" }
+add_hyperlane = { from = "284" to = "302" }
+add_hyperlane = { from = "285" to = "303" }
+add_hyperlane = { from = "286" to = "304" }
+add_hyperlane = { from = "287" to = "305" }
+add_hyperlane = { from = "288" to = "306" }
+add_hyperlane = { from = "289" to = "307" }
+add_hyperlane = { from = "290" to = "308" }
+add_hyperlane = { from = "291" to = "309" }
+add_hyperlane = { from = "292" to = "310" }
+add_hyperlane = { from = "293" to = "311" }
+add_hyperlane = { from = "294" to = "312" }
+add_hyperlane = { from = "295" to = "313" }
+add_hyperlane = { from = "296" to = "314" }
+add_hyperlane = { from = "297" to = "315" }
+add_hyperlane = { from = "298" to = "316" }
+add_hyperlane = { from = "299" to = "317" }
+add_hyperlane = { from = "300" to = "318" }
+add_hyperlane = { from = "301" to = "319" }
+add_hyperlane = { from = "302" to = "320" }
+add_hyperlane = { from = "303" to = "321" }
+add_hyperlane = { from = "304" to = "322" }
+add_hyperlane = { from = "305" to = "323" }
+add_hyperlane = { from = "306" to = "324" }
+add_hyperlane = { from = "307" to = "325" }
+add_hyperlane = { from = "308" to = "326" }
+add_hyperlane = { from = "309" to = "327" }
+add_hyperlane = { from = "310" to = "328" }
+add_hyperlane = { from = "311" to = "329" }
+add_hyperlane = { from = "312" to = "330" }
+add_hyperlane = { from = "313" to = "331" }
+add_hyperlane = { from = "314" to = "332" }
+add_hyperlane = { from = "315" to = "333" }
+add_hyperlane = { from = "316" to = "334" }
+add_hyperlane = { from = "317" to = "335" }
+add_hyperlane = { from = "318" to = "336" }
+add_hyperlane = { from = "319" to = "337" }
+add_hyperlane = { from = "320" to = "338" }
+add_hyperlane = { from = "321" to = "339" }
+add_hyperlane = { from = "322" to = "340" }
+add_hyperlane = { from = "323" to = "341" }
+add_hyperlane = { from = "324" to = "342" }
+add_hyperlane = { from = "325" to = "343" }
+add_hyperlane = { from = "326" to = "344" }
+add_hyperlane = { from = "327" to = "345" }
+add_hyperlane = { from = "328" to = "346" }
+add_hyperlane = { from = "329" to = "347" }
+add_hyperlane = { from = "330" to = "348" }
+add_hyperlane = { from = "331" to = "349" }
+add_hyperlane = { from = "332" to = "350" }
+add_hyperlane = { from = "333" to = "351" }
+add_hyperlane = { from = "334" to = "352" }
+add_hyperlane = { from = "335" to = "353" }
+add_hyperlane = { from = "336" to = "354" }
+add_hyperlane = { from = "337" to = "355" }
+add_hyperlane = { from = "338" to = "356" }
+add_hyperlane = { from = "339" to = "357" }
+add_hyperlane = { from = "340" to = "358" }
+add_hyperlane = { from = "341" to = "359" }
+add_hyperlane = { from = "342" to = "360" }
+add_hyperlane = { from = "343" to = "361" }
+add_hyperlane = { from = "344" to = "362" }
+add_hyperlane = { from = "345" to = "363" }
+add_hyperlane = { from = "346" to = "364" }
+add_hyperlane = { from = "347" to = "365" }
+add_hyperlane = { from = "348" to = "366" }
+add_hyperlane = { from = "349" to = "367" }
+add_hyperlane = { from = "350" to = "368" }
+add_hyperlane = { from = "351" to = "369" }
+add_hyperlane = { from = "352" to = "370" }
+add_hyperlane = { from = "353" to = "371" }
+add_hyperlane = { from = "354" to = "372" }
+add_hyperlane = { from = "355" to = "373" }
+add_hyperlane = { from = "356" to = "374" }
+add_hyperlane = { from = "357" to = "375" }
+add_hyperlane = { from = "358" to = "376" }
+add_hyperlane = { from = "359" to = "377" }
+add_hyperlane = { from = "360" to = "378" }
+add_hyperlane = { from = "361" to = "379" }
+add_hyperlane = { from = "362" to = "380" }
+add_hyperlane = { from = "363" to = "381" }
+add_hyperlane = { from = "364" to = "382" }
+add_hyperlane = { from = "365" to = "383" }
+add_hyperlane = { from = "366" to = "384" }
+add_hyperlane = { from = "367" to = "385" }
+add_hyperlane = { from = "368" to = "386" }
+add_hyperlane = { from = "369" to = "387" }
+add_hyperlane = { from = "370" to = "388" }
+add_hyperlane = { from = "371" to = "389" }
+add_hyperlane = { from = "372" to = "390" }
+add_hyperlane = { from = "373" to = "391" }
+add_hyperlane = { from = "374" to = "392" }
+add_hyperlane = { from = "375" to = "393" }
+add_hyperlane = { from = "376" to = "394" }
+add_hyperlane = { from = "377" to = "395" }
+add_hyperlane = { from = "378" to = "396" }
+add_hyperlane = { from = "379" to = "397" }
+add_hyperlane = { from = "380" to = "398" }
+add_hyperlane = { from = "381" to = "399" }
+add_hyperlane = { from = "382" to = "400" }
+add_hyperlane = { from = "383" to = "401" }
+add_hyperlane = { from = "384" to = "402" }
+add_hyperlane = { from = "385" to = "403" }
+add_hyperlane = { from = "386" to = "404" }
+add_hyperlane = { from = "387" to = "405" }
+add_hyperlane = { from = "388" to = "406" }
+add_hyperlane = { from = "389" to = "407" }
+add_hyperlane = { from = "390" to = "408" }
+add_hyperlane = { from = "391" to = "409" }
+add_hyperlane = { from = "392" to = "410" }
+add_hyperlane = { from = "393" to = "411" }
+add_hyperlane = { from = "394" to = "412" }
+add_hyperlane = { from = "395" to = "413" }
+add_hyperlane = { from = "396" to = "414" }
+add_hyperlane = { from = "397" to = "415" }
+add_hyperlane = { from = "398" to = "416" }
+add_hyperlane = { from = "399" to = "417" }
+add_hyperlane = { from = "400" to = "418" }
+add_hyperlane = { from = "401" to = "419" }
+add_hyperlane = { from = "402" to = "420" }
+add_hyperlane = { from = "403" to = "421" }
+add_hyperlane = { from = "404" to = "422" }
+add_hyperlane = { from = "405" to = "423" }
+add_hyperlane = { from = "406" to = "424" }
+add_hyperlane = { from = "407" to = "425" }
+add_hyperlane = { from = "408" to = "426" }
+add_hyperlane = { from = "409" to = "427" }
+add_hyperlane = { from = "410" to = "428" }
+add_hyperlane = { from = "411" to = "429" }
+add_hyperlane = { from = "412" to = "430" }
+add_hyperlane = { from = "413" to = "431" }
+add_hyperlane = { from = "414" to = "432" }
+add_hyperlane = { from = "415" to = "433" }
+add_hyperlane = { from = "416" to = "434" }
+add_hyperlane = { from = "417" to = "435" }
+add_hyperlane = { from = "418" to = "436" }
+add_hyperlane = { from = "419" to = "437" }
+add_hyperlane = { from = "420" to = "438" }
+add_hyperlane = { from = "421" to = "439" }
+add_hyperlane = { from = "422" to = "440" }
+add_hyperlane = { from = "423" to = "441" }
+add_hyperlane = { from = "424" to = "442" }
+add_hyperlane = { from = "425" to = "443" }
+add_hyperlane = { from = "426" to = "444" }
+add_hyperlane = { from = "427" to = "445" }
+add_hyperlane = { from = "428" to = "446" }
+add_hyperlane = { from = "429" to = "447" }
+add_hyperlane = { from = "430" to = "448" }
+add_hyperlane = { from = "431" to = "449" }
+add_hyperlane = { from = "432" to = "450" }
+add_hyperlane = { from = "433" to = "451" }
+add_hyperlane = { from = "434" to = "452" }
+add_hyperlane = { from = "435" to = "453" }
+add_hyperlane = { from = "436" to = "454" }
+add_hyperlane = { from = "437" to = "455" }
+add_hyperlane = { from = "438" to = "456" }
+add_hyperlane = { from = "439" to = "457" }
+add_hyperlane = { from = "440" to = "458" }
+add_hyperlane = { from = "441" to = "459" }
+add_hyperlane = { from = "442" to = "460" }
+add_hyperlane = { from = "443" to = "461" }
+add_hyperlane = { from = "444" to = "462" }
+add_hyperlane = { from = "445" to = "463" }
+add_hyperlane = { from = "446" to = "464" }
+add_hyperlane = { from = "447" to = "465" }
+add_hyperlane = { from = "448" to = "466" }
+add_hyperlane = { from = "449" to = "467" }
+}

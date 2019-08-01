@@ -1,0 +1,534 @@
+#######################
+#### Major Empires ####
+#######################
+
+#1 Earth
+UnitedEarth = {
+	name_list="Human"
+	ship_prefix="PRESCRIPTED_ship_prefix_UnitedEarth"
+	species_name="PRESCRIPTED_species_name_UnitedEarth"
+	species_plural="PRESCRIPTED_species_plural_UnitedEarth"
+	species_class="FED"
+	species_adjective="PRESCRIPTED_species_adjective_UnitedEarth"
+	species_bio=""
+	portrait="human"
+	name="UnitedEarth"
+	adjective="PRESCRIPTED_adjective_UnitedEarth"
+	
+	authority = "auth_democratic"
+	civics = { "civic_post_scarcity" "civic_spirit_exploration" }
+	government = gov_federal_republic
+	
+	ethic = "ethic_pacifist"
+	ethic = "ethic_xenophile"
+	ethic = "ethic_egalitarian"
+	trait="trait_charismatic"
+	trait="trait_natural_sociologists"
+	
+	flags ={
+		custom_start_screen
+		starfleet_ent
+		united_earth
+		federation_founder
+		alpha_beta_empire
+		first_alien_life
+		first_contact_event
+		botf_major
+		sth_medium_galaxy
+		major_faction
+	}
+	ftl=warp
+	weapon="tech_phaser_cannon_1"
+	planet_name="Earth"
+	planet_class="pc_continental"
+	system_name="Sol"
+	initializer="human_homeworld"
+	graphical_culture="federation"
+	city_graphical_culture="federation"
+	empire_flag={
+		icon={
+			category="human"
+			file="flag_human_9.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"blue"
+			"blue"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_UnitedEarth"
+		portrait="human_male_04"
+		texture=0
+		hair=7
+		clothes=89
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "earth_room"
+}
+
+#2 KDF
+KlingonEmpire = {
+	name_list="Klingon"
+	ship_prefix="PRESCRIPTED_ship_prefix_KlingonEmpire"
+	species_name="PRESCRIPTED_species_name_KlingonEmpire"
+	species_plural="PRESCRIPTED_species_plural_KlingonEmpire"
+	species_class="KDF"
+	species_adjective="PRESCRIPTED_species_adjective_KlingonEmpire"
+	species_bio=""
+	portrait="klingon"
+	name="KlingonEmpire"
+	adjective="PRESCRIPTED_adjective_KlingonEmpire"
+	
+	authority = "auth_oligarchic"
+	civics = { "civic_warrior_kahless" "civic_great_houses" }
+	government = gov_high_council
+	ethic="ethic_militarist"
+	ethic="ethic_spiritualist"
+	ethic="ethic_authoritarian"
+	trait="trait_consummate_warriors"
+	trait="trait_communal"
+	trait="trait_stubborn"
+	
+	flags={ 
+		custom_start_screen
+		klingon_empire
+		klingon_ent
+		alpha_beta_empire
+		first_alien_life
+		first_contact_event
+		botf_major
+		sth_medium_galaxy
+		major_faction
+		no_dilithium_at_capitol
+	}
+	ftl=warp
+	weapon="tech_disruptor_klingon_cannon_1"
+	planet_name="Qo'Nos"
+	planet_class="pc_tropical"
+	system_name="Qo'Nos"
+	initializer="klingon_homeworld"
+	graphical_culture="klingon"
+	city_graphical_culture="klingon"
+	empire_flag={
+		icon={
+			category="trek"
+			file="Klingon.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1301"
+			"customcolor2001"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_KlingonEmpire"
+		portrait="klingon_male_04"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Chancellor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "klingon_room"
+}
+
+#3 Romulan
+RomulanStarEmpire = {
+	ship_prefix="PRESCRIPTED_ship_prefix_RomulanStarEmpire"
+	species = {
+		class = "ROM"
+		portrait = "romulan"
+		name = "PRESCRIPTED_species_name_RomulanStarEmpire"
+		plural = "PRESCRIPTED_species_plural_RomulanStarEmpire"
+		adjective = "PRESCRIPTED_species_adjective_RomulanStarEmpire"
+		name_list = "Romulan"
+		trait="trait_cunning"
+		trait="trait_enduring"
+		trait="trait_untrustworthy"
+		trait="trait_strong"
+	}
+	name="RomulanStarEmpire"
+	adjective="PRESCRIPTED_adjective_RomulanStarEmpire"
+	authority = "auth_oligarchic"
+	civics = { "civic_born_of_order" "civic_cutthroat_politics" }
+	government = gov_romulan_senate
+	ethic="ethic_authoritarian"
+	ethic="ethic_xenophobe"
+	ethic="ethic_materialist"
+	planet_name="Romulus"
+	planet_class="pc_continental"
+	system_name="Romulus"
+	initializer="romulan_homeworld"
+	graphical_culture="romulan"
+	city_graphical_culture="romulan"
+	flags={ 
+		custom_start_screen
+		romulan_star_empire
+		romulan_ent
+		alpha_beta_empire
+		first_alien_life
+		first_contact_event
+		botf_major
+		sth_medium_galaxy
+		major_faction
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="Romulan1.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1720"
+			"customcolor1720"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_RomulanStarEmpire"
+		portrait="romulan_female_01"
+		texture=0
+		hair=2
+		clothes=95
+		ruler_title="Praetor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "romulan_room"
+}
+
+#4 Cardassian
+CardassianUnion = {
+	ship_prefix="PRESCRIPTED_ship_prefix_CardassianUnion"
+	species = {
+		class = "CAR"
+		portrait = "cardassian"
+		name = "PRESCRIPTED_species_name_CardassianUnion"
+		plural = "PRESCRIPTED_species_plural_CardassianUnion"
+		adjective = "PRESCRIPTED_species_adjective_CardassianUnion"
+		name_list = "Cardassian"
+		trait="trait_industrious"
+		trait="trait_communal"
+		trait="trait_rigid"
+	}
+	name="CardassianUnion"
+	adjective="PRESCRIPTED_adjective_CardassianUnion"
+	authority = "auth_oligarchic"
+	civics = { "civic_nationalistic_zeal" "civic_obsidian_order" }
+	government = gov_detapa_council
+	ethic="ethic_militarist"
+	ethic="ethic_authoritarian"
+	ethic="ethic_xenophobe"
+	planet_name="Cardassia Prime"
+	planet_class="pc_arid"
+	system_name="Cardassia"
+	initializer="cardassian_homeworld"
+	graphical_culture="cardassian_01"
+	city_graphical_culture="cardassian_01"
+	flags={ 
+	    generic_ent
+		custom_start_screen
+		cardassian_union 
+		alpha_beta_empire
+		first_alien_life
+		first_contact_event
+		botf_major
+		sth_medium_galaxy
+		major_faction
+		no_dilithium_at_capitol
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="Cardassian2.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1758"
+			"customcolor1758"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_CardassianUnion"
+		portrait="cardassian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Legate"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "cardassian_room"
+}
+
+#5 Founders
+TheDominion = {
+	ship_prefix="PRESCRIPTED_ship_prefix_TheDominion"
+	species = {
+		class = "DOM"
+		portrait = "changeling"
+		name = "PRESCRIPTED_species_name_TheDominion"
+		plural = "PRESCRIPTED_species_plural_TheDominion"
+		adjective = "PRESCRIPTED_species_adjective_TheDominion"
+		name_list = "Founder"
+		trait = "trait_conformists"
+		trait = "trait_shapeshifter"
+		trait = "trait_master_geneticist"
+	}
+	
+	species_bio=""
+	name="TheDominion"
+	adjective="PRESCRIPTED_adjective_TheDominion"
+	
+	authority = "auth_great_link"
+	civics = { "civic_river_1" "civic_river_2" }
+	government = gov_great_link
+	ethic="ethic_authoritarian"
+	ethic="ethic_xenophobe"
+	ethic="ethic_great_link"
+	ftl=warp
+	weapon="tech_polaron_beam_1"
+	planet_name="Founders Planet"
+	planet_class="pc_thegreatlink"
+	system_name="Founders Planet"
+	initializer="founders_homeworld"
+	graphical_culture="dominion_01"
+	city_graphical_culture="dominion_01"
+	flags={
+		custom_start_screen
+		generic_ent
+		the_dominion
+		first_alien_life
+		first_contact_event
+		gamma_empire
+		sth_medium_galaxy
+		major_faction
+		no_dilithium_at_capitol
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="Dominion.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1793"
+			"customcolor1793"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_TheDominion"
+		portrait="changeling_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title_male="Changeling"
+		ruler_title_female="Changeling"
+		heir_title="Changeling"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "dominion_room"
+}
+
+#6 Borg
+BorgCollective = {
+	name_list="Borg"
+	ship_prefix="PRESCRIPTED_ship_prefix_Borg"
+	species_name="PRESCRIPTED_species_name_Borg"
+	species_plural="PRESCRIPTED_species_plural_Borg"
+	species_class="BRG"
+	species_adjective="PRESCRIPTED_species_adjective_Borg"
+	species_bio=""
+	portrait="borg"
+	name="BorgCollective"
+	adjective="PRESCRIPTED_adjective_Borg"
+	authority = "auth_cybernetic_consciousness"
+	civics = { "civic_assimilators" "civic_functional_architecture" }
+	government = gov_borg_collective
+	ethic = "ethic_cybernetic_consciousness"
+	ethic = "ethic_fanatic_militarist"
+	trait="trait_quick_learners"
+	trait="trait_strong"	
+	ftl=warp
+	weapon="tech_cutting_beam_1"
+	planet_name="Unimatrix One"
+	planet_class="pc_assimilated"
+	system_name="Unimatrix One"
+	initializer="borg_initializer"
+	graphical_culture="borg_01"
+	city_graphical_culture="borg_01"
+	flags = {
+		custom_start_screen 
+		borg_ent
+		the_borg_collective
+		first_alien_life
+		first_contact_event
+		delta_empire
+		sth_medium_galaxy
+		major_faction
+	}
+	empire_flag={
+		icon = { category = "trek" file = "Borg.dds" }
+		background = { category = "backgrounds" file = "00_solid.dds" }
+		colors = { "green" "green" "null" "null" }
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_Borg"
+		portrait="borg_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title_male="King"
+		ruler_title_female="Queen"
+		heir_title="Queen"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "borg_room"
+}
+#14 Ferengi - Megacorp
+FerengiAlliance = {
+	name_list="Ferengi"
+	ship_prefix="FMS"
+	species_name="Ferengi"
+	species_plural="Ferengi"
+	species_class="FER"
+	species_adjective="Ferengi"
+	species_bio=""
+	portrait="ferengi"
+	name="FerengiAlliance"
+	adjective="Ferengi"
+	authority = "auth_corporate"
+	playable = has_megacorp
+	civics = { "civic_ritualized_greed" "civic_megacorp_rules_acquisition" }
+	government = gov_ferengi_board
+	ethic="ethic_egalitarian"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_industrious"
+	trait="trait_thrifty"
+	trait="trait_wasteful"
+	trait="trait_coward"
+	planet_name="Ferenginar"
+	planet_class="pc_m1_class"
+	system_name="Ventarus Idrilon"
+	initializer="ferengi_homeworld"
+	graphical_culture="ferengi_01"
+	city_graphical_culture="ferengi_01"
+	flags={
+		custom_start_screen
+	    generic_ent	
+		ferengi_alliance
+		alpha_beta_empire
+		botf_major
+		sth_medium_galaxy
+		major_faction
+	}
+	empire_flag = { 
+		icon = { category = "trek" file = "Ferengi.dds" }
+		background = { category = "backgrounds" file = "00_solid.dds" }
+		colors = { "customcolor1359" "customcolor1359" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="Sekwel"
+		portrait="ferengi_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Grand Nagus"
+		ruler_title_female="Grand Nagus"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "ferengi_room"
+}
+#Ferengi - Fallback
+FerengiAlliance_B = {
+	name_list="Ferengi"
+	ship_prefix="FMS"
+	species_name="Ferengi"
+	species_plural="Ferengi"
+	species_class="FER"
+	species_adjective="Ferengi"
+	species_bio=""
+	portrait="ferengi"
+	name="FerengiAlliance"
+	adjective="Ferengi"
+	authority = "auth_oligarchic"
+	playable = has_not_megacorp
+	civics = { "civic_ritualized_greed" "civic_cutthroat_politics" }
+	government = gov_ferengi_board
+	ethic="ethic_egalitarian"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_industrious"
+	trait="trait_thrifty"
+	trait="trait_wasteful"
+	trait="trait_coward"
+	planet_name="Ferenginar"
+	planet_class="pc_m1_class"
+	system_name="Ventarus Idrilon"
+	initializer="ferengi_homeworld"
+	graphical_culture="ferengi_01"
+	city_graphical_culture="ferengi_01"
+	flags={
+		custom_start_screen
+	    generic_ent	
+		ferengi_alliance
+		alpha_beta_empire
+		botf_major
+		sth_medium_galaxy
+		major_faction
+	}
+	empire_flag = { 
+		icon = { category = "trek" file = "Ferengi.dds" }
+		background = { category = "backgrounds" file = "00_solid.dds" }
+		colors = { "customcolor1359" "customcolor1359" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="Sekwel"
+		portrait="ferengi_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Grand Nagus"
+		ruler_title_female="Grand Nagus"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "ferengi_room"
+}

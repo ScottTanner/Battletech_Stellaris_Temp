@@ -1,0 +1,1314 @@
+#######################
+#### Beta Quadrant ####
+#######################
+
+
+#Acamarian
+AcamarianSovereignty = {
+	name_list="Acamarian"
+	ship_prefix=""
+	species_name="Acamarian"
+	species_plural="Acamarians"
+	species_class="ACA"
+	species_adjective="Acamarian"
+	species_bio=""
+	portrait="acamarian"
+	name="AcamarianSovereignty"
+	adjective="Acamarian"
+	authority = "auth_democratic"
+	civics = { "civic_acamarian_1" "civic_parliamentary_system" }
+	government = gov_aca_sovereignty
+	ethic="ethic_xenophile"
+	ethic="ethic_militarist"
+	ethic="ethic_egalitarian"
+	trait="trait_nomadic"
+	trait="trait_traditional"
+	trait="trait_talented"
+	trait="trait_fragmented"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Acamar III"
+	planet_class="pc_ocean"
+	system_name="Acamar"
+	initializer="acamarian_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_05"
+	flags= {
+		custom_start_screen
+	    generic_ent	
+		acamarian_sovereignty  
+		alpha_beta_empire
+		botf_minor
+		sth_medium_galaxy
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="acamarian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="inverse_v.dds"
+		}
+		colors={
+			"customcolor457"
+			"customcolor1656"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Salouk"
+		portrait="acamarian_female_04"
+		texture=0
+		hair=33
+		clothes=5
+		ruler_title="Sovereign"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#7 Andorian
+AndorianEmpire = {
+	name_list="Andorian"
+	ship_prefix="PRESCRIPTED_ship_prefix_AndorianEmpire"
+	species_name="PRESCRIPTED_species_name_AndorianEmpire"
+	species_plural="PRESCRIPTED_species_plural_AndorianEmpire"
+	species_class="ADR"
+	species_adjective="PRESCRIPTED_species_adjective_AndorianEmpire"
+	species_bio=""
+	portrait="andorian"
+	name="AndorianEmpire"
+	adjective="PRESCRIPTED_adjective_AndorianEmpire"
+	
+	authority = "auth_democratic"
+	civics = { "civic_imperial_guard" "civic_nationalistic_zeal" }
+	government = gov_constitutional_empire
+	ethic="ethic_militarist"
+	ethic="ethic_xenophile"
+	ethic="ethic_materialist"
+	trait="trait_talented"
+	trait="trait_industrious"
+	trait="trait_slow_breeders"	
+	trait="trait_solitary"
+	ftl=warp
+	weapon="tech_andorian_phaser_1"
+	planet_name="Andoria"
+	planet_class="pc_arctic"
+	system_name="Andoria"
+	initializer="andorian_homeworld"
+	graphical_culture="andorian_01"
+	city_graphical_culture="andorian_01"
+	flags = { 
+	    generic_ent	
+		andorian_empire
+		custom_start_screen
+		federation_founder
+		alpha_beta_empire
+		botf_minor
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="Andorian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1481"
+			"customcolor1181"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_AndorianEmpire"
+		portrait="andorian_female_01"
+		texture=0
+		hair=0
+		clothes=91
+		ruler_title="Chancellor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "andorian_room"
+}
+
+#21 Benzite
+BenzarianCommonwealth = {
+	name_list="Benzite"
+	ship_prefix=""
+	species_name="Benzite"
+	species_plural="Benzites"
+	species_class="BEN"
+	species_adjective="Benzite"
+	species_bio=""
+	portrait="benzite"
+	name="BenzarianCommonwealth"
+	adjective="Benzite"
+	authority = "auth_democratic"
+	civics = { "civic_efficient_bureaucracy" "civic_functional_architecture" }
+	government = gov_direct_democracy
+	ethic="ethic_pacifist"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_intelligent"
+	trait="trait_quick_learners"
+	trait="trait_breather_apparatus"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Benzar"
+	planet_class="pc_ocean"
+	system_name="Delta Pavonis"
+	initializer="benzarian_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_05"
+	flags= {
+		custom_start_screen
+	    generic_ent	
+		benzarian_commonwealth 
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="benzite.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor376"
+			"customcolor376"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Mirdoc"
+		portrait="benzite_male_01"
+		texture=0
+		hair=0
+		clothes=9
+		ruler_title="Supreme Echlon"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#23 Bolian League
+BolianLeague = {
+	name_list="Bolian"
+	ship_prefix="BLS"
+	species_name="Bolian"
+	species_plural="Bolian"
+	species_class="BOL"
+	species_adjective="Bolian"
+	species_bio="The Bolians are a humanoid species native to the planet Bolias. Bolians are known forfor a bifurcating cartilaginous ridge running vertically along the centre of the head and face. Skin colour ranges from light green-blue to blue-gray and is occasionally accented with dark blue bands on the head. Bolian individuals tend to be high highly outspoken."
+	portrait="bolian"
+	name="BolianLeague"
+	adjective="Bolian"
+	authority = "auth_democratic"
+	civics = { "civic_beacon_of_liberty" "civic_idealistic_foundation" }
+	government = gov_representative_democracy
+	ethic="ethic_pacifist"
+	ethic="ethic_xenophile"
+	ethic="ethic_egalitarian"
+	trait="trait_thrifty"
+	trait="trait_deviants"
+	trait="trait_charismatic"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Boliax"
+	planet_class="pc_m1_class"
+	system_name="Bolarus"
+	initializer="bolian_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_05"
+	flags={ 
+		custom_start_screen
+	    generic_ent	
+		bolian_league 
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="spherical"
+			file="flag_spherical_17.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"indigo"
+			"burgundy"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Haruna Harada"
+		portrait="bolian_female_05"
+		texture=0
+		hair=0
+		clothes=1
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "bolian_room"
+}
+
+#27 Cheronite Commission
+CheroniteNation = {
+	name_list="Cheronite"
+	ship_prefix=""
+	species_name="Cheronite"
+	species_plural="Cheronites"
+	species_class="CHE"
+	species_adjective="Cheronite"
+	species_bio=""
+	portrait="cheronite"
+	name="CheroniteNation"
+	adjective="Cheronite"
+	authority = "auth_oligarchic"
+	civics = { "civic_black_right_side" "civic_police_state" }
+	government = gov_commission
+	ethic="ethic_authoritarian"
+	ethic="ethic_xenophobe"
+	ethic="ethic_materialist"
+	trait="trait_venerable"
+	trait="trait_sedentary"		
+	trait="trait_solitary"	
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Cheron Prime"
+	planet_class="pc_arctic"
+	system_name="83 Leonis"
+	initializer="cheronite_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+	    generic_ent	
+		cheronite_nation
+		custom_start_screen
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon = { category = "pirate" file = "flag_pirate_4.dds" }
+		background = { category = "backgrounds" file = "vertical.dds" }
+		colors = { "customcolor2050" "customcolor2050" "null" "null" }
+	}
+	ruler={
+		gender=female
+		name="Ando"
+		portrait="cheronite_male_04"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Chief Executive"
+		ruler_title_female="Chief Executive"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_spiritual_seekers_room"
+}
+
+#33 Flaxian
+FlaxianHegemony = {
+	name_list="Flaxian"
+	ship_prefix=""
+	species_name="Flaxian"
+	species_plural="Flaxians"
+	species_class="FLA"
+	species_adjective="Flaxian"
+	species_bio=""
+	portrait="flaxian"
+	name="FlaxianHegemony"
+	adjective="Flaxian"
+	authority = "auth_oligarchic"
+	civics = { "civic_police_state" "civic_shadow_council" }
+	government = gov_military_junta
+	ethic="ethic_xenophobe"
+	ethic="ethic_authoritarian"
+	ethic="ethic_militarist"
+	trait="trait_charismatic"
+	trait="trait_industrious"
+	trait="trait_nonadaptive"
+	trait="trait_quick_learners"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Flaxia Prime"
+	planet_class="pc_savannah"
+	system_name="Flaxia"
+	initializer="FlaxianHomeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent flaxian_hegemony alpha_beta_empire botf_minor }
+	empire_flag={
+		icon={
+			category="trek"
+			file="flaxian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1756"
+			"customcolor1756"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Valderi"
+		portrait="flaxian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title = "Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#34 Garidian
+GaridianRepublic = {
+	name_list="Garidian"
+	ship_prefix="GRS"
+	species_name="Garidian"
+	species_plural="Garidians"
+	species_class="GAR"
+	species_adjective="Garidian"
+	species_bio=""
+	portrait="garidian"
+	name="GaridianRepublic"
+	adjective="Garidian"
+	authority = "auth_oligarchic"
+	civics = { "civic_meritocracy" "civic_exalted_priesthood" }
+	government = gov_holy_tribunal
+	ethic="ethic_militarist"
+	ethic="ethic_authoritarian"
+	ethic="ethic_spiritualist"
+	trait="trait_enduring"
+	trait="trait_intelligent"
+	trait="trait_slow_breeders"
+	flags={
+		custom_start_screen
+	    romulan_ent	
+		garidian_republic	
+		alpha_beta_empire
+		first_alien_life
+		first_contact_event
+		botf_minor
+	}
+	ftl=warp
+	weapon="tech_plasma_disruptor_beam_1"
+	planet_name="Garid"
+	planet_class="pc_continental"
+	system_name="Garid"
+	initializer="garidian_homeworld"
+	graphical_culture="romulan"
+	city_graphical_culture="romulan"
+	empire_flag={
+		icon={
+			category="zoological"
+			file="flag_zoological_6.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1304"
+			"customcolor1365"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Pentara"
+		portrait="garidian_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Patrician"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_harmonious_hierarchy_room"
+}
+
+#35 Gorn
+GornEmpire = {
+	name_list="Gorn"
+	ship_prefix="GHS"
+	species_name="Gorn"
+	species_plural="Gorn"
+	species_class="GOR"
+	species_adjective="Gorn"
+	species_bio=""
+	portrait="gorn"
+	name="GornEmpire"
+	adjective="Gorn"
+	authority = "auth_oligarchic"
+	civics = { "civic_warrior_culture" "civic_meritocracy" }
+	government = gov_gorn_hegemony
+	ethic="ethic_militarist"
+	ethic="ethic_fanatic_xenophobe"
+	trait="trait_reptilian"
+	trait="trait_very_strong"
+	trait="trait_repugnant"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Gornar"
+	planet_class="pc_tropical"
+	system_name="Gorn"
+	initializer="gorn_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags={
+	    generic_ent	
+		gorn_empire 
+		custom_start_screen
+		alpha_beta_empire
+		botf_minor
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="gorn.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1700"
+			"customcolor1616"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Sssla"
+		portrait="gorn_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Imperator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_decadent_hierarchy_room"
+}
+
+#12 Husnock
+HusnockAscendency = {
+	name_list="Husnock"
+	ship_prefix="HAS"
+	species_name="Husnock"
+	species_plural="Husnocks"
+	species_class="HUS"
+	species_adjective="Husnock"
+	species_bio=""
+	portrait="husnock"
+	name="HusnockAscendency"
+	adjective="Husnock"
+	authority = "auth_imperial"
+	civics = { "civic_police_state" "civic_slaver_guilds" }
+	government = gov_martial_empire
+	ethic="ethic_authoritarian"
+	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
+	trait="trait_communal"
+	trait="trait_untrustworthy"
+	trait="trait_industrious"
+	ftl=warp
+	weapon="tech_antiproton_cannon_1"
+	planet_name="Hus III"
+	planet_class="pc_tropical"
+	system_name="Hus"
+	initializer="husnock_homeworld"
+	graphical_culture="husnock_01"
+	city_graphical_culture="generic_01"
+	flags={
+	    generic_ent	
+		husnock_ascendency 
+		custom_start_screen
+		alpha_beta_empire
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="husnock.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1928"
+			"customcolor2018"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Hassu"
+		portrait="husnock_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Imperator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_slaving_despots_room"
+}
+
+#38a Kelpien Duchies - Remove until we can get Ba'ul in place
+# KelpianDuchies = {
+	# name_list="Kelpien"
+	# ship_prefix=""
+	# species_name="Kelpien"
+	# species_plural="Kelpiens"
+	# species_class="KEL"
+	# species_adjective="Kelpien"
+	# species_bio=""
+	# portrait="kelpian"
+	# name="KelpianDuchies"
+	# adjective="Kelpian"
+	# authority = "auth_democratic"
+	# civics = { "civic_the_herd" "civic_agrarian_idyll" }
+	# government = gov_elder_council
+	# ethic = "ethic_fanatic_pacifist"
+	# ethic = "ethic_egalitarian"
+	# trait="trait_agrarian"
+	# trait="trait_heightened_senses"
+	# trait="trait_communal"
+	# trait="trait_reclusive"
+	# trait="trait_coward"
+	# trait="trait_kelpien_delicious"
+	# ftl=warp
+	# weapon="tech_phaser_1"
+	# planet_name="Kelpia"
+	# planet_class="pc_savannah"
+	# system_name="Kelai"
+	# initializer="kelpien_homeworld"
+	# graphical_culture="generic_01"
+	# city_graphical_culture="generic_01"
+	# flags = { custom_start_screen generic_ent kelpian_duchies alpha_beta_empire botf_minor }
+	# empire_flag={
+		# icon={
+			# category="trek"
+			# file="kelpian.dds"
+		# }
+		# background={
+			# category="backgrounds"
+			# file="00_solid.dds"
+		# }
+		# colors={
+			# "customcolor1972"
+			# "customcolor1972"
+			# "null"
+			# "null"
+		# }
+	# }
+	# ruler={
+		# gender=male
+		# name="Maru"
+		# portrait="kelpian_01"
+		# texture=0
+		# hair=0
+		# clothes=0
+		# ruler_title="High Elder"
+		# leader_class = ruler
+	# }
+	# spawn_enabled=always
+	# room = "personality_erudite_explorers_room"
+# }
+
+#Sovereign Dynasty of Krios Prime
+KriosDynasty = {
+	name_list="Kriosian"
+	ship_prefix=""
+	species_name="Kriosian"
+	species_plural="Kriosians"
+	species_class="KRI"
+	species_adjective="Kriosian"
+	species_bio=""
+	portrait="kriosian"
+	name="KriosDynasty"
+	adjective="Kriosian"
+	authority = "auth_imperial"
+	civics = { "civic_krios_1" "civic_aristocratic_elite" }
+	government = gov_sov_dynasty
+	ethic = "ethic_militarist"
+	ethic = "ethic_materialist"
+	ethic = "ethic_authoritarian"
+	trait="trait_conformists"
+	trait="trait_talented"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Krios Prime"
+	planet_class="pc_continental"
+	system_name="Krios"
+	initializer="krios_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent krios_dynasties alpha_beta_empire botf_minor }
+	empire_flag={
+		icon={
+			category="trek"
+			file="kriosian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="diagonal.dds"
+		}
+		colors={
+			"red"
+			"dark_blue"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Kaitaama"
+		portrait="kriosian_female_01"
+		texture=0
+		hair=0
+		clothes=14
+		ruler_title="First Monarch"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_erudite_explorers_room"
+}
+
+#43 Morali
+MoraliStates = {
+	name_list="Morali"
+	ship_prefix=""
+	species_name="Morali"
+	species_plural="Morali"
+	species_class="MOR"
+	species_adjective="Moralian"
+	species_bio=""
+	portrait="sth_humanoid_02"
+	name="MoraliStates"
+	adjective="Moralian"
+	authority = "auth_democratic"
+	civics = { "civic_inwards_perfection" "civic_idealistic_foundation" }
+	government = gov_moral_democracy
+	ethic="ethic_pacifist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_egalitarian"
+	trait="trait_enduring"
+	trait="trait_conformists"
+	trait="trait_natural_engineers"
+	trait="trait_nonadaptive"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Morales"
+	planet_class="pc_m1_class"
+	system_name="Sergane"
+	initializer="MoraliHomeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent morali_states alpha_beta_empire beta_empire botf_minor }
+	empire_flag={
+		icon={
+			category="human"
+			file="flag_human_3.dds"
+		}
+		background={
+			category="backgrounds"
+			file="horizontal.dds"
+		}
+		colors={
+			"customcolor1799"
+			"customcolor1521"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Vade"
+		portrait="sth_humanoid_02_female_01"
+		texture=0
+		hair=2
+		clothes=6
+		ruler_title="Praetor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_harmonious_hierarchy_room"
+}
+
+#44 Nausicaan
+NausicaanTribes = {
+	name_list="Nausicaan"
+	ship_prefix="NS"
+	species_name="Nausicaan"
+	species_plural="Nausicaans"
+	species_class="NAU"
+	species_adjective="Nausicaan"
+	species_bio=""
+	portrait="nausicaan"
+	name="NausicaanTribes"
+	adjective="Nausicaan"
+	authority = "auth_democratic"
+	civics = { "civic_warrior_culture" "civic_bandits" }
+	government = gov_assembly_of_clans
+	ethic="ethic_fanatic_militarist"
+	ethic="ethic_xenophobe"
+	trait="trait_very_strong"
+	trait="trait_wasteful"
+	trait="trait_repugnant"
+	trait="trait_resilient"
+	flags={
+	custom_start_screen
+	    generic_ent	
+		nausicaan_tribes 
+		alpha_beta_empire
+		botf_minor
+	}
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Nausicaa"
+	planet_class="pc_tropical"
+	system_name="Nausicaa"
+	initializer="nausicaan_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	empire_flag={
+		icon={
+			category="pointy"
+			file="flag_pointy_6.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1611"
+			"customcolor2001"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Nos"
+		portrait="nausicaan_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="General"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_fanatic_purifier_room"
+}
+
+#14a Orion - Megacorp
+OrionFreeStates = {
+	name_list="Orion"
+	ship_prefix=""
+	species = {
+		class="ORI"
+		portrait="orion"
+		name="Orion"
+		plural="Orions"
+		adjective="Orion"
+		name_list="Orion"
+		trait="trait_thrifty"
+		trait="trait_strong"
+		trait="trait_charismatic"
+		trait="trait_deviants"
+		trait="trait_untrustworthy"
+	}
+	name="OrionFreeStates"
+	adjective="Orion"
+	authority = "auth_corporate"
+	playable = has_megacorp
+	civics = { "civic_criminal_heritage" "civic_megacorp_slave_bazaars" }
+	government = gov_orion_freestates
+	ethic="ethic_militarist"
+	ethic="ethic_authoritarian"
+	ethic="ethic_xenophobe"
+	planet_name="Vondem"
+	planet_class="pc_continental"
+	system_name="Orion"
+	initializer="orion_homeworld"
+	graphical_culture="orion_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+	    generic_ent	
+		orion_free_states
+		custom_start_screen 
+		alpha_beta_empire
+		first_alien_life
+		first_contact_event
+		botf_minor
+		sth_medium_galaxy 
+	}
+	empire_flag = {
+		icon = { category = "trek" file = "orion.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "customcolor1951" "customcolor1915" "null" "null" }
+	}
+	ruler={
+		gender=female
+		name="Anaria"
+		portrait="orion_female_01"
+		texture=0
+		hair=0
+		clothes=1
+		ruler_title="Ala Shodar"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_slaving_despots_room"
+}
+#14a Orion - Non Megacorp
+OrionFreeStates_B = {
+	name_list="Orion"
+	ship_prefix=""
+	species = {
+		class="ORI"
+		portrait="orion"
+		name="Orion"
+		plural="Orions"
+		adjective="Orion"
+		name_list="Orion"
+		trait="trait_thrifty"
+		trait="trait_strong"
+		trait="trait_charismatic"
+		trait="trait_deviants"
+		trait="trait_untrustworthy"
+	}
+	name="OrionFreeStates"
+	adjective="Orion"
+	authority = "auth_oligarchic"
+	playable = has_not_megacorp
+	civics = { "civic_shadow_council" "civic_bandits" }
+	government = gov_orion_freestates
+	ethic="ethic_militarist"
+	ethic="ethic_authoritarian"
+	ethic="ethic_xenophobe"
+	planet_name="Vondem"
+	planet_class="pc_continental"
+	system_name="Orion"
+	initializer="orion_homeworld"
+	graphical_culture="orion_01"
+	city_graphical_culture="generic_01"
+	flags= { 
+	    generic_ent	
+		orion_free_states
+		custom_start_screen 
+		alpha_beta_empire
+		first_alien_life
+		first_contact_event
+		botf_minor
+		sth_medium_galaxy 
+	}
+	empire_flag = {
+		icon = { category = "trek" file = "orion.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "customcolor1951" "customcolor1915" "null" "null" }
+	}
+	ruler={
+		gender=female
+		name="Anaria"
+		portrait="orion_female_01"
+		texture=0
+		hair=0
+		clothes=1
+		ruler_title="Ala Shodar"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_slaving_despots_room"
+}
+
+#50 Rigellian Consortium
+RigellianConsortium = {
+	name_list="Rigellian"
+	ship_prefix=""
+	species_name="Rigellian"
+	species_plural="Rigellians"
+	species_class="RIG"
+	species_adjective="Rigellian"
+	species_bio=""
+	portrait="rigellian"
+	name="RigellianConsortium"
+	adjective="Rigellian"	
+	authority = "auth_oligarchic"
+	civics = { "civic_corporate_dominion_stnh" "civic_mining_guilds" }
+	government = gov_moral_democracy
+	ethic="ethic_egalitarian"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_enduring"
+	trait="trait_intelligent"
+	trait="trait_nonadaptive"
+	trait="trait_strong"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Rigel"
+	planet_class="pc_arid"
+	system_name="Krayus"
+	initializer="rigellian_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent	
+	    rigellian_consortium
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon = { category = "spherical" file = "flag_spherical_5.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "customcolor1359" "dark_green" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="Arkel"
+		portrait="rigellian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="First Executive"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+### Son'a Command
+ SonaCommand = {
+ 	name_list="Sona"
+ 	ship_prefix=""
+ 	species_name="Son'a"
+ 	species_plural="Son'a"
+ 	species_class="SON"
+ 	species_adjective="Son'a"
+ 	species_bio=""
+ 	portrait="sona"
+ 	name="SonaCommand"
+ 	adjective="Son'a"	
+ 	authority = "auth_dictatorial"
+ 	civics = { "civic_sona_1" "civic_sona_2" }
+ 	government = gov_sona_command
+ 	ethic="ethic_authoritarian"
+ 	ethic="ethic_militarist"
+ 	ethic="ethic_xenophobe"
+ 	trait="trait_natural_sociologists"
+ 	trait="trait_enduring"
+ 	trait="trait_nomadic"
+ 	trait="trait_slow_breeders"
+ 	ftl=warp
+ 	weapon="tech_antiproton_cannon_1"
+ 	planet_name="Son'a Prime"
+ 	planet_class="pc_arid"
+ 	system_name="Son'a"
+ 	initializer="sona_homeworld"
+ 	graphical_culture="generic_01"
+ 	city_graphical_culture="generic_01"
+ 	flags = { 
+ 		custom_start_screen
+ 	    generic_ent	
+ 	    sona_command
+ 		alpha_beta_empire
+ 		botf_minor
+ 	}
+ 	empire_flag={
+ 		icon = { category = "trek" file = "sona.dds" }
+ 		background = { category = "backgrounds" file = "hexagon.dds" }
+ 		colors = { "dark_green" "customcolor1359" "null" "null" }
+ 	}
+ 	ruler={
+ 		gender=male
+ 		name="Mu'afo"
+ 		portrait="sona_male_04"
+		texture=0
+		hair=0
+		clothes=0
+ 		ruler_title="Adhar"
+		leader_class = ruler
+ 	}
+ 	spawn_enabled=always
+ 	room = "personality_ruthless_capitalists_room"
+ }
+
+#14b Suliban
+SulibanCabal = {
+	name_list="Suliban"
+	ship_prefix="SCS"
+	species_name="Suliban"
+	species_plural="Suliban"
+	species_class="SUL"
+	species_adjective="Suliban"
+	species_bio=""
+	portrait="suliban"
+	name ="SulibanCabal"
+	adjective="Suliban"
+	authority = "auth_dictatorial"
+	civics = { "civic_nomadic" "civic_bandits_suliban" }
+	government = gov_technocratic_dictatorship
+	ethic="ethic_authoritarian"
+	ethic="ethic_materialist"
+	ethic="ethic_xenophobe"
+	trait="trait_survivor"
+	trait="trait_repugnant"
+	trait="trait_sedentary"
+	trait="trait_master_geneticist"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Helix 01"
+	planet_class="pc_helix"
+	system_name="Exile"
+	initializer="suliban_homeworld"
+	graphical_culture="suliban_01"
+	city_graphical_culture="suliban_01"
+	flags = { custom_start_screen generic_ent suliban_cabal alpha_beta_empire botf_minor sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="suliban.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"brown"
+			"brown"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Melik"
+		portrait="suliban_male_04"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Commissioner"
+		leader_class = ruler
+	}
+	room = "suliban_room"
+	spawn_enabled=always
+}
+
+#Valtese Senate
+ValteseSenate = {
+	name_list="Valtese"
+	ship_prefix="VS"
+	species_name="Valtese"
+	species_plural="Valtese"
+	species_class="VAL"
+	species_adjective="Valtese"
+	species_bio=""
+	portrait="valtese"
+	name="ValteseSenate"
+	adjective="Valtese"
+	authority = "auth_democratic"
+	civics = { "civic_cutthroat_politics" "civic_valt_1" }
+	government = gov_val_senate
+	ethic = "ethic_pacifist"
+	ethic = "ethic_spiritualist"
+	ethic = "ethic_egalitarian"
+	trait="trait_agrarian"
+	trait="trait_talented"
+	trait="trait_quarrelsome"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Valt Minor"
+	planet_class="pc_continental"
+	system_name="Valt"
+	initializer="valt_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent valtese_senate alpha_beta_empire botf_minor }
+	empire_flag={
+		icon={
+			category="trek"
+			file="valtese.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"orange"
+			"orange"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Altok"
+		portrait="valtese_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Chancellor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_erudite_explorers_room"
+}
+
+#9 Vulcan
+VulcanHighCommand = {
+	name_list="Vulcan"
+	ship_prefix="VSS"
+	species_name="Vulcan"
+	species_plural="Vulcans"
+	species_class="VUL"
+	species_adjective="Vulcan"
+	species_bio=""
+	portrait="vulcan"
+	name="VulcanHighCommand"
+	adjective="Vulcan"
+	authority = "auth_oligarchic"
+	civics = { "civic_high_command" "civic_efficient_bureaucracy" }
+	government = gov_high_command
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"
+	ethic="ethic_egalitarian"
+	trait="trait_enduring"
+	trait="trait_intelligent"
+	trait="trait_nonadaptive"
+	trait="trait_strong"
+	trait="trait_telepathy"
+	ftl=warp
+	weapon="tech_particle_phaser_1"
+	planet_name="Vulcan"
+	planet_class="pc_arid"
+	system_name="40 Eridani"
+	initializer="vulcan_homeworld"
+	graphical_culture="vulcan_01"
+	city_graphical_culture="vulcan_01"
+	flags= { generic_ent vulcan_high_command federation_founder alpha_beta_empire custom_start_screen first_alien_life first_contact_event botf_minor sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="Vulcan2.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1798"
+			"customcolor1798"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="T'Mei"
+		portrait="vulcan_female_01"
+		texture=0
+		hair=0
+		clothes=63
+		ruler_title="Administrator"
+		ruler_title_female="Administrator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "vulcan_room"
+}
+
+#62 Zakdorn
+ZakdornAlliance = {
+	name_list="Zakdorn"
+	ship_prefix=""
+	species_name="Zakdorn"
+	species_plural="Zakdorn"
+	species_class="ZAK"
+	species_adjective="Zakdorn"
+	species_bio=""
+	portrait="zakdorn"
+	name="ZakdornAlliance"
+	adjective="Zakdorn"
+	authority = "auth_democratic"
+	civics = { "civic_master_strategy" "civic_technological_revolution" }
+	government = gov_rational_consensus
+	ethic="ethic_militarist"
+	ethic="ethic_xenophile"
+	ethic="ethic_materialist"
+	trait="trait_highly_talented"
+	trait="trait_weak"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Zakdorn"
+	planet_class="pc_arid"
+	system_name="Zakdorn"
+	initializer="zakdorn_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent zakdorn_alliance alpha_beta_empire botf_minor }
+	empire_flag={
+		icon={
+			category="trek"
+			file="zakdorn.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1972"
+			"customcolor1972"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Sirna Dokachin"
+		portrait="zakdorn_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Strategos"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_erudite_explorers_room"
+}

@@ -1,0 +1,1332 @@
+########################
+#### Delta Quadrant ####
+########################
+
+#20 Banea
+UnitedCongressOfBanea = {
+	name_list="Banean"
+	ship_prefix="CBV"
+	species_name="Banea"
+	species_plural="Baneans"
+	species_class="BAN"
+	species_adjective="Banean"
+	species_bio=""
+	portrait="banea"
+	name="UnitedCongressOfBanea"
+	adjective="Banean"
+	authority = "auth_democratic"
+	civics = { "civic_parliamentary_system" "civic_efficient_bureaucracy" }
+	government = gov_rational_consensus
+	ethic="ethic_egalitarian"
+	ethic="ethic_xenophile"
+	ethic="ethic_materialist"
+	trait="trait_quick_learners"
+	trait="trait_charismatic"
+	ftl=warp
+	weapon="tech_antiproton_cannon_1"
+	planet_name="Banea"
+	planet_class="pc_ocean"
+	system_name="Banea"
+	initializer="banean_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = {
+	    generic_ent	
+		united_congress_of_banea 
+		custom_start_screen
+		delta_empire
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="banea.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1527"
+			"customcolor1844"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Holan Swen"
+		portrait="banea_male_05"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Minister"
+		ruler_title_female="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room="personality_metalheads_room"
+}
+
+#24 Brunali
+BrunaliEmpire = {
+	name_list="Brunali"
+	ship_prefix=""
+	species_name="Brunali"
+	species_plural="Brunali"
+	species_class="BRU"
+	species_adjective="Brunali"
+	species_bio=""
+	portrait="brunali"
+	name ="BrunaliEmpire"
+	adjective="Brunali"
+	authority = "auth_democratic"
+	civics = { "civic_agrarian_idyll" "civic_environmentalist" }
+	government = gov_moral_democracy
+	ethic="ethic_fanatic_pacifist"
+	ethic="ethic_spiritualist"
+	trait="trait_natural_sociologists"
+	trait="trait_intelligent"
+	trait="trait_weak"
+	trait="trait_master_geneticist"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Brunal Prime"
+	planet_class="pc_savannah"
+	system_name="Brunal"
+	initializer="BrunaliHomeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { custom_start_screen generic_ent brunali_empire delta_empire }
+	empire_flag={
+		icon={
+			category="blocky"
+			file="flag_blocky_8.dds"
+		}
+		background={
+			category="backgrounds"
+			file="new_dawn.dds"
+		}
+		colors={
+			"customcolor2000"
+			"customcolor1809"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Remi"
+		portrait="brunali_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Administrator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_spiritual_seekers_room"
+}
+
+#28 Cravic Imperative
+CravicImperative = {
+	name_list="Cravic"
+	ship_prefix=""
+	species_name="Cravic APU"
+	species_plural="Cravic APU"
+	species_class="CRA"
+	species_adjective="Cravics"
+	species_bio=""
+	portrait="cravic"
+	name="CravicImperative"
+	adjective="Cravics"	
+	authority = "auth_machine_intelligence"
+	civics = { "civic_machine_factory_overclock" "civic_machine_ota_updates" }
+	government = gov_machine_industrial
+	ethic="ethic_gestalt_consciousness"
+	trait="trait_machine_unit"
+	trait="trait_robot_mass_produced"
+	trait="trait_robot_logic_engines"
+	trait="trait_chromodynamic_power_module"
+	ftl=warp
+	weapon="tech_physics_particles_747"
+	planet_name="Cravica"
+	planet_class="pc_savannah"
+	system_name="Crav"
+	initializer="cravic_homeworld"
+	graphical_culture="pralor_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent	
+	    cravic_imperative
+		delta_empire
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="cravic.dds"
+		}
+		background={
+			category="backgrounds"
+			file="horizontal_stripe.dds"
+		}
+		colors={
+			"customcolor1456"
+			"customcolor1860"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Automated Commander 001"
+		portrait="cravic_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Command Unit"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hegemonic_imperialists_room"
+}
+
+#30 Devore Imerpum
+DevoreImperium = {
+	name_list="Devore"
+	ship_prefix=""
+	species_name="Devore"
+	species_plural="Devore"
+	species_class="DEV"
+	species_adjective="Devore"
+	species_bio=""
+	portrait="devore"
+	name="DevoreImperium"
+	adjective="Devore"
+	authority = "auth_dictatorial"
+	civics = { "civic_telepath_hunters" "civic_efficient_bureaucracy" }
+	government = gov_totalitarian_regime
+	ethic="ethic_xenophobe"
+	ethic="ethic_authoritarian"
+	ethic="ethic_materialist"
+	trait="trait_conformists"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Devore"
+	planet_class="pc_alpine"
+	system_name="Devore"
+	initializer="devorian_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent	
+	    devorian_solidarity
+		delta_empire
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="devore.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor483"
+			"customcolor483"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Kashyk"
+		portrait="devore_male_04"
+		texture=0
+		hair=6
+		clothes=0
+		ruler_title_male="Lord General"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hegemonic_imperialists_room"
+}
+
+#32 Fen Domar 
+FenDomarStates = {
+	name_list="Fendomar"
+	ship_prefix="FDV"
+	species_name="Fen Domar"
+	species_plural="Fen Domar"
+	species_class="FEN"
+	species_adjective="Fen Domar"
+	species_bio=""
+	portrait="fen_domar"
+	adjective="Fen Domar"
+	name="FenDomarStates"
+	authority = "auth_oligarchic"
+	civics = { "civic_warrior_culture" "civic_exalted_priesthood" }
+	government = gov_war_council
+	ethic="ethic_militarist"
+	ethic="ethic_spiritualist"
+	ethic="ethic_xenophile"
+	trait="trait_enduring"
+	trait="trait_intelligent"
+	trait="trait_slow_breeders"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Fen Domar Prime"
+	planet_class="pc_savannah"
+	system_name="Fen Domar"
+	initializer="FenDomarHomeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent fen_domar_states delta_empire}
+	empire_flag={
+		icon={
+			category="trek"
+			file="fen_domar.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1756"
+			"customcolor1756"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Aru Fen"
+		portrait="fen_domar_female_04"
+		texture=3
+		hair=0
+		clothes=0
+		ruler_title="Keretsal"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_democratic_crusaders_room"
+}
+
+#36 Haakonian Order
+HaakonianOrder = {
+	name_list="Haakonian"
+	ship_prefix=""
+	species_name="Haakonian"
+	species_plural="Haakonians"
+	species_class="HAA"
+	species_adjective="Haakonian"
+	species_bio=""
+	portrait="haakonian"
+	name="HaakonianOrder"
+	adjective="Haakonian"
+	authority = "auth_dictatorial"
+	civics = { "civic_technocracy" "civic_efficient_bureaucracy" }
+	government = gov_technocratic_dictatorship
+	ethic="ethic_militarist"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_industrious"
+	trait="trait_natural_physicists"
+	trait="trait_wasteful"
+	ftl=warp
+	weapon="tech_antiproton_cannon_1"
+	planet_name="Haakon"
+	planet_class="pc_savannah"
+	system_name="Haakon"
+	initializer="haakonian_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent haakonian_order first_alien_life first_contact_event delta_empire sth_medium_galaxy }
+	empire_flag={
+		icon = { category = "trek" file = "haakonian.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "customcolor1640" "customcolor828" "null" "null" }
+	}
+	ruler = {
+		gender=male
+		name="Ma'Tar Met'ol"
+		portrait="haakonian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#36 Hirogen Hunters
+HirogenHunters = {
+	name_list="Hirogen"
+	ship_prefix=""
+	species_name="Hirogen"
+	species_plural="Hirogen"
+	species_class="HIR"
+	species_adjective="Hirogen"
+	species_bio=""
+	portrait="hirogen"
+	name="HirogenHunters"
+	adjective="Hirogen"
+	authority = "auth_oligarchic"
+	civics = { "civic_nomadic" "civic_bandits_hirogen" }
+	government = gov_star_empire
+	ethic="ethic_fanatic_militarist"
+	ethic="ethic_authoritarian"
+	trait="trait_consummate_warriors"
+	trait="trait_skilled_hunters"
+	trait="trait_solitary"
+	ftl=warp
+	weapon="tech_tetryon_cannon_1"
+	planet_name="Idrin's Lodge"
+	planet_class="pc_hunters_lodge"
+	system_name="Idrin's Star"
+	initializer="hirogen_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent hirogen_hunters first_alien_life first_contact_event delta_empire sth_medium_galaxy }
+	empire_flag={
+		icon = { category = "trek" file = "hirogen.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "customcolor1902" "customcolor1890" "null" "null" }
+	}
+	ruler = {
+		gender=male
+		name="Idrin"
+		portrait="hirogen_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="High Alpha"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_fanatic_purifier_room"
+}
+
+#13 KazonSects
+KazonSects = {
+	name_list="Kazon"
+	ship_prefix="KSV"
+	species_name="Kazon"
+	species_plural="Kazon"
+	species_class="KAZ"
+	species_adjective="Kazon"
+	species_bio=""
+	portrait="kazon"
+	name="KazonSects"
+	adjective="Kazon"
+	authority = "auth_dictatorial"
+	civics = { "civic_bandits" "civic_cutthroat_politics" }
+	government = gov_kazon_sects
+	ethic="ethic_militarist"
+	ethic="ethic_fanatic_authoritarian"
+	trait="trait_slow_learners"
+	trait="trait_nomadic"
+	trait="trait_adaptive"
+	flags = { custom_start_screen generic_ent kazon_sects delta_empire sth_medium_galaxy }
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Kazon Prime"
+	planet_class="pc_arid"
+	system_name="Kazon"
+	initializer="kazon_homeworld"
+	graphical_culture="kazon_01"
+	city_graphical_culture="kazon_01"
+	empire_flag={
+		icon={
+			category="trek"
+			file="kazon.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1655"
+			"customcolor2001"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Sankur"
+		portrait="kazon_male_04"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="First Mahje"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_slaving_despots_room"
+}
+
+#39 Kobali
+KobaliRepublic = {
+	name_list="Kobali"
+	ship_prefix="PRESCRIPTED_ship_prefix_KobaliRepublic"
+	species_name="PRESCRIPTED_species_name_KobaliRepublic"
+	species_plural="PRESCRIPTED_species_plural_KobaliRepublic"
+	species_class="KOB"
+	species_adjective="PRESCRIPTED_species_adjective_KobaliRepublic"
+	species_bio=""
+	portrait="kobali"
+	name="KobaliRepublic"
+	adjective="PRESCRIPTED_adjective_KobaliRepublic"
+	authority = "auth_democratic"
+	civics = { "civic_xeno_vultures" "civic_technological_revolution" }
+	government = gov_kobali_democracy
+	ethic = "ethic_materialist"
+	ethic = "ethic_xenophile"
+	ethic = "ethic_egalitarian"
+	trait="trait_necrogenesis"
+	trait="trait_extremely_adaptive"
+	flags = {	
+		custom_start_screen
+		generic_ent	
+		kobali_republic
+		delta_empire 
+		sth_medium_galaxy 
+	}
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Kobali Prime"
+	planet_class="pc_continental"
+	system_name="Kol"
+	initializer="kobali_homeworld"
+	graphical_culture="kobali_01"
+	city_graphical_culture="kobali_01"
+	empire_flag={
+		icon={
+			category="trek"
+			file="kobali.dds"
+		}
+		background={
+			category="backgrounds"
+			file="horizontal.dds"
+		}
+		colors={
+			"customcolor1499"
+			"customcolor145"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="PRESCRIPTED_ruler_name_KobaliRepublic"
+		portrait="kobali_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#40 Kraylor Republic
+KraylorRepublic = {
+	name_list="Kraylor"
+	ship_prefix=""
+	species_name="Kraylor"
+	species_plural="Kraylor"
+	species_class="KRA"
+	species_adjective="Kraylor"
+	species_bio=""
+	portrait="kraylor"
+	name="KraylorRepublic"
+	adjective="Kraylor"	
+	authority = "auth_democratic"
+	civics = { "civic_technological_revolution" "civic_efficient_bureaucracy" }
+	government = gov_moral_democracy
+	ethic="ethic_fanatic_pacifist"
+	ethic="ethic_materialist"
+	trait="trait_industrious"
+	trait="trait_weak"
+	trait="trait_natural_physicists"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Kraylora"
+	planet_class="pc_alpine"
+	system_name="Krayus"
+	initializer="kraylor_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+		generic_ent	
+		kraylor_republic
+		delta_empire
+	}
+	empire_flag={
+		icon = { category = "ornate" file = "flag_ornate_9.dds" }
+		background = { category = "backgrounds" file = "horizontal_stripe.dds" }
+		colors = { "customcolor828" "customcolor1640" "null" "null" }
+	}
+	ruler = {
+		gender=male
+		name="Brell"
+		portrait="kraylor_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="First Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#41 Krenim
+KrenimImperium = {
+	name_list="Krenim"
+	ship_prefix=""
+	species_name="Krenim"
+	species_plural="Krenim"
+	species_class="KRE"
+	species_adjective="Krenim"
+	species_bio=""
+	portrait="krenim"
+	name="KrenimImperium"
+	adjective="Krenim"
+	authority = "auth_imperial"
+	civics = { "civic_technocracy" "civic_master_time" }
+	government = gov_krenim_imperium
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"
+	ethic="ethic_authoritarian"
+	trait="trait_natural_physicists"
+	trait="trait_industrious"
+	trait="trait_wasteful"
+	ftl=warp
+	weapon="tech_physics_particles_763"
+	planet_name="Krenim Prime"
+	planet_class="pc_continental"
+	system_name="Krenim"
+	initializer="krenim_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent krenim_imperium first_alien_life first_contact_event delta_empire sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="krenim.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1850"
+			"customcolor1850"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Ennorax"
+		portrait="krenim_male_02"
+		texture=0
+		hair=13
+		clothes=0
+		ruler_title_male="Emperor"
+		ruler_title_female="Empress"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_xenophobic_isolationists_room"
+}
+
+#42 Lyridians
+LyridianDiaspora = {
+	name_list="Lyridian"
+	ship_prefix=""
+	species_name="Lyridian"
+	species_plural="Lyridians"
+	species_class="LYR"
+	species_adjective="Lyridian"
+	species_bio=""
+	portrait="lyridian"
+	name="LyridianDiaspora"
+	adjective="Lyridian"
+	authority = "auth_dictatorial"
+	civics = { "civic_warrior_culture" "civic_technological_revolution" }
+	government = gov_technocratic_dictatorship
+	ethic="ethic_militarist"
+	ethic="ethic_authoritarian"
+	ethic="ethic_materialist"
+	trait="trait_industrious"
+	trait="trait_intelligent"
+	trait="trait_fleeting"
+	trait="trait_deviants"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Lyridia Prime"
+	planet_class="pc_alpine"
+	system_name="Lyridia"
+	initializer="LyridianHomeworld"
+	graphical_culture="generic_03"
+	city_graphical_culture="generic_03" ### This needs to be updated, too when putting in a new gfxculture
+	flags={
+		custom_start_screen
+	    generic_ent	
+	    lyridian_diaspora 
+		delta_empire
+	}
+	empire_flag={
+		icon={
+			category="pointy"
+			file="flag_pointy_23.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripes.dds"
+		}
+		colors={
+			"customcolor2050"
+			"customcolor2001"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Raylah"
+		portrait="lyridian_female_04"
+		texture=0
+		hair=0
+		clothes=5
+		ruler_title="Chancellor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_honorbound_warriors_room"
+}
+
+#45 Norcadian Megacorp
+NorcadianHarmony = {
+	name_list="Norcadian"
+	ship_prefix=""
+	species_name="Norcadian"
+	species_plural="Norcadians"
+	species_class="NRC"
+	species_adjective="Norcadian"
+	species_bio=""
+	portrait="norcadian"
+	name="NorcadianHarmony"
+	adjective="Norcadian"
+	authority = "auth_corporate"
+	playable = has_megacorp
+	civics = { "civic_trading_posts" "civic_megacorp_tsunkatse_franchising" }
+	government = gov_direct_democracy
+	ethic="ethic_materialist"
+	ethic="ethic_xenophile"
+	ethic="ethic_egalitarian"
+	trait="trait_industrious"
+	trait="trait_sedentary"
+	trait="trait_deviants"
+	trait="trait_rapid_breeders"
+	ftl=warp
+	weapon="tech_polaron_beam_1"
+	planet_name="Norcadia Prime"
+	planet_class="pc_continental"
+	system_name="Norcadia"
+	initializer="NorcadianHomeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent norcadian_harmony delta_empire }
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_12.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor2024"
+			"customcolor2024"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Denk"
+		portrait="norcadian"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_decadent_hierarchy_room"
+}
+
+#45 Norcadian No Megacorp
+NorcadianHarmony_B = {
+	name_list="Norcadian"
+	ship_prefix=""
+	species_name="Norcadian"
+	species_plural="Norcadians"
+	species_class="NRC"
+	species_adjective="Norcadian"
+	species_bio=""
+	portrait="norcadian"
+	name="NorcadianHarmony"
+	adjective="Norcadian"
+	authority = "auth_democratic"
+	playable = has_not_megacorp
+	civics = { "civic_free_haven" "civic_shadow_council" }
+	government = gov_direct_democracy
+	ethic="ethic_materialist"
+	ethic="ethic_xenophile"
+	ethic="ethic_egalitarian"
+	trait="trait_industrious"
+	trait="trait_sedentary"
+	trait="trait_deviants"
+	trait="trait_rapid_breeders"
+	ftl=warp
+	weapon="tech_polaron_beam_1"
+	planet_name="Norcadia Prime"
+	planet_class="pc_continental"
+	system_name="Norcadia"
+	initializer="NorcadianHomeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent norcadian_harmony delta_empire }
+	empire_flag={
+		icon={
+			category="ornate"
+			file="flag_ornate_12.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor2024"
+			"customcolor2024"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Denk"
+		portrait="norcadian"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_decadent_hierarchy_room"
+}
+
+#48 Pralor Auxiliary - Dawn DLC gated
+PralorAuxiliary = {
+	name_list="Pralor"
+	ship_prefix=""
+	species_name="Pralor APU"
+	species_plural="Pralor APU"
+	species_class="PRA"
+	species_adjective="Pralors"
+	species_bio=""
+	portrait="pralor"
+	name="PralorAuxiliary"
+	adjective="Pralors"	
+	authority = "auth_machine_intelligence"
+	civics = { "civic_machine_introspective" "civic_machine_builder" }
+	government = gov_machine_research
+	ethic="ethic_gestalt_consciousness"
+	trait="trait_machine_unit"
+	trait="trait_robot_enhanced_memory"
+	trait="trait_robot_learning_algorithms"
+	trait="trait_chromodynamic_power_module"
+	ftl=warp
+	weapon="tech_physics_particles_747"
+	planet_name="Pralor Prime"
+	planet_class="pc_arctic"
+	system_name="Pral"
+	initializer="pralor_homeworld"
+	graphical_culture= "pralor_01"
+	city_graphical_culture= "generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent	
+	    pralor_auxiliary
+		delta_empire
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="pralor.dds"
+		}
+		background={
+			category="backgrounds"
+			file="double_hemispheres.dds"
+		}
+		colors={
+			"customcolor1329"
+			"customcolor579"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Automated General A1"
+		portrait="pralor_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Elite Admin Substrate"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_xenophobic_isolationists_room"
+}
+
+#53 Talaxian Empire
+TalaxianEmpire = {
+	name_list="Talaxian"
+	ship_prefix="TLS"
+	species_name="Talaxian"
+	species_plural="Talaxians"
+	species_class="TAL"
+	species_adjective="Talaxian"
+	species_bio="The Talaxian are a humanoid species native to the planet Talax."
+	portrait="talaxian"
+	name="TalaxianEmpire"
+	adjective="Talaxian"
+	authority = "auth_democratic"
+	civics = { "civic_agrarian_idyll" "civic_beacon_of_liberty" }
+	government = gov_moral_democracy
+	ethic="ethic_fanatic_pacifist"
+	ethic="ethic_egalitarian"
+	trait="trait_communal"
+	trait="trait_nomadic"
+	trait="trait_weak"
+	trait="trait_quick_learners"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Talax"
+	planet_class="pc_alpine"
+	system_name="Talax"
+	initializer="talaxian_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { custom_start_screen generic_ent talaxian_empire delta_empire sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="talaxian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="vertical.dds"
+		}
+		colors={
+			"customcolor2014"
+			"customcolor1555"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Salix"
+		portrait="talaxian_male_01"
+		texture=0
+		hair=0
+		clothes=7
+		leader_class = ruler
+	}
+	spawn_enabled=always		
+	room = "personality_migrating_flock_room"
+}
+
+#54 Trabe Alliance
+TrabeAlliance = {
+	name_list="Trabe"
+	ship_prefix="TNV"
+	species_name="Trabe"
+	species_plural="Trabe"
+	species_class="TRA"
+	species_adjective="Trabe"
+	species_bio=""
+	portrait="trabe"
+	name="TrabeAlliance"
+	adjective="Trabe"
+	authority = "auth_dictatorial"
+	civics = { "civic_warrior_culture" "civic_cutthroat_politics" }
+	government = gov_martial_empire
+	ethic="ethic_militarist"
+	ethic="ethic_fanatic_authoritarian"
+	trait="trait_slow_learners"
+	trait="trait_nomadic"
+	trait="trait_adaptive"
+	flags = { custom_start_screen generic_ent trabe_alliance delta_empire sth_medium_galaxy }
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Trabe Prime"
+	planet_class="pc_alpine"
+	system_name="Trabe"
+	initializer="trabe_homeworld"
+	graphical_culture="trabe_01"
+	city_graphical_culture="trabe_01"
+	empire_flag={
+		icon={
+			category="trek"
+			file="trabe.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1776"
+			"customcolor1848"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Tabus"
+		portrait="trabe_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Chancellor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_slaving_despots_room"
+}
+
+#55 Turei Commonwealth
+TureiCommonwealth = {
+	name_list="MAM3"
+	ship_prefix="TCV"
+	species_name="Turei"
+	species_plural="Turei"
+	species_class="TUR"
+	species_adjective="Turei"
+	species_bio=""
+	portrait="turei"
+	name="TureiCommonwealth"
+	adjective="Turei"
+	authority = "auth_dictatorial"
+	civics = { "civic_functional_architecture" "civic_nationalistic_zeal" }
+	government = gov_martial_empire
+	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_materialist"
+	trait="trait_reptilian"
+	trait="trait_charismatic"
+	trait="trait_ingenious"
+	trait="trait_weak"
+	trait="trait_quarrelsome"
+	flags = { 
+		custom_start_screen
+		generic_ent
+		turei_commonwealth
+		delta_empire
+		sth_medium_galaxy
+	}
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Turei Prime"
+	planet_class="pc_arctic"
+	system_name="Turei"
+	initializer="turei_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	empire_flag={
+		icon={
+			category="trek"
+			file="turei.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor897"
+			"customcolor851"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Norrick"
+		portrait="turei_male_01"
+		texture=0
+		hair=0
+		clothes=83
+		ruler_title="Chancellor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_metalheads_room"
+}
+
+#57 Vaadwaur Supremacy
+VaadwaurSupremacy = {
+	name_list="Vaadwaur"
+	ship_prefix="VSV"
+	species_name="Vaadwaur"
+	species_plural="Vaadwaur"
+	species_class="VAA"
+	species_adjective="Vaadwaur"
+	species_bio=""
+	portrait="vaadwaur"
+	name="VaadwaurSupremacy"
+	adjective="Vaadwaur"
+	authority = "auth_dictatorial"
+	civics = { "civic_warrior_culture" "civic_police_state" }
+	government = gov_martial_empire
+	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_authoritarian"
+	trait="trait_consummate_warriors"
+	trait="trait_talented"
+	trait="trait_resilient"
+	trait="trait_antiquated"
+	planet_name="Vaadwaur Prime"
+	planet_class="pc_savannah"
+	system_name="Vaadwaur"
+	initializer="vaadwaur_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_05"
+	flags = { custom_start_screen generic_ent vaadwaur_supremacy first_alien_life first_contact_event delta_empire sth_medium_galaxy }
+	empire_flag={
+		icon = { category = "trek" file = "vaadwaur.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "customcolor860" "customcolor1301" "null" "null" }
+	}
+	ruler = {
+		gender=male
+		name="Kedrin"
+		portrait="vaadwaur_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="General"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hegemonic_imperialists_room"
+}
+
+#16 Vidiians
+VidiianSodality = {
+	name_list="Vidiian"
+	ship_prefix="VSV"
+	species_name="Vidiian"
+	species_plural="Vidiians"
+	species_class="VID"
+	species_adjective="Vidiian"
+	species_bio=""
+	portrait="vidiian"
+	name="VidiianSodality"
+	adjective="Vidiian"
+	authority = "auth_oligarchic"
+	civics = { "civic_unrelenting_struggle" "civic_technocracy"}
+	government = gov_medical_directorate
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"
+	ethic="ethic_xenophobe"
+	trait="trait_intelligent"
+	trait="trait_industrious"
+	trait="trait_repugnant"
+	trait="trait_the_phage"
+	trait="trait_master_geneticist"
+	ftl=warp
+	weapon="tech_physics_particles_755"
+	planet_name="Vidiia"
+	planet_class="pc_arctic"
+	system_name="Via"
+	initializer="vidiian_homeworld"
+	graphical_culture="vidiian_01"
+	city_graphical_culture="vidiian_01"
+	flags = { custom_start_screen generic_ent vidiian_sodality delta_empire sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="vidiian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="horizontal.dds"
+		}
+		colors={
+			"customcolor650"
+			"customcolor406"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Derath"
+		portrait="vidiian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Chief Surgeon"
+		ruler_title_female="Chief Surgeon"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#58 Voth
+VothTheocracy = {
+	name_list="Voth"
+	ship_prefix=""
+	species_name="Voth"
+	species_plural="Voth"
+	species_class="VOT"
+	species_adjective="Voth"
+	species_bio=""
+	portrait="voth"
+	name="VothTheocracy"
+	adjective="Voth"
+	authority = "auth_oligarchic"
+	civics = { "civic_exalted_priesthood" "civic_distant_origins" }
+	government = gov_ministry_elder
+	ethic="ethic_fanatic_spiritualist" 
+	ethic="ethic_xenophobe"
+	trait="trait_reptilian"
+	trait="trait_venerable"
+	trait="trait_natural_physicists"
+	trait="trait_antiquated"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_tetryon_cannon_1"
+	planet_name="Voth Prime"
+	planet_class="pc_voth_city_ship"
+	system_name="Voth"
+	initializer="voth_homeworld"
+	graphical_culture="voth_01"
+	city_graphical_culture="voth_01"
+	flags = { 
+	    custom_start_screen 
+	    generic_ent 
+	    voth_theocracy 
+	    first_alien_life 
+	    first_contact_event 
+	    delta_empire
+	    is_stnh_fallen_empire
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="voth.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor343"
+			"customcolor1942"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Odala"
+		portrait="voth_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Revered Elder"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "voth_room"
+}
+
+#61 Zahl 
+ZahlTechnocracy = {
+	name_list="MAM2"
+	ship_prefix=""
+	species_name="Zahl"
+	species_plural="Zahl"
+	species_class="ZAH"
+	species_adjective="Zahlian"
+	species_bio=""
+	portrait="zahl"
+	name="ZahlTechnocracy"
+	adjective="Zahlian"
+	authority = "auth_dictatorial"
+	civics = { "civic_distinguished_admiralty" "civic_technocracy" }
+	government = gov_technocratic_dictatorship
+	ethic="ethic_militarist"
+	ethic="ethic_xenophile"
+	ethic="ethic_materialist"
+	trait="trait_natural_physicists"
+	trait="trait_conformists"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Zahl II"
+	planet_class="pc_arid"
+	system_name="Zahl"
+	initializer="zahl_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent zahl_technocracy delta_empire }
+	empire_flag={
+		icon={
+			category="blocky"
+			file="flag_blocky_15.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1972"
+			"customcolor1972"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Gar"
+		portrait="zahl_male_03"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="High Governor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_erudite_explorers_room"
+}

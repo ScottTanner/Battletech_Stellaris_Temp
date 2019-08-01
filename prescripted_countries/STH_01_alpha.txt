@@ -1,0 +1,1529 @@
+########################
+#### Alpha Quadrant ####
+########################
+
+#Antedian
+AntedianShoals = {
+	name_list="Antedian"
+	ship_prefix=""
+	species_name="Antedian"
+	species_plural="Antedian"
+	species_class="ATE"
+	species_adjective="Antedian"
+	species_bio=""
+	portrait="antedian"
+	name ="AntedianShoals"
+	adjective="Antedian"
+	authority = "auth_democratic"
+	civics = { "civic_shadow_council" "civic_antede_1" }
+	government = gov_ate_shoalassembly
+	ethic="ethic_egalitarian"
+	ethic="ethic_materialist"
+	ethic="ethic_pacifist"
+	trait="trait_catatonia" #2
+	trait="trait_agrarian" #2
+	trait="trait_nonadaptive" #-2
+	trait="trait_deviants" #-1
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Antede III"
+	planet_class="pc_ocean"
+	system_name="Antede"
+	initializer="antedian_homeworld"
+	graphical_culture="generic_03"
+	city_graphical_culture="generic_03"
+	flags = { custom_start_screen generic_ent antedian_shoals alpha_beta_empire botf_minor }
+	empire_flag={
+		icon={
+			category="trek"
+			file="antedian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1655"
+			"customcolor2001"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Cish Peira"
+		portrait="antedian_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Shoal Pathfinder"
+		ruler_title_female="Shoal Pathfinder"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_erudite_explorers_room"
+}
+
+#7 Antican
+AnticanPacks = {
+	name_list="Antican"
+	ship_prefix=""
+	species_name="Antican"
+	species_plural="Anticans"
+	species_class="ANT"
+	species_adjective="Antican"
+	species_bio=""
+	portrait="antican"
+	name ="AnticanPacks"
+	adjective="Antican"
+	authority = "auth_democratic"
+	civics = { "civic_warrior_culture" "civic_police_state" }
+	government = gov_military_commissariat
+	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_materialist"
+	trait="trait_resilient"
+	trait="trait_skilled_hunters"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Beta Renner VI"
+	planet_class="pc_m1_class"
+	system_name="Beta Renner"
+	initializer="antican_homeworld"
+	graphical_culture="generic_03"
+	city_graphical_culture="generic_03"
+	flags = { custom_start_screen generic_ent antican_packs alpha_beta_empire botf_minor }
+	empire_flag={
+		icon={
+			category="zoological"
+			file="flag_zoological_12.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1707"
+			"customcolor64"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Graden"
+		portrait="antican_male_04"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title_female="Pack Leader"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_erudite_explorers_room"
+}
+
+#8 Bajoran
+BajoranRepublic = {
+	name_list="Bajoran"
+	ship_prefix="BV"
+	species_name="Bajoran"
+	species_plural="Bajorans"
+	species_class="BAJ"
+	species_adjective="Bajoran"
+	species_bio=""
+	portrait="bajoran"
+	name="BajoranRepublic"
+	adjective="Bajoran"
+	authority = "auth_oligarchic"
+	civics = { "civic_prophet_1" "civic_prophet_2" }
+	government = gov_vedek_assembly
+	ethic="ethic_pacifist"
+	ethic="ethic_fanatic_spiritualist"
+	trait="trait_agrarian"
+	trait="trait_chosen_people"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Bajor"
+	planet_class="pc_continental"
+	system_name="Bajor"
+	initializer="bajoran_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = {
+	    generic_ent	
+		bajoran_republic 
+		custom_start_screen
+		alpha_beta_empire
+		botf_minor
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="Bajor.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1454"
+			"customcolor1806"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="Nira Meran"
+		portrait="bajoran_female_01"
+		texture=0
+		hair=1
+		clothes=9
+		ruler_title="First Minister"
+		ruler_title_female="First Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "bajoran_room"
+}
+
+#9 Betazoid Houses
+BetazoidHouses = {
+	name_list="Betazoid"
+	ship_prefix=""
+	species_name="Betazoid"
+	species_plural="Betazoids"
+	species_class="BET"
+	species_adjective="Betazoid"
+	species_bio=""
+	portrait="betazoid"
+	name="BetazoidHouses"
+	adjective="Betazoid"
+	authority = "auth_oligarchic"
+	civics = { "civic_free_haven" "civic_aristocratic_elite" }
+	government = gov_irenic_bureaucracy
+	ethic="ethic_fanatic_xenophile"
+	ethic="ethic_pacifist"
+	trait="trait_charismatic"
+	trait="trait_natural_sociologists"
+	trait="trait_telepathy"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Betazed"
+	planet_class="pc_continental"
+	system_name="Beta Veldonna"
+	initializer="betazoid_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent
+	    betazoid_houses
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="betazoid.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"customcolor250"
+			"customcolor633"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Bexani Meloi"
+		portrait="betazoid_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="First Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "betazoid_room"
+}
+
+#10 Breen Confederacy
+BreenConfederacy = {
+	name_list="Breen"
+	ship_prefix="BCS"
+	species_name="Breen"
+	species_plural="Breen"
+	species_class="BRE"
+	species_adjective="Breen"
+	species_bio=""
+	portrait="breen"
+	name="BreenConfederacy"
+	adjective="Breen"
+	authority = "auth_imperial"
+	civics = { "civic_efficient_bureaucracy" "civic_slaver_superior" }
+	government = gov_martial_dictatorship
+	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_authoritarian"
+	trait="trait_environment_suit_dependency"
+	trait="trait_conformists"
+	trait="trait_natural_physicists"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Breen Prime"
+	planet_class="pc_frozen"
+	system_name="Breen"
+	initializer="breen_homeworld"
+	graphical_culture="breen_01"
+	city_graphical_culture="breen_01"
+	flags={
+	    generic_ent	
+		breen_confederacy 
+		custom_start_screen
+		alpha_beta_empire
+		botf_minor
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="breen.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1824"
+			"customcolor1824"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Gar"
+		portrait="breen_entity_01"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_fanatic_purifier_room"
+}
+
+#11 Bynar Domains
+BynarDomains = {
+	name_list="Bynar"
+	ship_prefix="01"
+	species_name="Bynar"
+	species_plural="Bynar"
+	species_class="BYN"
+	species_adjective="Bynar"
+	species_bio=""
+	portrait="bynar"
+	name="BynarDomains"
+	adjective="Bynar"	
+	authority = "auth_cybernetic_consensus"
+	civics = { "civic_duality" "civic_technocracy" }
+	government = gov_virtual_democracy
+	ethic="ethic_cybernetic_consensus"
+	ethic="ethic_pacifist"
+	ethic="ethic_materialist"
+	trait="trait_synaptic_processors"
+	trait="trait_weak"
+	trait="trait_fleeting"
+	ftl=warp
+    weapon="tech_tetryon_cannon_1"
+	planet_name="Bynaus"
+	planet_class="pc_alpine"
+	system_name="Beta Magellan"
+	initializer="bynar_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent	
+	    bynar_domains
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag = {
+		icon = { category = "trek" file = "bynar.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "customcolor443" "customcolor1587" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="01101011"
+		portrait="bynar_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Administrative Node"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#12 Caitian Union
+CaitianUnion = {
+	name_list="Caitian"
+	ship_prefix="CSV"
+	species_name="Caitian"
+	species_plural="Caitians"
+	species_class="CAT"
+	species_adjective="Caitian"
+	species_bio=""
+	portrait="caitian"
+	name="CaitianUnion"
+	adjective="Caitian"
+	authority = "auth_democratic"
+	civics = { "civic_distinguished_admiralty" "civic_nationalistic_zeal" }
+	government = gov_military_commissariat
+	ethic="ethic_militarist"
+	ethic="ethic_xenophile"
+	ethic="ethic_materialist"
+	trait="trait_talented"
+	trait="trait_slow_breeders"		
+	trait="trait_industrious"
+	trait="trait_solitary"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Cait"
+	planet_class="pc_savannah"
+	system_name="15 Lyncis"
+	initializer="caitian_homeworld"
+	graphical_culture="generic_03"
+	city_graphical_culture="generic_03"  ### This needs to be updated, too when putting in a new gfxculture
+	flags = { 
+	    generic_ent	
+		caitian_union
+		custom_start_screen
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon = { category = "trek" file = "caitian.dds" }
+		background = { category = "backgrounds" file = "00_solid.dds" }
+		colors = { "customcolor1451" "customcolor1451" "null" "null" }
+	}
+	ruler={
+		gender=female
+		name="Mress"
+		portrait="caitian_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Pridemaster"
+		ruler_title_female="Pridemistress"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_spiritual_seekers_room"
+}
+
+#13 Deltan Union
+DeltanUnion = {
+	species={
+		class="DEL"
+		portrait="deltan"
+		name="PRESCRIPTED_species_name_DeltanUnion"
+		plural="PRESCRIPTED_species_plural_DeltanUnion"
+		adjective="PRESCRIPTED_species_adjective_DeltanUnion"
+		name_list="MAM1"
+		trait="trait_charismatic"
+		trait="trait_telepathy"
+		trait="trait_communal"
+	}
+	ship_prefix="PRESCRIPTED_ship_prefix_DeltanUnion"
+	species_bio=""
+	name="DeltanUnion"
+	adjective="PRESCRIPTED_adjective_DeltanUnion"	
+	authority = "auth_democratic"
+	government = gov_moral_democracy
+	ethic="ethic_egalitarian"
+	ethic="ethic_xenophile"
+	ethic="ethic_pacifist"
+	civics={
+		"civic_free_haven"
+		"civic_environmentalist"
+	}
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Dhei"
+	planet_class="pc_tropical"
+	system_name="Lta"
+	initializer="deltan_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent	
+	    deltan_union
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="deltan.dds"
+		}
+		background={
+			category="backgrounds"
+			file="hexagon.dds"
+		}
+		colors={
+			"customcolor600"
+			"customcolor60"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_DeltanUnion"
+		portrait="deltan_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title_male="PRESCRIPTED_ruler_title_male_DeltanUnion"
+		ruler_title_female="PRESCRIPTED_ruler_title_female_DeltanUnion"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#13 Denobulan Unity
+DenobulanUnity = {
+	name_list="Denobulan"
+	ship_prefix=""
+	species_name="Denobulan"
+	species_plural="Denobulans"
+	species_class="DEN"
+	species_adjective="Denobulan"
+	species_bio=""
+	portrait="denobulan"
+	name="DenobulanUnity"
+	adjective="Denobulan"	
+	authority = "auth_democratic"
+	civics = { "civic_philomaths" "civic_beacon_of_liberty" }
+	government = gov_moral_democracy
+	ethic="ethic_xenophile"
+	ethic="ethic_pacifist"
+	ethic="ethic_egalitarian"
+	trait="trait_quick_learners"
+	trait="trait_charismatic"
+	trait="trait_complex_family_structures"
+	trait="trait_slow_breeders"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Denobula"
+	planet_class="pc_continental"
+	system_name="Iota Bootis"
+	initializer="denobulan_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent	
+	    denobulan_unity
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="denobula.dds"
+		}
+		background={
+			category="backgrounds"
+			file="double_hemispheres.dds"
+		}
+		colors={
+			"customcolor1600"
+			"customcolor223"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Delox"
+		portrait="denobulan_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+
+
+#Lissepian Parliaments
+LissepianParliaments = {
+	name_list="Lissepian"
+	ship_prefix="LPS"
+	species_name="Lissepian"
+	species_plural="Lissepians"
+	species_class="LIS"
+	species_adjective="Lissepian"
+	species_bio=""
+	portrait="lissepian"
+	name="LissepianParliaments"
+	adjective="Lissepian"
+	authority = "auth_democratic"
+	civics = { "civic_parliamentary_system" "civic_bandits_smugglers" }
+	government = gov_representative_democracy
+	ethic="ethic_xenophile"
+	ethic="ethic_egalitarian"
+	ethic="ethic_materialist"
+	trait="trait_industrious"
+	trait="trait_natural_engineers"
+	trait="trait_slow_breeders"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Lissepia"
+	planet_class="pc_savannah"
+	system_name="Lis"
+	initializer="lissepian_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { custom_start_screen generic_ent lissepian_parliaments alpha_beta_empire  }
+	empire_flag={
+		icon = { category="trek" file="lissepian.dds" }
+		background = { category="backgrounds" file="hex_angles.dds" }
+		colors={ "customcolor1611" "customcolor1825" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="Drufo"
+		portrait="lissepian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Councillor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hive_mind_room"
+}
+
+#Lurian Principality
+LurianPrincipality = {
+	name_list="Lurian"
+	ship_prefix="HMLS"
+	species_name="Lurian"
+	species_plural="Lurians"
+	species_class="LUR"
+	species_adjective="Lurian"
+	species_bio=""
+	portrait="lurian"
+	name="LurianPrincipality"
+	adjective="Lurian"
+	authority = "auth_imperial"
+	civics = { "civic_gift_of_gab" "civic_feudal_realm" }
+	government = gov_irenic_monarchy
+	ethic="ethic_xenophobe"
+	ethic="ethic_authoritarian"
+	ethic="ethic_pacifist"
+	trait="trait_charismatic"
+	trait="trait_communal"
+	trait="trait_two_stomach"
+	trait="trait_wasteful"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Luria"
+	planet_class="pc_arid"
+	system_name="Lur"
+	initializer="lurian_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = {
+		custom_start_screen
+		generic_ent
+		lurian_principality
+		alpha_beta_empire
+	}
+	empire_flag={
+		icon = { category="trek" file="lurian.dds" }
+		background = { category="backgrounds" file="half_circle_lower.dds" }
+		colors={ "customcolor1850" "red" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="Morn"
+		portrait="lurian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Councillor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hive_mind_room"
+}
+
+#Saurian League
+SaurianLeague = {
+	name_list="Saurian"
+	ship_prefix="SLV"
+	species_name="Saurian"
+	species_plural="Saurians"
+	species_class="SAU"
+	species_adjective="Saurian"
+	species_bio=""
+	portrait="saurian"
+	name="SaurianLeague"
+	adjective="saurian"
+	authority = "auth_democratic"
+	civics = { "civic_connoisseur" "civic_beacon_of_liberty" }
+	government = gov_saurian_league
+	ethic="ethic_xenophile"
+	ethic="ethic_pacifist"
+	ethic="ethic_egalitarian"
+	trait="trait_reptilian"
+	trait="trait_four_hearts"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Lyaksti'kton"
+	planet_class="pc_savannah"
+	system_name="Psi Serpentis"
+	initializer="saurian_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = {
+		custom_start_screen
+		generic_ent
+		saurian_league
+		alpha_beta_empire
+	}
+	empire_flag={
+		icon = { category="trek" file="saurian.dds" }
+		background = { category="backgrounds" file="circle_tall.dds" }
+		colors={ "customcolor1314" "customcolor1705" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="Koass Rotinom"
+		portrait="saurian_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Presider"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hive_mind_room"
+}
+
+#Selay
+SelayClutches = {
+	name_list="Selay"
+	ship_prefix=""
+	species_name="Selay"
+	species_plural="Selay"
+	species_class="SEL"
+	species_adjective="Selay"
+	species_bio=""
+	portrait="selay"
+	name ="SelayClutches"
+	adjective="Selay"
+	authority = "auth_democratic"
+	civics = { "civic_police_state" "civic_shadow_council" }
+	government = gov_military_commissariat
+	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_egalitarian"
+	trait="trait_reptilian"
+	trait="trait_resilient"
+	trait="trait_conformists"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Beta Renner Secunda IV"
+	planet_class="pc_m1_class"
+	system_name="Beta Renner Secunda"
+	initializer="selay_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_05"
+	flags = { custom_start_screen generic_ent selay_clutches alpha_beta_empire botf_minor }
+	empire_flag={
+		icon={
+			category="zoological"
+			file="flag_zoological_23.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"customcolor1420"
+			"customcolor1556"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Ssetar"
+		portrait="selay_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Overseer"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_erudite_explorers_room"
+}
+
+#16 Sheliak
+SheliakCorporate = {
+	name_list="Sheliak"
+	ship_prefix="SCV"
+	species_name="Sheliak"
+	species_plural="Sheliak"
+	species_class="SHE"
+	species_adjective="Sheliak"
+	species_bio=""
+	portrait="sheliak"
+	name ="SheliakCorporate"
+	adjective="Sheliak"
+	authority = "auth_oligarchic"
+	civics = { "civic_attention_detail" "civic_mining_guilds" }
+	government = gov_sheliak_corporate
+	ethic="ethic_authoritarian"
+	ethic="ethic_materialist"
+	ethic="ethic_xenophobe"
+	trait="trait_silicon"
+	trait="trait_natural_engineers"
+	trait="trait_repugnant"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Shelia"
+	planet_class="pc_desert"
+	system_name="Sheliak"
+	initializer="sheliak_homeworld"
+	graphical_culture="sheliak_01"
+	city_graphical_culture="sheliak_01"
+	flags = { custom_start_screen generic_ent sheliak_corporate alpha_beta_empire botf_minor sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="sheliak.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"grey"
+			"grey"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Sheldon"
+		portrait="sheliak_01"
+		texture=0
+		hair=0
+		clothes=1
+		ruler_title="Director"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "sheliak_room"
+}
+
+#Talarian
+TalarianRepublic = {
+	name_list="Talarian"
+	ship_prefix=""
+	species_name="Talarian"
+	species_plural="Talarians"
+	species_class="TLR"
+	species_adjective="Talarian"
+	species_bio=""
+	portrait="talarian"
+	name="TalarianRepublic"
+	adjective="Talarian"
+	authority = "auth_oligarchic"
+	civics = { "civic_talarian_1" "civic_citizen_service" }
+	government = gov_tal_patriarchy
+	ethic="ethic_egalitarian"
+	ethic="ethic_xenophobe"
+	ethic="ethic_militarist"
+	trait="trait_industrious"
+	trait="trait_communal"
+	trait="trait_resilient"
+	trait="trait_stubborn"
+	trait="trait_rigid"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Talar"
+	planet_class="pc_arctic"
+	system_name="Talar"
+	initializer="talarian_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags= {
+		talarian_republic
+		custom_start_screen
+		generic_ent	
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="talarian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"customcolor937"
+			"customcolor1678"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Enzel"
+		portrait="talarian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title ="Commander-in-Chief"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_xenophobic_isolationists_room"
+}
+
+#54 Tamarian
+TamarianUnity = {
+	name_list="Tamarian"
+	ship_prefix=""
+	species_name="Tamarian"
+	species_plural="Tamarians"
+	species_class="TAM"
+	species_adjective="Tamarian"
+	species_bio=""
+	portrait="tamarian"
+	name="TamarianUnity"
+	adjective="Tamarian"
+	authority = "auth_imperial"
+	civics = { "civic_inwards_perfection" "civic_philosopher_king" }
+	government = gov_celestial_empire
+	ethic="ethic_pacifist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_spiritualist"
+	trait="trait_enduring"
+	trait="trait_communal"
+	trait="trait_natural_sociologists"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_particle_phaser_1"
+	planet_name="Sigma Tama IV"
+	planet_class="pc_alpine"
+	system_name="Sigma Tama"
+	initializer="tamarian_homeworld"
+	graphical_culture="generic_05"
+	city_graphical_culture="generic_05"
+	flags= {
+		custom_start_screen
+		generic_ent	
+		tamarian_unity
+		alpha_beta_empire
+		botf_minor
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="tamarian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="inverse_delta.dds"
+		}
+		colors={
+			"customcolor381"
+			"customcolor1492"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Dalthon"
+		portrait="tamarian_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title_female="Rakkul"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_spiritual_seekers_room"
+}
+
+#8 Tellarites
+TellarianTechnocracy = {
+	name_list="Tellarite"
+	ship_prefix="TSC"
+	species_name="Tellarite"
+	species_plural="Tellarites"
+	species_class="TEL"
+	species_adjective="Tellarite"
+	species_bio=""
+	portrait="tellarite"
+	name="TellarianTechnocracy"
+	adjective="Tellarite"
+	
+	authority = "auth_democratic"
+	civics = { "civic_stubborn_pride" "civic_technocracy" }
+	government = gov_deliberative_democracy
+	ethic="ethic_xenophile"
+	ethic="ethic_fanatic_materialist"
+	trait="trait_charismatic"
+	trait="trait_communal"
+	trait="trait_natural_engineers"
+	trait="trait_slow_breeders"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Tellar Prime"
+	planet_class="pc_savannah"
+	system_name="Tellar"
+	initializer="tellarian_homeworld"
+	graphical_culture="tellarite_01"
+	city_graphical_culture="tellarite_01"
+	flags = { custom_start_screen generic_ent tellarian_technocracy federation_founder alpha_beta_empire first_alien_life first_contact_event botf_minor sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="tellarite.dds"
+		}
+		background={
+			category="backgrounds"
+			file="diamond.dds"
+		}
+		colors={
+			"customcolor1275"
+			"customcolor221"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Grel"
+		portrait="tellarite_male_01"
+		texture=0
+		hair=0
+		clothes=4
+		ruler_title="Administrator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_peaceful_traders_room"
+}
+
+#15 Tholians
+TholianAssembly = {
+	name_list="Tholian"
+	ship_prefix="TSS"
+	species_name="Tholian"
+	species_plural="Tholians"
+	species_class="THO"
+	species_adjective="Tholian"
+	species_bio=""
+	portrait="tholian"
+	name="TholianAssembly"
+	adjective="Tholian"
+	authority = "auth_oligarchic"
+	civics = { "civic_citizen_service" "civic_perfect_memory" }
+	government = gov_ruling_conclave
+	ethic="ethic_xenophobe"
+	ethic="ethic_materialist"
+	ethic="ethic_militarist"
+	trait="trait_crystal"
+	trait="trait_conformists"
+	trait="trait_natural_physicists"
+	ftl=warp
+	weapon="tech_tetryon_cannon_1"
+	planet_name="Tholia Prime"
+	planet_class="pc_y_class"
+	system_name="Tholia"
+	initializer="tholian_homeworld"
+	graphical_culture="tholian_01"
+	city_graphical_culture="tholian_01"
+	flags = { custom_start_screen generic_ent tholian_assembly alpha_beta_empire botf_minor sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="tholian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1400"
+			"customcolor908"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Taziitzh"
+		portrait="tholian"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Administrator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hive_mind_room"
+}
+
+#55 Trill Republic
+TrillRepublic = {
+	name_list="Trill"
+	ship_prefix=""
+	species_name="Trill"
+	species_plural="Trill"
+	species_class="TRI"
+	species_adjective="Trill"
+	species_bio=""
+	portrait="trill"
+	name="TrillRepublic"
+	adjective="Trill"	
+	authority = "auth_democratic"
+	civics = { "civic_free_haven" "civic_meritocracy" }
+	government = gov_moral_democracy
+	ethic="ethic_xenophile"
+	ethic="ethic_pacifist"
+	ethic="ethic_egalitarian"
+	trait="trait_symbiont"
+	trait="trait_slow_breeders"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Trill"
+	planet_class="pc_continental"
+	system_name="Trill"
+	initializer="trill_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { 
+		custom_start_screen
+	    generic_ent
+	    trill_republic
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="trill.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"blue"
+			"customcolor1734"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Artem Jenox"
+		portrait="trill_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#Tzenkethi Coalition
+TzenkethiCoalition = {
+	name_list="Tzenkethi"
+	ship_prefix="CSS"
+	species_name="Tzenkethi"
+	species_plural="Tzenkethi"
+	species_class="TZE"
+	species_adjective="Tzenkethi"
+	species_bio=""
+	portrait="tzenkethi"
+	name="TzenkethiCoalition"
+	adjective="Tzenkethi"
+	authority = "auth_oligarchic"
+	civics = { "civic_citizen_service" "civic_corvee_system" }
+	government = gov_citizen_stratocracy
+	ethic="ethic_xenophobe"
+	ethic="ethic_materialist"
+	ethic="ethic_militarist"
+	trait="trait_reptilian"
+	trait="trait_natural_physicists"
+	trait="trait_strong"
+	ftl=warp
+	weapon="tech_antiproton_cannon_1"
+	planet_name="Ab-Tzenketh"
+	planet_class="pc_tropical"
+	system_name="Tzenketh"
+	initializer="tzenkethi_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { custom_start_screen generic_ent tzenkethi_coalition alpha_beta_empire botf_minor sth_medium_galaxy }
+	empire_flag={
+		icon={
+			category="trek"
+			file="tzenkethi.dds"
+		}
+		background={
+			category="backgrounds"
+			file="inverse_v.dds"
+		}
+		colors={
+			"customcolor1058"
+			"customcolor1525"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Taziitzh"
+		portrait="tzenkethi_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Administrator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hive_mind_room"
+}
+
+#Valerian Freeholds
+ValerianFreeholds = {
+	name_list="Valerian"
+	ship_prefix="VCS"
+	species_name="Valerian"
+	species_plural="Valerians"
+	species_class="VLR"
+	species_adjective="Valerians"
+	species_bio=""
+	portrait="valerian"
+	name="ValerianFreeholds"
+	adjective="Valerian"
+	authority = "auth_democratic"
+	civics = { "civic_warrior_culture" "civic_mining_guilds" }
+	government = gov_assembly_of_clans
+	ethic="ethic_egalitarian"
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"
+	trait="trait_thrifty"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Valeria"
+	planet_class="pc_ocean"
+	system_name="The Vale"
+	initializer="valerian_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { 
+		custom_start_screen
+		generic_ent
+		valerian_freeholds
+		alpha_beta_empire
+	}
+	empire_flag={
+		icon = { category="trek" file="valerian.dds" }
+		background = { category="backgrounds" file="horizontal_stripe.dds" }
+		colors={ "customcolor121" "indigo" "null" "null" }
+	}
+	ruler={
+		gender=female
+		name="Ala"
+		portrait="valerian_female_02"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Councillor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hive_mind_room"
+}
+
+#Xepolite
+XepoliteGuilds = {
+	name_list="Xepolite"
+	ship_prefix="XGS"
+	species_name="Xepolite"
+	species_plural="Xepolites"
+	species_class="XEP"
+	species_adjective="Xepolites"
+	species_bio=""
+	portrait="xepolite"
+	name="XepoliteGuilds"
+	adjective="Xepolite"
+	authority = "auth_oligarchic"
+	civics = { "civic_corporate_dominion_stnh" "civic_bandits_smugglers" }
+	government = gov_trade_league
+	ethic="ethic_xenophile"
+	ethic="ethic_materialist"
+	ethic="ethic_egalitarian"
+	trait="trait_thrifty"
+	trait="trait_talented"
+	trait="trait_charismatic"
+	trait="trait_deviants"
+	trait="trait_wasteful"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Xepol"
+	planet_class="pc_m1_class"
+	system_name="Xepolite"
+	initializer="xepolite_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { custom_start_screen generic_ent xepolite_guilds alpha_beta_empire  }
+	empire_flag={
+		icon = { category="trek" file="xepolite.dds" }
+		background = { category="backgrounds" file="square.dds" }
+		colors={ "customcolor765" "customcolor1586" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="Degra"
+		portrait="xepolite_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Councillor"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hive_mind_room"
+}
+
+#17 Xindi
+XindiCouncil = {
+	name_list="XINMAM"
+	ship_prefix="XCV"
+	species_name="Xindi-Primate"
+	species_plural="Xindi-Primates"
+	species_class="XINMAM"
+	species_adjective="Xindi-Primates"
+	species_bio=""
+	portrait="xindi_mammalian"
+	name="XindiCouncil"
+	adjective="Xindi"
+	authority = "auth_oligarchic"
+	civics = { "civic_convergent_evolution" "civic_shadow_council" }
+	government = gov_executive_committee
+	ethic="ethic_xenophobe"
+	ethic="ethic_authoritarian"
+	ethic="ethic_materialist"
+	trait="trait_xindi"
+	trait="trait_fragmented"
+	trait="trait_survivor"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Azati Prime"
+	planet_class="pc_ocean"
+	system_name="Azati"
+	initializer="xindi_homeworld"
+	graphical_culture="xindi_01"
+	city_graphical_culture="xindi_01"
+	flags = { custom_start_screen generic_ent xindi_council alpha_beta_empire  }
+	empire_flag={
+		icon = { category="trek" file="xindi.dds" }
+		background = { category="backgrounds" file="00_solid.dds" }
+		colors={ "green" "green" "null" "null" }
+	}
+	ruler={
+		gender=male
+		name="Degra"
+		portrait="xindi_mammalian"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Chairperson"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "xindi_room"
+}
+
+#Yridian League MEGACORP
+YridianLeague = {
+	name_list="Yridian"
+	ship_prefix=""
+	species_name="Yridian"
+	species_plural="Yridians"
+	species_class="YRI"
+	species_adjective="Yridian"
+	species_bio=""
+	portrait="yridian"
+	name="YridianLeague"
+	adjective="Yridian"	
+	authority = "auth_corporate"
+	playable = has_megacorp
+	civics = { "civic_criminal_heritage" "civic_megacorp_bandits_yrid" }
+	government = gov_direct_democracy
+	ethic="ethic_materialist"
+	ethic="ethic_pacifist"
+	ethic="ethic_egalitarian"
+	trait="trait_intelligent"
+	trait="trait_talented"
+	trait="trait_natural_sociologists"
+	trait="trait_repugnant"
+	trait="trait_wasteful"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Yridia Prime"
+	planet_class="pc_alpine"
+	system_name="Yrda"
+	initializer="yridian_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { 
+		custom_start_screen
+	    generic_ent
+	    yridian_league
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="yridian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="hexagon.dds"
+		}
+		colors={
+			"blue"
+			"customcolor1703"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Artem Jenox"
+		portrait="yridian_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}
+
+#Yridian League NON Megacorp
+YridianLeague_B = {
+	name_list="Yridian"
+	ship_prefix=""
+	species_name="Yridian"
+	species_plural="Yridians"
+	species_class="YRI"
+	species_adjective="Yridian"
+	species_bio=""
+	portrait="yridian"
+	name="YridianLeague"
+	adjective="Yridian"	
+	authority = "auth_democratic"
+	playable = has_not_megacorp
+	civics = { "civic_shadow_council" "civic_bandits_yrid" }
+	government = gov_direct_democracy
+	ethic="ethic_materialist"
+	ethic="ethic_pacifist"
+	ethic="ethic_egalitarian"
+	trait="trait_intelligent"
+	trait="trait_talented"
+	trait="trait_natural_sociologists"
+	trait="trait_repugnant"
+	trait="trait_wasteful"
+	ftl=warp
+	weapon="tech_phaser_1"
+	planet_name="Yridia Prime"
+	planet_class="pc_alpine"
+	system_name="Yrda"
+	initializer="yridian_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { 
+		custom_start_screen
+	    generic_ent
+	    yridian_league
+		alpha_beta_empire
+		botf_minor
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="yridian.dds"
+		}
+		background={
+			category="backgrounds"
+			file="hexagon.dds"
+		}
+		colors={
+			"blue"
+			"customcolor1703"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="Artem Jenox"
+		portrait="yridian_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_ruthless_capitalists_room"
+}

@@ -1,0 +1,732 @@
+########################
+#### Gamma Quadrant ####
+########################
+
+#19 Argrathian
+ArgrathianCommonwealth = {
+	name_list="Argrathi"
+	ship_prefix=""
+	species_name="Argrathi"
+	species_plural="Argrathians"
+	species_class="ARG"
+	species_adjective="Argrathi"
+	species_bio=""
+	portrait="argrathian"
+	name ="ArgrathianCommonwealth"
+	adjective="Argrathian"
+	authority = "auth_democratic"
+	civics = { "civic_police_state" "civic_shadow_council" }
+	government = gov_military_commissariat
+	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_egalitarian"
+	trait="trait_enduring"
+	trait="trait_conformists"
+	trait="trait_rigid"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Argratha Prime"
+	planet_class="pc_m1_class"
+	system_name="Argratha"
+	initializer="ArgrathianHomeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent argrathian_commonwealth gamma_empire }
+	empire_flag={
+		icon={
+			category="trek"
+			file="argrathi.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor1734"
+			"customcolor1734"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Aa'cho"
+		portrait="argrathian_female_01"
+		texture=0
+		hair=0
+		clothes=3
+		ruler_title_female="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_erudite_explorers_room"
+}
+
+#31 DosiConfederacy
+DosiConfederacy = {
+	name_list="Dosi"
+	ship_prefix="DCS"
+	species_name="Dosi"
+	species_plural="Dosi"
+	species_class="DOS"
+	species_adjective="Dosi"
+	species_bio=""
+	portrait="dosi"
+	name="DosiConfederacy"
+	adjective="Dosi"
+	authority = "auth_oligarchic"
+	civics = { "civic_warrior_culture" "civic_meritocracy" }
+	government = gov_citizen_stratocracy
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"
+	ethic="ethic_xenophile"
+	trait="trait_strong"
+	trait="trait_slow_learners"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Dosa"
+	planet_class="pc_tropical"
+	system_name="Dosarus"
+	initializer="dosi_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags={
+		custom_start_screen 
+	    generic_ent	
+	    dosi_confederacy
+		gamma_empire
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="spherical"
+			file="flag_spherical_4.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"red"
+			"customcolor2050"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Zyree"
+		portrait="dosi_female_04"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title_female="Administrator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_honorbound_warriors_room"
+}
+
+#37 Hur'Q
+HurQStagnancy = {
+	name_list="ART3"
+	ship_prefix=""
+	species_name="Hur'Q"
+	species_plural="Hur'Q"
+	species_class="HUR"
+	species_adjective="Hur'Q"
+	species_bio=""
+	portrait="hur'q"
+	name="HurQStagnancy"
+	adjective="Hur'Q"
+	authority = "auth_oligarchic"
+	civics = { "civic_museums" "civic_museums_2" }
+	government = gov_curator_council
+	ethic="ethic_militarist"
+	ethic="ethic_fanatic_xenophobe"
+	trait="trait_venerable"
+	trait="trait_resilient"
+	trait="trait_repugnant"
+	trait="trait_slow_breeders"
+	trait="trait_sedentary"
+	planet_name="Refuge"
+	planet_class="pc_arid"
+	system_name="Hur'Q"
+	initializer="hurq_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { 
+	    custom_start_screen 
+	    generic_ent 
+	    hurq_stagnancy 
+	    first_alien_life 
+	    first_contact_event 
+	    gamma_empire
+	    is_stnh_fallen_empire
+		sth_medium_galaxy 
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="hur'q.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor1909"
+			"customcolor1628"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Oka N'da"
+		portrait="hur'q_04"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="High Curator"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_decadent_hierarchy_room"
+}
+
+#38 Karemma - Megacorp
+KaremmanFoundation = {
+	name_list="Karemman"
+	ship_prefix="KFV"
+	species_name="Karemma"
+	species_plural="Karemma"
+	species_class="KAR"
+	species_adjective="Karemman"
+	species_bio=""
+	portrait="karemma"
+	name ="KaremmanFoundation"
+	adjective="Karemman"
+	authority = "auth_corporate"
+	playable = has_megacorp
+	civics = { "civic_brand_loyalty" "civic_megacorp_ethical_trading" }
+	government = gov_karemman_foundation
+	ethic="ethic_xenophile"
+	ethic="ethic_egalitarian"
+	ethic="ethic_materialist"
+	trait="trait_thrifty"
+	planet_name="Karemma"
+	planet_class="pc_tropical"
+	system_name="Karemma"
+	initializer="karemma_homeworld"
+	graphical_culture="karemma_01"
+	city_graphical_culture="karemma_01"
+	flags = { custom_start_screen generic_ent karemman_foundation gamma_empire sth_medium_galaxy }
+	empire_flag = {
+		icon = { category="pointy" file="flag_pointy_12.dds" }
+		background = { category="backgrounds" file="00_solid.dds" }
+		colors = {"green""blue""null""null" }
+	}
+	ruler = {
+		gender=male
+		name="Ornithar"
+		portrait="karemma_male_04"
+		texture=0
+		hair=0
+		clothes=1
+		ruler_title="First Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_decadent_hierarchy_room"
+}
+#38 Karemma - Non Megacorp
+KaremmanFoundation_B = {
+	name_list="Karemman"
+	ship_prefix="KFV"
+	species_name="Karemma"
+	species_plural="Karemma"
+	species_class="KAR"
+	species_adjective="Karemman"
+	species_bio=""
+	portrait="karemma"
+	name ="KaremmanFoundation"
+	adjective="Karemman"
+	authority = "auth_oligarchic"
+	playable = has_not_megacorp
+	civics = { "civic_shadow_council" "civic_mining_guilds" }
+	government = gov_karemman_foundation
+	ethic="ethic_xenophile"
+	ethic="ethic_egalitarian"
+	ethic="ethic_materialist"
+	trait="trait_thrifty"
+	planet_name="Karemma"
+	planet_class="pc_tropical"
+	system_name="Karemma"
+	initializer="karemma_homeworld"
+	graphical_culture="karemma_01"
+	city_graphical_culture="karemma_01"
+	flags = { custom_start_screen generic_ent karemman_foundation gamma_empire sth_medium_galaxy }
+	empire_flag = {
+		icon = { category="pointy" file="flag_pointy_12.dds" }
+		background = { category="backgrounds" file="00_solid.dds" }
+		colors = {"green""blue""null""null" }
+	}
+	ruler = {
+		gender=male
+		name="Ornithar"
+		portrait="karemma_male_04"
+		texture=0
+		hair=0
+		clothes=1
+		ruler_title="First Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_decadent_hierarchy_room"
+}
+
+#46 Nyberrite
+NyberriteAlliance = {
+	name_list="MAM1"
+	ship_prefix="NSS"
+	species_name="Nyberrite"
+	species_plural="Nyberrites"
+	species_class="NYB"
+	species_adjective="Nyberrite"
+	species_bio=""
+	portrait="nyberrite"
+	name ="NyberriteAlliance"
+	adjective="Nyberrite"
+	authority = "auth_democratic"
+	civics = { "civic_free_haven" "civic_parliamentary_system" }
+	government = gov_moral_democracy
+	ethic="ethic_xenophile"
+	ethic="ethic_pacifist"
+	ethic="ethic_materialist"
+	trait="trait_strong"
+	trait="trait_communal"	
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Nyberon Prime"
+	planet_class="pc_alpine"
+	system_name="Nyberon"
+	initializer="nyberrite_homeworld"
+	graphical_culture="generic_04"
+	city_graphical_culture="generic_04"
+	flags = { custom_start_screen generic_ent nyberrite_alliance gamma_empire }
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_2.dds"
+		}
+		background={
+			category="backgrounds"
+			file="double_hemispheres.dds"
+		}
+		colors={
+			"customcolor1698"
+			"customcolor572"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Aira"
+		portrait="nyberrite_female_04"
+		texture=0
+		hair=1
+		clothes=1
+		ruler_title="Prime Minister"
+		leader_class = ruler
+	}
+	spawn_enabled=always	
+	room = "personality_democratic_crusaders_room"
+}
+
+#47 Oschean Hunters - Utopia DLC gated
+OscheanHunters = {
+	name_list="Oschean"
+	ship_prefix="OHV"
+	species_name="Oschean"
+	species_plural="Oscheans"
+	species_class="OSC"
+	species_adjective="Oscheani"
+	species_bio=""
+	portrait="oschean"
+	name ="OscheanHunters"
+	adjective="Oschean"
+	species = {
+		class = "OSC"
+		portrait="oschean"
+		name = "Oschean"
+		plural = "Oschean"
+		adjective = "Oscheani"
+		name_list = "Oschean"
+		trait="trait_skilled_hunters"
+		trait="trait_communal"
+	}
+	secondary_species = {
+		class = "TOS"
+		portrait="tosk"
+		name = "Tosk"
+		plural = "Tosk"
+		adjective = "Tosk"
+		name_list = "Tosk"
+		trait="trait_syncretic_proles"
+		trait="trait_strong"
+	}	
+	authority = "auth_democratic"
+	civics = { "civic_warrior_culture" "civic_syncretic_evolution" }
+	government = gov_assembly_of_clans
+	ethic="ethic_egalitarian"
+	ethic="ethic_militarist"
+	ethic="ethic_materialist"	
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Ma'kor"
+	planet_class="pc_ocean"
+	system_name="Za'id"
+	initializer="oschean_homeworld"
+	graphical_culture="generic_04"
+	city_graphical_culture="generic_04"
+	flags = { 
+	    custom_start_screen 
+	    generic_ent 
+	    oschean_hunters
+	    gamma_empire 
+		sth_medium_galaxy 
+	 }
+	empire_flag={
+		icon={
+			category="trek"
+			file="oschean.dds"
+		}
+		background={
+			category="backgrounds"
+			file="half_circle_lower.dds"
+		}
+		colors={
+			"customcolor1698"
+			"customcolor1778"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Onash"
+		portrait="oschean_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Clan Speaker"
+		leader_class = ruler
+	}
+	spawn_enabled=always	
+	room = "personality_democratic_crusaders_room"
+}
+
+#49 Rakhari Third Imperium
+RakharianFreeStates = {
+	name_list="Rakhari"
+	ship_prefix="RFS"
+	species_name="Rakhari"
+	species_plural="Rakhari"
+	species_class="RAK"
+	species_adjective="Rakhari"
+	species_bio=""
+	portrait="rakhari"
+	name="RakharianFreeStates"
+	adjective="Rakhari"
+	authority = "auth_dictatorial"
+	civics = { "civic_police_state" "civic_efficient_bureaucracy" }
+	government = gov_constitutional_dictatorship
+	ethic="ethic_fanatic_authoritarian"
+	ethic="ethic_xenophobe"
+	trait="trait_resilient"
+	trait="trait_conformists"
+	trait="trait_solitary"
+	flags = { custom_start_screen generic_ent rakharian_free_states gamma_empire sth_medium_galaxy }
+	ftl=warp
+	weapon="tech_plasma_cannon_1"
+	planet_name="Rakhar"
+	planet_class="pc_arctic"
+	system_name="Rakh"
+	initializer="rakharian_homeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	empire_flag={
+		icon = { category = "trek" file = "rakhari.dds" }
+		background = { category = "backgrounds" file = "circle.dds" }
+		colors = { "customcolor660" "customcolor660" "null" "null" }
+	}
+	ruler = { 
+		gender = male 
+		name = "Natani" 
+		portrait="rakhari_male_04" 
+		texture = 0 
+		hair = 0 
+		clothes = 0
+		ruler_title="High Exarch"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hegemonic_imperialists_room"
+}
+
+#52 Skrreean Republic
+SkrreeanRepublic = {
+	name_list="Skrreean"
+	ship_prefix="SKR"
+	species_name="Skrreean"
+	species_plural="Skrreeans"
+	species_class="SKR"
+	species_adjective="Skrreea"
+	species_bio=""
+	portrait=skrreean
+	name ="SkrreeanRepublic"
+	adjective="Skrreea"
+	authority = "auth_oligarchic"
+	civics = { "civic_agrarian_idyll" "civic_matriarchy" }
+	government = gov_circle_matrons
+	ethic="ethic_fanatic_pacifist"
+	ethic="ethic_xenophobe"
+	trait="trait_agrarian"
+	trait="trait_communal"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Skry"
+	planet_class="pc_ocean"
+	system_name="Meron"
+	initializer="skrreean_homeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags = { 
+	    custom_start_screen 
+	    generic_ent 
+	    skrreean_republic
+	    gamma_empire 
+	}
+	empire_flag={
+		icon={
+			category="pointy"
+			file="flag_pointy_14.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"grey"
+			"grey"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Haneev"
+		portrait="skrreean_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="First Mother"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_migrating_flock_room"
+}
+
+#56 T'Rogoran
+TRogoranEmpire = {
+	name_list="Trogoran"
+	ship_prefix=""
+	species_name="T'Rogoran"
+	species_plural="T'Rogorans"
+	species_class="TRO"
+	species_adjective="T'Rogoran"
+	species_bio=""
+	portrait="sth_humanoid_01"
+	name="TRogoranEmpire"
+	adjective="T'Rogoran"
+	authority = "auth_dictatorial"
+	civics = { "civic_slaver_guilds" "civic_nationalistic_zeal" }
+	government = gov_military_dictatorship
+	ethic="ethic_militarist"
+	ethic="ethic_xenophobe"
+	ethic="ethic_authoritarian"
+	trait="trait_enduring"
+	trait="trait_conformists"
+	trait="trait_rigid"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="T'Rogoran Prime"
+	planet_class="pc_arctic"
+	system_name="T'Rogoran"
+	initializer="TRogoranHomeworld"
+	graphical_culture="generic_01"
+	city_graphical_culture="generic_01"
+	flags = { custom_start_screen generic_ent trogoran_empire gamma_empire sth_medium_galaxy }
+	empire_flag = {
+		icon={
+			category="blocky"
+			file="flag_blocky_19.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"customcolor656"
+			"customcolor656"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=female
+		name="Melari"
+		portrait="sth_humanoid_01_female_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="Empress"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_hegemonic_imperialists_room"
+}
+
+#59 Wadi
+WadiEmirates = {
+	name_list="Wadi"
+	ship_prefix=""
+	species_name="Wadi"
+	species_plural="Wadi"
+	species_class="WAD"
+	species_adjective="Wadi"
+	species_bio=""
+	portrait="wadi"
+	name="WadiEmirates"
+	adjective="Wadi"
+	authority = "auth_democratic"
+	civics = { "civic_shadow_council" "civic_cutthroat_politics" }
+	government = gov_wadi_surchid
+	ethic="ethic_xenophile"
+	ethic="ethic_egalitarian"
+	ethic="ethic_materialist"
+	trait="trait_thrifty"
+	trait="trait_weak"
+	trait="trait_solitary"
+	trait="trait_industrious"
+	ftl=warp
+	weapon="tech_disruptor_cannon_1"
+	planet_name="Tomerela"
+	planet_class="pc_tropical"
+	system_name="Wadi"
+	initializer="WadiHomeworld"
+	graphical_culture="generic_02"
+	city_graphical_culture="generic_02"
+	flags={
+		custom_start_screen
+	    generic_ent	
+    	wadi_emirates
+		gamma_empire
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="wadi.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor537"
+			"customcolor537"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Falow"
+		portrait="wadi_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="High Surchid"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_peaceful_traders_room"
+}
+
+#60 Yaderan Republic
+YaderanRepublic = {
+	name_list="Yaderan"
+	ship_prefix=""
+	species_name="Yaderan"
+	species_plural="Yaderans"
+	species_class="YAD"
+	species_adjective="Yaderan"
+	species_bio=""
+	portrait="yaderan"
+	name="YaderanRepublic"
+	adjective="Yaderan"	
+	authority = "auth_democratic"
+	civics = { "civic_virtuoso" "civic_inwards_perfection" }
+	government = gov_moral_democracy
+	ethic="ethic_xenophobe"
+	ethic="ethic_pacifist"
+	ethic="ethic_egalitarian"
+	trait="trait_intelligent"
+	trait="trait_communal"
+	trait="trait_sedentary"
+	ftl=warp
+	weapon="tech_tetryon_cannon_1"
+	planet_name="Yadera Prime"
+	planet_class="pc_alpine"
+	system_name="Yadera"
+	initializer="yaderan_homeworld"
+	graphical_culture="generic_04"
+	city_graphical_culture="generic_01"
+	flags = { 
+		custom_start_screen
+	    generic_ent	
+	    yaderan_republic
+		gamma_empire
+	}
+	empire_flag={
+		icon={
+			category="trek"
+			file="yaderan.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"customcolor537"
+			"blue"
+			"null"
+			"null"
+		}
+	}
+	ruler = {
+		gender=male
+		name="Colynen"
+		portrait="yaderan_male_01"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="President"
+		leader_class = ruler
+	}
+	spawn_enabled=always
+	room = "personality_peaceful_traders_room"
+}

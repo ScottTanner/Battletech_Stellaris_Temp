@@ -1,0 +1,592 @@
+### Static map. 500+ star systems. Small map of Alpha/Beta Quadrants.
+### This map must include the zeta aquilae system to enable an event to identify alpha/beta races.
+### This map must include the Signum system, initializer signum_ab1, which is used to identify the map.
+static_galaxy_scenario = {
+	name = STH_galaxy_tiny_alpha_beta
+	colonizable_planet_odds = 1.0
+	priority = 3
+    num_empires = { min = 1 max = 32 }
+    num_empire_default = 1
+	num_hyperlanes = { min = 5 max = 5 }
+	num_hyperlanes_default = 5
+	advanced_empire_default = 0
+	core_radius = 0
+	fallen_empire_default = 0
+	fallen_empire_max = 0
+	random_hyperlanes = yes
+system = { id = "0" name = "Sol" position = { x = 1 y = 1 } initializer = human_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = united_earth } } }
+system = { id = "1" name = "Alpha Centauri" position = { x = -8 y = -8 } initializer = rl_alpha_centauri }
+system = { id = "2" name = "Barnard's Star" position = { x = 8 y = -13 } initializer = barnards_star }
+system = { id = "3" name = "Wolf 359" position = { x = -16 y = 8 } initializer = wolf_359 }
+system = { id = "4" name = "Lalande 21185" position = { x = -2 y = 19 } initializer = lalande_21185_b }
+system = { id = "5" name = "UV Ceti" position = { x = 2 y = 20 } initializer = uv_ceti_b }
+system = { id = "6" name = "Sirius" position = { x = -14 y = 14 } initializer = rl_sirius }
+system = { id = "7" name = "Ross 154" position = { x = 4 y = -21 } initializer = ross_154_b }
+system = { id = "8" name = "Ross 248" position = { x = 22 y = 8 } initializer = ross_248_b }
+system = { id = "9" name = "Epsilon Eridani" position = { x = -6 y = 22 } initializer = axanar_homeworld }
+system = { id = "10" name = "Lacaille 9352" position = { x = 2 y = -23 } initializer = lacaille_9352_b }
+system = { id = "11" name = "Ross 128" position = { x = -24 y = -1 } initializer = ross_128_b }
+system = { id = "12" name = "EZ Aquarii" position = { x = 18 y = -17 } initializer = ez_aquarii_b }
+system = { id = "13" name = "61 Cygni" position = { x = 25 y = -3 } initializer = tellarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tellarian_technocracy } } }
+system = { id = "14" name = "Procyon" position = { x = -22 y = 12 } initializer = andorian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = andorian_empire } } }
+system = { id = "15" name = "Struve 2398" position = { x = 25 y = 0 } initializer = struve_2398_b }
+system = { id = "16" name = "Groombridge 34" position = { x = 22 y = 11 } initializer = groombridge_34_b }
+system = { id = "17" name = "DX Cancri" position = { x = -7 y = 24 } initializer = dx_cancri_b }
+system = { id = "18" name = "Epsilon Indi" position = { x = -10 y = -23 } initializer = rl_epsilon_indi }
+system = { id = "19" name = "Tau Ceti" position = { x = 3 y = 25 } initializer = rl_tau_ceti }
+system = { id = "20" name = "YZ Ceti" position = { x = 13 y = 23 } initializer = yz_ceti_b }
+system = { id = "21" name = "Teegarden's Star" position = { x = 9 y = 25 } initializer = teegarden_star_b }
+system = { id = "22" name = "Kapteyn's Star" position = { x = -26 y = 9 } initializer = kapteyn_star_b }
+system = { id = "23" name = "AX Microscopii" position = { x = 2 y = -27 } initializer = ax_microscopii_b }
+system = { id = "24" name = "Kruger 60" position = { x = 27 y = 7 } initializer = kruger_60_b }
+system = { id = "25" name = "Wolf 424" position = { x = -28 y = -10 } initializer = wolf_424_b }
+system = { id = "26" name = "Van Maanen's star" position = { x = 24 y = 17 } initializer = van_maanen_b }
+system = { id = "27" name = "Gliese 1" position = { x = -9 y = -28 } initializer = gliese_1_b }
+system = { id = "28" name = "J'Ral Supernova" position = { x = -5 y = 30 } initializer = jral_b }
+system = { id = "29" name = "WX Ursae Majoris" position = { x = 7 y = 31 } initializer = wx_ursae_majoris_b }
+system = { id = "30" name = "AD Leonis" position = { x = -19 y = 26 } initializer = ad_leonis_b }
+system = { id = "31" name = "40 Eridani" position = { x = -12 y = 31 } initializer = vulcan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vulcan_high_command } } }
+system = { id = "32" name = "Pjem" position = { x = -14 y = 22 } initializer = pjem }
+system = { id = "33" name = "EV Lacertae" position = { x = 33 y = 6 } initializer = ev_lacertae_b }
+system = { id = "34" name = "Altair" position = { x = 25 y = -23 } initializer = altair_homeworld }
+system = { id = "35" name = "70 Ophiuchi" position = { x = 17 y = -30 } initializer = rl_70_ophiuchi }
+system = { id = "36" name = "Eta Cassiopeiae" position = { x = 27 y = 21 } initializer = terra_nova_b }
+system = { id = "37" name = "Xyrillia" position = { x = 16 y = 32 } initializer = scf_b }
+system = { id = "38" name = "Van Biesbroeck's Star" position = { x = 24 y = -28 } initializer = scm_b }
+system = { id = "39" name = "Sigma Draconis" position = { x = 36 y = 7 } initializer = sigma_draconis_b }
+system = { id = "40" name = "Ophiucus" position = { x = -1 y = -38 } initializer = sck_b }
+system = { id = "41" name = "Beta Hydri" position = { x = -32 y = -22 } initializer = scg_b }
+system = { id = "42" name = "Delta Pavonis" position = { x = -19 y = -34 } initializer = benzarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = benzarian_commonwealth } } }
+system = { id = "43" name = "82 G. Eridani" position = { x = -37 y = 13 } initializer = 82g_eridani_b }
+system = { id = "44" name = "Chara" position = { x = 27 y = 28 } initializer = scg_b }
+system = { id = "45" name = "47 Ursae Majoris" position = { x = 3 y = 40 } initializer = Chalawan_b }
+system = { id = "46" name = "Xi Bootis" position = { x = 16 y = -39 } initializer = scg_b }
+system = { id = "47" name = "Ankaa" position = { x = -27 y = -32 } initializer = sck_b }
+system = { id = "48" name = "Akaali" position = { x = -21 y = 37 } initializer = akaali_b }
+system = { id = "49" name = "Calder" position = { x = -41 y = -19 } initializer = calder_b }
+system = { id = "50" name = "Fomalhaut" position = { x = 17 y = -43 } initializer = sca_b }
+system = { id = "51" name = "Mu Cassiopeiae" position = { x = 38 y = 27 } initializer = scg_b }
+system = { id = "52" name = "Vega" position = { x = 43 y = -17 } initializer = rl_vega }
+system = { id = "53" name = "Gamma 400" position = { x = -24 y = 41 } initializer = scm_b }
+system = { id = "54" name = "Hydralan" position = { x = -43 y = 19 } initializer = scf_b }
+system = { id = "55" name = "MAB-BU" position = { x = 16 y = 45 } initializer = mab_bu_b }
+system = { id = "56" name = "Yadalla" position = { x = -39 y = -28 } initializer = scf_b }
+system = { id = "57" name = "M43 Alpha" position = { x = 31 y = 37 } initializer = m43_alpha_b }
+system = { id = "58" name = "Chi Draconis" position = { x = 47 y = 12 } initializer = scf_b }
+system = { id = "59" name = "Orion" position = { x = -10 y = 47 } initializer = orion_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = orion_free_states } } }
+system = { id = "60" name = "Mu Herculis" position = { x = 39 y = -30 } initializer = scg_b }
+system = { id = "61" name = "Valakis" position = { x = -17 y = 48 } initializer = valakis_b }
+system = { id = "62" name = "61 Virginis" position = { x = -38 y = -33 } initializer = scg_b }
+system = { id = "63" name = "Zeta Tucanae" position = { x = -40 y = -31 } initializer = scf_b }
+system = { id = "64" name = "Bolarus" position = { x = -16 y = -50 } initializer = bolian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bolian_league } } }
+system = { id = "65" name = "Alula Australis" position = { x = -14 y = 51 } initializer = scg_b }
+system = { id = "66" name = "Gamma Leporis" position = { x = -38 y = 36 } initializer = gamma_leporis_b }
+system = { id = "67" name = "Coridan" position = { x = -7 y = 53 } initializer = coridan_b }
+system = { id = "68" name = "Beta Comae Berenices" position = { x = 37 y = -39 } initializer = beta_comae_b }
+system = { id = "69" name = "Gamma Pavonis" position = { x = -29 y = -46 } initializer = scf_b }
+system = { id = "70" name = "Kappa Ceti" position = { x = 2 y = 54 } initializer = scg_b }
+system = { id = "71" name = "Rana" position = { x = -17 y = 51 } initializer = sck_b }
+system = { id = "72" name = "Nelvana" position = { x = -53 y = -10 } initializer = scm_b }
+system = { id = "73" name = "Dessica" position = { x = -39 y = -37 } initializer = scg_b }
+system = { id = "74" name = "Chi Ceti" position = { x = 13 y = 52 } initializer = scf_b }
+system = { id = "75" name = "83 Leonis" position = { x = -53 y = 10 } initializer = cheronite_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cheronite_nation } } }
+system = { id = "76" name = "Beta Rigel" position = { x = -28 y = 49 } initializer = rigellian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = rigellian_consortium } } }
+system = { id = "77" name = "Rator" position = { x = -57 y = 1 } initializer = rator_b }
+system = { id = "78" name = "Draylon" position = { x = 34 y = 45 } initializer = scg_b }
+system = { id = "79" name = "Alpha Mensae" position = { x = -55 y = -20 } initializer = scg_b }
+system = { id = "80" name = "Nehru" position = { x = 56 y = 16 } initializer = sca_b }
+system = { id = "81" name = "Draken" position = { x = -58 y = 1 } initializer = scg_b }
+system = { id = "82" name = "Devron" position = { x = -38 y = -44 } initializer = sck_contx_b }
+system = { id = "83" name = "Barradas" position = { x = -57 y = 8 } initializer = sck_b }
+system = { id = "84" name = "Japori" position = { x = -50 y = 29 } initializer = scf_b }
+system = { id = "85" name = "Iota Persei" position = { x = 34 y = 49 } initializer = scg_b }
+system = { id = "86" name = "Pollux" position = { x = -12 y = 58 } initializer = sck_b }
+system = { id = "87" name = "Vendor" position = { x = -60 y = -8 } initializer = scg_b }
+system = { id = "88" name = "Delta Trianguli" position = { x = 37 y = 48 } initializer = scg_b }
+system = { id = "89" name = "Zeta Herculis" position = { x = 49 y = -37 } initializer = scf_b }
+system = { id = "90" name = "Selcundi Drema" position = { x = 57 y = -21 } initializer = selcundi_drema_b }
+system = { id = "91" name = "Beta Leonis" position = { x = -59 y = 20 } initializer = beta_leonis_b }
+system = { id = "92" name = "Zavijava" position = { x = -62 y = 1 } initializer = scf_b }
+system = { id = "93" name = "Delta Triciatu" position = { x = 17 y = -61 } initializer = deltan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = deltan_union } } }
+system = { id = "94" name = "Gamma Serpentis" position = { x = 30 y = -56 } initializer = scf_b }
+system = { id = "95" name = "Muphrid" position = { x = 6 y = -63 } initializer = scg_b }
+system = { id = "96" name = "Theta Persei" position = { x = 40 y = 49 } initializer = scf_b }
+system = { id = "97" name = "Iota Pegasi" position = { x = 64 y = -9 } initializer = scf_b }
+system = { id = "98" name = "Porrima" position = { x = -55 y = -34 } initializer = scf_b }
+system = { id = "99" name = "Zeta Doradus" position = { x = -65 y = 5 } initializer = scf_b }
+system = { id = "100" name = "Caldik" position = { x = 56 y = 33 } initializer = sca_b }
+system = { id = "101" name = "UFC 3676543" position = { x = -36 y = -54 } initializer = rl_eden }
+system = { id = "102" name = "Toroth" position = { x = -9 y = 66 } initializer = toroth_b }
+system = { id = "103" name = "Scheddi" position = { x = 41 y = -52 } initializer = sca_b }
+system = { id = "104" name = "Zeta Reticuli A" position = { x = -66 y = -10 } initializer = scg_b }
+system = { id = "105" name = "Trappist-1" position = { x = 62 y = -23 } initializer = trappist1_b }
+system = { id = "106" name = "Tellun" position = { x = -23 y = 64 } initializer = tellun_b }
+system = { id = "107" name = "Betria" position = { x = -42 y = -53 } initializer = scf_b }
+system = { id = "108" name = "Lambda Serpentis" position = { x = 19 y = -65 } initializer = lambda_serpentis_b }
+system = { id = "109" name = "Zeta Trianguli Australis" position = { x = -44 y = -52 } initializer = scf_contx_b }
+system = { id = "110" name = "Kressari" position = { x = 38 y = 56 } initializer = kressari_b }
+system = { id = "111" name = "Kotaki" position = { x = 44 y = 52 } initializer = sca_b }
+system = { id = "112" name = "Lambda Aurigae" position = { x = 14 y = 68 } initializer = scg_b }
+system = { id = "113" name = "Galador" position = { x = 51 y = 46 } initializer = scf_b }
+system = { id = "114" name = "Iota Bootis" position = { x = 69 y = 6 } initializer = denobulan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = denobulan_unity } } }
+system = { id = "115" name = "Capella" position = { x = 21 y = 67 } initializer = rl_capella }
+system = { id = "116" name = "Trill" position = { x = 60 y = 37 } initializer = trill_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trill_republic } } }
+system = { id = "117" name = "Melona" position = { x = 69 y = 20 } initializer = melona_b }
+system = { id = "118" name = "Xendi Sabu" position = { x = 66 y = -29 } initializer = scm_b }
+system = { id = "119" name = "Dakala" position = { x = 19 y = 69 } initializer = dakala_b }
+system = { id = "120" name = "Sarir" position = { x = 18 y = 71 } initializer = scf_b }
+system = { id = "121" name = "Upsilon Andromedae" position = { x = 54 y = 49 } initializer = scf_b }
+system = { id = "122" name = "Alpha Hydri" position = { x = -61 y = -41 } initializer = scf_b }
+system = { id = "123" name = "Nausicaa" position = { x = -39 y = 63 } initializer = nausicaan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = nausicaan_tribes } } }
+system = { id = "124" name = "Alshain" position = { x = 53 y = -53 } initializer = scg_b }
+system = { id = "125" name = "Errai" position = { x = 65 y = 36 } initializer = sck_b }
+system = { id = "126" name = "Iota Piscium" position = { x = 60 y = 44 } initializer = sck_b }
+system = { id = "127" name = "Klaestron" position = { x = 74 y = 4 } initializer = scf_b }
+system = { id = "128" name = "Hanolan" position = { x = 44 y = 60 } initializer = sck_b }
+system = { id = "129" name = "Maxia Zeta" position = { x = 70 y = -25 } initializer = sck_b }
+system = { id = "130" name = "Qualor" position = { x = -72 y = 17 } initializer = sck_b }
+system = { id = "131" name = "Tau Hydrae" position = { x = -62 y = 41 } initializer = scf_b }
+system = { id = "132" name = "Pi Pharosi" position = { x = -64 y = 37 } initializer = pi_pharosi_b }
+system = { id = "133" name = "Halka" position = { x = -19 y = -72 } initializer = halka_b }
+system = { id = "134" name = "Alpha Fornacis" position = { x = -54 y = 54 } initializer = scf_b }
+system = { id = "135" name = "26 Draconis" position = { x = 76 y = 1 } initializer = pyrithia_b }
+system = { id = "136" name = "Amal" position = { x = 44 y = -62 } initializer = xindi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = xindi_council } } }
+system = { id = "137" name = "Madena" position = { x = 64 y = -43 } initializer = madena_b }
+system = { id = "138" name = "Asellus Primus" position = { x = 77 y = 5 } initializer = scf_b }
+system = { id = "139" name = "Eta Cephei" position = { x = 76 y = 11 } initializer = sck_b }
+system = { id = "140" name = "Pi Ursae Majoris" position = { x = 37 y = 67 } initializer = scg_b }
+system = { id = "141" name = "Talitha Borealis" position = { x = 11 y = 76 } initializer = sca_b }
+system = { id = "142" name = "Kalandra" position = { x = 54 y = 54 } initializer = scf_b }
+system = { id = "143" name = "Nu Lupi" position = { x = -43 y = -66 } initializer = scg_b }
+system = { id = "144" name = "Psi Capricorni" position = { x = 27 y = -74 } initializer = scf_b }
+system = { id = "145" name = "Psi Serpentis" position = { x = 14 y = -77 } initializer = saurian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = saurian_league } } }
+system = { id = "146" name = "Alchiba" position = { x = -73 y = -28 } initializer = scf_b }
+system = { id = "147" name = "Tohvun" position = { x = -76 y = 20 } initializer = scf_b }
+system = { id = "148" name = "Epsilon Fornacis" position = { x = -53 y = 57 } initializer = maluria_b }
+system = { id = "149" name = "Temecklia" position = { x = 72 y = 34 } initializer = sck_b }
+system = { id = "150" name = "Alderamin" position = { x = 78 y = 15 } initializer = sca_b }
+system = { id = "151" name = "Eta Leporis" position = { x = -51 y = 61 } initializer = scf_b }
+system = { id = "152" name = "Nu Phoenicis" position = { x = -77 y = -21 } initializer = scf_b }
+system = { id = "153" name = "Rhei'llhne" position = { x = -78 y = -14 } initializer = rheillhne_b }
+system = { id = "154" name = "Ras Alhague" position = { x = 47 y = -64 } initializer = sca_b }
+system = { id = "155" name = "Xindus" position = { x = 42 y = -68 } initializer = xindus_homeworld_system_event_spawn }
+system = { id = "156" name = "Solarion" position = { x = 41 y = 68 } initializer = sca_b }
+system = { id = "157" name = "Lamemda" position = { x = 73 y = 35 } initializer = scm_b }
+system = { id = "158" name = "19 Ceti" position = { x = 67 y = 45 } initializer = scf_b }
+system = { id = "159" name = "Sigma Bootis" position = { x = 57 y = -57 } initializer = scf_b }
+system = { id = "160" name = "Castor" position = { x = -11 y = 81 } initializer = sca_b }
+system = { id = "161" name = "Denebokab" position = { x = 52 y = -64 } initializer = scf_b }
+system = { id = "162" name = "Mu Arae" position = { x = -28 y = -77 } initializer = scg_b }
+system = { id = "163" position = { x = 73 y = 39 } initializer = scg_b }
+system = { id = "164" name = "Pyrellia" position = { x = 10 y = 82 } initializer = scg_b }
+system = { id = "165" name = "Iota Carinae" position = { x = -75 y = -33 } initializer = scf_b }
+system = { id = "166" name = "Romulus" position = { x = -49 y = -68 } initializer = romulan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = romulan_star_empire } } }
+system = { id = "167" name = "Romii" position = { x = -48 y = -64 } initializer = romulan_satellite_1 }
+system = { id = "168" name = "Terix" position = { x = -59 y = -50 } initializer = romulan_satellite_2 }
+system = { id = "169" name = "Beta Veldonna" position = { x = 26 y = 79 } initializer = betazoid_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = betazoid_houses } } }
+system = { id = "170" name = "Cheron" position = { x = -43 y = -72 } initializer = scf_b }
+system = { id = "171" name = "Chi Herculis" position = { x = 77 y = -31 } initializer = scf_b }
+system = { id = "172" name = "Orellus" position = { x = 83 y = 3 } initializer = scf_b }
+system = { id = "173" name = "Xi Pegasi" position = { x = 84 y = -12 } initializer = neethia_b }
+system = { id = "174" name = "V886 Centauri" position = { x = -73 y = -42 } initializer = scf_b }
+system = { id = "175" name = "Alpha Circini" position = { x = -61 y = -61 } initializer = sca_b }
+system = { id = "176" name = "Lta" position = { x = 28 y = -83 } initializer = scf_b }
+system = { id = "177" name = "Kohlan" position = { x = 76 y = -44 } initializer = scf_b }
+system = { id = "178" name = "Caph" position = { x = 77 y = 41 } initializer = scf_b }
+system = { id = "179" name = "Sheva" position = { x = 42 y = 76 } initializer = scm_b }
+system = { id = "180" name = "Chin'Toka" position = { x = 48 y = 73 } initializer = scg_b }
+system = { id = "181" name = "Irtok" position = { x = 82 y = -33 } initializer = scg_b }
+system = { id = "182" name = "Iota Horologii" position = { x = -89 y = 2 } initializer = scg_b }
+system = { id = "183" name = "Rho Coronae Borealis" position = { x = 71 y = -53 } initializer = scg_b }
+system = { id = "184" name = "Ukdah" position = { x = -74 y = 48 } initializer = scf_b }
+system = { id = "185" name = "Minos Korva" position = { x = 35 y = 82 } initializer = scm_b }
+system = { id = "186" name = "Rymus" position = { x = 66 y = -59 } initializer = sck_b }
+system = { id = "187" name = "Iota Pavonis" position = { x = -42 y = -79 } initializer = scg_b }
+system = { id = "188" name = "Regulon" position = { x = 75 y = 49 } initializer = scm_b }
+system = { id = "189" name = "Dorvan" position = { x = 73 y = 53 } initializer = dorvan_b }
+system = { id = "190" name = "Volchok" position = { x = 86 y = -30 } initializer = scf_b }
+system = { id = "191" name = "Gamma Coronae Australis" position = { x = 1 y = -91 } initializer = scf_b }
+system = { id = "192" name = "Megrez" position = { x = 70 y = 59 } initializer = sca_b }
+system = { id = "193" name = "Zosma" position = { x = -62 y = 67 } initializer = sca_b }
+system = { id = "194" name = "Xi Geminorum" position = { x = -33 y = 86 } initializer = scf_b }
+system = { id = "195" name = "Iota Centauri" position = { x = -71 y = -59 } initializer = sca_b }
+system = { id = "196" name = "Menkent" position = { x = -61 y = -70 } initializer = sck_b }
+system = { id = "197" name = "Miridian" position = { x = -88 y = 27 } initializer = sck_b }
+system = { id = "198" name = "Son'a" position = { x = -24 y = 90 } initializer = sona_homeworld spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = sona_command } } }
+system = { id = "199" name = "Delta Equulei" position = { x = 82 y = -45 } initializer = scf_b }
+system = { id = "200" name = "Epsilon Reticuli" position = { x = -92 y = -16 } initializer = sck_b }
+system = { id = "201" name = "Eta Corvi" position = { x = -83 y = -43 } initializer = scf_b }
+system = { id = "202" name = "Pi Mensae" position = { x = -86 y = -37 } initializer = scg_b }
+system = { id = "203" name = "Sheratan" position = { x = 56 y = 75 } initializer = sca_b }
+system = { id = "204" name = "Theta Cygni" position = { x = 93 y = -11 } initializer = scf_b }
+system = { id = "205" name = "Ventarus Indrilon" position = { x = 87 y = -39 } initializer = ferengi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = ferengi_alliance } } }
+system = { id = "206" name = "Rog" position = { x = 89 y = -32 } initializer = scf_b }
+system = { id = "207" name = "Eta Serpentis" position = { x = 43 y = -85 } initializer = sck_b }
+system = { id = "208" name = "Psi Velorum" position = { x = -95 y = 5 } initializer = scf_b }
+system = { id = "209" name = "Mu Virginis" position = { x = -21 y = -92 } initializer = scf_b }
+system = { id = "210" name = "Tau Piscis Austrini" position = { x = 25 y = -92 } initializer = scf_b }
+system = { id = "211" name = "Wasat" position = { x = -26 y = 91 } initializer = scf_b }
+system = { id = "212" name = "Koralis" position = { x = 80 y = 50 } initializer = scm_b }
+system = { id = "213" name = "Fahleena" position = { x = 85 y = 45 } initializer = scm_b }
+system = { id = "214" name = "Balosnee" position = { x = 73 y = -63 } initializer = scg_b }
+system = { id = "215" name = "Thalos" position = { x = 84 y = -49 } initializer = scm_b }
+system = { id = "216" name = "Beta Pictoris" position = { x = -95 y = 20 } initializer = sca_b }
+system = { id = "217" name = "Alpha Comae Berenices" position = { x = -49 y = -84 } initializer = scf_b }
+system = { id = "218" name = "Mothallah" position = { x = 64 y = 73 } initializer = scf_b }
+system = { id = "219" name = "Omicron Aquilae" position = { x = 75 y = -63 } initializer = scf_b }
+system = { id = "220" name = "Glintara" position = { x = -66 y = -71 } initializer = scg_b }
+system = { id = "221" name = "Setlik" position = { x = 47 y = 85 } initializer = sca_b }
+system = { id = "222" name = "Dopteria" position = { x = 83 y = -54 } initializer = sck_b }
+system = { id = "223" name = "Tarahong" position = { x = 87 y = -46 } initializer = scb_b }
+system = { id = "224" name = "Alpha Chamaeleontis" position = { x = -93 y = -34 } initializer = scf_contx_b }
+system = { id = "225" name = "Eta Crucis" position = { x = -86 y = -48 } initializer = scf_contx_b }
+system = { id = "226" name = "Nu Canis Majoris" position = { x = -74 y = 65 } initializer = sck_b }
+system = { id = "227" name = "Wei" position = { x = -19 y = -97 } initializer = sck_b }
+system = { id = "228" name = "Tzenketh" position = { x = 96 y = 22 } initializer = tzenkethi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tzenkethi_coalition } } }
+system = { id = "229" name = "Garid" position = { x = -72 y = -69 } initializer = garidian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = garidian_republic } } }
+system = { id = "230" name = "Aldebaran" position = { x = -2 y = 100 } initializer = sck_b }
+system = { id = "231" name = "AB Doradus" position = { x = -99 y = -9 } initializer = sck_b }
+system = { id = "232" name = "Bardeezi" position = { x = 76 y = 64 } initializer = scf_b }
+system = { id = "233" name = "Nimbus" position = { x = -54 y = -86 } initializer = nimbus_b }
+system = { id = "234" name = "Jouret" position = { x = -95 y = 35 } initializer = jouret_b }
+system = { id = "235" name = "Clarus" position = { x = 96 y = -31 } initializer = sck_b }
+system = { id = "236" name = "Gamma Doradus" position = { x = -100 y = 18 } initializer = scf_b }
+system = { id = "237" name = "Hamal" position = { x = 59 y = 82 } initializer = sck_b }
+system = { id = "238" name = "Pi Cancri" position = { x = -58 y = 83 } initializer = scg_b }
+system = { id = "239" name = "Unroth" position = { x = -99 y = 21 } initializer = scf_b }
+system = { id = "240" name = "Tarod" position = { x = -44 y = -91 } initializer = sck_b }
+system = { id = "241" name = "Bajor" position = { x = 84 y = 57 } initializer = bajoran_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bajoran_republic } } }
+system = { id = "242" name = "Algorab" position = { x = -94 y = -40 } initializer = sca_contx_b }
+system = { id = "243" name = "Theta Pegasi" position = { x = 95 y = -38 } initializer = sca_b }
+system = { id = "244" name = "Kappa Tucanae" position = { x = -89 y = -50 } initializer = scf_b }
+system = { id = "245" name = "Korma" position = { x = 76 y = 68 } initializer = scf_b }
+system = { id = "246" name = "Balancar" position = { x = 97 y = -37 } initializer = scf_b }
+system = { id = "247" name = "Lappa" position = { x = 92 y = -48 } initializer = sck_b }
+system = { id = "248" name = "Olmerak" position = { x = 95 y = 42 } initializer = scg_b }
+system = { id = "249" name = "Barzan" position = { x = 103 y = -13 } initializer = barzan_homeworld }
+system = { id = "250" name = "Theta Draconis" position = { x = 105 y = 0 } initializer = scf_b }
+system = { id = "251" name = "94 Aquarii" position = { x = 27 y = -101 } initializer = fellebia_b }
+system = { id = "252" name = "T'Met" position = { x = -70 y = -80 } initializer = scf_b }
+system = { id = "253" name = "Epsilon Serpentis" position = { x = 24 y = -103 } initializer = sca_b }
+system = { id = "254" name = "Kappa Reticuli" position = { x = -105 y = -15 } initializer = scf_b }
+system = { id = "255" name = "Lambda Arae" position = { x = -33 y = -101 } initializer = scf_b }
+system = { id = "256" name = "Iota Virginis" position = { x = -40 y = -98 } initializer = scf_b }
+system = { id = "257" name = "Cardassia" position = { x = 93 y = 52 } initializer = cardassian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cardassian_union } } }
+system = { id = "258" name = "Krios" position = { x = -98 y = 48 } initializer = krios_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = krios_dynasties } } }
+system = { id = "259" name = "Valt" position = { x = -104 y = 34 } initializer = valt_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = valtese_senate } } }
+system = { id = "260" name = "Goralis" position = { x = 99 y = 57 } initializer = cardassian_satellite_1 }
+system = { id = "261" name = "Regulak" position = { x = 102 y = 43 } initializer = cardassian_satellite_2 }
+system = { id = "262" name = "Lur" position = { x = 82 y = 69 } initializer = lurian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = lurian_principality } } }
+system = { id = "263" name = "Theta Sculptoris" position = { x = -24 y = -104 } initializer = scf_b }
+system = { id = "264" name = "Zeta Leporis" position = { x = -69 y = 82 } initializer = xarantine_b }
+system = { id = "265" name = "Kappa Fornacis" position = { x = -52 y = 95 } initializer = kappa_fornacis_b }
+system = { id = "266" name = "Gasko" position = { x = -107 y = 17 } initializer = sca_b }
+system = { id = "267" name = "Psi Draconis" position = { x = 106 y = 24 } initializer = scf_b }
+system = { id = "268" name = "Head of Hydrus" position = { x = -102 y = -35 } initializer = scf_b }
+system = { id = "269" name = "Gemulon" position = { x = 108 y = 4 } initializer = scg_b }
+system = { id = "270" name = "Gamma Hromi" position = { x = -85 y = 67 } initializer = scg_b }
+system = { id = "271" name = "Iadara" position = { x = 53 y = 95 } initializer = sck_b }
+system = { id = "272" name = "Gienah" position = { x = 106 y = -27 } initializer = sck_b }
+system = { id = "273" name = "Arhennius" position = { x = -76 y = 79 } initializer = arhennius_b }
+system = { id = "274" name = "Eta Scorpii" position = { x = -29 y = -107 } initializer = scf_b }
+system = { id = "275" name = "Zeta Virginis" position = { x = -60 y = -93 } initializer = sca_contx_b }
+system = { id = "276" name = "Alpha Serpentis" position = { x = 27 y = -107 } initializer = sck_b }
+system = { id = "277" name = "Upsilon Aquarii" position = { x = 68 y = -87 } initializer = scf_b }
+system = { id = "278" name = "Gamma Tucanae" position = { x = -66 y = -91 } initializer = scf_contx_b }
+system = { id = "279" name = "Gemma" position = { x = 75 y = -83 } initializer = sca_b }
+system = { id = "280" name = "Sarin" position = { x = 82 y = -76 } initializer = sca_b }
+system = { id = "281" name = "Zubenelgenubi" position = { x = -36 y = -106 } initializer = scf_b }
+system = { id = "282" name = "Ronara" position = { x = 70 y = 87 } initializer = scf_b }
+system = { id = "283" name = "Achernar" position = { x = -105 y = -40 } initializer = scb_contx_b }
+system = { id = "284" name = "Sherman" position = { x = -29 y = 109 } initializer = sherman_b }
+system = { id = "285" name = "Haakona" position = { x = -98 y = -57 } initializer = scg_b }
+system = { id = "286" name = "Zeta Serpentis" position = { x = 46 y = -103 } initializer = scf_b }
+system = { id = "287" name = "Arbazan" position = { x = 32 y = -110 } initializer = arbazan_b }
+system = { id = "288" name = "Prexnak" position = { x = 105 y = -49 } initializer = scm_b }
+system = { id = "289" name = "Kaus Borealis" position = { x = 16 y = -114 } initializer = sck_b }
+system = { id = "290" name = "Donatu" position = { x = -47 y = 107 } initializer = scg_b }
+system = { id = "291" name = "Iota Leonis" position = { x = -108 y = 44 } initializer = iota_leonis_b }
+system = { id = "292" name = "Regulus" position = { x = -84 y = 81 } initializer = scb_b }
+system = { id = "293" name = "Archanis" position = { x = -66 y = 98 } initializer = sck_b }
+system = { id = "294" name = "Tevak" position = { x = 103 y = 57 } initializer = scm_b }
+system = { id = "295" name = "Gamma Ceti" position = { x = 22 y = 116 } initializer = sca_b }
+system = { id = "296" name = "Merak" position = { x = 61 y = 101 } initializer = sca_b }
+system = { id = "297" name = "Delta Velorum" position = { x = -119 y = -4 } initializer = sca_b }
+system = { id = "298" name = "Xep'a" position = { x = 110 y = 47 } initializer = xepolite_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = xepolite_guilds } } }
+system = { id = "299" name = "Adelphous" position = { x = -108 y = 50 } initializer = sck_b }
+system = { id = "300" name = "Organia" position = { x = -21 y = 118 } initializer = organia_b }
+system = { id = "301" name = "Cebalrai" position = { x = 36 y = -115 } initializer = sck_b }
+system = { id = "302" name = "Phi Pavonis" position = { x = -49 y = -110 } initializer = scf_b }
+system = { id = "303" name = "Mizar" position = { x = 110 y = 51 } initializer = sca_b }
+system = { id = "304" name = "Alioth" position = { x = 103 y = 64 } initializer = sca_b }
+system = { id = "305" name = "Zeta Aquilae" position = { x = 89 y = -83 } initializer = zeta_aquilae_b }
+system = { id = "306" name = "Phecda" position = { x = 77 y = 94 } initializer = sca_b }
+system = { id = "307" name = "Yridia" position = { x = -52 y = 110 } initializer = yridian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = yridian_league } } }
+system = { id = "308" name = "Monak" position = { x = 112 y = 50 } initializer = sck_b }
+system = { id = "309" name = "Valeria" position = { x = 119 y = 28 } initializer = valerian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = valerian_freeholds } } }
+system = { id = "310" name = "Gamma Crateris" position = { x = -122 y = -12 } initializer = sca_b }
+system = { id = "311" name = "Lambda Fornacis" position = { x = -103 y = 67 } initializer = scg_b }
+system = { id = "312" name = "Mu Ceti" position = { x = 38 y = 117 } initializer = mu_ceti_b }
+system = { id = "313" name = "Devoras" position = { x = -122 y = 6 } initializer = scm_b }
+system = { id = "314" name = "Kelvas" position = { x = 106 y = 64 } initializer = sck_b }
+system = { id = "315" name = "Devolin" position = { x = -80 y = -95 } initializer = sca_contx_b }
+system = { id = "316" name = "Gamma Bootis" position = { x = 115 y = -46 } initializer = seginus_b }
+system = { id = "317" name = "Ramatis" position = { x = -96 y = 78 } initializer = scg_b }
+system = { id = "318" name = "Beta Columbae" position = { x = -111 y = 61 } initializer = sck_b }
+system = { id = "319" name = "Talos Star Group" position = { x = 52 y = 116 } initializer = talos_homeworld }
+system = { id = "320" name = "Simperia" position = { x = 120 y = 44 } initializer = scm_b }
+system = { id = "321" name = "Alrakis" position = { x = 126 y = -17 } initializer = scf_b }
+system = { id = "322" name = "Naia" position = { x = 127 y = -11 } initializer = naia_b }
+system = { id = "323" name = "Ascella" position = { x = 15 y = -126 } initializer = sca_b }
+system = { id = "324" name = "Epsilon Ceti" position = { x = -18 y = 126 } initializer = rl_epsilon_ceti }
+system = { id = "325" name = "Camus" position = { x = 0 y = 127 } initializer = scm_b }
+system = { id = "326" name = "Cursa" position = { x = -55 y = 116 } initializer = sca_b }
+system = { id = "327" name = "Gacrux" position = { x = -111 y = -64 } initializer = scm_b }
+system = { id = "328" name = "Ganalda" position = { x = -77 y = 103 } initializer = scb_tropx_b }
+system = { id = "329" name = "Khitomer" position = { x = -111 y = 69 } initializer = khitomer_b }
+system = { id = "330" name = "Delta Muscae" position = { x = -109 y = -73 } initializer = sck_b }
+system = { id = "331" name = "Eta Draconis" position = { x = 132 y = 6 } initializer = scg_b }
+system = { id = "332" name = "Sadaltager" position = { x = 120 y = -55 } initializer = scf_b }
+system = { id = "333" name = "Beta Thoridor" position = { x = -118 y = 58 } initializer = scm_b }
+system = { id = "334" name = "Algol" position = { x = 68 y = 114 } initializer = scb_b }
+system = { id = "335" name = "Graffias" position = { x = 0 y = -133 } initializer = scf_b }
+system = { id = "336" name = "Omega Andromedae" position = { x = 102 y = 85 } initializer = scf_b }
+system = { id = "337" name = "Pi Piscis Austrini" position = { x = 19 y = -132 } initializer = sca_b }
+system = { id = "338" name = "Eta Arietis" position = { x = 73 y = 112 } initializer = scf_b }
+system = { id = "339" name = "Al Durajah" position = { x = 66 y = -118 } initializer = sca_b }
+system = { id = "340" name = "Praecipua" position = { x = -23 y = 133 } initializer = sck_b }
+system = { id = "341" name = "Deneb Kaitos" position = { x = 129 y = 44 } initializer = rl_deneb_kaitos }
+system = { id = "342" name = "Korvat" position = { x = -106 y = 86 } initializer = korvat_b }
+system = { id = "343" name = "Morska" position = { x = -112 y = 78 } initializer = scm_b }
+system = { id = "344" name = "Altais" position = { x = 136 y = 21 } initializer = scg_b }
+system = { id = "345" name = "Beta Magellan" position = { x = 135 y = 26 } initializer = bynar_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = bynar_domains } } }
+system = { id = "346" name = "Alpha Pictoris" position = { x = -137 y = -5 } initializer = sca_b }
+system = { id = "347" name = "Lis" position = { x = 128 y = 51 } initializer = lissepian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = lissepian_parliaments  } } }
+system = { id = "348" name = "Beta Circini" position = { x = -87 y = -107 } initializer = sca_b }
+system = { id = "349" name = "Lambda Bootis" position = { x = 137 y = -7 } initializer = sca_b }
+system = { id = "350" name = "Nushaba" position = { x = 2 y = -138 } initializer = sck_b }
+system = { id = "351" name = "Kappa Delphini" position = { x = 114 y = -79 } initializer = antos_b }
+system = { id = "352" name = "Alpha Indi" position = { x = -18 y = -138 } initializer = sck_b }
+system = { id = "353" name = "Kuma" position = { x = 139 y = -17 } initializer = sca_b }
+system = { id = "354" name = "Rho Capricorni" position = { x = 63 y = -125 } initializer = scf_b }
+system = { id = "355" name = "Ruchbah" position = { x = 111 y = 85 } initializer = sca_b }
+system = { id = "356" name = "Sigma Tamar" position = { x = 0 y = 141 } initializer = tamarian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tamarian_unity } } }
+system = { id = "357" name = "No'Mat" position = { x = -100 y = 100 } initializer = nomat_b }
+system = { id = "358" name = "Nequencia" position = { x = -136 y = 36 } initializer = scm_b }
+system = { id = "359" name = "Exile" position = { x = -138 y = 29 } initializer = suliban_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = suliban_cabal } } }
+system = { id = "360" name = "Beta Reticuli" position = { x = -139 y = -22 } initializer = sck_b }
+system = { id = "361" name = "Kurhah" position = { x = 135 y = 39 } initializer = sca_b }
+system = { id = "362" name = "Gamma Eridon" position = { x = -77 y = 118 } initializer = scm_tropx_b }
+system = { id = "363" name = "Alnair" position = { x = -25 y = -140 } initializer = scb_b }
+system = { id = "364" name = "Edasich" position = { x = 142 y = 10 } initializer = sck_b }
+system = { id = "365" name = "Lambda Geminorum" position = { x = -51 y = 133 } initializer = sca_b }
+system = { id = "366" name = "Pi Hydrae" position = { x = -85 y = -113 } initializer = sck_b }
+system = { id = "367" name = "Rotanev" position = { x = 122 y = -73 } initializer = scf_b }
+system = { id = "368" name = "Nigala" position = { x = 17 y = 142 } initializer = scm_b }
+system = { id = "369" name = "H'atoria" position = { x = -135 y = 49 } initializer = sck_b }
+system = { id = "370" name = "Alkaid" position = { x = 143 y = 28 } initializer = scb_b }
+system = { id = "371" name = "Brestant" position = { x = -104 y = 101 } initializer = scf_b }
+system = { id = "372" name = "Marrat" position = { x = -73 y = 126 } initializer = marrat_b }
+system = { id = "373" name = "Xi Serpentis" position = { x = 27 y = -144 } initializer = scf_b }
+system = { id = "374" name = "Qo'nos" position = { x = -119 y = 86 } initializer = klingon_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = klingon_empire } } }
+system = { id = "375" name = "Gorath" position = { x = -116 y = 101 } initializer = klingon_satellite_1 }
+system = { id = "376" name = "Boreth" position = { x = -91 y = 108 } initializer = klingon_satellite_2 }
+system = { id = "377" name = "Beta Penthe" position = { x = -115 y = 80 } initializer = klingon_satellite_3 }
+system = { id = "378" name = "Breen" position = { x = 142 y = -35 } initializer = breen_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = breen_confederacy } } }
+system = { id = "379" name = "Delta Andromedae" position = { x = 128 y = 74 } initializer = sck_b }
+system = { id = "380" name = "Sadalbari" position = { x = 148 y = 3 } initializer = scg_b }
+system = { id = "381" name = "Yed Posterior" position = { x = 22 y = -146 } initializer = scg_b }
+system = { id = "382" name = "Chaltok" position = { x = -148 y = 16 } initializer = scm_b }
+system = { id = "383" name = "Beta Volantis" position = { x = -148 y = -26 } initializer = sck_b }
+system = { id = "384" name = "Mu Aquilae" position = { x = 106 y = -106 } initializer = sck_b }
+system = { id = "385" name = "Beta Lankal" position = { x = -131 y = 73 } initializer = scf_tropx_b }
+system = { id = "386" name = "Davlos" position = { x = -8 y = 150 } initializer = sca_b }
+system = { id = "387" name = "Mempa" position = { x = -128 y = 77 } initializer = mempa_b }
+system = { id = "388" name = "Algiedi Secunda" position = { x = 78 y = -129 } initializer = scg_b }
+system = { id = "389" name = "Alhena" position = { x = -44 y = 145 } initializer = sca_b }
+system = { id = "390" name = "Eta Antliae" position = { x = -151 y = 5 } initializer = scf_b }
+system = { id = "391" name = "Sceptrum" position = { x = -78 y = 129 } initializer = sck_b }
+system = { id = "392" name = "Tranome Sar" position = { x = -149 y = 32 } initializer = sck_b }
+system = { id = "393" name = "Galen" position = { x = 102 y = 113 } initializer = scg_b }
+system = { id = "394" name = "Cor Caroli" position = { x = 132 y = 76 } initializer = sca_b }
+system = { id = "395" name = "Pi Piscium" position = { x = 97 y = 117 } initializer = scf_b }
+system = { id = "396" name = "Dozaria" position = { x = 137 y = 67 } initializer = dozaria_b }
+system = { id = "397" name = "Epsilon Chamaeleontis" position = { x = -132 y = -77 } initializer = scb_b }
+system = { id = "398" name = "Gamma Trianguli" position = { x = 93 y = 123 } initializer = sca_b }
+system = { id = "399" name = "Misam" position = { x = 84 y = 130 } initializer = sck_b }
+system = { id = "400" name = "Sophian" position = { x = 137 y = -72 } initializer = scg_b }
+system = { id = "401" name = "Grumium" position = { x = 155 y = -13 } initializer = sck_b }
+system = { id = "402" name = "Miaplacidus" position = { x = -149 y = -43 } initializer = sca_b }
+system = { id = "403" name = "Narendra" position = { x = -149 y = 48 } initializer = sck_b }
+system = { id = "404" name = "Qu'Vat" position = { x = -128 y = 90 } initializer = quvat_b }
+system = { id = "405" name = "Nusakan" position = { x = 112 y = -110 } initializer = sca_b }
+system = { id = "406" name = "Talvath" position = { x = -147 y = -56 } initializer = sck_b }
+system = { id = "407" name = "Iota Cephei" position = { x = 147 y = 57 } initializer = sck_b }
+system = { id = "408" name = "Kappa Pegasi" position = { x = 154 y = -33 } initializer = scf_b }
+system = { id = "409" name = "Upsilon Ursae Majoris" position = { x = 68 y = 142 } initializer = scf_b }
+system = { id = "410" name = "Khazara" position = { x = -157 y = -8 } initializer = scg_b }
+system = { id = "411" name = "Alpha Horologii" position = { x = -147 y = 63 } initializer = sck_b }
+system = { id = "412" name = "New Romulus" position = { x = -160 y = 20 } initializer = dewa_b }
+system = { id = "413" name = "Talar" position = { x = 120 y = 108 } initializer = talarian_homeworld spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = talarian_republic } } }
+system = { id = "414" name = "Rho Virginis" position = { x = -146 y = -68 } initializer = sca_b }
+system = { id = "415" name = "Cygnet" position = { x = 25 y = 159 } initializer = sck_b }
+system = { id = "416" name = "Acamar" position = { x = -151 y = 61 } initializer = acamarian_homeworld spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = acamarian_sovereignty } } }
+system = { id = "417" name = "Iota Geminorum" position = { x = -31 y = 160 } initializer = tribble_b }
+system = { id = "418" name = "Mu Telescopii" position = { x = -49 y = -155 } initializer = scf_b }
+system = { id = "419" name = "Alkalurops" position = { x = 143 y = -81 } initializer = scf_b }
+system = { id = "420" name = "Azha" position = { x = -20 y = 163 } initializer = sck_b }
+system = { id = "421" name = "Epsilon Monocerotis" position = { x = -71 y = 148 } initializer = scf_b }
+system = { id = "422" name = "Iota Cygni" position = { x = 163 y = -18 } initializer = sca_b }
+system = { id = "423" name = "Delta Bootis" position = { x = 132 y = -99 } initializer = scg_b }
+system = { id = "424" name = "Rho Sagittarii" position = { x = 57 y = -155 } initializer = scf_b }
+system = { id = "425" name = "Tau Sagittarii" position = { x = 27 y = -163 } initializer = sck_b }
+system = { id = "426" name = "" position = { x = 80 y = 145 } initializer = scg_b initializer = antedian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = antedian_shoals } } }
+system = { id = "427" name = "Forcas" position = { x = -29 y = 163 } initializer = sck_b }
+system = { id = "428" name = "Dubhe" position = { x = 102 y = 131 } initializer = sck_b }
+system = { id = "429" name = "" position = { x = 110 y = 126 } initializer = edo_homeworld }
+system = { id = "430" name = "Kappa Cygni" position = { x = 167 y = -16 } initializer = scg_b }
+system = { id = "431" name = "Al Thalimain" position = { x = 85 y = -146 } initializer = scb_b }
+system = { id = "432" name = "Alpha Volantis" position = { x = -164 y = -37 } initializer = sck_b }
+system = { id = "433" name = "Alphecca Meridiana" position = { x = -1 y = -168 } initializer = sca_b }
+system = { id = "434" name = "Beid" position = { x = -55 y = 159 } initializer = scf_b }
+system = { id = "435" name = "Iota Crucis" position = { x = -143 y = -90 } initializer = sck_b }
+system = { id = "436" name = "Flaxia" position = { x = -146 y = -84 } initializer = FlaxianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = flaxian_hegemony } } }
+system = { id = "437" name = "Iconia" position = { x = -169 y = 18 } initializer = iconia_b }
+system = { id = "438" name = "Janus" position = { x = 61 y = 158 } initializer = janus_mm }
+system = { id = "439" name = "Murasaki 312" position = { x = 12 y = 169 } initializer = murasaki_312_b }
+system = { id = "440" name = "Beta Trianguli" position = { x = -105 y = -134 } initializer = sca_b }
+system = { id = "441" name = "Zeta Telescopii" position = { x = -42 y = -165 } initializer = scg_b }
+system = { id = "442" name = "Epsilon Hydrae" position = { x = -113 y = 130 } initializer = scg_tropx_b }
+system = { id = "443" name = "Gamma Normae" position = { x = -78 y = -154 } initializer = sck_b }
+system = { id = "444" name = "Nu Tauri" position = { x = -14 y = 172 } initializer = sca_b }
+system = { id = "445" name = "Xi Hydrae" position = { x = -168 y = -42 } initializer = scg_b }
+system = { id = "446" name = "Algieba" position = { x = -171 y = 30 } initializer = sck_b }
+system = { id = "447" name = "Gamma Centauri" position = { x = -149 y = -90 } initializer = sca_b }
+system = { id = "448" name = "Mu Andromedae" position = { x = 144 y = 97 } initializer = sca_b }
+system = { id = "449" name = "Sheliak" position = { x = 155 y = -79 } initializer = sheliak_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = sheliak_corporate } } }
+system = { id = "450" name = "Mu Piscis Austrini" position = { x = 40 y = -169 } initializer = sca_b }
+system = { id = "451" name = "El Nath" position = { x = 6 y = 175 } initializer = scb_b }
+system = { id = "452" name = "Kochab" position = { x = 161 y = 68 } initializer = sck_b }
+system = { id = "453" name = "Tau Centauri" position = { x = -151 y = -89 } initializer = sca_b }
+system = { id = "454" name = "Alya" position = { x = 106 y = -140 } initializer = sca_b }
+system = { id = "455" name = "Iota Trianguli Australis" position = { x = -103 y = -142 } initializer = scf_b }
+system = { id = "456" name = "Markab" position = { x = 177 y = -9 } initializer = scb_b }
+system = { id = "457" name = "Mu Leonis" position = { x = -72 y = 162 } initializer = mu_leonis_b }
+system = { id = "458" name = "Rho Tucanae" position = { x = -146 y = -100 } initializer = scf_b }
+system = { id = "459" name = "Gamma Hydrae" position = { x = -134 y = -117 } initializer = scg_b }
+system = { id = "460" name = "Subra" position = { x = -126 y = 128 } initializer = scf_b }
+system = { id = "461" name = "Hus Eyi" position = { x = -167 y = 68 } initializer = husnock_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = husnock_ascendency } } }
+system = { id = "462" name = "B'Ral" position = { x = -169 y = 62 } initializer = brinn_homeworld }
+system = { id = "463" name = "Ner" position = { x = -165 y = 73 } initializer = neryj_homeworld }
+system = { id = "464" name = "Durna" position = { x = -162 y = 79 } initializer = durnen_homeworld }
+system = { id = "465" name = "Arkushanangarushashutu" position = { x = -85 y = 159 } initializer = sck_b }
+system = { id = "466" name = "Theta Cephei" position = { x = 179 y = 24 } initializer = sca_b }
+system = { id = "467" name = "Balduk" position = { x = -177 y = 31 } initializer = sca_b }
+system = { id = "468" name = "D'Asray" position = { x = -180 y = 9 } initializer = dasray_b }
+system = { id = "469" name = "Tau Lacertae" position = { x = -79 y = 155 } initializer = gorn_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = gorn_empire } } }
+system = { id = "470" name = "Tholia" position = { x = 156 y = 98 } initializer = tholian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = tholian_assembly } } }
+system = { id = "471" name = "Konnoria" position = { x = 170 y = 72 } initializer = konnoria_b }
+system = { id = "472" name = "15 Lyncis" position = { x = 73 y = 181 } initializer = caitian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = caitian_union } } }
+system = { id = "473" name = "Fesarius" position = { x = 126 y = -162 } initializer = first_federation_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = first_federation } } }
+system = { id = "474" name = "Sergane" position = { x = -186 y = -87 } initializer = MoraliHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = morali_states } } }
+system = { id = "475" name = "Beta Renner" position = { x = 157 y = 132 } initializer = antican_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = antican_packs } } }
+system = { id = "476" name = "Beta Renner Secunda" position = { x = 153 y = 137 } initializer = selay_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = selay_clutches } } }
+system = { id = "477" name = "Zakdorn" position = { x = -170 y = -115 } initializer = zakdorn_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = zakdorn_alliance } } }
+system = { id = "478" name = "Kelai" position = { x = -36 y = 202 } initializer = kelpien_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kelpian_duchies } } }
+system = { id = "479" name = "Metronia" position = { x = -124 y = 164 } initializer = metron_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = metron_consortium } } }
+system = { id = "480" name = "" position = { x = -200 y = 65 } initializer = scb_b }
+system = { id = "481" name = "" position = { x = -190 y = 93 } initializer = scg_b }
+system = { id = "482" name = "" position = { x = 0 y = -152 } initializer = BrunaliHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = brunali_empire } } }
+system = { id = "483" name = "" position = { x = 27 y = -152 } initializer = devorian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = devorian_solidarity } } }
+system = { id = "484" name = "" position = { x = 53 y = -147 } initializer = FenDomarHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = fen_domar_states } } }
+system = { id = "485" name = "" position = { x = 79 y = -138 } initializer = hirogen_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = hirogen_hunters } } }
+system = { id = "486" name = "" position = { x = 103 y = -124 } initializer = kazon_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kazon_sects } } }
+system = { id = "487" name = "" position = { x = 124 y = -106 } initializer = kraylor_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kraylor_republic } } }
+system = { id = "488" name = "" position = { x = 142 y = -84 } initializer = krenim_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = krenim_imperium } } }
+system = { id = "489" name = "" position = { x = 157 y = -59 } initializer = LyridianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = lyridian_diaspora } } }
+system = { id = "490" name = "" position = { x = 167 y = -32 } initializer = NorcadianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = norcadian_harmony } } }
+system = { id = "491" name = "" position = { x = 172 y = -3 } initializer = talaxian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = talaxian_empire } } }
+system = { id = "492" name = "" position = { x = 172 y = 27 } initializer = vaadwaur_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vaadwaur_supremacy } } }
+system = { id = "493" name = "" position = { x = 166 y = 57 } initializer = voth_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = voth_theocracy } } }
+system = { id = "494" name = "" position = { x = 156 y = 86 } initializer = borg_initializer  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = the_borg_collective } } }
+system = { id = "495" name = "" position = { x = 141 y = 113 } initializer = zahl_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = zahl_technocracy } } }
+system = { id = "496" name = "" position = { x = 121 y = 137 } initializer = ArgrathianHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = argrathian_commonwealth } } }
+system = { id = "497" name = "" position = { x = 96 y = 157 } initializer = dosi_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = dosi_confederacy } } }
+system = { id = "498" name = "" position = { x = 69 y = 173 } initializer = founders_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = the_dominion } } }
+system = { id = "499" name = "" position = { x = 38 y = 185 } initializer = hurq_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = hurq_stagnancy } } }
+system = { id = "500" name = "" position = { x = 6 y = 191 } initializer = karemma_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = karemman_foundation } } }
+system = { id = "501" name = "" position = { x = -27 y = 191 } initializer = nyberrite_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = nyberrite_alliance } } }
+system = { id = "502" name = "" position = { x = -60 y = 185 } initializer = rakharian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = rakharian_free_states } } }
+system = { id = "503" name = "" position = { x = -92 y = 174 } initializer = TRogoranHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trogoran_empire } } }
+system = { id = "504" name = "" position = { x = -122 y = 157 } initializer = scg_b }
+system = { id = "505" name = "" position = { x = -149 y = 135 } initializer = scg_b }
+system = { id = "506" name = "" position = { x = -172 y = 109 } initializer = scg_b }
+system = { id = "507" name = "" position = { x = -190 y = 79 } initializer = kobali_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = kobali_republic } } }
+system = { id = "508" name = "" position = { x = -202 y = 45 } initializer = pralor_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = pralor_auxiliary } } }
+system = { id = "509" name = "" position = { x = -209 y = 10 } initializer = cravic_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = cravic_imperative } } }
+system = { id = "510" name = "" position = { x = -219 y = -67 } initializer = oschean_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = oschean_hunters } } }
+system = { id = "511" name = "" position = { x = -213 y = -109 } initializer = skrreean_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = skrreean_republic } } }
+system = { id = "512" name = "" position = { x = -174 y = -131 } initializer = signum_ab3 }
+system = { id = "513" name = "" position = { x = -150 y = -160 } initializer = signum_ab3 }
+system = { id = "514" name = "" position = { x = -122 y = -185 } initializer = WadiHomeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = wadi_emirates } } }
+system = { id = "515" name = "" position = { x = -89 y = -205 } initializer = yaderan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = yaderan_republic } } }
+system = { id = "516" name = "" position = { x = -53 y = -219 } initializer = vidiian_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = vidiian_sodality } } }
+system = { id = "517" name = "" position = { x = -14 y = -227 } initializer = signum_ab3 }
+system = { id = "518" name = "" position = { x = 25 y = -228 } initializer = banean_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = united_congress_of_banea } } }
+system = { id = "519" name = "" position = { x = 65 y = -222 } initializer = trabe_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = trabe_alliance } } }
+system = { id = "520" name = "" position = { x = 0 y = 152 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "521" name = "" position = { x = -27 y = 152 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "522" name = "" position = { x = -53 y = 147 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "523" name = "" position = { x = -79 y = 138 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "524" name = "" position = { x = -103 y = 124 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "525" name = "" position = { x = -124 y = 106 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "526" name = "" position = { x = -142 y = 84 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "527" name = "" position = { x = -157 y = 59 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "528" name = "" position = { x = -167 y = 32 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "529" name = "" position = { x = -172 y = 3 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "530" name = "" position = { x = -172 y = -27 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "531" name = "" position = { x = -166 y = -57 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "532" name = "" position = { x = -156 y = -86 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "533" name = "" position = { x = -141 y = -113 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "534" name = "" position = { x = -121 y = -137 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "535" name = "" position = { x = -96 y = -157 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "536" name = "" position = { x = -69 y = -173 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "537" name = "" position = { x = -38 y = -185 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "538" name = "" position = { x = -6 y = -191 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "539" name = "" position = { x = 27 y = -191 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "540" name = "" position = { x = 60 y = -185 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "541" name = "" position = { x = 92 y = -174 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "542" name = "" position = { x = 122 y = -157 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "543" name = "" position = { x = 149 y = -135 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "544" name = "" position = { x = 172 y = -109 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "545" name = "" position = { x = 190 y = -79 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "546" name = "" position = { x = 202 y = -45 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "547" name = "" position = { x = 209 y = -10 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "548" name = "" position = { x = 210 y = 26 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "549" name = "" position = { x = 204 y = 63 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "550" name = "" position = { x = 192 y = 98 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+system = { id = "551" name = "" position = { x = 174 y = 131 } initializer = STH_empire_init_01  spawn_weight = { base = 0 modifier = { add = 100000 STH_starting_country = no } } }
+nebula = { name = "Agosoria Nebula" position = { x = -18 y = 38 } radius = 20 }
+nebula = { name = "Arachnid Nebula" position = { x = 18 y = 61 } radius = 20 }
+nebula = { name = "Tibor Nebula" position = { x = 37 y = 64 } radius = 10 }
+nebula = { name = "Argolois Cluster" position = { x = 31 y = 72 } radius = 20 }
+nebula = { name = "Helaspont Nebula" position = { x = 78 y = -3 } radius = 20 }
+nebula = { name = "Delphic Expanse" position = { x = 43 y = -67 } radius = 40 }
+nebula = { name = "Briar Patch" position = { x = -27 y = 82 } radius = 25 }
+nebula = { name = "McAllister C-5 Nebula" position = { x = 54 y = 78 } radius = 25 }
+nebula = { name = "Paulson Nebula" position = { x = -87 y = 41 } radius = 20 }
+nebula = { name = "Betreka Nebula" position = { x = 17 y = 97 } radius = 25 }
+nebula = { name = "Amleth Nebula" position = { x = 82 y = 69 } radius = 20 }
+nebula = { name = "Hromi Cluster" position = { x = -87 y = 73 } radius = 20 }
+nebula = { name = "Rolor Nebula" position = { x = 113 y = 20 } radius = 25 }
+nebula = { name = "Hugora Nebula" position = { x = 77 y = 86 } radius = 20 }
+nebula = { name = "Dark Matter Nebula" position = { x = 117 y = 36 } radius = 20 }
+nebula = { name = "Azure Nebula" position = { x = -118 y = 48 } radius = 20 }
+nebula = { name = "Typhon Expanse" position = { x = -54 y = -115 } radius = 40 }
+nebula = { name = "Tong Beak Nebula" position = { x = 111 y = 72 } radius = 20 }
+nebula = { name = "Taurus Nebula" position = { x = -13 y = -146 } radius = 30 }
+nebula = { name = "Black Cluster" position = { x = 122 y = -95 } radius = 35 }
+nebula = { name = "Alwanir Nebula" position = { x = -5 y = 154 } radius = 30 }
+nebula = { name = "Ionization Cloud" position = { x = 12 y = 169 } radius = 25 }
+nebula = { name = "Etnap Nebula" position = { x = -113 y = 130 } radius = 25 }
+}
