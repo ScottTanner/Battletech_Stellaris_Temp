@@ -1,0 +1,48 @@
+### Static (mirror) map. 1400+ star systems. Mirror Map of Full Galaxy with all races.
+### This map must NOT include the zeta aquilae system, otherwise game will identify map as alpha/beta quadrant map.
+### This map must include the Signum system, initializer signum_mg, which is used to identify the map.
+static_galaxy_scenario = {
+	name = "STH_galaxy_mirror_galaxy_map"
+	colonizable_planet_odds = 1.0
+	priority = 6
+    default = no
+    num_empires = { min = 1 max = 32 }
+    num_empire_default = 1
+	num_hyperlanes = { min = 5 max = 5 }
+	num_hyperlanes_default = 5
+	advanced_empire_default = 0
+	fallen_empire_default = 0
+	fallen_empire_max = 0
+	core_radius = 25
+	random_hyperlanes = yes
+system = { 
+    id = "0" 
+    name = "Qo'nos" 
+    position = { 
+        x = { 
+            min = 184 
+            max = 152 
+        } 
+        y =  { 
+            min = 408 
+            max = 416 
+        } 
+    }
+    initializer = klingon_homeworld  
+    spawn_weight = { 
+        base = 0 
+        modifier = { 
+            add = 100000 
+            has_country_flag = klingon_empire 
+        } 
+    } 
+}
+system = { id = "1" name = "Romulus" position = { x = { min = 114 max = 90 } y =  { min = 219 max = 225 } }  initializer = romulan_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = romulan_star_empire } } }
+system = { id = "2" name = "Krenim" position = { x = { min = 273 max = 265 } y =  { min = -358 max = -332 } }  initializer = krenim_homeworld  spawn_weight = { base = 0 modifier = { add = 100000 has_country_flag = krenim_imperium } } }
+system = { id = "3" name = "" position = { x = { min = 167 max = 147 } y =  { min = 47 max = 47 } }  initializer = signum_mg }
+system = { id = "4" name = "" position = { x = { min = 178 max = 174 } y =  { min = 15 max = 35 } }  initializer = signum_mg }
+system = { id = "5" name = "" position = { x = { min = 194 max = 190 } y =  { min = -11 max = 7 } }  initializer = signum_mg }
+system = { id = "6" name = "" position = { x = { min = 208 max = 202 } y =  { min = -43 max = -23 } }  initializer = signum_mg }
+system = { id = "7" name = "Kelis" position = { x = { min = 214 max = 208 } y =  { min = -67 max = -45 } }  initializer = kelis_b }
+system = { id = "8" name = "Selnia" position = { x = { min = 217 max = 211 } y =  { min = -91 max = -69 } }  initializer = sck_b }
+system = { id = "9" name = "Nakan" position = { x = { min = 217 max = 211 } y =  { min = -118 max = -94 } }  }
