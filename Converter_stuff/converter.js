@@ -1,12 +1,31 @@
 let systems = {};
-const csvSystems = readCSV();
+let csvSystems = {};
+const fs = require('fs')
 
-console.log(csvSystems);
+combineData();
 
-function readCSV() {
+function combineData() {    
+    readCSV(function (err, csvData) {
+        csvSystems = csvData;
+        readPlainText(function (err, plainData) {
+            systems = plainData;
+            for (csvItem in csvData) {
+                for (plainItem in plainData) {
+                    let temp = plainData[plainItem].name.split("");
+                    temp.pop();
+                    temp = temp.join("");
+                    if (csvData[csvItem].name === temp){
+                        csvData[csvItem].allegiance = plainData[plainItem].allegiance;
+                    }
+                }
+            }
+            createMapData(csvData);
+        });
+    });
+}
+
+function readCSV(callBack) {
     let csvSystems = {}
-    const fs = require('fs')
-
     fs.readFile('Converted.txt', (err, data) => {
         if (err) throw err;
         let csvData = [];
@@ -23,26 +42,25 @@ function readCSV() {
             
             if (j[3] == 2764) {
                 csvSystems[i] = {
-                    name: j[0],
-                    position : {
-                        x : (.90 * j[1]) * -1,
-                        y : (.90 * j[2]) * -1
+                    "name" : j[0],
+                    "position" : {
+                        "x" : (.90 * j[1]) * -1,
+                        "y" : (.90 * j[2]) * -1
                     },
-                    spawn : false,
-                    initializer : null,
-                    prevent_hyperlane : false,
-                    id : i,                
+                    "spawn" : false,
+                    "initializer" : null,
+                    "prevent_hyperlane" : false,
+                    "id" : i,
+                    "allegiance" : null
                 };
             }
         }
+        callBack(null, csvSystems);
     });
-    return csvSystems;
 }
 
-function readPlainText() {
-    const fs = require('fs')
+function readPlainText(callBack) {
     const systems = {}
-
     fs.readFile('plaintext.txt', (err, data) => {
         if (err) throw err;
         const quickData = [];
@@ -87,15 +105,15 @@ function readPlainText() {
                 "initializer" : null,
                 "prevent_hyperlane" : false,
                 "id" : i,
-                "alligience" : loyalty[i]
+                "allegiance" : loyalty[i]
             };
-    
+            // console.log(systems[i].name);
         }
+        callBack(null, systems);
     });
-    return systems;
 }
 
-function createMapData() {
+function createMapData(systems) {
     const fs = require('fs')
     let logger = fs.createWriteStream('copydata.txt');
 
@@ -107,7 +125,7 @@ function createMapData() {
         logger.write("      x = " + systems[i].position.x + "\n");
         logger.write("      y = " + systems[i].position.y + "\n");
         logger.write("  }\n");
-        switch (systems[i].alligience) {
+        switch (systems[i].allegiance) {
             case "FWLPlanet":
                 logger.write("  initializer = FWLPlanet\n");
                 break;
